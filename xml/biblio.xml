@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblio SYSTEM "../dtd/biblio.dtd">
+<biblio>
+    <entrée id="ULB-0001">
+        <titre>Règlement de discipline du corps professoral et du corps scientifique</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2010-06-14</date>
+        <source>Greffe</source>
+        <service>INST</service>
+        <url>http://www.ulb.ac.be/ulb/greffe/documents/docs/REGLEMENT-DISCIPLINE-PROF-SCIENT.pdf</url>
+        <nomFichier>REGLEMENT-DISCIPLINE-PROF-SCIENT</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0002">
+        <titre>Statuts organiques de l’Université libre de Bruxelles</titre>
+        <type>Statuts</type>
+        <date norme="ISO8601">2013-10-07</date>
+        <source>Greffe</source>
+        <service>INST</service>
+        <url>http://www.ulb.be/ulb/greffe/documents/docs/STATUTS-ORGANIQUES.pdf</url>
+        <nomFichier>STATUTS-ORGANIQUES</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0003">
+        <titre>Texte coordonné des dispositions relatives à la carrière du corps scientifique et du
+            corps académique</titre>
+        <type>Compendium légal</type>
+        <date norme="ISO8601">2016-12-19</date>
+        <source>Greffe</source>
+        <service>DRH + INST</service>
+        <url>http://www.ulb.ac.be/ulb/greffe/documents/docs/DISPO-SCIENT-ACA.pdf</url>
+        <nomFichier>DISPO-SCIENT-ACA</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0004">
+        <titre>Règlement d'ordre intérieur de la Faculté des sciences psychologiques et de
+            l'éducation</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2016-08-25</date>
+        <source>Faculté des sciences psychologiques et de l'éducation</source>
+        <service>Conseil facultaire</service>
+        <url>http://www.ulb.be/facs/psycho/docs/ROI_Psycho.pdf</url>
+        <nomFichier>ROI_Psycho</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0005">
+        <titre>Règlement électoral de la Faculté des sciences</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2015</date>
+        <source>Faculté des sciences</source>
+        <url>http://www.ulb.be/facs/sciences/admin/docs/RegElec.pdf</url>
+        <nomFichier>RegElec</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0006">
+        <titre>Règlement d'ordre intérieur de l'École de santé publique</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2015-02-19</date>
+        <source>École de santé publique</source>
+        <service>Conseil facultaire</service>
+        <url>http://www.ulb.be/ulb/greffe/documents/docs/ROI-ESP.pdf</url>
+        <nomFichier>ROI-ESP</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0007">
+        <titre>Table des modalités relatives à l’engagement dans les corps académique et
+            scientifique de l’Université libre de Bruxelles</titre>
+        <type>Brochure info</type>
+        <date norme="ISO8601">2017-01</date>
+        <source>Greffe</source>
+        <service>INST</service>
+        <url>http://www.ulb.ac.be/ulb/greffe/documents/docs/Table-des-modalites.pdf</url>
+        <nomFichier>Table-des-modalites</nomFichier>
+    </entrée>
+
+    
+
+    <entrée id="ULB-0008">
+        <titre>Vacance d'un poste scientifique logisticien de recherche temps plein</titre>
+        <type>Vacance d'emploi</type>
+        <source>Greffe</source>
+        <nomFichier>5491</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0009">
+        <titre>Règlement d'ordre intérieur de la Faculté d'architecture</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2015-04-28</date>
+        <source>Faculté d'architecture</source>
+        <service>Conseil facultaire</service>
+        <url>http://archi.ulb.ac.be/sites/default/files/documents/facarchi-roi_soumis_cf_28042015_0.docx</url>
+        <nomFichier>facarchi-roi_soumis_cf_28042015_0</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0010">
+        <titre>Vade-mecum pension du personnel enseignant &amp; scientifique nommé à titre
+            définitif</titre>
+        <type>Brochure info</type>
+        <date norme="ISO8601">2012</date>
+        <source>Greffe</source>
+        <service>SPES</service>
+        <url>http://www.ulb.be/ulb/greffe/documents/docs/VADE-MECUM-PENSION.pdf</url>
+        <nomFichier>VADE-MECUM-PENSION</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0011">
+        <titre>Règlement du doctorat de la Faculté de droit et de criminologie</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2015-10-19</date>
+        <source>Faculté de droit et de criminologie</source>
+        <url>http://www.ulb.be/facs/droit/docs/RegDoc2015.pdf</url>
+        <nomFichier>RegDoc2015</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0012">
+        <titre>Guide pratique chercheurs – chercheuses à l’ULB</titre>
+        <type>Brochure info</type>
+        <date norme="ISO8601">2015-12</date>
+        <source>Greffe</source>
+        <service>DRE + DRH</service>
+        <url>http://www.ulb.ac.be/ulb/greffe/documents/docs/guide-chercheurs-2015-16.pdf</url>
+        <nomFichier>guide-chercheurs-2015-16</nomFichier>
+    </entrée>
+
+    
+
+    <entrée id="ULB-0013">
+        <titre>Vade-mecum des bourses de doctorat et de post-doctorat</titre>
+        <type>Brochure info</type>
+        <date norme="ISO8601">2016-03</date>
+        <source>DRH</source>
+        <service>SPRC</service>
+        <url>http://www.ulb.ac.be/drh/prc/prc-docs/Vademecum_bourses.pdf</url>
+        <nomFichier>Vademecum_bourses</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0014">
+        <titre>Brochure d’information destinée au corps scientifique de l’ULB</titre>
+        <type>Brochure info</type>
+        <date norme="ISO8601">2001-06</date>
+        <source>DRH</source>
+        <service>SPES</service>
+        <url>http://www.ulb.ac.be/docs/bienvenues/services/spes-docs/corps-scientifique.pdf</url>
+        <nomFichier>corps-scientifique</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0015">
+        <titre>>Modalités pratiques de mise en œuvre des mandats post-doctoraux pour les
+            assistants</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2007-07-02</date>
+        <source>Greffe</source>
+        <service>INST</service>
+        <url>http://www.ulb.be/ulb/greffe/documents/docs/modal-applic-post-doc.pdf</url>
+        <nomFichier>modal-applic-post-doc</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0016">
+        <titre>Règlement des évaluations et des jurys : Dispositions complémentaires de la Faculté
+            des Sciences</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2016-09-26</date>
+        <source>Département études et étudiants</source>
+        <auteur>M.-C. Lenain</auteur>
+        <url>http://www.ulb.be/ulb/greffe/documents/docs/REGLEMENT-EXAMENS-JURYS-DISPOSITIONS-SCIENCES-2016-2017.pdf</url>
+        <nomFichier>REGLEMENT-EXAMENS-JURYS-DISPOSITIONS-SCIENCES-2016-2017</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0017">
+        <titre>Règlement d'ordre intérieur de la Faculté de pharmacie</titre>
+        <type>Règlement</type>
+        <source>Faculté de pharmacie</source>
+        <url>http://www.ulb.be/facs/pharma/docs/reglements/ROI.pdf</url>
+        <nomFichier>ROI</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0018">
+        <titre>EURAXESS Rights</titre>
+        <type>Déclaration</type>
+        <date norme="ISO8601">2013-05-01</date>
+        <source>Département des relations extérieures</source>
+        <auteur>Susan Black</auteur>
+        <url>https://www.ulb.ac.be/recherche/presentation/euraxess/docs/euraxessen.pdf</url>
+        <nomFichier>euraxessn</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0019">
+        <titre>ULB Researcher's Handbook</titre>
+        <type>Brochure info</type>
+        <date norme="ISO8601">2015-12</date>
+        <source>DRE + DRH</source>
+        <url>https://www.ulb.ac.be/ulb/greffe/documents/docs/researchers-handbook-2015-16.pdf</url>
+        <nomFichier>researchers-handbook-2015-16</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0020">
+        <titre>New staff members' guide</titre>
+        <type>Brochure info</type>
+        <date norme="ISO8601">2016</date>
+        <source>DRH</source>
+        <url>http://www.ulb.ac.be/liseuse/new_staff_members_guide/content/guidenanglais2016_2017.pdf</url>
+        <nomFichier>guidenanglais2016_2017</nomFichier>
+    </entrée>
+
+    <entrée id="ULB-0021">
+        <titre>A guide to doctoral and postdoctoral fellowships</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2016-03</date>
+        <source>DRH</source>
+        <service>SPRC</service>
+        <url>https://www.ulb.ac.be/drh/prc/prc-docs/Fellowships_guide.pdf</url>
+        <nomFichier>Fellowships_guide</nomFichier>
+    </entrée>
+    
+    <entrée id="ULB-0022">
+        <titre>Statut équivalent du corps professoral et scientifique</titre>
+        <type>Statuts</type>
+        <date norme="ISO8601">2009-06-16</date>
+        <source>Greffe</source>
+        <service>INST</service>
+        <url>http://www.ulb.ac.be/ulb/greffe/documents/docs/STATUT-PROF-SCIENT.pdf</url>
+        <nomFichier>STATUT-PROF-SCIENT</nomFichier>
+    </entrée>
+    
+    <entrée id="ULB-0023">
+        <titre>Lexique Kroeger</titre>
+        <type>Lexique</type>
+        <source>DRE</source>
+        <auteur>Simon Kroeger</auteur>
+        <nomFichier></nomFichier>
+    </entrée>
+    
+    <entrée id="ULB-0024">
+        <titre>ULB 12 Months - 12 Experts 2016</titre>
+        <type>Publication en ligne</type>
+        <source>DRE</source>
+        <auteur>Simon Kroeger (traduisant depuis le français)</auteur>
+        <url>http://www.ulb.ac.be/ulb12months12experts/retrospective-en-nahavandi2016.html</url>
+        <nomFichier>n/a</nomFichier>
+    </entrée>
+    
+    <entrée id="ULB-0025">
+        <titre>Coordination committee on research communication (3CR)</titre>
+        <type>Contenu informatif en ligne</type>
+        <source>DRE</source>
+        <auteur>Simon Kroeger (traduisant depuis le français)</auteur>
+        <url>http://webcache.googleusercontent.com/search?q=cache:HCJtaJQxXmsJ:https://www.ulb.be/dre/recherche/contact-en.html</url>
+        <nomFichier>n/a</nomFichier>
+    </entrée>
+    
+    <entrée id="FNRS-0001">
+        <titre>Règlement : Mandat chargé de recherches (CR)</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2016-04-26</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <url>http://www.fnrs.be/docs/Reglement-et-documents/FRS-FNRS_REGL_CR_FR.pdf</url>
+        <nomFichier>FRS-FNRS_REGL_CR_FR</nomFichier>
+    </entrée>
+
+    <entrée id="FNRS-0002">
+        <titre>Specific Provisions Regarding The Call 2014: "Research Logistic
+            Collaborators" (LOG)</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2014-04-24</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <url>http://www.fnrs.be/en/docs/Reglement-et-documents/FRS-FNRS_REGL_LOG_EN.pdf</url>
+        <nomFichier>FRS-FNRS_REGL_LOG_EN</nomFichier>
+    </entrée>
+
+    <entrée id="FNRS-0003">
+        <titre>Rules and Regulations - Research Fellow Fellowship (ASP - Aspirant)</titre>
+        <type>Règlement</type>
+        <date>2016-12-06</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <url>http://www.fnrs.be/en/docs/Reglement-et-documents/FRS-FNRS_REGL_ASP_EN.pdf</url>
+        <nomFichier>FRS-FNRS_REGL_ASP_EN</nomFichier>
+    </entrée>
+    
+    <entrée id="FNRS-0004">
+        <titre>Rules and Regulations - Postdoctoral Researcher Fellowship (CR - Chargé de Recherches)</titre>
+        <type>Règlement</type>
+        <date>2016-04-26</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <url>http://www.fnrs.be/en/docs/Reglement-et-documents/FRS-FNRS_REGL_CR_EN.pdf</url>
+        <nomFichier>FRS-FNRS_REGL_CR_EN</nomFichier>
+    </entrée>
+    
+    <entrée id="FNRS-0005">
+        <titre>Dispositions particulières « Appel logisticiens de recherche 2014 » (LOG) </titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2014-04-24</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <url>http://www.fnrs.be/en/docs/Reglement-et-documents/FRS-FNRS_REGL_LOG_FR.pdf</url>
+        <nomFichier>FRS-FNRS_REGL_LOG_EN</nomFichier>
+    </entrée>
+    
+    <entrée id="FNRS-0006">
+        <titre>Rules and Regulations - Open-Ended Fellowships: Research Associate (CQ - Chercheur Qualifié), Senior Research Associate (MR - Maître De Recherches), Research Director (DR - Directeur De Recherches)</titre>
+        <type>Règlement</type>
+        <date>2016-04-26</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <url>http://www.fnrs.be/en/docs/Reglement-et-documents/FRS-FNRS_REGL_CQ_MR_DR_EN.pdf</url>
+        <nomFichier>FRS-FNRS_REGL_CQ_MR_DR_EN</nomFichier>
+    </entrée>
+    
+    <entrée id="FNRS-0007">
+        <titre>Règlement - Mandats à durée indéterminée (CQ, MR, DR)</titre>
+        <type>Règlement</type>
+        <date>2016-04-26</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <url>http://www.fnrs.be/en/docs/Reglement-et-documents/FRS-FNRS_REGL_CQ_MR_DR_FR.pdf</url>
+        <nomFichier>FRS-FNRS_REGL_CQ_MR_DR_FR</nomFichier>
+    </entrée>
+   
+    
+    <entrée id="CFB-0001">
+        <titre>Décret relatif à la carrière des chercheurs scientifiques</titre>
+        <type>Décret</type>
+        <date norme="ISO8601">1991-07-19</date>
+        <source>Communauté française de Belgique</source>
+        <service>Centre de documentation administrative</service>
+        <url>http://www.gallilex.cfwb.be/document/pdf/06319_002.pdf</url>
+        <nomFichier>06319_002_carrière-scientifique</nomFichier>
+    </entrée>
+    
+    <entrée id="CFB-0002">
+        <titre>Décret portant création de la fonction de logisticien de recherche au sein des
+            universités en Communauté française</titre>
+        <type>Décret</type>
+        <date norme="ISO8601">2013-01-24</date>
+        <source>Communauté française de Belgique</source>
+        <service>Centre de documentation administrative</service>
+        <url>http://www.gallilex.cfwb.be/document/pdf/38529_000.pdf</url>
+        <nomFichier>06319_002_carrière_scientifiqu</nomFichier>
+    </entrée>
+    
+    <entrée id="CFB-0003">
+        <titre>Arrêté royal fixant le statut des agrégés, des répétiteurs et des membres du
+            personnel scientifique des universités de l'Etat</titre>
+        <type>Arrêté</type>
+        <date>1953-10-31</date>
+        <source>Communauté française de Belgique</source>
+        <service>Centre de documentation administrative</service>
+        <url>http://www.gallilex.cfwb.be/document/pdf/06317_000.pdf</url>
+        <nomFichier>06317_000_arrete1953</nomFichier>
+    </entrée>
+</biblio>
