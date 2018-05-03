@@ -21,7 +21,7 @@ if ($conn) {
         $array = mssql_fetch_array($query, MSSQL_NUM);
         foreach($array as $key => $value)
         {
-            $value = mb_convert_encoding($value, 'UTF-8', 'windows-1252');
+            $value = mb_convert_encoding($value, 'ISO-8859-1', 'windows-1252');
             echo $key." has the value ". $value ."<br />";
         }
     }
