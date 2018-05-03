@@ -8,6 +8,7 @@
 //phpinfo();
 error_reporting(-1);
 ini_set('display_errors', 'On');
+ini_set('mssql.charset', 'UTF-8');
 include("secret.php");
 $server = SERVER;
 $username = USERNAME;
