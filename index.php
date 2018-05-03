@@ -18,7 +18,7 @@ if ($conn) {
     mssql_select_db("terminorel", $conn);
     $query = mssql_query("SELECT * FROM biblio", $conn);
     if ($query) {
-        $array = mssql_fetch_array($query, MSSQL_NUM);
+        $array = mssql_fetch_assoc($query, MSSQL_NUM);
         foreach($array as $key => $value)
         {
             $value = mb_convert_encoding($value, 'ISO-8859-1', 'windows-1252');
