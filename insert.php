@@ -22,7 +22,7 @@ if ($conn) {
         //$auteur = $doc->auteur;
         $filename = $doc->nomFichier;
         echo $ref . '<br>' . $title . '<br>' . $type . '<br>' . $date . '<br>' . $source . '<br>' . $service . '<br>' . $url . '<br>' . $filename;
-        $title = utf8_decode($title);
+        //$title = utf8_decode($title);
         $query = mssql_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES ($ref, N'$title', $type, $date, $source, $service, $url, $filename)", $conn);
     }
 }
