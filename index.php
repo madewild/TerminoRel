@@ -1,6 +1,7 @@
 <html>
 <head>
-<title>Terminorel</title>
+<title>TerminoRel</title>
+<meta charset="UTF-8">
 </head>
 <body>
 <?php
