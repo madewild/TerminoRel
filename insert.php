@@ -14,6 +14,7 @@ if ($conn) {
     {
         $ref = $doc['id'];
         $title = $doc->titre;
+        $title = mb_convert_encoding($title, 'windows-1252', 'ISO-8859-1');
         $type = $doc->type;
         $date = $doc->date;
         $source = $doc->source;
