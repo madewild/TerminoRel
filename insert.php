@@ -12,8 +12,16 @@ if ($conn) {
     $xml = simplexml_load_file("xml/biblio.xml");
     foreach($xml->entrée as $doc)
     {
-        echo $doc->titre . "<br />";
+        $ref = $doc->id;
+        $title = $doc->titre;
+        $type = $doc->type;
+        $date = $doc->date;
+        $source = $doc->source;
+        $service = $doc->service;
+        $url = $doc->url;
+        //$auteur = $doc->auteur;
+        $filename = $doc->nomFichier;
+        $query = mssql_query("INSERT INTO biblio(reference, title, typedoc, datedoc, source, service, url, filename) VALUES ($ref, $title, $type, $date, $source, $service, $url, $filename)", $conn);
     }
-    //$query = mssql_query("INSERT INTO biblio VALUES", $conn);
 }
 ?>
