@@ -14,7 +14,7 @@ if ($conn) {
     {
         $ref = $doc['id'];
         $title = $doc->titre;
-        $title = mb_convert_encoding($title, 'windows-1252', 'ISO-8859-1');
+        $enc = mb_detect_encoding($title);
         $type = $doc->type;
         $date = $doc->date;
         $source = $doc->source;
@@ -22,8 +22,8 @@ if ($conn) {
         $url = $doc->url;
         //$auteur = $doc->auteur;
         $filename = $doc->nomFichier;
-        echo $ref . '<br>' . $title . '<br>' . $type . '<br>' . $date . '<br>' . $source . '<br>' . $service . '<br>' . $url . '<br>' . $filename;
-        $query = mssql_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES ($ref, $title, $type, $date, $source, $service, $url, $filename)", $conn);
+        echo $ref . '<br>' . $title . ' ( ' . $enc . ' )<br>' . $type . '<br>' . $date . '<br>' . $source . '<br>' . $service . '<br>' . $url . '<br>' . $filename;
+        $query = mssql_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES ($ref, N'$title', $type, $date, $source, $service, $url, $filename)", $conn);
     }
 }
 ?>
