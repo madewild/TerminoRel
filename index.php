@@ -18,11 +18,11 @@ if ($conn) {
     mssql_select_db("terminorel", $conn);
     $query = mssql_query("SELECT * FROM biblio", $conn);
     if ($query) {
-        $array = mssql_fetch_assoc($query, MSSQL_NUM);
-        foreach($array as $key => $value)
+        while ($row = mssql_fetch_assoc($query))
         {
-            $value = mb_convert_encoding($value, 'ISO-8859-1', 'windows-1252');
-            echo $key." has the value ". $value ."<br />";
+            $ref = $row['reference'];
+            $title = mb_convert_encoding($row['title'], 'ISO-8859-1', 'windows-1252');
+            echo $ref." : ". $title ."<br />";
         }
     }
 }
