@@ -27,8 +27,9 @@ if ($conn) {
         //$auteur = $doc->auteur;
         $filename = $doc->nomFichier;
         $filename = str_replace("'", "''", $filename);
-        echo $ref . '<br>' . $title . '<br>' . $type . '<br>' . $date . '<br>' . $source . '<br>' . $service . '<br>' . $url . '<br>' . $filename;
+        echo 'Importing ' . $ref . '...';
         $query = mssql_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$url', N'$filename')", $conn);
+        echo 'Done!';
     }
 }
 ?>
