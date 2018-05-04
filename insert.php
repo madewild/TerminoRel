@@ -14,7 +14,7 @@ if ($conn) {
     {
         $ref = $doc['id'];
         $title = $doc->titre;
-        $title = REPLACE($title, "'", "''");
+        $title = str_replace("'", "''", $title);
         $type = $doc->type;
         $date = $doc->date;
         $source = $doc->source;
