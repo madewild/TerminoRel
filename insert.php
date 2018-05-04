@@ -18,6 +18,7 @@ if ($conn) {
         $type = $doc->type;
         $type = str_replace("'", "''", $type);
         $date = $doc->date;
+        $date = str_replace("-", "", $date);
         $source = $doc->source;
         $source = str_replace("'", "''", $source);
         $service = $doc->service;
