@@ -16,12 +16,16 @@ if ($conn) {
         $title = $doc->titre;
         $title = str_replace("'", "''", $title);
         $type = $doc->type;
+        $type = str_replace("'", "''", $type);
         $date = $doc->date;
         $source = $doc->source;
+        $source = str_replace("'", "''", $source);
         $service = $doc->service;
+        $service = str_replace("'", "''", $service);
         $url = $doc->url;
         //$auteur = $doc->auteur;
         $filename = $doc->nomFichier;
+        $filename = str_replace("'", "''", $filename);
         echo $ref . '<br>' . $title . '<br>' . $type . '<br>' . $date . '<br>' . $source . '<br>' . $service . '<br>' . $url . '<br>' . $filename;
         $query = mssql_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES (N'$ref', N'$title', N'$type', N'$date', N'$source', N'$service', N'$url', N'$filename')", $conn);
     }
