@@ -5,7 +5,6 @@
 </head>
 <body>
 <?php
-//phpinfo();
 error_reporting(-1);
 ini_set('display_errors', 'On');
 ini_set('mssql.charset', 'UTF-8');
@@ -22,7 +21,6 @@ if ($conn) {
         while ($row = mssql_fetch_assoc($query))
         {
             $ref = $row['reference'];
-            //$title = mb_convert_encoding($row['title'], 'ISO-8859-1', 'windows-1252');
             $title = $row['title'];
             $type = $row['typedoc'];
             $date = $row['datedoc'];
