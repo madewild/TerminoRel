@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/btulb.xsl"?>
+<!DOCTYPE DC-4025-termbase SYSTEM "../dtd/btulb.dtd">
+<DC-4025-termbase>term
+    <DC-209-terminologicalEntry DC-206-entryIdentifier="P01-0001">
+        <DC-489-subjectField cdu="371.53" niveau="1">Personnel ULB</DC-489-subjectField>
+        <DC-494-subsetOwner nom="TRADITAL"/>
+        <DC-162-createdBy>Kévin Persin</DC-162-createdBy>
+        <DC-274-inputDate norme="ISO8601">2017-05-18</DC-274-inputDate>
+        <langGrp xml:lang="fr-BE">
+            <definitionGrp>
+                <DC-168-definition>Corps composé, d'une part, de l'ensemble des membres du corps
+                    enseignant et, d'autre part, de l'ensemble des membres du corps scientifique qui
+                    répondent aux critères définis dans les Statuts organiques de
+                    l'ULB.</DC-168-definition>
+                <DC-1968-source biblio="ULB-0002">d'après art. 55</DC-1968-source>
+            </definitionGrp>
+            <explicGrp>
+                <DC-223-explanation>Outre les membres du corps enseignant, le corps académique
+                    comprend également les membres du corps scientifique qui ont obtenu une thèse de
+                    doctorat, une thèse d'agrégation de l'enseignement supérieur, une équivalence de
+                    diplôme de docteur avec thèse ou une dispense de diplôme de docteur avec thèse
+                    et qui ont été nommés à titre définitif, ainsi que, pour l’exercice des droits
+                    qui leur sont expressément reconnus par le Conseil académique, des chercheurs
+                    rémunérés par des fonds ou des organismes extérieurs à l’Université autorisés à
+                    y exercer leurs activités et auxquels le titre honorifique de chercheurs de
+                    l’ULB a été conféré par le Conseil académique, des assistants volontaires
+                    hospitaliers exerçant leurs activités à l’Hôpital académique et universitaire
+                    qui sont autorisés à porter le titre de maître assistant hospitalier et qui sont
+                    titulaires du grade académique de docteur ou d’agrégé conféré après la
+                    soutenance d’une thèse, des assistants chargés d’exercices attachés à un
+                    titulaire de langue vivante qui sont autorisés à porter le titre de maître de
+                    langue principal et de premier maître de langue et qui sont titulaires du grade
+                    de docteur conféré après la soutenance d’une thèse et des maîtres et premiers
+                    maîtres assistants pédagogiques.</DC-223-explanation>
+                <DC-1968-source biblio="ULB-0002">d'après art. 55</DC-1968-source>
+            </explicGrp>
+            <termGrp>
+                <DC-508-term DC-301-lexTermIdentifier="P01-0001-01-fr">corps
+                    académique</DC-508-term>
+                <DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
+                    DC-245-grammaticalGender="DC-246-masculine"/>
+                <contextGrp>
+                    <DC-149-context>Le corps académique est composé, d'une part, de l'ensemble des
+                        membres du corps enseignant et, d'autre part, de l'ensemble des membres du
+                        corps scientifique qui ont obtenu une thèse de doctorat, une thèse
+                        d'agrégation de l'enseignement supérieur, une équivalence de diplôme de
+                        docteur avec thèse ou une dispense de diplôme de docteur avec thèse et qui
+                        ont été nommés à titre définitif.</DC-149-context>
+                    <DC-1968-source biblio="ULB-0002">art. 55</DC-1968-source>
+                </contextGrp>
+            </termGrp>
+            <termGrp>
+                <DC-508-term DC-301-lexTermIdentifier="P01-0001-02-fr">personnel
+                    académique</DC-508-term>
+                <DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
+                    DC-245-grammaticalGender="DC-246-masculine"/>
+                <contextGrp>
+                    <DC-149-context>Les dispositions statutaires et règlementaires relatives aux
+                        membres du personnel académique et du personnel scientifique sont
+                        préalablement soumises au Conseil académique pour avis.</DC-149-context>
+                    <DC-1968-source biblio="ULB-0002">art. 11, § 3</DC-1968-source>
+                </contextGrp>
+            </termGrp>
+        </langGrp>
+        <langGrp xml:lang="en">
+            <termGrp>
+                <DC-508-term DC-301-lexTermIdentifier="P01-0001-01-en"
+                    DC-280-languagePlanningQualifier="DC-281-recommendedTerm">academic
+                    staff</DC-508-term>
+                <DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
+                <contextGrp>
+                    <DC-149-context>The responsibilities of the academic staff cover the ULB’s three
+                        missions (teaching, research and services to society).</DC-149-context>
+                    <DC-1968-source biblio="ULB-0018">sect. 5</DC-1968-source>
+                </contextGrp>
+            </termGrp>
+        </langGrp>
+    </DC-209-terminologicalEntry>
+</DC-4025-termbase>
