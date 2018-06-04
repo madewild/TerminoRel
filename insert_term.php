@@ -18,8 +18,15 @@ if ($conn) {
         $level = $subject['niveau'];
         $subject = str_replace("'", "''", $subject);
         echo 'Importing ' . $ref . '...<br>';
-        $subjectid = mssql_query("SELECT id from subject where cdu=$cdu and level=$level and text=N'$subject'", $conn);
-        echo $subjectid;
+        $query = mssql_query("SELECT id from subject where cdu=$cdu and level=$level and text=N'$subject'", $conn);
+        if ($query) {
+            while ($row = mssql_fetch_assoc($query)) {
+                echo $row['id'] . '<br>';
+            }
+        }
+        else {
+            $query = mssql_query("INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')", $conn);
+        }
         //$query = mssql_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$url', N'$filename')", $conn);
         echo 'Done!';
     }
