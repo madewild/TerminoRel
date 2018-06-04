@@ -35,19 +35,19 @@ if ($conn) {
             }
         }
         else {
-            $query = mssql_query("INSERT INTO subject (cdu, level, text) OUTPUT Inserted.id VALUES (N'$cdu', $level, N'$subject')", $conn);
+            $query = mssql_query("INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')", $conn);
             $subject_id = mssql_insert_id();
         }
         $owner = $doc->{'DC-494-subsetOwner'};
         $owner_name = $owner['name'];
-        $query = mssql_query("SELECT id from subsetowner where name=N'$name'", $conn);
+        $query = mssql_query("SELECT id from subsetowner where name=N'$owner_name'", $conn);
         if (mssql_num_rows($query) > 0) {
             while ($row = mssql_fetch_assoc($query)) {
                 $owner_id = $row['id'];
             }
         }
         else {
-            $query = mssql_query("INSERT INTO subject (cdu, level, text) OUTPUT Inserted.id VALUES (N'$cdu', $level, N'$subject')", $conn);
+            $query = mssql_query("INSERT INTO subsetowner (name) VALUES (N'$owner_name')", $conn);
             $owner_id = mssql_insert_id();
         }
         echo $owner_id . ' ' . $owner_name . '<br>';
