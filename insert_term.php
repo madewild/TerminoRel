@@ -19,7 +19,7 @@ if ($conn) {
         $subject = str_replace("'", "''", $subject);
         echo 'Importing ' . $ref . '...<br>';
         $query = mssql_query("SELECT id from subject where cdu=$cdu and level=$level and text=N'$subject'", $conn);
-        if (mysql_num_rows($query) > 0) {
+        if (mssql_num_rows($query) > 0) {
             while ($row = mssql_fetch_assoc($query)) {
                 echo $row['id'] . '<br>';
             }
