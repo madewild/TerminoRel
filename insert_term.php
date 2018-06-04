@@ -31,15 +31,26 @@ if ($conn) {
         $query = mssql_query("SELECT id from subject where cdu=$cdu and level=$level and text=N'$subject'", $conn);
         if (mssql_num_rows($query) > 0) {
             while ($row = mssql_fetch_assoc($query)) {
-                $subjectid = $row['id'];
+                $subject_id = $row['id'];
             }
         }
         else {
             $query = mssql_query("INSERT INTO subject (cdu, level, text) OUTPUT Inserted.id VALUES (N'$cdu', $level, N'$subject')", $conn);
-            $subjectid = mssql_insert_id();
+            $subject_id = mssql_insert_id();
         }
-        echo $subjectid . '<br>';
-        //$query = mssql_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$url', N'$filename')", $conn);
+        $owner = $doc->{'DC-494-subsetOwner'};
+        $owner_name = $owner['name'];
+        $query = mssql_query("SELECT id from subsetowner where name=N'$name'", $conn);
+        if (mssql_num_rows($query) > 0) {
+            while ($row = mssql_fetch_assoc($query)) {
+                $owner_id = $row['id'];
+            }
+        }
+        else {
+            $query = mssql_query("INSERT INTO subject (cdu, level, text) OUTPUT Inserted.id VALUES (N'$cdu', $level, N'$subject')", $conn);
+            $owner_id = mssql_insert_id();
+        }
+        echo $owner_id . ' ' . $owner_name . '<br>';
         echo 'Done!';
     }
 }
