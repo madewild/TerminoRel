@@ -23,6 +23,7 @@ if ($conn) {
     foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
     {
         $ref = $doc['DC-206-entryIdentifier'];
+
         $subject = $doc->{'DC-489-subjectField'};
         $cdu = $subject['cdu'];
         $level = $subject['niveau'];
@@ -38,6 +39,8 @@ if ($conn) {
             $query = mssql_query("INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')", $conn);
             $subject_id = mssql_insert_id();
         }
+        echo 'Subject: ' . $subject_id . ' ' . $subject . '(cdu ' . $cdu . ', level ' . $level . ')<br>';
+
         $owner = $doc->{'DC-494-subsetOwner'};
         $owner_name = $owner['nom'];
         $query = mssql_query("SELECT id from subsetowner where name=N'$owner_name'", $conn);
@@ -51,6 +54,21 @@ if ($conn) {
             $owner_id = mssql_insert_id();
         }
         echo $owner_id . ' ' . $owner_name . '<br>';
+
+        $creator = $doc->{'DC-162-createdBy'};
+        $creator_name = str_replace("'", "''", $creator);
+        $query = mssql_query("SELECT id from creator where name=N'$creator_name'", $conn);
+        if (mssql_num_rows($query) > 0) {
+            while ($row = mssql_fetch_assoc($query)) {
+                $creator_id = $row['id'];
+            }
+        }
+        else {
+            $query = mssql_query("INSERT INTO creator (name) VALUES (N'$creator_name')", $conn);
+            $creator_id = mssql_insert_id();
+        }
+        echo 'Created By: ' . $creator_id . ' ' . $creator_name . '<br>';
+
         echo 'Done!';
     }
 }
