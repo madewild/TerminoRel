@@ -18,7 +18,7 @@ if ($conn) {
         $level = $subject['niveau'];
         $subject = str_replace("'", "''", $subject);
         echo 'Importing ' . $ref . '...<br>';
-        $subjectid = mssql_query("SELECT id from subject where cdu=$cdu and level=$level and text=$subject");
+        $subjectid = mssql_query("SELECT id from subject where cdu=$cdu and level=$level and text=$subject", $conn);
         echo $subjectid;
         //$query = mssql_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$url', N'$filename')", $conn);
         echo 'Done!';
