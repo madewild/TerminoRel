@@ -21,12 +21,13 @@ if ($conn) {
         $query = mssql_query("SELECT id from subject where cdu=$cdu and level=$level and text=N'$subject'", $conn);
         if (mssql_num_rows($query) > 0) {
             while ($row = mssql_fetch_assoc($query)) {
-                echo $row['id'] . '<br>';
+                $subjectid = $row['id'];
             }
         }
         else {
-            $query = mssql_query("INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')", $conn);
+            $subjectid = mssql_query("INSERT INTO subject (cdu, level, text) OUTPUT Inserted.id VALUES (N'$cdu', $level, N'$subject')", $conn);
         }
+        echo $subjectid . '<br>';
         //$query = mssql_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$url', N'$filename')", $conn);
         echo 'Done!';
     }
