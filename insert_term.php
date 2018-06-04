@@ -39,7 +39,7 @@ if ($conn) {
             $query = mssql_query("INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')", $conn);
             $subject_id = mssql_insert_id();
         }
-        echo 'Subject: ' . $subject_id . ' ' . $subject . '(cdu ' . $cdu . ', level ' . $level . ')<br>';
+        echo 'Subject: ' . $subject_id . ' ' . $subject . '(CDU ' . $cdu . ', level ' . $level . ')<br>';
 
         $owner = $doc->{'DC-494-subsetOwner'};
         $owner_name = $owner['nom'];
@@ -53,7 +53,7 @@ if ($conn) {
             $query = mssql_query("INSERT INTO subsetowner (name) VALUES (N'$owner_name')", $conn);
             $owner_id = mssql_insert_id();
         }
-        echo $owner_id . ' ' . $owner_name . '<br>';
+        echo 'Subset Owner: ' . $owner_id . ' ' . $owner_name . '<br>';
 
         $creator = $doc->{'DC-162-createdBy'};
         $creator_name = str_replace("'", "''", $creator);
@@ -67,7 +67,7 @@ if ($conn) {
             $query = mssql_query("INSERT INTO creator (name) VALUES (N'$creator_name')", $conn);
             $creator_id = mssql_insert_id();
         }
-        echo 'Created By: ' . $creator_id . ' ' . $creator_name . '<br>';
+        echo 'Created by: ' . $creator_id . ' ' . $creator_name . '<br>';
 
         echo 'Done!';
     }
