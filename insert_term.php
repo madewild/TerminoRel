@@ -6,6 +6,16 @@ include("secret.php");
 $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
+
+function mssql_insert_id() { 
+    $id = 0; 
+    $res = mssql_query("SELECT @@identity AS id"); 
+    if ($row = mysql_fetch_array($res, MYSQL_ASSOC)) { 
+        $id = $row["id"]; 
+    } 
+    return $id; 
+} 
+
 $conn = mssql_connect($server, $username, $password);
 if ($conn) {
     mssql_select_db("terminorel", $conn);
@@ -25,7 +35,8 @@ if ($conn) {
             }
         }
         else {
-            $subjectid = mssql_query("INSERT INTO subject (cdu, level, text) OUTPUT Inserted.id VALUES (N'$cdu', $level, N'$subject')", $conn);
+            $query = mssql_query("INSERT INTO subject (cdu, level, text) OUTPUT Inserted.id VALUES (N'$cdu', $level, N'$subject')", $conn);
+            $subjectid = mssql_insert_id();
         }
         echo $subjectid . '<br>';
         //$query = mssql_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$url', N'$filename')", $conn);
