@@ -39,7 +39,7 @@ if ($conn) {
             $subject_id = mssql_insert_id();
         }
         $owner = $doc->{'DC-494-subsetOwner'};
-        $owner_name = $owner['name'];
+        $owner_name = $owner['nom'];
         $query = mssql_query("SELECT id from subsetowner where name=N'$owner_name'", $conn);
         if (mssql_num_rows($query) > 0) {
             while ($row = mssql_fetch_assoc($query)) {
