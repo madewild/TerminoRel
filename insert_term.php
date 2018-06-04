@@ -14,9 +14,9 @@ if ($conn) {
     {
         $ref = $doc['DC-206-entryIdentifier'];
         $subject = $doc->{'DC-489-subjectField'};
-        $subject = str_replace("'", "''", $subject);
         $cdu = $subject['cdu'];
         $level = $subject['niveau'];
+        $subject = str_replace("'", "''", $subject);
         echo 'Importing ' . $ref . '...';
         echo $subject . ' ' . $cdu . ' ' . $level;
         //$query = mssql_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$url', N'$filename')", $conn);
