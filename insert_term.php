@@ -10,9 +10,9 @@ $password = PASSWORD;
 function mssql_insert_id() { 
     $id = 0; 
     $res = mssql_query("SELECT @@identity AS id"); 
-    if ($row = mysql_fetch_array($res, MYSQL_ASSOC)) { 
+    if ($row = mssql_fetch_assoc($res)) { 
         $id = $row["id"]; 
-    } 
+    }
     return $id; 
 } 
 
