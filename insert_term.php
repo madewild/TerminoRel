@@ -101,10 +101,12 @@ if ($conn) {
             $def = $lgrp->definitionGrp->{'DC-168-definition'};
             $def = str_replace("'", "''", $def);
             $def = str_replace("\n", " ", $def);
+            $def = str_replace("                     ", " ", $def);
 
             $exp = $lgrp->explicGrp->{'DC-223-explanation'};
             $exp = str_replace("'", "''", $exp);
             $exp = str_replace("\n", " ", $exp);
+            $exp = str_replace("                     ", " ", $exp);
 
             $query = mssql_query("SELECT id from langroup where termid=N'$term_id' and lang=N'$lang_id'", $conn);
             if (mssql_num_rows($query) > 0) {
