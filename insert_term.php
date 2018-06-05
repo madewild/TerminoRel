@@ -192,7 +192,7 @@ if ($conn) {
                     $context = $cgrp->{'DC-149-context'};
                     $context = str_replace("'", "''", $context);
                     $context = str_replace("\n", " ", $context);
-                    $context = str_replace("                     ", " ", $context);
+                    $context = str_replace("                          ", " ", $context);
                     $query = mssql_query("SELECT id from contextgroup where termgroup=$termgroup_id and context=N'$context'", $conn);
                     if (mssql_num_rows($query) > 0) {
                         while ($row = mssql_fetch_assoc($query)) {
