@@ -19,7 +19,7 @@ function mssql_insert_id() {
 $conn = mssql_connect($server, $username, $password);
 if ($conn) {
     mssql_select_db("terminorel", $conn);
-    $xml = simplexml_load_file("xml/sample.xml");
+    $xml = simplexml_load_file("xml/btulb.xml");
     foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
     {
         $ref = $doc['DC-206-entryIdentifier'];
