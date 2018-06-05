@@ -139,7 +139,7 @@ if ($conn) {
                     }
                 }
                 else {
-                    $query = mssql_query("INSERT INTO source (biblio, text, type, termid) VALUES ($bib_id, N'$source_text', 'def',$term_id)", $conn);
+                    $query = mssql_query("INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'def', $term_id, NULL)", $conn);
                     $source_id = mssql_insert_id();
                 }
             }
@@ -161,7 +161,7 @@ if ($conn) {
                     }
                 }
                 else {
-                    $query = mssql_query("INSERT INTO source (biblio, text, type, termid) VALUES ($bib_id, N'$source_text', 'exp',$term_id)", $conn);
+                    $query = mssql_query("INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'exp', $term_id, NULL)", $conn);
                     $source_id = mssql_insert_id();
                 }
             }
@@ -186,9 +186,45 @@ if ($conn) {
                     $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender) VALUES ($langroup_id, N'$termlexid', N'$termtext', N'$pos', N'$gender')", $conn);
                     $termgroup_id = mssql_insert_id();
                 }
+
+                foreach($tgrp->contextGrp as $cgrp)
+                {
+                    $context = $cgrp->{'DC-149-context'};
+                    $context = str_replace("'", "''", $context);
+                    $context = str_replace("\n", " ", $context);
+                    $context = str_replace("                     ", " ", $context);
+                    $query = mssql_query("SELECT id from contextgroup where termgroup=$termgroup_id and context=N'$context'", $conn);
+                    if (mssql_num_rows($query) > 0) {
+                        while ($row = mssql_fetch_assoc($query)) {
+                            $contextgroup_id = $row['id'];
+                        }
+                    }
+                    else {
+                        $query = mssql_query("INSERT INTO contextgroup (termgroup, context) VALUES ($termgroup_id, N'$context')", $conn);
+                        $contextgroup_id = mssql_insert_id();
+                    }
+                    $source = $cgrp->{'DC-1968-source'};
+                    $bibref = $source['biblio'];
+                    $source_text = str_replace("'", "''", $source);
+                    $query = mssql_query("SELECT id from biblio where reference=N'$bibref'", $conn);
+                    if (mssql_num_rows($query) > 0) {
+                        while ($row = mssql_fetch_assoc($query)) {
+                            $bib_id = $row['id'];
+                        }
+                    }
+                    $query = mssql_query("SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='con' and termid=$term_id and contextgroup=$contextgroup_id", $conn);
+                    if (mssql_num_rows($query) > 0) {
+                        while ($row = mssql_fetch_assoc($query)) {
+                            $source_id = $row['id'];
+                        }
+                    }
+                    else {
+                        $query = mssql_query("INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'con', $term_id, $contextgroup_id)", $conn);
+                        $source_id = mssql_insert_id();
+                    }
+                }
             }
         }
-
         echo 'Done!<br><br>';
     }
 }
