@@ -79,8 +79,24 @@ if ($conn) {
         else {
             $query = mssql_query("INSERT INTO term (reference, subject, subsetowner, createdby, inputdate) VALUES (N'$ref', $subject_id, $owner_id, $creator_id, N'$date')", $conn);
             $term_id = mssql_insert_id();
+            echo 'Term inserted with ID ' . $term_id . '<br>';
         }
-        echo 'Term inserted with ID ' . $term_id . '<br>';
+
+        foreach($doc->langGrp as $lgrp) 
+        {
+            $lang = $lgrp['xml:lang'];
+            $query = mssql_query("SELECT id from lang where code=N'$lang'", $conn);
+            if (mssql_num_rows($query) > 0) {
+                while ($row = mssql_fetch_assoc($query)) {
+                    $lang_id = $row['id'];
+                }
+            }
+            else {
+                $query = mssql_query("INSERT INTO lang (code) VALUES (N'$lang')", $conn);
+                $lang_id = mssql_insert_id();
+            }
+            echo 'Language: ' . $lang_id . ' ' . $lang . '<br>';
+        }
 
         echo 'Done!<br><br>';
     }
