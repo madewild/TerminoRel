@@ -171,10 +171,11 @@ if ($conn) {
                 $termlexid = $term['DC-301-lexTermIdentifier'];
                 $termtext = str_replace("'", "''", $term);
                 $termtext = str_replace("\n", " ", $termtext);
+                $termtext = str_replace("                     ", " ", $termtext);
                 $graminfo = $tgrp->{'DC-250-grammaticalInfo'};
                 $pos = $graminfo['DC-396-partOfSpeech'];
                 $gender = $graminfo['DC-245-grammaticalGender'];
-                $query = mssql_query("SELECT id from termgroup where langroup=$lang_id and termlexid=N'$termlexid' and termtext=N'$termtext' and pos=N'$pos' and gender=N'$gender' and termid=$termid", $conn);
+                $query = mssql_query("SELECT id from termgroup where langroup=$lang_id and termlexid=N'$termlexid' and termtext=N'$termtext' and pos=N'$pos' and gender=N'$gender' and termid=$term_id", $conn);
                 if (mssql_num_rows($query) > 0) {
                     while ($row = mssql_fetch_assoc($query)) {
                         $termgroup_id = $row['id'];
