@@ -74,6 +74,7 @@ if ($conn) {
         if (mssql_num_rows($query) > 0) {
             while ($row = mssql_fetch_assoc($query)) {
                 echo "Reference already in DB<br>";
+                $term_id = $row['id'];
             }
         }
         else {
