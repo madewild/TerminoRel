@@ -183,7 +183,7 @@ if ($conn) {
                     }
                 }
                 else {
-                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender) VALUES ($langroup_id, N'termlexid', N'$termtext', N'$pos', N'$gender')", $conn);
+                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender) VALUES ($langroup_id, N'$termlexid', N'$termtext', N'$pos', N'$gender')", $conn);
                     $termgroup_id = mssql_insert_id();
                 }
             }
