@@ -121,7 +121,7 @@ if ($conn) {
                 $langroup_id = mssql_insert_id();
             }
 
-            foreach((array)$dgrp->{'DC-1968-source'} as $source)
+            foreach($dgrp->{'DC-1968-source'} as $source)
             {
                 $bibref = $source['biblio'];
                 $source_text = str_replace("'", "''", $source);
@@ -143,7 +143,7 @@ if ($conn) {
                 }
             }
 
-            foreach((array)$egrp->{'DC-1968-source'} as $source)
+            foreach($egrp->{'DC-1968-source'} as $source)
             {
                 $bibref = $source['biblio'];
                 $source_text = str_replace("'", "''", $source);
