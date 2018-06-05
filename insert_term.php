@@ -30,7 +30,7 @@ if ($conn) {
             $cdu = $subject['cdu'];
             $level = $subject['niveau'];
             $subject = str_replace("'", "''", $subject);
-            $query = mssql_query("SELECT id from subject where cdu=N'$cdu' and level=$level and text=N'$subject'", $conn);
+            $query = mssql_query("SELECT id from subject where level=$level and text=N'$subject'", $conn);
             if (mssql_num_rows($query) > 0) {
                 while ($row = mssql_fetch_assoc($query)) {
                     $subject_id = $row['id'];
