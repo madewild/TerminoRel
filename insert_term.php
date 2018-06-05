@@ -121,7 +121,7 @@ if ($conn) {
                 $langroup_id = mssql_insert_id();
             }
 
-            foreach($dgrp->{'DC-1968-source'} as $source)
+            foreach((array)$dgrp->{'DC-1968-source'} as $source)
             {
                 $bibref = $source['biblio'];
                 $source_text = str_replace("'", "''", $source);
@@ -142,6 +142,26 @@ if ($conn) {
                     $source_id = mssql_insert_id();
                 }
 
+                foreach((array)$egrp->{'DC-1968-source'} as $source)
+                {
+                    $bibref = $source['biblio'];
+                    $source_text = str_replace("'", "''", $source);
+                    $query = mssql_query("SELECT id from biblio where reference=N'$bibref'", $conn);
+                    if (mssql_num_rows($query) > 0) {
+                        while ($row = mssql_fetch_assoc($query)) {
+                            $bib_id = $row['id'];
+                        }
+                    }
+                    $query = mssql_query("SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='exp' and termid=$term_id", $conn);
+                    if (mssql_num_rows($query) > 0) {
+                        while ($row = mssql_fetch_assoc($query)) {
+                            $source_id = $row['id'];
+                        }
+                    }
+                    else {
+                        $query = mssql_query("INSERT INTO source (biblio, text, type, termid) VALUES ($bib_id, N'$source_text', 'exp',$term_id)", $conn);
+                        $source_id = mssql_insert_id();
+                    }
             }
         }
 
