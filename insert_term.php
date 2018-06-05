@@ -96,6 +96,22 @@ if ($conn) {
                 $lang_id = mssql_insert_id();
             }
             echo 'Language: ' . $lang_id . ' ' . $lang . '<br>';
+
+            $def = $lgrp->definitionGrp->{'DC-168-definition'};
+            $def = str_replace("'", "''", $def);
+            $exp = $lgrp->explicGrp->{'DC-223-explanation'};
+            $exp = str_replace("'", "''", $exp);
+
+            $query = mssql_query("SELECT id from langroup where termid=N'$term_id' and lang=N'$lang_id'", $conn);
+            if (mssql_num_rows($query) > 0) {
+                while ($row = mssql_fetch_assoc($query)) {
+                    echo "This term has already an entry for " . $lang . "<br>";
+                }
+            }
+            else {
+                $query = mssql_query("INSERT INTO langroup (termid, lang, definition, explanation) VALUES ($term_id, $lang_id, N'$def', N'$exp')", $conn);
+                $langroup_id = mssql_insert_id();
+            }
         }
 
         echo 'Done!<br><br>';
