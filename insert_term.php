@@ -114,6 +114,7 @@ if ($conn) {
             if (mssql_num_rows($query) > 0) {
                 while ($row = mssql_fetch_assoc($query)) {
                     echo "This term has already an entry for " . $lang . "<br>";
+                    $langroup_id = $row['id'];
                 }
             }
             else {
@@ -175,14 +176,14 @@ if ($conn) {
                 $graminfo = $tgrp->{'DC-250-grammaticalInfo'};
                 $pos = $graminfo['DC-396-partOfSpeech'];
                 $gender = $graminfo['DC-245-grammaticalGender'];
-                $query = mssql_query("SELECT id from termgroup where langroup=$lang_id and termlexid=N'$termlexid' and termtext=N'$termtext' and pos=N'$pos' and gender=N'$gender' and termid=$term_id", $conn);
+                $query = mssql_query("SELECT id from termgroup where langroup=$langroup_id and termlexid=N'$termlexid' and termtext=N'$termtext' and pos=N'$pos' and gender=N'$gender'", $conn);
                 if (mssql_num_rows($query) > 0) {
                     while ($row = mssql_fetch_assoc($query)) {
                         $termgroup_id = $row['id'];
                     }
                 }
                 else {
-                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender, termid) VALUES ($lang_id, N'termlexid', N'$termtext', N'$pos', N'$gender', $term_id)", $conn);
+                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender) VALUES ($langroup_id, N'termlexid', N'$termtext', N'$pos', N'$gender')", $conn);
                     $termgroup_id = mssql_insert_id();
                 }
             }
