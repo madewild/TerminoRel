@@ -23,13 +23,13 @@ if ($conn) {
     foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
     {
         $ref = $doc['DC-206-entryIdentifier'];
+        echo 'Importing ' . $ref . '...<br>';
 
         foreach($doc->{'DC-489-subjectField'} as $subject)
         {
             $cdu = $subject['cdu'];
             $level = $subject['niveau'];
             $subject = str_replace("'", "''", $subject);
-            echo 'Importing ' . $ref . '...<br>';
             $query = mssql_query("SELECT id from subject where cdu=N'$cdu' and level=$level and text=N'$subject'", $conn);
             if (mssql_num_rows($query) > 0) {
                 while ($row = mssql_fetch_assoc($query)) {
