@@ -40,7 +40,7 @@ if ($conn) {
                 $query = mssql_query("INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')", $conn);
                 $subject_id = mssql_insert_id();
             }
-            echo 'Subject: ' . $subject_id . ' ' . $subject . ' (CDU ' . $cdu . ', level ' . $level . ')<br>';
+            //echo 'Subject: ' . $subject_id . ' ' . $subject . ' (CDU ' . $cdu . ', level ' . $level . ')<br>';
         }
 
         $owner = $doc->{'DC-494-subsetOwner'};
@@ -55,7 +55,7 @@ if ($conn) {
             $query = mssql_query("INSERT INTO subsetowner (name) VALUES (N'$owner_name')", $conn);
             $owner_id = mssql_insert_id();
         }
-        echo 'Subset Owner: ' . $owner_id . ' ' . $owner_name . '<br>';
+        //echo 'Subset Owner: ' . $owner_id . ' ' . $owner_name . '<br>';
 
         $creator = $doc->{'DC-162-createdBy'};
         $creator_name = str_replace("'", "''", $creator);
@@ -69,7 +69,7 @@ if ($conn) {
             $query = mssql_query("INSERT INTO creator (name) VALUES (N'$creator_name')", $conn);
             $creator_id = mssql_insert_id();
         }
-        echo 'Created by: ' . $creator_id . ' ' . $creator_name . '<br>';
+        //echo 'Created by: ' . $creator_id . ' ' . $creator_name . '<br>';
 
         $date = $doc->{'DC-274-inputDate'};
         $query = mssql_query("SELECT id from term where reference=N'$ref'", $conn);
@@ -82,7 +82,7 @@ if ($conn) {
         else {
             $query = mssql_query("INSERT INTO term (reference, subject, subsetowner, createdby, inputdate) VALUES (N'$ref', $subject_id, $owner_id, $creator_id, N'$date')", $conn);
             $term_id = mssql_insert_id();
-            echo 'Term inserted with ID ' . $term_id . '<br>';
+            //echo 'Term inserted with ID ' . $term_id . '<br>';
         }
 
         foreach($doc->langGrp as $lgrp) 
@@ -98,7 +98,7 @@ if ($conn) {
                 $query = mssql_query("INSERT INTO lang (code) VALUES (N'$lang')", $conn);
                 $lang_id = mssql_insert_id();
             }
-            echo 'Language: ' . $lang_id . ' ' . $lang . '<br>';
+            //echo 'Language: ' . $lang_id . ' ' . $lang . '<br>';
 
             $dgrp = $lgrp->definitionGrp;
             $def = $dgrp->{'DC-168-definition'};
@@ -227,7 +227,6 @@ if ($conn) {
                 }
             }
         }
-        echo 'Done!<br><br>';
     }
 }
 ?>
