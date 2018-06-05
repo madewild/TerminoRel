@@ -39,7 +39,7 @@ if ($conn) {
             $query = mssql_query("INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')", $conn);
             $subject_id = mssql_insert_id();
         }
-        echo 'Subject: ' . $subject_id . ' ' . $subject . '(CDU ' . $cdu . ', level ' . $level . ')<br>';
+        echo 'Subject: ' . $subject_id . ' ' . $subject . ' (CDU ' . $cdu . ', level ' . $level . ')<br>';
 
         $owner = $doc->{'DC-494-subsetOwner'};
         $owner_name = $owner['nom'];
@@ -69,7 +69,20 @@ if ($conn) {
         }
         echo 'Created by: ' . $creator_id . ' ' . $creator_name . '<br>';
 
-        echo 'Done!';
+        $date = $doc->{'DC-274-inputDate'};
+        $query = mssql_query("SELECT id from term where reference=N'$ref'", $conn);
+        if (mssql_num_rows($query) > 0) {
+            while ($row = mssql_fetch_assoc($query)) {
+                echo "Reference already in DB";
+            }
+        }
+        else {
+            $query = mssql_query("INSERT INTO term (reference, subject, subsetowner, createdby, inputdate) VALUES (N'$ref', $subject_id, $owner_id, $creator_id, N'$date')", $conn);
+            $term_id = mssql_insert_id();
+        }
+        echo 'Term inserted with ID ' . $term_id . '<br>';
+
+        echo 'Done!<br><br>';
     }
 }
 ?>
