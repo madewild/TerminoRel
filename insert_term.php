@@ -73,7 +73,7 @@ if ($conn) {
         $query = mssql_query("SELECT id from term where reference=N'$ref'", $conn);
         if (mssql_num_rows($query) > 0) {
             while ($row = mssql_fetch_assoc($query)) {
-                echo "Reference already in DB";
+                echo "Reference already in DB<br>";
             }
         }
         else {
@@ -84,7 +84,7 @@ if ($conn) {
 
         foreach($doc->langGrp as $lgrp) 
         {
-            $lang = $lgrp['xml:lang'];
+            $lang = $lgrp->attributes("xml", TRUE)->lang;
             $query = mssql_query("SELECT id from lang where code=N'$lang'", $conn);
             if (mssql_num_rows($query) > 0) {
                 while ($row = mssql_fetch_assoc($query)) {
