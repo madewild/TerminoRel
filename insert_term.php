@@ -164,6 +164,27 @@ if ($conn) {
                     $source_id = mssql_insert_id();
                 }
             }
+
+            foreach($lgrp->termGrp as $tgrp)
+            {
+                $term = $tgrp->{'DC-508-term'};
+                $termlexid = $term['DC-301-lexTermIdentifier'];
+                $termtext = str_replace("'", "''", $term);
+                $termtext = str_replace("\n", " ", $termtext);
+                $graminfo = $tgrp->{'DC-250-grammaticalInfo'};
+                $pos = $graminfo['DC-396-partOfSpeech'];
+                $gender = $graminfo['DC-245-grammaticalGender'];
+                $query = mssql_query("SELECT id from termgroup where langroup=$lang_id and termlexid=N'$termlexid' and termtext=N'$termtext' and pos=N'$pos' and gender=N'$gender' and termid=$termid", $conn);
+                if (mssql_num_rows($query) > 0) {
+                    while ($row = mssql_fetch_assoc($query)) {
+                        $termgroup_id = $row['id'];
+                    }
+                }
+                else {
+                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender, termid) VALUES ($lang_id, N'termlexid', N'$termtext', N'$pos', N'$gender', $term_id)", $conn);
+                    $termgroup_id = mssql_insert_id();
+                }
+            }
         }
 
         echo 'Done!<br><br>';
