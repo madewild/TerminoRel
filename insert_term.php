@@ -24,22 +24,24 @@ if ($conn) {
     {
         $ref = $doc['DC-206-entryIdentifier'];
 
-        $subject = $doc->{'DC-489-subjectField'};
-        $cdu = $subject['cdu'];
-        $level = $subject['niveau'];
-        $subject = str_replace("'", "''", $subject);
-        echo 'Importing ' . $ref . '...<br>';
-        $query = mssql_query("SELECT id from subject where cdu=$cdu and level=$level and text=N'$subject'", $conn);
-        if (mssql_num_rows($query) > 0) {
-            while ($row = mssql_fetch_assoc($query)) {
-                $subject_id = $row['id'];
+        foreach($doc->{'DC-489-subjectField'} as $subject)
+        {
+            $cdu = $subject['cdu'];
+            $level = $subject['niveau'];
+            $subject = str_replace("'", "''", $subject);
+            echo 'Importing ' . $ref . '...<br>';
+            $query = mssql_query("SELECT id from subject where cdu=N'$cdu' and level=$level and text=N'$subject'", $conn);
+            if (mssql_num_rows($query) > 0) {
+                while ($row = mssql_fetch_assoc($query)) {
+                    $subject_id = $row['id'];
+                }
             }
+            else {
+                $query = mssql_query("INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')", $conn);
+                $subject_id = mssql_insert_id();
+            }
+            echo 'Subject: ' . $subject_id . ' ' . $subject . ' (CDU ' . $cdu . ', level ' . $level . ')<br>';
         }
-        else {
-            $query = mssql_query("INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')", $conn);
-            $subject_id = mssql_insert_id();
-        }
-        echo 'Subject: ' . $subject_id . ' ' . $subject . ' (CDU ' . $cdu . ', level ' . $level . ')<br>';
 
         $owner = $doc->{'DC-494-subsetOwner'};
         $owner_name = $owner['nom'];
