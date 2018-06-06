@@ -1,32 +1,12 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-   
-<!--
-page's full id: ulb:homepage:homepage
-page's local id: homepage
-page's target: index.html
-
-generation date: 06/06/2018 10:01:53
-generation build: #163d41dccf8
-method: html
-
-language: fr
-design: 
-category: homepage
-
-project's id: ulb:homepage
-source id: main
-source file: /usr/local/http/site/ulb-central/ulb/homepage/homepage.xml
-contact: Cellule.Web[at]ulb.ac.be
--->
-
-   <head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-      <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-      <link href="http://ulb.be/design1/css/design-framework.css" rel="stylesheet" type="text/css">
-      <link href="http://ulb.be/design1/css/design-page.css" rel="stylesheet" type="text/css">
-      <link href="http://ulb.be/design1/css/design-print.css" media="print" rel="stylesheet" type="text/css">
-      <script src="http://ulb.be/design1/js/script-framework.js" type="text/javascript"></script>
+   <head>
+        <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+        <link href="http://ulb.be/design1/css/design-framework.css" rel="stylesheet" type="text/css">
+        <link href="http://ulb.be/design1/css/design-page.css" rel="stylesheet" type="text/css">
+        <link href="http://ulb.be/design1/css/design-print.css" media="print" rel="stylesheet" type="text/css">
+        <script src="http://ulb.be/design1/js/script-framework.js" type="text/javascript"></script>
       
    <title>Homepage de l'Universit&eacute; libre de Bruxelles</title>
    <meta name="keywords" content="">
@@ -665,7 +645,7 @@ fbq('track', 'PageView');
             <tr id="rowid:N115CC" class="layoutL">
                 <td id="cellid:N115CC:1" class="layoutL-L"><div style="width:100%;">
                     <table border="0" style="width:100%;margin-left:auto;margin-right:auto;" cellspacing="0" cellpadding="0">
-                        <tr id="rowid:N11691"><td id="cellid:N11693:1" colspan="3" style="background-color:transparent;text-align:left; vertical-align:top;"><p style="padding-bottom:0px;color:#444444;" class=" justify">&nbsp;</p></td></tr>
+                        <tr id="rowid:N11691"><td id="cellid:N11693:1" colspan="3" style="background-color:transparent;text-align:left; vertical-align:top;"><?php include("glossary.php"); ?></td></tr>
                     </table>
                 </td>
             </tr>
