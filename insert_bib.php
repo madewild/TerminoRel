@@ -10,7 +10,7 @@ $password = PASSWORD;
 function clean($string) {
     $string = str_replace("'", "''", $string);
     $string = str_replace("\n", " ", $string);
-    $string = str_replace("             ", " ", $string);
+    $string = preg_replace('/\s\s+/', ' ', $string);
     return $string;
 }
 
