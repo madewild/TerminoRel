@@ -4,9 +4,11 @@
 <form>
     <fieldset>
         <legend>Vos critères de recherche</legend>
-        Terme recherché<span class="star">*</span>
-        <input type="text" name="term" size="80">
-        <input type="submit" value="Rechercher"><br>
+        <div class="groupLabel">
+            <label for="term">Terme recherché<span class="star">*</span>
+            <input type="text" class="input" id="term" size="80">
+            <input type="submit" value="Rechercher">
+        </div>
         Langue source<span class="star">*</span>
         <select>
             <option value="fr">fr - français</option>
