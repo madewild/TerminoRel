@@ -36,8 +36,8 @@
     <li>- Télécharger un glossaire au format TBX (format destiné aux outils d'aide à la traduction)</li>
     <li>- Télécharger un glossaire au format PDF</li>
 </ul>
-<hr style="border: solid 0.5px grey;">
-<table class="">
+<hr style="border: solid 0.5px grey; height: 0px;">
+<table class="footer">
     <tr>
         <td>À propos des glossaires</td>
         <td>Aide</td>
