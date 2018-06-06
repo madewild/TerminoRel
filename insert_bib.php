@@ -22,7 +22,7 @@ if ($conn) {
     {
         $ref = $doc['id'];
         $title = $doc->titre;
-        $title = clean("'", "''", $title);
+        $title = clean($title);
         $type = $doc->type;
         $type = str_replace("'", "''", $type);
         $date = $doc->date;
