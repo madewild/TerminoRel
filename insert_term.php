@@ -179,7 +179,7 @@ if ($conn) {
             {
                 $term = $tgrp->{'DC-508-term'};
                 $termlexid = $term['DC-301-lexTermIdentifier'];
-                $termtext = clean($termtext);
+                $termtext = clean($term);
                 $graminfo = $tgrp->{'DC-250-grammaticalInfo'};
                 $pos = $graminfo['DC-396-partOfSpeech'];
                 $gender = $graminfo['DC-245-grammaticalGender'];
