@@ -37,11 +37,11 @@
     <li>- Télécharger un glossaire au format PDF</li>
 </ul>
 <hr style="border: solid 0.5px grey; height: 0px;">
-<table class="footer">
+<table class="footer_table">
     <tr>
         <td>À propos des glossaires</td>
         <td>Aide</td>
-        <td>Droits d'auteur</td>
+        <td>&copy; Droits d'auteur</td>
         <td>Nous contacter</td>
     </tr>
 </table>
