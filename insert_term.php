@@ -124,6 +124,10 @@ if ($conn) {
                 $langroup_id = mssql_insert_id();
             }
 
+            $sources = $dgrp->{'DC-1968-source'};
+            echo gettype($sources) . "<br>";
+            echo print_r($sources) . "<br>";
+
             foreach($dgrp->{'DC-1968-source'} as $source)
             {
                 $bibref = $source['biblio'];
