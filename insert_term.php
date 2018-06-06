@@ -20,7 +20,7 @@ function clean($string) {
     $string = str_replace("'", "''", $string);
     $string = str_replace("\n", " ", $string);
     $string = str_replace("                     ", " ", $string);
-    return $string
+    return $string;
 }
 
 $conn = mssql_connect($server, $username, $password);
