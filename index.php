@@ -23,10 +23,10 @@ contact: Cellule.Web[at]ulb.ac.be
 
    <head><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
       <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-      <link href="design1/css/design-framework.css" rel="stylesheet" type="text/css">
-      <link href="design1/css/design-page.css" rel="stylesheet" type="text/css">
-      <link href="design1/css/design-print.css" media="print" rel="stylesheet" type="text/css">
-      <script src="design1/js/script-framework.js" type="text/javascript"></script>
+      <link href="http://ulb.be/design1/css/design-framework.css" rel="stylesheet" type="text/css">
+      <link href="http://ulb.be/design1/css/design-page.css" rel="stylesheet" type="text/css">
+      <link href="http://ulb.be/design1/css/design-print.css" media="print" rel="stylesheet" type="text/css">
+      <script src="http://ulb.be/design1/js/script-framework.js" type="text/javascript"></script>
       
    <title>Homepage de l'Universit&eacute; libre de Bruxelles</title>
    <meta name="keywords" content="">
@@ -42,7 +42,7 @@ contact: Cellule.Web[at]ulb.ac.be
       set.createSet = _createParameterSetPage;
       function _createParameterSetPage()
           {
-          this.addParameter("designDir", "design1/");
+          this.addParameter("designDir", "http://ulb.be/design1/");
           this.addParameter("topDir", "");
           this.addParameter("genDateTime", "06/06/2018 10:01:53");
           this.addParameter("genDate", "06/06/2018");
@@ -160,7 +160,7 @@ fbq('track', 'PageView');
                   <input class="searchRadio" name="mode" type="hidden" value="site-search">
                   
                   <input class="searchInput" name="keyword" type="text" value="">
-                  <input class="searchButton" name="ok" src="design1/img/search.gif" type="image" value="search">
+                  <input class="searchButton" name="ok" src="http://ulb.be/design1/img/search.gif" type="image" value="search">
 
                </td>
             </tr>
@@ -178,66 +178,66 @@ fbq('track', 'PageView');
    <script type="text/javascript">TM=new MenuBarConstructor('TM','menuBarImg','menubar-colors.gif','menubar-colors-off.gif');</script>
    <div class="menuBar">
       <span class="menuBarLeft">
-         <a href="index.html" onmouseout="TM.menuBarOff('home','design1/img/menubar-home-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('home','design1/img/menubar-home-on.gif','#838383'); TM.mainMenuOn('menuHome:0:1:180')">
-            <img alt="" id="TM_home" src="design1/img/menubar-home-off.gif">
+         <a href="index.html" onmouseout="TM.menuBarOff('home','http://ulb.be/design1/img/menubar-home-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('home','http://ulb.be/design1/img/menubar-home-on.gif','#838383'); TM.mainMenuOn('menuHome:0:1:180')">
+            <img alt="" id="TM_home" src="http://ulb.be/design1/img/menubar-home-off.gif">
          </a>
       </span>
       <span class="menuBarLeft">
-         <a href="sitemap/ulb/map-universite.html" onmouseout="TM.menuBarOff('universite','design1/img/menubar-universite-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('universite','design1/img/menubar-universite-on.gif','#b31a1c'); TM.mainMenuOn('menuUniversite:0:33:220')">
-            <img alt="" id="TM_universite" src="design1/img/menubar-universite-off.gif">
+         <a href="sitemap/ulb/map-universite.html" onmouseout="TM.menuBarOff('universite','http://ulb.be/design1/img/menubar-universite-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('universite','http://ulb.be/design1/img/menubar-universite-on.gif','#b31a1c'); TM.mainMenuOn('menuUniversite:0:33:220')">
+            <img alt="" id="TM_universite" src="http://ulb.be/design1/img/menubar-universite-off.gif">
          </a>
       </span>
       <span class="menuBarLeft">
-         <a href="sitemap/ulb/map-enseignement.html" onmouseout="TM.menuBarOff('enseignement','design1/img/menubar-enseignement-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('enseignement','design1/img/menubar-enseignement-on.gif','#ca7f30'); TM.mainMenuOn('menuEnseignement:0:119:220')">
-            <img alt="" id="TM_enseignement" src="design1/img/menubar-enseignement-off.gif">
+         <a href="sitemap/ulb/map-enseignement.html" onmouseout="TM.menuBarOff('enseignement','http://ulb.be/design1/img/menubar-enseignement-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('enseignement','http://ulb.be/design1/img/menubar-enseignement-on.gif','#ca7f30'); TM.mainMenuOn('menuEnseignement:0:119:220')">
+            <img alt="" id="TM_enseignement" src="http://ulb.be/design1/img/menubar-enseignement-off.gif">
          </a>
       </span>
       <span class="menuBarLeft">
-         <a href="sitemap/ulb/map-recherche.html" onmouseout="TM.menuBarOff('recherche','design1/img/menubar-recherche-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('recherche','design1/img/menubar-recherche-on.gif','#b1a448'); TM.mainMenuOn('menuRecherche:0:224:192')">
-            <img alt="" id="TM_recherche" src="design1/img/menubar-recherche-off.gif">
+         <a href="sitemap/ulb/map-recherche.html" onmouseout="TM.menuBarOff('recherche','http://ulb.be/design1/img/menubar-recherche-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('recherche','http://ulb.be/design1/img/menubar-recherche-on.gif','#b1a448'); TM.mainMenuOn('menuRecherche:0:224:192')">
+            <img alt="" id="TM_recherche" src="http://ulb.be/design1/img/menubar-recherche-off.gif">
          </a>
       </span>
       <span class="menuBarLeft">
-         <a href="sitemap/ulb/map-international.html" onmouseout="TM.menuBarOff('international','design1/img/menubar-international-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('international','design1/img/menubar-international-on.gif','#7ea749'); TM.mainMenuOn('menuInternational:0:312:210')">
-            <img alt="" id="TM_international" src="design1/img/menubar-international-off.gif">
+         <a href="sitemap/ulb/map-international.html" onmouseout="TM.menuBarOff('international','http://ulb.be/design1/img/menubar-international-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('international','http://ulb.be/design1/img/menubar-international-on.gif','#7ea749'); TM.mainMenuOn('menuInternational:0:312:210')">
+            <img alt="" id="TM_international" src="http://ulb.be/design1/img/menubar-international-off.gif">
          </a>
       </span>
       <span class="menuBarLeft">
-         <a href="sitemap/ulb/map-vivreulb.html" onmouseout="TM.menuBarOff('vivreulb','design1/img/menubar-vivreulb-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('vivreulb','design1/img/menubar-vivreulb-on.gif','#648ba8'); TM.mainMenuOn('menuVivreUlb:0:418:215')">
-            <img alt="" id="TM_vivreulb" src="design1/img/menubar-vivreulb-off.gif">
+         <a href="sitemap/ulb/map-vivreulb.html" onmouseout="TM.menuBarOff('vivreulb','http://ulb.be/design1/img/menubar-vivreulb-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('vivreulb','http://ulb.be/design1/img/menubar-vivreulb-on.gif','#648ba8'); TM.mainMenuOn('menuVivreUlb:0:418:215')">
+            <img alt="" id="TM_vivreulb" src="http://ulb.be/design1/img/menubar-vivreulb-off.gif">
          </a>
       </span>
       <span class="menuBarLeft">
-         <img alt="" src="design1/img/menubar-light-left.gif">
+         <img alt="" src="http://ulb.be/design1/img/menubar-light-left.gif">
       </span>
       <span class="menuBarRight">
-         <a href="#" onmouseout="TM.menuBarOff('reseaux','design1/img/menubar-reseaux-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('reseaux','design1/img/menubar-reseaux-on.gif','#999999'); TM.mainMenuOn('menuReseaux:0:764:238')">
-            <img alt="" id="TM_reseaux" src="design1/img/menubar-reseaux-off.gif">
-         </a>
-      </span>
-      <span class="menuBarRight">
-         <a href="actulb/index.php" onmouseout="TM.menuBarOff('actualites','design1/img/menubar-actualites-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('actualites','design1/img/menubar-actualites-on.gif','#9aaec1'); TM.mainMenuOn('menuActualites:0:862:140')">
-            <img alt="" id="TM_actualites" src="design1/img/menubar-actualites-off.gif">
+         <a href="#" onmouseout="TM.menuBarOff('reseaux','http://ulb.be/design1/img/menubar-reseaux-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('reseaux','http://ulb.be/design1/img/menubar-reseaux-on.gif','#999999'); TM.mainMenuOn('menuReseaux:0:764:238')">
+            <img alt="" id="TM_reseaux" src="http://ulb.be/design1/img/menubar-reseaux-off.gif">
          </a>
       </span>
       <span class="menuBarRight">
-         <a href="#" onmouseout="TM.menuBarOff('quickaccess','design1/img/menubar-quickaccess-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('quickaccess','design1/img/menubar-quickaccess-on.gif','#9aaec1'); TM.mainMenuOn('menuQuickAccess:0:774:220')">
-            <img alt="" id="TM_quickaccess" src="design1/img/menubar-quickaccess-off.gif">
+         <a href="actulb/index.php" onmouseout="TM.menuBarOff('actualites','http://ulb.be/design1/img/menubar-actualites-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('actualites','http://ulb.be/design1/img/menubar-actualites-on.gif','#9aaec1'); TM.mainMenuOn('menuActualites:0:862:140')">
+            <img alt="" id="TM_actualites" src="http://ulb.be/design1/img/menubar-actualites-off.gif">
+         </a>
+      </span>
+      <span class="menuBarRight">
+         <a href="#" onmouseout="TM.menuBarOff('quickaccess','http://ulb.be/design1/img/menubar-quickaccess-off.gif'); TM.mainMenuOff()" onmouseover="TM.menuBarOn('quickaccess','http://ulb.be/design1/img/menubar-quickaccess-on.gif','#9aaec1'); TM.mainMenuOn('menuQuickAccess:0:774:220')">
+            <img alt="" id="TM_quickaccess" src="http://ulb.be/design1/img/menubar-quickaccess-off.gif">
          </a>
       </span>
       <span class="menuBarRight" id="menu-dbg" style="display:none">
          <a href="javascript:debugMenu()">
-            <img alt="" src="design1/img/menubar-debug-off.gif">
+            <img alt="" src="http://ulb.be/design1/img/menubar-debug-off.gif">
          </a>
       </span>
       <span class="menuBarRight">
-         <img alt="" src="design1/img/menubar-dark-right.gif">
+         <img alt="" src="http://ulb.be/design1/img/menubar-dark-right.gif">
       </span>
       <div style="clear:both"></div>
    </div>
    <div id="menuBarArea">
       <div style="position:absolute; z-index: 0;">
-         <img alt="" id="TM_menuBarImg" src="design1/img/menubar-colors.gif">
+         <img alt="" id="TM_menuBarImg" src="http://ulb.be/design1/img/menubar-colors.gif">
       </div>
       <div class="firstLevelMenuPane" id="TM_menuHome" onmouseout="TM.mainMenuOff()" onmouseover="TM.mainMenuKeep()">
          <div class="firstLevelMenu" style="border-color: #838383;">
@@ -306,19 +306,19 @@ fbq('track', 'PageView');
             <a href="http://www.iee-ulb.eu/fr" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuUniversiteFacs')">Institut d'&eacute;tudes europ&eacute;ennes</a>
             <a href="facs/sciences/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuUniversiteFacs')">Facult&eacute; des Sciences</a>
             <a href="facs/bioing/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuUniversiteFacs')">
-               <img alt="" src="design1/img/main-menu-level2.gif">&Eacute;cole interfacultaire de bioing&eacute;nieurs</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">&Eacute;cole interfacultaire de bioing&eacute;nieurs</a>
             <a href="facs/polytech/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuUniversiteFacs')">&Eacute;cole polytechnique de Bruxelles</a>
             <a href="facs/bioing/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuUniversiteFacs')">
-               <img alt="" src="design1/img/main-menu-level2.gif">&Eacute;cole interfacultaire de bioing&eacute;nieurs</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">&Eacute;cole interfacultaire de bioing&eacute;nieurs</a>
             <a href="polesante/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuUniversiteFacs')">P&ocirc;le Sant&eacute;</a>
             <a href="facs/medecine/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuUniversiteFacs')">
-               <img alt="" src="design1/img/main-menu-level2.gif">Facult&eacute; de M&eacute;decine</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">Facult&eacute; de M&eacute;decine</a>
             <a href="facs/pharma/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuUniversiteFacs')">
-               <img alt="" src="design1/img/main-menu-level2.gif">Facult&eacute; de Pharmacie</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">Facult&eacute; de Pharmacie</a>
             <a href="facs/ism/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuUniversiteFacs')">
-               <img alt="" src="design1/img/main-menu-level2.gif">Facult&eacute; des Sciences de la Motricit&eacute;</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">Facult&eacute; des Sciences de la Motricit&eacute;</a>
             <a href="facs/esp/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuUniversiteFacs')">
-               <img alt="" src="design1/img/main-menu-level2.gif">&Eacute;cole de Sant&eacute; publique</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">&Eacute;cole de Sant&eacute; publique</a>
          </div>
       </div>
       <div class="secondLevelMenuPane" id="TM_menuAdministration" onmouseout="TM.mainMenuOff()" onmouseover="TM.mainMenuKeep()" style="z-index: 101;">
@@ -404,19 +404,19 @@ fbq('track', 'PageView');
             <a href="http://www.iee-ulb.eu/fr" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuEnseignementFacs1')">Institut d'&eacute;tudes europ&eacute;ennes</a>
             <a href="facs/sciences/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuEnseignementFacs1')">Facult&eacute; des Sciences</a>
             <a href="facs/bioing/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuEnseignementFacs1')">
-               <img alt="" src="design1/img/main-menu-level2.gif">&Eacute;cole interfacultaire de bioing&eacute;nieurs</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">&Eacute;cole interfacultaire de bioing&eacute;nieurs</a>
             <a href="facs/polytech/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuEnseignementFacs1')">&Eacute;cole polytechnique de Bruxelles</a>
             <a href="facs/bioing/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuEnseignementFacs1')">
-               <img alt="" src="design1/img/main-menu-level2.gif">&Eacute;cole interfacultaire de bioing&eacute;nieurs</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">&Eacute;cole interfacultaire de bioing&eacute;nieurs</a>
             <a href="polesante/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuEnseignementFacs1')">P&ocirc;le Sant&eacute;</a>
             <a href="facs/medecine/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuEnseignementFacs1')">
-               <img alt="" src="design1/img/main-menu-level2.gif">Facult&eacute; de M&eacute;decine</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">Facult&eacute; de M&eacute;decine</a>
             <a href="facs/pharma/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuEnseignementFacs1')">
-               <img alt="" src="design1/img/main-menu-level2.gif">Facult&eacute; de Pharmacie</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">Facult&eacute; de Pharmacie</a>
             <a href="facs/ism/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuEnseignementFacs1')">
-               <img alt="" src="design1/img/main-menu-level2.gif">Facult&eacute; des Sciences de la Motricit&eacute;</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">Facult&eacute; des Sciences de la Motricit&eacute;</a>
             <a href="facs/esp/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuEnseignementFacs1')">
-               <img alt="" src="design1/img/main-menu-level2.gif">&Eacute;cole de Sant&eacute; publique</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">&Eacute;cole de Sant&eacute; publique</a>
          </div>
       </div>
       <div class="secondLevelMenuPane" id="TM_menuEnseignementSupports" onmouseout="TM.mainMenuOff()" onmouseover="TM.mainMenuKeep()" style="z-index: 100;">
@@ -493,19 +493,19 @@ fbq('track', 'PageView');
             <a href="http://www.iee-ulb.eu/fr" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuRechercheFacs1')">Institut d'&eacute;tudes europ&eacute;ennes</a>
             <a href="facs/sciences/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuRechercheFacs1')">Facult&eacute; des Sciences</a>
             <a href="facs/bioing/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuRechercheFacs1')">
-               <img alt="" src="design1/img/main-menu-level2.gif">&Eacute;cole interfacultaire de bioing&eacute;nieurs</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">&Eacute;cole interfacultaire de bioing&eacute;nieurs</a>
             <a href="facs/polytech/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuRechercheFacs1')">&Eacute;cole polytechnique de Bruxelles</a>
             <a href="facs/bioing/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuRechercheFacs1')">
-               <img alt="" src="design1/img/main-menu-level2.gif">&Eacute;cole interfacultaire de bioing&eacute;nieurs</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">&Eacute;cole interfacultaire de bioing&eacute;nieurs</a>
             <a href="polesante/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuRechercheFacs1')">P&ocirc;le Sant&eacute;</a>
             <a href="facs/medecine/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuRechercheFacs1')">
-               <img alt="" src="design1/img/main-menu-level2.gif">Facult&eacute; de M&eacute;decine</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">Facult&eacute; de M&eacute;decine</a>
             <a href="facs/pharma/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuRechercheFacs1')">
-               <img alt="" src="design1/img/main-menu-level2.gif">Facult&eacute; de Pharmacie</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">Facult&eacute; de Pharmacie</a>
             <a href="facs/ism/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuRechercheFacs1')">
-               <img alt="" src="design1/img/main-menu-level2.gif">Facult&eacute; des Sciences de la Motricit&eacute;</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">Facult&eacute; des Sciences de la Motricit&eacute;</a>
             <a href="facs/esp/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuRechercheFacs1')">
-               <img alt="" src="design1/img/main-menu-level2.gif">&Eacute;cole de Sant&eacute; publique</a>
+               <img alt="" src="http://ulb.be/design1/img/main-menu-level2.gif">&Eacute;cole de Sant&eacute; publique</a>
          </div>
       </div>
       <div class="secondLevelMenuPane" id="TM_menuRechercheSupport" onmouseout="TM.mainMenuOff()" onmouseover="TM.mainMenuKeep()" style="z-index: 100;">
@@ -608,23 +608,23 @@ fbq('track', 'PageView');
       <div class="firstLevelMenuPane" id="TM_menuReseaux" onmouseout="TM.mainMenuOff()" onmouseover="TM.mainMenuKeep()">
          <div class="firstLevelMenu" style="border-color: #999999;">
             <a class="icon" href="https://www.facebook.com/ulbruxelles" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuReseaux')">
-               <img border="0" class="menuIcon" src="design1/img/link-facebook.png">L'ULB sur Facebook</a>
+               <img border="0" class="menuIcon" src="http://ulb.be/design1/img/link-facebook.png">L'ULB sur Facebook</a>
             <a class="icon" href="http://twitter.com/ULBruxelles" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuReseaux')">
-               <img border="0" class="menuIcon" src="design1/img/link-twitter.png">L'ULB sur Twitter</a>
+               <img border="0" class="menuIcon" src="http://ulb.be/design1/img/link-twitter.png">L'ULB sur Twitter</a>
             <a class="icon" href="http://instagram.com/insta_ulb" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuReseaux')">
-               <img border="0" class="menuIcon" src="design1/img/link-instagram.png">L'ULB sur Instagram</a>
+               <img border="0" class="menuIcon" src="http://ulb.be/design1/img/link-instagram.png">L'ULB sur Instagram</a>
             <a class="icon" href="http://www.youtube.com/user/ULBruxelles" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuReseaux')">
-               <img border="0" class="menuIcon" src="design1/img/link-youtube.png">ULB TV</a>
+               <img border="0" class="menuIcon" src="http://ulb.be/design1/img/link-youtube.png">ULB TV</a>
             <a class="icon" href="http://www.scoop.it/t/ulb" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuReseaux')">
-               <img border="0" class="menuIcon" src="design1/img/link-scoopit.png">L'ULB sur Scoop.it</a>
+               <img border="0" class="menuIcon" src="http://ulb.be/design1/img/link-scoopit.png">L'ULB sur Scoop.it</a>
             <a class="icon" href="http://www.linkedin.com/company/universite-libre-de-bruxelles" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuReseaux')">
-               <img border="0" class="menuIcon" src="design1/img/link-linkedin.png">L'ULB en tant qu'entreprise</a>
+               <img border="0" class="menuIcon" src="http://ulb.be/design1/img/link-linkedin.png">L'ULB en tant qu'entreprise</a>
             <a class="icon" href="http://www.linkedin.com/edu/school?id=10418" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuReseaux')">
-               <img border="0" class="menuIcon" src="design1/img/link-linkedin.png">L'ULB en tant qu'universit&eacute;</a>
+               <img border="0" class="menuIcon" src="http://ulb.be/design1/img/link-linkedin.png">L'ULB en tant qu'universit&eacute;</a>
             <a class="icon" href="outils/flux/index.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuReseaux')">
-               <img border="0" class="menuIcon" src="design1/img/link-rss.png">Le flux RSS de l'ULB</a>
+               <img border="0" class="menuIcon" src="http://ulb.be/design1/img/link-rss.png">Le flux RSS de l'ULB</a>
             <a class="icon" href="dre/com/reseaux-sociaux.html" onclick="return TM.mainMenuGo()" onmouseover="TM.mainMenuOn('menuReseaux')">
-               <img border="0" class="menuIcon" src="design1/img/link-reseaux.png">Les Facult&eacute;s et Services de l'ULB</a>
+               <img border="0" class="menuIcon" src="http://ulb.be/design1/img/link-reseaux.png">Les Facult&eacute;s et Services de l'ULB</a>
          </div>
       </div>
       <div class="firstLevelMenuPane" id="TM_menuActualites" onmouseout="TM.mainMenuOff()" onmouseover="TM.mainMenuKeep()">
@@ -665,10 +665,10 @@ fbq('track', 'PageView');
                   
 <table class="layoutL">
    <tr id="rowid:N115CC" class="layoutL">
-            <td id="cellid:N115CC:1" class="layoutL-L"><div style="width:100%;"><table border="0" style="width:100%;margin-left:auto;margin-right:auto;" cellspacing="0" cellpadding="0"><tr id="rowid:N115F0"><td id="cellid:N115F2:1" style="width:550px;background-color:transparent;text-align:left; vertical-align:top;"><div style="padding-top: px;padding-bottom: 0px;" class="imgLeft"><a style="text-decoration:none" href="http://www.summerday.ulb.be/"><img style="z-index: 1" src="img/rhetosummerday-big.jpg" alt=""></a></div></td><td id="cellid:N11627:2" style="width:15px;background-color:transparent;text-align:left; vertical-align:top;"></td><td id="cellid:N1162A:3" style="width:375px;background-color:transparent;text-align:left; vertical-align:top;"><div style="width:100%;"><table border="0" style="margin-left:auto;margin-right:auto;" cellspacing="0" cellpadding="0"><tr id="rowid:N11632"><td id="cellid:N11634:1" style="width:180px;background-color:transparent;text-align:left; vertical-align:top;"><div style="padding-top: px;padding-bottom: 0px;" class="imgLeft"><a style="text-decoration:none" href="http://diversites.ulb.be/"><img style="z-index: 1" src="img/diversites-ane.jpg" alt=""></a></div></td><td id="cellid:N1165E:2" style="width:15px;background-color:transparent;text-align:left; vertical-align:top;"></td><td id="cellid:N11661:3" style="width:180px;background-color:transparent;text-align:left; vertical-align:top;"><div style="padding-top: px;padding-bottom: 0px;" class="imgLeft"><a style="text-decoration:none" href="https://www.youtube.com/user/ULBruxelles"><img style="z-index: 1" src="img/Decouvrezulbtv.jpg" alt=""></a></div></td></tr></table></div><div style="height:0px; clear:both"></div></td></tr><tr id="rowid:N11691"><td id="cellid:N11693:1" colspan="3" style="background-color:transparent;text-align:left; vertical-align:top;"><p style="padding-bottom:0px;color:#444444;" class=" justify">&nbsp;</p></td></tr><tr id="rowid:N11699"><td id="cellid:N1169B:1" style="background-color:transparent;text-align:left; vertical-align:top;"><div style="padding-top: px;padding-bottom: 12px;" class="imgCenter"><img usemap="#map0" style="z-index: 1" src="img/jesuis15.jpg" alt=""><map name="map0"><area shape="rect" coords="10,25,179,44" href="futur-etudiant/index.html"><area shape="rect" coords="9,48,133,66" href="ulb/bienvenue/etudiants.html"><area shape="rect" coords="7,71,252,88" href="ulb/bienvenue/doctorant-chercheur.html"><area shape="rect" coords="6,92,237,109" href="international/students/en/index.html"><area shape="rect" coords="7,113,342,132" href="ulb/bienvenue/phds-researchers.html"><area shape="rect" coords="350,25,518,43" href="ulb/bienvenue/personnel.html"><area shape="rect" coords="351,48,443,65" href="alumni/index.html"><area shape="rect" coords="351,69,475,88" href="ulb/bienvenue/entreprises.html"><area shape="rect" coords="352,91,441,109" href="http://www.ulb.ac.be/actulb/presse.php"><area shape="rect" coords="353,110,541,130" href="emploi/index.html"></map></div><div style="width:100%;"><table border="0" style="width:100%;margin-left:auto;margin-right:auto;" cellspacing="0" cellpadding="0"><tr id="rowid:N11711"><td id="cellid:N11714:1" style="background-color:transparent;text-align:center; vertical-align:top;"><div id="bloc:N11716" style="display:block;margin:0px;padding:0px;"><div id="blocContainer:N11716" class="blocStyle" style="position:relative;margin:0px;padding:0px;padding-bottom:0px;"><script type="text/javascript">addBloc('', 'N11716', '', -1, false, 8, false);</script><div style="position:relative;margin:0px;padding:0px;"><div style="height:8px; background-image:url('design1/img/blocs/defaut/ContentSquare.gif');" class="blocTopLeft"><div style="height:8px; background-image:url('design1/img/blocs/defaut/ContentSquare.gif');" class="blocTopRight"><div style="margin-left:8px; margin-right:8px; height:8px; background-image:url('design1/img/blocs/defaut/ContentVertical.gif');" class="blocTop"><!-- --></div></div></div><div id="blocContent:N11716" style="display:block;"><div style="background-image:url('design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocLeft"><div style="background-image:url('design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocRight"><div style="background-color:#ffffff;margin-left:8px; margin-right:8px;" id="blocData:N11716" class="blocContent"><div style="padding-top: px;padding-bottom: 12px;" class="imgCenter"><img style="z-index: 1" src="img/vivre-exams.jpg" alt=""></div><div style="padding-top: px;padding-bottom: 12px;" class="imgCenter"><img style="z-index: 1" src="img/blocus1.jpg" alt=""></div><a name="title-1"></a><h3 style="padding-top: 18px;padding-bottom: 8px;color:#4d8cab;">&gt; &Eacute;TUDIEZ EN TOUTE TRANQUILLIT&Eacute;</h3><p style="padding-bottom:6px;color:#444444;" class=" justify"><a href="http://www.ulb.be/dscu/lieux-etude.html" target="oui" style="color:#003399;">Les biblioth&egrave;ques de l'ULB et des  salles d'&eacute;tude suppl&eacute;mentaires</a> sont &agrave; votre disposition pour travailler dans une ambiance studieuse. <br>
+            <td id="cellid:N115CC:1" class="layoutL-L"><div style="width:100%;"><table border="0" style="width:100%;margin-left:auto;margin-right:auto;" cellspacing="0" cellpadding="0"><tr id="rowid:N115F0"><td id="cellid:N115F2:1" style="width:550px;background-color:transparent;text-align:left; vertical-align:top;"><div style="padding-top: px;padding-bottom: 0px;" class="imgLeft"><a style="text-decoration:none" href="http://www.summerday.ulb.be/"><img style="z-index: 1" src="img/rhetosummerday-big.jpg" alt=""></a></div></td><td id="cellid:N11627:2" style="width:15px;background-color:transparent;text-align:left; vertical-align:top;"></td><td id="cellid:N1162A:3" style="width:375px;background-color:transparent;text-align:left; vertical-align:top;"><div style="width:100%;"><table border="0" style="margin-left:auto;margin-right:auto;" cellspacing="0" cellpadding="0"><tr id="rowid:N11632"><td id="cellid:N11634:1" style="width:180px;background-color:transparent;text-align:left; vertical-align:top;"><div style="padding-top: px;padding-bottom: 0px;" class="imgLeft"><a style="text-decoration:none" href="http://diversites.ulb.be/"><img style="z-index: 1" src="img/diversites-ane.jpg" alt=""></a></div></td><td id="cellid:N1165E:2" style="width:15px;background-color:transparent;text-align:left; vertical-align:top;"></td><td id="cellid:N11661:3" style="width:180px;background-color:transparent;text-align:left; vertical-align:top;"><div style="padding-top: px;padding-bottom: 0px;" class="imgLeft"><a style="text-decoration:none" href="https://www.youtube.com/user/ULBruxelles"><img style="z-index: 1" src="img/Decouvrezulbtv.jpg" alt=""></a></div></td></tr></table></div><div style="height:0px; clear:both"></div></td></tr><tr id="rowid:N11691"><td id="cellid:N11693:1" colspan="3" style="background-color:transparent;text-align:left; vertical-align:top;"><p style="padding-bottom:0px;color:#444444;" class=" justify">&nbsp;</p></td></tr><tr id="rowid:N11699"><td id="cellid:N1169B:1" style="background-color:transparent;text-align:left; vertical-align:top;"><div style="padding-top: px;padding-bottom: 12px;" class="imgCenter"><img usemap="#map0" style="z-index: 1" src="img/jesuis15.jpg" alt=""><map name="map0"><area shape="rect" coords="10,25,179,44" href="futur-etudiant/index.html"><area shape="rect" coords="9,48,133,66" href="ulb/bienvenue/etudiants.html"><area shape="rect" coords="7,71,252,88" href="ulb/bienvenue/doctorant-chercheur.html"><area shape="rect" coords="6,92,237,109" href="international/students/en/index.html"><area shape="rect" coords="7,113,342,132" href="ulb/bienvenue/phds-researchers.html"><area shape="rect" coords="350,25,518,43" href="ulb/bienvenue/personnel.html"><area shape="rect" coords="351,48,443,65" href="alumni/index.html"><area shape="rect" coords="351,69,475,88" href="ulb/bienvenue/entreprises.html"><area shape="rect" coords="352,91,441,109" href="http://www.ulb.ac.be/actulb/presse.php"><area shape="rect" coords="353,110,541,130" href="emploi/index.html"></map></div><div style="width:100%;"><table border="0" style="width:100%;margin-left:auto;margin-right:auto;" cellspacing="0" cellpadding="0"><tr id="rowid:N11711"><td id="cellid:N11714:1" style="background-color:transparent;text-align:center; vertical-align:top;"><div id="bloc:N11716" style="display:block;margin:0px;padding:0px;"><div id="blocContainer:N11716" class="blocStyle" style="position:relative;margin:0px;padding:0px;padding-bottom:0px;"><script type="text/javascript">addBloc('', 'N11716', '', -1, false, 8, false);</script><div style="position:relative;margin:0px;padding:0px;"><div style="height:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentSquare.gif');" class="blocTopLeft"><div style="height:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentSquare.gif');" class="blocTopRight"><div style="margin-left:8px; margin-right:8px; height:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentVertical.gif');" class="blocTop"><!-- --></div></div></div><div id="blocContent:N11716" style="display:block;"><div style="background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocLeft"><div style="background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocRight"><div style="background-color:#ffffff;margin-left:8px; margin-right:8px;" id="blocData:N11716" class="blocContent"><div style="padding-top: px;padding-bottom: 12px;" class="imgCenter"><img style="z-index: 1" src="img/vivre-exams.jpg" alt=""></div><div style="padding-top: px;padding-bottom: 12px;" class="imgCenter"><img style="z-index: 1" src="img/blocus1.jpg" alt=""></div><a name="title-1"></a><h3 style="padding-top: 18px;padding-bottom: 8px;color:#4d8cab;">&gt; &Eacute;TUDIEZ EN TOUTE TRANQUILLIT&Eacute;</h3><p style="padding-bottom:6px;color:#444444;" class=" justify"><a href="http://www.ulb.be/dscu/lieux-etude.html" target="oui" style="color:#003399;">Les biblioth&egrave;ques de l'ULB et des  salles d'&eacute;tude suppl&eacute;mentaires</a> sont &agrave; votre disposition pour travailler dans une ambiance studieuse. <br>
                      <a href="enseignements/support-enseignements/reussir-lieux.html" target="oui" style="color:#003399;">+ d'infos</a></p><a name="title-2"></a><h3 style="padding-top: 18px;padding-bottom: 8px;color:#4d8cab;">&gt; RESSOURCES EN LIGNE</h3><p style="padding-bottom:6px;color:#444444;" class=" justify">Podcasts, cours, exercices sur l'Universit&eacute; Virtuelle, recherche de documents sur Cible+. <br>
                      <a href="enseignements/support-enseignements/reussir-enligne.html" target="oui" style="color:#003399;">+ d'infos</a></p><a name="title-3"></a><h3 style="padding-top: 18px;padding-bottom: 8px;color:#4d8cab;">&gt; GUIDANCES, COACHS, M&Eacute;THODE </h3><p style="padding-bottom:6px;color:#444444;" class=" justify">Les Facult&eacute;s vous proposent toute l'ann&eacute;e une aide sp&eacute;cifique en fonction de vos besoins.<br>
-                     <a href="enseignements/support-enseignements/reussir-personnes.html" target="oui" style="color:#003399;"> + d'infos</a></p><a name="title-4"></a><h3 style="padding-top: 18px;padding-bottom: 8px;color:#4d8cab;">&gt; LES INCONTOURNABLES</h3><ul style="padding-bottom:0px;" id="list:N11763"><script type="text/javascript">addNumberedList('N11763', '');</script><li style="background-image: url('design1/img/bullets/default/arrow.png');padding-left:16px;background-position:0px 2px;"><p style="padding-bottom:6px;color:#444444;" class=" justify"><a href="http://student.be/fr/student-life/comment-reussir-son-blocus" style="color:#003399;">Planifier son blocus </a> (objectifs, rythme, m&eacute;moire, alimentation, sommeil). </p></li><li style="background-image: url('design1/img/bullets/default/arrow.png');padding-left:16px;background-position:0px 2px;"><p style="padding-bottom:6px;color:#444444;" class=" justify">Trop <a href="http://www.ulb.ac.be/services/etudiants/psy-campus.html" style="color:#003399;"> stress&eacute;(e)?</a></p></li><li style="background-image: url('design1/img/bullets/default/arrow.png');padding-left:16px;background-position:0px 2px;"><p style="padding-bottom:6px;color:#444444;" class=" justify"><a href="http://www.ulbsports.eu/fullnews3.asp?NewsID=6298&amp;ClubID=107&amp;LG=FR" style="color:#003399;">Faites du sport</a> pendant le blocus.</p></li><li style="background-image: url('design1/img/bullets/default/arrow.png');padding-left:16px;background-position:0px 2px;"><p style="padding-bottom:0px;color:#444444;" class=" justify">En bonus: <a href="https://www.facebook.com/healthystud/photos/a.998969733533470.1073741828.998366366927140/1956663584430742/?type=3&amp;theater" style="color:#003399;">un esprit sain mais aussi un corps sain gr&acirc;ce aux conseils de @Healthy Student.</a></p></li></ul><br><div style="height: 0px; font-size:0px; clear: both;"><!-- --></div></div></div></div></div><div id="blocAbstract:N11716" style="display:none;"><div style="background-image:url('design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocLeft"><div style="background-image:url('design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocRight"><div style="background-color:#ffffff;margin-left:8px; margin-right:8px;" class="blocContent"></div></div></div></div><div style="height:8px; background-image:url('design1/img/blocs/defaut/ContentSquare.gif');" class="blocBottomLeft"><div style="height:8px; background-image:url('design1/img/blocs/defaut/ContentSquare.gif');" class="blocBottomRight"><div style="height:8px; margin-left:8px; margin-right:8px; background-image:url('design1/img/blocs/defaut/ContentVertical.gif');" class="blocBottom"><!-- --></div></div></div></div></div></div></td></tr></table></div><div style="height:0px; clear:both"></div></td><td id="cellid:N11794:2" style="background-color:transparent;text-align:left; vertical-align:top;"></td><td id="cellid:N11796:3" style="background-color:transparent;text-align:left; vertical-align:top;"><div class="imgLeft"><div><iframe type="text/html" src="https://www.youtube.com/embed//G4cJ6KbmeyM?rel=0" allowfullscreen="1" id="img_N117B0" width="375" height="210"></iframe><div id="legend_N117B7" style="color:#999999;" class="imgLegendLeft">Les diversit&eacute;s sont au centre de l'action de l'ULB: <a href="http://diversites.ulb.be/fr" style="color:#003399;">diversites.ulb.be.</a></div><script type="text/javascript">addLegendToImg('legend_N117B7','img_N117B0');</script></div></div><div id="bloc:N117FA" style="display:block;margin:0px;padding:0px;"><div id="blocContainer:N117FA" class="blocStyle" style="position:relative;margin:0px;padding:0px;padding-bottom:0px;"><script type="text/javascript">addBloc('', 'N117FA', '', -1, false, 8, false);</script><div style="position:relative;margin:0px;padding:0px;"><div><div style="height:8px; background-image:url('design1/img/blocs/defaut/TitleSquare.gif');" class="blocTopLeft"><div style="height:8px; background-image:url('design1/img/blocs/defaut/TitleSquare.gif');" class="blocTopRight"><div style="margin-left:8px; margin-right:8px; height:8px; background-image:url('design1/img/blocs/defaut/TitleVertical.gif');" class="blocTop"></div></div></div><div style="background-image:url('design1/img/blocs/defaut/TitleHorizontal.gif')" class="blocLeft"><div style="background-image:url('design1/img/blocs/defaut/TitleHorizontal.gif')" class="blocRight"><div style="background-color:#004d94;color:#ffffcc;margin-left:8px; margin-right:8px;"><div class="blocTitle"><div class="blocTitle"><img style="border-style:none;border-width:0px;" src="img/UNEACTULBTITRE.jpg" alt=""></div></div></div></div></div><div style="height:8px; background-image:url('design1/img/blocs/defaut/TitleSquare.gif');" class="blocBottomLeft"><div style="height:8px; background-image:url('design1/img/blocs/defaut/TitleSquare.gif');" class="blocBottomRight"><div style="margin-left:8px; margin-right:8px; height:8px; background-image:url('design1/img/blocs/defaut/TitleVertical.gif');" class="blocBottom"><!-- --></div></div></div></div><div id="blocContent:N117FA" style="display:block;"><div style="background-image:url('design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocLeft"><div style="background-image:url('design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocRight"><div style="background-color:#ffffff;margin-left:8px; margin-right:8px; padding-top: 8px;" id="blocData:N117FA" class="blocContent"><div id="bloc:N1180A" style="display:block;margin:0px;padding:0px;"><div id="blocContainer:N1180A" class="blocStyle" style="position:relative;margin:0px;padding:0px;padding-bottom:0px;"><script type="text/javascript">addBloc('', 'N1180A', '', -1, false, 0, false);</script><div style="position:relative;margin:0px;padding:0px;"><div id="blocContent:N1180A" style="display:block;"><div id="blocData:N1180A"><div class="newsBox"><ul><li style="padding-top:2px;padding-bottom:6px;"><div style="width:100%;background-repeat: repeat-x;background-image: url('design1/img/separators/default/default.png');height:1px;"></div></li><li><div class="newsItem"><div class="newsImage"><a href="http://www.ulb.ac.be/actulb/index.php?e=14010&amp;page=0#14010"><img style="border-style:none;border-width:0px;" src="http://www.ulb.ac.be/actulb/img/news/databox1-art-image-14010.png" alt="Une (1)"></a></div><div class="newsTitle"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=14010&amp;page=0#14010">"Victimes de la g&eacute;ographie": 3 &eacute;crivains palestiniens</a></div><div class="newsAbstract"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=14010&amp;page=0#14010">Ce 6 juin, Ghayath Almadhoun, Selma Dabbagh et Karim Kattan discuteront de la fa&ccedil;on dont une g&eacute;ographie totalement alt&eacute;r&eacute;e affecte leur travail et leur vie.</a></div><div class="newsItemFooter"><span class="newsDate">06-06-2018</span><span class="newsLink"><a href="http://www.ulb.ac.be/actulb/index.php?e=14010&amp;page=0#14010">LIRE LA SUITE...</a></span></div><div class="divClear"></div></div></li><li style="padding-top:2px;padding-bottom:6px;"><div style="width:100%;background-repeat: repeat-x;background-image: url('design1/img/separators/default/default.png');height:1px;"></div></li><li><div class="newsItem"><div class="newsImage"><a href="http://www.ulb.ac.be/actulb/index.php?e=14004&amp;page=0#14004"><img style="border-style:none;border-width:0px;" src="http://www.ulb.ac.be/actulb/img/news/databox1-art-image-14004.jpg" alt="Une (1)"></a></div><div class="newsTitle"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=14004&amp;page=0#14004">L'ULB &agrave; Charleroi-Ville Haute dans l'Esprit libre</a></div><div class="newsAbstract"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=14004&amp;page=0#14004">Un bachelier, une 1&egrave;re ann&eacute;e polyvalente et un master de sp&eacute;cialisation, l'ULB renforce l'offre d'enseignement sur le campus de Charleroi-Ville Haute.</a></div><div class="newsItemFooter"><span class="newsDate">04-06-2018</span><span class="newsLink"><a href="http://www.ulb.ac.be/actulb/index.php?e=14004&amp;page=0#14004">LIRE LA SUITE...</a></span></div><div class="divClear"></div></div></li><li style="padding-top:2px;padding-bottom:6px;"><div style="width:100%;background-repeat: repeat-x;background-image: url('design1/img/separators/default/default.png');height:1px;"></div></li><li><div class="newsItem"><div class="newsImage"><a href="http://www.ulb.ac.be/actulb/index.php?e=13981&amp;page=0#13981"><img style="border-style:none;border-width:0px;" src="http://www.ulb.ac.be/actulb/img/news/databox1-art-image-13981.jpg" alt="Une (1)"></a></div><div class="newsTitle"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=13981&amp;page=0#13981">Premi&egrave;re proclamation pour l'Universit&eacute; des enfants</a></div><div class="newsAbstract"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=13981&amp;page=0#13981">L'Universit&eacute; des enfants f&ecirc;te sa premi&egrave;re ann&eacute;e d'existence et dipl&ocirc;me ses laur&eacute;at&middot;e&middot;s...</a></div><div class="newsItemFooter"><span class="newsDate">31-05-2018</span><span class="newsLink"><a href="http://www.ulb.ac.be/actulb/index.php?e=13981&amp;page=0#13981">LIRE LA SUITE...</a></span></div><div class="divClear"></div></div></li><li style="padding-top:2px;padding-bottom:6px;"><div style="width:100%;background-repeat: repeat-x;background-image: url('design1/img/separators/default/default.png');height:1px;"></div></li><li><div class="newsItem"><div class="newsImage"><a href="http://www.ulb.ac.be/actulb/index.php?e=13937&amp;page=0#13937"><img style="border-style:none;border-width:0px;" src="http://www.ulb.ac.be/actulb/img/news/databox1-art-image-13937.png" alt="Une (1)"></a></div><div class="newsTitle"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=13937&amp;page=0#13937">Deux nouveaux bacheliers &agrave; Charleroi</a></div><div class="newsAbstract"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=13937&amp;page=0#13937">Le campus de Charleroi Ville-Haute accueillera deux nouveaux bacheliers: un en sciences humaines et une premi&egrave;re ann&eacute;e polyvalente en sciences de la vie.</a></div><div class="newsItemFooter"><span class="newsDate">28-05-2018</span><span class="newsLink"><a href="http://www.ulb.ac.be/actulb/index.php?e=13937&amp;page=0#13937">LIRE LA SUITE...</a></span></div><div class="divClear"></div></div></li><li style="padding-top:2px;padding-bottom:6px;"><div style="width:100%;background-repeat: repeat-x;background-image: url('design1/img/separators/default/default.png');height:1px;"></div></li><li><div class="newsItem"><div class="newsImage"><a href="http://www.ulb.ac.be/actulb/index.php?&amp;page=0#14008"><img style="border-style:none;border-width:0px;" src="http://www.ulb.ac.be/actulb/img/news/databox1-art-image-14008.png" alt=""></a></div><div class="newsTitle"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?&amp;page=0#14008">Cours de vacances en langue et litt&eacute;rature fran&ccedil;aises</a></div><div class="newsAbstract"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?&amp;page=0#14008">Les cours, du 14 juillet au 3 ao&ucirc;t, aborderont la grammaire, la pratique &eacute;crite et orale, l'explication de textes, la th&eacute;orie de la litt&eacute;rature, etc.</a></div><div class="newsItemFooter"><span class="newsDate">05-06-2018</span><span class="newsLink"><a href="http://www.ulb.ac.be/actulb/index.php?&amp;page=0#14008">LIRE LA SUITE...</a></span></div><div class="divClear"></div></div></li><li style="padding-top:2px;padding-bottom:6px;"><div style="width:100%;background-repeat: repeat-x;background-image: url('design1/img/separators/default/default.png');height:1px;"></div></li><li><div class="newsBoxFooter"><span class="newsLink"><a href="http://www.ulb.ac.be/actulb/index.php">PLUS D'ACTUALIT&Eacute;S...</a></span></div></li></ul></div><div style="height: 0px; font-size:0px; clear: both;"><!-- --></div></div></div><div id="blocAbstract:N1180A" style="display:none;"></div></div></div></div><div style="height: 0px; font-size:0px; clear: both;"><!-- --></div></div></div></div></div><div id="blocAbstract:N117FA" style="display:none;"><div style="background-image:url('design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocLeft"><div style="background-image:url('design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocRight"><div style="background-color:#ffffff;margin-left:8px; margin-right:8px; padding-top: 8px;" class="blocContent"></div></div></div></div><div style="height:8px; background-image:url('design1/img/blocs/defaut/ContentSquare.gif');" class="blocBottomLeft"><div style="height:8px; background-image:url('design1/img/blocs/defaut/ContentSquare.gif');" class="blocBottomRight"><div style="height:8px; margin-left:8px; margin-right:8px; background-image:url('design1/img/blocs/defaut/ContentVertical.gif');" class="blocBottom"><!-- --></div></div></div></div></div></div></td></tr></table></div><div style="height:0px; clear:both"></div>
+                     <a href="enseignements/support-enseignements/reussir-personnes.html" target="oui" style="color:#003399;"> + d'infos</a></p><a name="title-4"></a><h3 style="padding-top: 18px;padding-bottom: 8px;color:#4d8cab;">&gt; LES INCONTOURNABLES</h3><ul style="padding-bottom:0px;" id="list:N11763"><script type="text/javascript">addNumberedList('N11763', '');</script><li style="background-image: url('http://ulb.be/design1/img/bullets/default/arrow.png');padding-left:16px;background-position:0px 2px;"><p style="padding-bottom:6px;color:#444444;" class=" justify"><a href="http://student.be/fr/student-life/comment-reussir-son-blocus" style="color:#003399;">Planifier son blocus </a> (objectifs, rythme, m&eacute;moire, alimentation, sommeil). </p></li><li style="background-image: url('http://ulb.be/design1/img/bullets/default/arrow.png');padding-left:16px;background-position:0px 2px;"><p style="padding-bottom:6px;color:#444444;" class=" justify">Trop <a href="http://www.ulb.ac.be/services/etudiants/psy-campus.html" style="color:#003399;"> stress&eacute;(e)?</a></p></li><li style="background-image: url('http://ulb.be/design1/img/bullets/default/arrow.png');padding-left:16px;background-position:0px 2px;"><p style="padding-bottom:6px;color:#444444;" class=" justify"><a href="http://www.ulbsports.eu/fullnews3.asp?NewsID=6298&amp;ClubID=107&amp;LG=FR" style="color:#003399;">Faites du sport</a> pendant le blocus.</p></li><li style="background-image: url('http://ulb.be/design1/img/bullets/default/arrow.png');padding-left:16px;background-position:0px 2px;"><p style="padding-bottom:0px;color:#444444;" class=" justify">En bonus: <a href="https://www.facebook.com/healthystud/photos/a.998969733533470.1073741828.998366366927140/1956663584430742/?type=3&amp;theater" style="color:#003399;">un esprit sain mais aussi un corps sain gr&acirc;ce aux conseils de @Healthy Student.</a></p></li></ul><br><div style="height: 0px; font-size:0px; clear: both;"><!-- --></div></div></div></div></div><div id="blocAbstract:N11716" style="display:none;"><div style="background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocLeft"><div style="background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocRight"><div style="background-color:#ffffff;margin-left:8px; margin-right:8px;" class="blocContent"></div></div></div></div><div style="height:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentSquare.gif');" class="blocBottomLeft"><div style="height:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentSquare.gif');" class="blocBottomRight"><div style="height:8px; margin-left:8px; margin-right:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentVertical.gif');" class="blocBottom"><!-- --></div></div></div></div></div></div></td></tr></table></div><div style="height:0px; clear:both"></div></td><td id="cellid:N11794:2" style="background-color:transparent;text-align:left; vertical-align:top;"></td><td id="cellid:N11796:3" style="background-color:transparent;text-align:left; vertical-align:top;"><div class="imgLeft"><div><iframe type="text/html" src="https://www.youtube.com/embed//G4cJ6KbmeyM?rel=0" allowfullscreen="1" id="img_N117B0" width="375" height="210"></iframe><div id="legend_N117B7" style="color:#999999;" class="imgLegendLeft">Les diversit&eacute;s sont au centre de l'action de l'ULB: <a href="http://diversites.ulb.be/fr" style="color:#003399;">diversites.ulb.be.</a></div><script type="text/javascript">addLegendToImg('legend_N117B7','img_N117B0');</script></div></div><div id="bloc:N117FA" style="display:block;margin:0px;padding:0px;"><div id="blocContainer:N117FA" class="blocStyle" style="position:relative;margin:0px;padding:0px;padding-bottom:0px;"><script type="text/javascript">addBloc('', 'N117FA', '', -1, false, 8, false);</script><div style="position:relative;margin:0px;padding:0px;"><div><div style="height:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/TitleSquare.gif');" class="blocTopLeft"><div style="height:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/TitleSquare.gif');" class="blocTopRight"><div style="margin-left:8px; margin-right:8px; height:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/TitleVertical.gif');" class="blocTop"></div></div></div><div style="background-image:url('http://ulb.be/design1/img/blocs/defaut/TitleHorizontal.gif')" class="blocLeft"><div style="background-image:url('http://ulb.be/design1/img/blocs/defaut/TitleHorizontal.gif')" class="blocRight"><div style="background-color:#004d94;color:#ffffcc;margin-left:8px; margin-right:8px;"><div class="blocTitle"><div class="blocTitle"><img style="border-style:none;border-width:0px;" src="img/UNEACTULBTITRE.jpg" alt=""></div></div></div></div></div><div style="height:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/TitleSquare.gif');" class="blocBottomLeft"><div style="height:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/TitleSquare.gif');" class="blocBottomRight"><div style="margin-left:8px; margin-right:8px; height:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/TitleVertical.gif');" class="blocBottom"><!-- --></div></div></div></div><div id="blocContent:N117FA" style="display:block;"><div style="background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocLeft"><div style="background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocRight"><div style="background-color:#ffffff;margin-left:8px; margin-right:8px; padding-top: 8px;" id="blocData:N117FA" class="blocContent"><div id="bloc:N1180A" style="display:block;margin:0px;padding:0px;"><div id="blocContainer:N1180A" class="blocStyle" style="position:relative;margin:0px;padding:0px;padding-bottom:0px;"><script type="text/javascript">addBloc('', 'N1180A', '', -1, false, 0, false);</script><div style="position:relative;margin:0px;padding:0px;"><div id="blocContent:N1180A" style="display:block;"><div id="blocData:N1180A"><div class="newsBox"><ul><li style="padding-top:2px;padding-bottom:6px;"><div style="width:100%;background-repeat: repeat-x;background-image: url('http://ulb.be/design1/img/separators/default/default.png');height:1px;"></div></li><li><div class="newsItem"><div class="newsImage"><a href="http://www.ulb.ac.be/actulb/index.php?e=14010&amp;page=0#14010"><img style="border-style:none;border-width:0px;" src="http://www.ulb.ac.be/actulb/img/news/databox1-art-image-14010.png" alt="Une (1)"></a></div><div class="newsTitle"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=14010&amp;page=0#14010">"Victimes de la g&eacute;ographie": 3 &eacute;crivains palestiniens</a></div><div class="newsAbstract"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=14010&amp;page=0#14010">Ce 6 juin, Ghayath Almadhoun, Selma Dabbagh et Karim Kattan discuteront de la fa&ccedil;on dont une g&eacute;ographie totalement alt&eacute;r&eacute;e affecte leur travail et leur vie.</a></div><div class="newsItemFooter"><span class="newsDate">06-06-2018</span><span class="newsLink"><a href="http://www.ulb.ac.be/actulb/index.php?e=14010&amp;page=0#14010">LIRE LA SUITE...</a></span></div><div class="divClear"></div></div></li><li style="padding-top:2px;padding-bottom:6px;"><div style="width:100%;background-repeat: repeat-x;background-image: url('http://ulb.be/design1/img/separators/default/default.png');height:1px;"></div></li><li><div class="newsItem"><div class="newsImage"><a href="http://www.ulb.ac.be/actulb/index.php?e=14004&amp;page=0#14004"><img style="border-style:none;border-width:0px;" src="http://www.ulb.ac.be/actulb/img/news/databox1-art-image-14004.jpg" alt="Une (1)"></a></div><div class="newsTitle"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=14004&amp;page=0#14004">L'ULB &agrave; Charleroi-Ville Haute dans l'Esprit libre</a></div><div class="newsAbstract"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=14004&amp;page=0#14004">Un bachelier, une 1&egrave;re ann&eacute;e polyvalente et un master de sp&eacute;cialisation, l'ULB renforce l'offre d'enseignement sur le campus de Charleroi-Ville Haute.</a></div><div class="newsItemFooter"><span class="newsDate">04-06-2018</span><span class="newsLink"><a href="http://www.ulb.ac.be/actulb/index.php?e=14004&amp;page=0#14004">LIRE LA SUITE...</a></span></div><div class="divClear"></div></div></li><li style="padding-top:2px;padding-bottom:6px;"><div style="width:100%;background-repeat: repeat-x;background-image: url('http://ulb.be/design1/img/separators/default/default.png');height:1px;"></div></li><li><div class="newsItem"><div class="newsImage"><a href="http://www.ulb.ac.be/actulb/index.php?e=13981&amp;page=0#13981"><img style="border-style:none;border-width:0px;" src="http://www.ulb.ac.be/actulb/img/news/databox1-art-image-13981.jpg" alt="Une (1)"></a></div><div class="newsTitle"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=13981&amp;page=0#13981">Premi&egrave;re proclamation pour l'Universit&eacute; des enfants</a></div><div class="newsAbstract"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=13981&amp;page=0#13981">L'Universit&eacute; des enfants f&ecirc;te sa premi&egrave;re ann&eacute;e d'existence et dipl&ocirc;me ses laur&eacute;at&middot;e&middot;s...</a></div><div class="newsItemFooter"><span class="newsDate">31-05-2018</span><span class="newsLink"><a href="http://www.ulb.ac.be/actulb/index.php?e=13981&amp;page=0#13981">LIRE LA SUITE...</a></span></div><div class="divClear"></div></div></li><li style="padding-top:2px;padding-bottom:6px;"><div style="width:100%;background-repeat: repeat-x;background-image: url('http://ulb.be/design1/img/separators/default/default.png');height:1px;"></div></li><li><div class="newsItem"><div class="newsImage"><a href="http://www.ulb.ac.be/actulb/index.php?e=13937&amp;page=0#13937"><img style="border-style:none;border-width:0px;" src="http://www.ulb.ac.be/actulb/img/news/databox1-art-image-13937.png" alt="Une (1)"></a></div><div class="newsTitle"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=13937&amp;page=0#13937">Deux nouveaux bacheliers &agrave; Charleroi</a></div><div class="newsAbstract"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?e=13937&amp;page=0#13937">Le campus de Charleroi Ville-Haute accueillera deux nouveaux bacheliers: un en sciences humaines et une premi&egrave;re ann&eacute;e polyvalente en sciences de la vie.</a></div><div class="newsItemFooter"><span class="newsDate">28-05-2018</span><span class="newsLink"><a href="http://www.ulb.ac.be/actulb/index.php?e=13937&amp;page=0#13937">LIRE LA SUITE...</a></span></div><div class="divClear"></div></div></li><li style="padding-top:2px;padding-bottom:6px;"><div style="width:100%;background-repeat: repeat-x;background-image: url('http://ulb.be/design1/img/separators/default/default.png');height:1px;"></div></li><li><div class="newsItem"><div class="newsImage"><a href="http://www.ulb.ac.be/actulb/index.php?&amp;page=0#14008"><img style="border-style:none;border-width:0px;" src="http://www.ulb.ac.be/actulb/img/news/databox1-art-image-14008.png" alt=""></a></div><div class="newsTitle"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?&amp;page=0#14008">Cours de vacances en langue et litt&eacute;rature fran&ccedil;aises</a></div><div class="newsAbstract"><a style="color: inherit; text-decoration: none" href="http://www.ulb.ac.be/actulb/index.php?&amp;page=0#14008">Les cours, du 14 juillet au 3 ao&ucirc;t, aborderont la grammaire, la pratique &eacute;crite et orale, l'explication de textes, la th&eacute;orie de la litt&eacute;rature, etc.</a></div><div class="newsItemFooter"><span class="newsDate">05-06-2018</span><span class="newsLink"><a href="http://www.ulb.ac.be/actulb/index.php?&amp;page=0#14008">LIRE LA SUITE...</a></span></div><div class="divClear"></div></div></li><li style="padding-top:2px;padding-bottom:6px;"><div style="width:100%;background-repeat: repeat-x;background-image: url('http://ulb.be/design1/img/separators/default/default.png');height:1px;"></div></li><li><div class="newsBoxFooter"><span class="newsLink"><a href="http://www.ulb.ac.be/actulb/index.php">PLUS D'ACTUALIT&Eacute;S...</a></span></div></li></ul></div><div style="height: 0px; font-size:0px; clear: both;"><!-- --></div></div></div><div id="blocAbstract:N1180A" style="display:none;"></div></div></div></div><div style="height: 0px; font-size:0px; clear: both;"><!-- --></div></div></div></div></div><div id="blocAbstract:N117FA" style="display:none;"><div style="background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocLeft"><div style="background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentHorizontal.gif')" class="blocRight"><div style="background-color:#ffffff;margin-left:8px; margin-right:8px; padding-top: 8px;" class="blocContent"></div></div></div></div><div style="height:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentSquare.gif');" class="blocBottomLeft"><div style="height:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentSquare.gif');" class="blocBottomRight"><div style="height:8px; margin-left:8px; margin-right:8px; background-image:url('http://ulb.be/design1/img/blocs/defaut/ContentVertical.gif');" class="blocBottom"><!-- --></div></div></div></div></div></div></td></tr></table></div><div style="height:0px; clear:both"></div>
       </td>
    </tr>
 </table>
@@ -679,20 +679,20 @@ fbq('track', 'PageView');
    <script type="text/javascript">BM=new MenuBarConstructor('BM',null,null,null);</script>
    <div class="menuBar">
       <span class="menuBarLeft">
-         <a href="ulbAZ/index.html" onclick="BM.menuBarOff('ulbaz','design1/img/menubar-ulbaz-off.gif'); return BM.mainMenuGo()" onmouseout="BM.menuBarOff('ulbaz','design1/img/menubar-ulbaz-off.gif'); BM.mainMenuOff()" onmouseover="BM.menuBarOn('ulbaz','design1/img/menubar-ulbaz-on.gif','#999999');">
-            <img alt="" id="BM_ulbaz" src="design1/img/menubar-ulbaz-off.gif">
+         <a href="ulbAZ/index.html" onclick="BM.menuBarOff('ulbaz','http://ulb.be/design1/img/menubar-ulbaz-off.gif'); return BM.mainMenuGo()" onmouseout="BM.menuBarOff('ulbaz','http://ulb.be/design1/img/menubar-ulbaz-off.gif'); BM.mainMenuOff()" onmouseover="BM.menuBarOn('ulbaz','http://ulb.be/design1/img/menubar-ulbaz-on.gif','#999999');">
+            <img alt="" id="BM_ulbaz" src="http://ulb.be/design1/img/menubar-ulbaz-off.gif">
          </a>
       </span>
       <span class="menuBarLeft">
-         <img alt="" src="design1/img/menubar-light-left.gif">
+         <img alt="" src="http://ulb.be/design1/img/menubar-light-left.gif">
       </span>
       <span class="menuBarRight" id="menu-dbg" style="display:none">
          <a href="javascript:debugMenu()">
-            <img alt="" src="design1/img/menubar-debug-off.gif">
+            <img alt="" src="http://ulb.be/design1/img/menubar-debug-off.gif">
          </a>
       </span>
       <span class="menuBarRight">
-         <img alt="" src="design1/img/menubar-dark-right.gif">
+         <img alt="" src="http://ulb.be/design1/img/menubar-dark-right.gif">
       </span>
       <div style="clear:both"></div>
    </div>
@@ -701,97 +701,97 @@ fbq('track', 'PageView');
             <div class="keywordTags">
    <div class="keywordTagsColumn">
       <a href="campus/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">acc&egrave;s campus</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">acc&egrave;s campus</a>
       <a href="http://www.ulb.ac.be/programme">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">catalogue des programmes</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">catalogue des programmes</a>
       <a href="environnement/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">environnement</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">environnement</a>
       <a href="international/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">international</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">international</a>
       <a href="http://www.ulb.ac.be/espritlibre">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">magazine de l'ULB</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">magazine de l'ULB</a>
       <a href="enseignements/planlangues/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">plan langues</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">plan langues</a>
       <a href="http://www.radiocampus.be">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">radio Campus</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">radio Campus</a>
       <a href="dre/com/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">service communication</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">service communication</a>
    </div>
    <div class="keywordTagsColumn">
       <a href="http://www.ulb.ac.be/actulb/index.php">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">actualit&eacute;s de l'ULB</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">actualit&eacute;s de l'ULB</a>
       <a href="dre/com/chartes.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">charte graphique</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">charte graphique</a>
       <a href="http://formcont.ulb.ac.be/">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">formation continue</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">formation continue</a>
       <a href="ulb/presentation/bienvenue.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">l'ULB en bref</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">l'ULB en bref</a>
       <a href="http://www.ulb.ac.be/demainmaster/">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">masters (liste des formations)</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">masters (liste des formations)</a>
       <a href="https://mon-ulb.ulb.ac.be/cp/home/displaylogin">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">portail MonULB</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">portail MonULB</a>
       <a href="recherche/presentation/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">recherche</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">recherche</a>
       <a href="ulb/bienvenue/soutenez-ulb.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">soutenez l'ULB</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">soutenez l'ULB</a>
    </div>
    <div class="keywordTagsColumn">
       <a href="outils/agenda/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">agenda</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">agenda</a>
       <a href="outils/contacts/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">contacts</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">contacts</a>
       <a href="ulb/hopitaux/hopitaux.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">h&ocirc;pitaux universitaires</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">h&ocirc;pitaux universitaires</a>
       <a href="http://www.ulb.ac.be/newsletter">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">la lettre de l'ULB</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">la lettre de l'ULB</a>
       <a href="services/etudiants/mediatheque.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">m&eacute;diath&egrave;que</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">m&eacute;diath&egrave;que</a>
       <a href="ulb/bienvenue/journaliste.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">presse</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">presse</a>
       <a href="ulb/greffe/documents/reglements-general-etudes.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">r&egrave;glement des examens et des jurys</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">r&egrave;glement des examens et des jurys</a>
       <a href="services/personnel/sport-personnel.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">sports</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">sports</a>
    </div>
    <div class="keywordTagsColumn">
       <a href="outils/annuaire/1.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">annuaire</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">annuaire</a>
       <a href="enseignements/presentation/fr/presentation-fr-ects.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">ects</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">ects</a>
       <a href="http://gehol.ulb.ac.be/gehol/">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">horaires des cours (GeHol)</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">horaires des cours (GeHol)</a>
       <a href="debats/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">les d&eacute;bats de l'ULB</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">les d&eacute;bats de l'ULB</a>
       <a href="musees/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">mus&eacute;es de l'ULB</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">mus&eacute;es de l'ULB</a>
       <a href="pub/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">presses universitaires de bruxelles</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">presses universitaires de bruxelles</a>
       <a href="ulb/greffe/documents/reglements-general-etudes.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">r&egrave;glement g&eacute;n&eacute;ral des &eacute;tudes</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">r&egrave;glement g&eacute;n&eacute;ral des &eacute;tudes</a>
       <a href="debats/index-enbref.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">tribunes de l'ULB </a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">tribunes de l'ULB </a>
    </div>
    <div class="keywordTagsColumn">
       <a href="http://www.ulb.ac.be/demainetudiant/">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">bacheliers (liste des formations)</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">bacheliers (liste des formations)</a>
       <a href="emploi/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">emploi</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">emploi</a>
       <a href="enseignements/inscriptions/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">inscriptions/admissions</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">inscriptions/admissions</a>
       <a href="ulb/actualite/livres/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">livres</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">livres</a>
       <a href="international/Partenariats-Reseaux.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">partenaires de l'ULB</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">partenaires de l'ULB</a>
       <a href="dre/com/infopub.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">publications institutionnelles</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">publications institutionnelles</a>
       <a href="enseignements/reprise-etudes/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">reprendre des &eacute;tudes</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">reprendre des &eacute;tudes</a>
       <a href="http://www.ulb.ac.be/culture/index.html">
-         <img alt="" src="design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">ULB Culture</a>
+         <img alt="" src="http://ulb.be/design1/img/keywords-bullet.gif" style="border-style:none;border-width:0px;">ULB Culture</a>
    </div>
    <div style="clear:both"></div>
    <div id="pageBodyFooter">
-      <img alt="ULB - entreprise &eacute;codynamique" src="design1/img/ecodyn.png">
+      <img alt="ULB - entreprise &eacute;codynamique" src="http://ulb.be/design1/img/ecodyn.png">
    </div>
 </div>
       
