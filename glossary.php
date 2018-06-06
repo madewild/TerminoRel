@@ -33,8 +33,15 @@
 
 <h3>Télécharger</h3>
 <ul>
-    <li>Télécharger un glossaire au format TBX (format destiné aux outils d'aide à la traduction)</li>
-    <li>Télécharger un glossaire au format PDF</li>
+    <li>- Télécharger un glossaire au format TBX (format destiné aux outils d'aide à la traduction)</li>
+    <li>- Télécharger un glossaire au format PDF</li>
 </ul>
-<hr>
-À propos des glossaires Aide Droits d'auteur Nous contacter
+<hr style="height: 2px;">
+<table>
+    <tr>
+        <td>À propos des glossaires</td>
+        <td>Aide</td>
+        <td>Droits d'auteur</td>
+        <td>Nous contacter</td>
+    </tr>
+</table>
