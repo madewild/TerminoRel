@@ -37,6 +37,7 @@
     <li>- Télécharger un glossaire au format PDF</li>
 </ul>
 <hr style="border: solid 0.5px grey; height: 0px;">
+<div class="glossary_footer">
 <table class="footer_table">
     <tr>
         <td>À propos des glossaires</td>
@@ -45,3 +46,4 @@
         <td>Nous contacter</td>
     </tr>
 </table>
+</div>

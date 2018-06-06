@@ -7,7 +7,10 @@
     color: red;
 }
 
+.glossary_footer {
+    font-size: small;    
+}
+
 .footer_table td {
-    padding-right: 10px;
-    font-size: small;
+    padding-right: 20px;
 }
