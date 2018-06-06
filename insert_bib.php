@@ -6,6 +6,14 @@ include("secret.php");
 $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
+
+function clean($string) {
+    $string = str_replace("'", "''", $string);
+    $string = str_replace("\n", " ", $string);
+    $string = str_replace("                     ", " ", $string);
+    return $string;
+}
+
 $conn = mssql_connect($server, $username, $password);
 if ($conn) {
     mssql_select_db("terminorel", $conn);
@@ -14,7 +22,7 @@ if ($conn) {
     {
         $ref = $doc['id'];
         $title = $doc->titre;
-        $title = str_replace("'", "''", $title);
+        $title = clean("'", "''", $title);
         $type = $doc->type;
         $type = str_replace("'", "''", $type);
         $date = $doc->date;
