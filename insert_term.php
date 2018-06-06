@@ -105,7 +105,7 @@ if ($conn) {
                 $query = mssql_query("INSERT INTO lang (code) VALUES (N'$lang')", $conn);
                 $lang_id = mssql_insert_id();
             }
-            echo 'Language: ' . $lang_id . ' ' . $lang . '<br>';
+            //echo 'Language: ' . $lang_id . ' ' . $lang . '<br>';
 
             $dgrp = $lgrp->definitionGrp;
             $def = $dgrp->{'DC-168-definition'};
@@ -126,52 +126,50 @@ if ($conn) {
                 $query = mssql_query("INSERT INTO langroup (termid, lang, definition, explanation) VALUES ($term_id, $lang_id, N'$def', N'$exp')", $conn);
                 $langroup_id = mssql_insert_id();
             }
-
-            $sources = $dgrp->{'DC-1968-source'};
-            echo gettype($sources) . "<br>";
-            echo print_r($sources) . "<br>";
-
-            foreach($dgrp->{'DC-1968-source'} as $source)
-            {
-                $bibref = $source['biblio'];
-                $source_text = str_replace("'", "''", $source);
-                $query = mssql_query("SELECT id from biblio where reference=N'$bibref'", $conn);
-                if (mssql_num_rows($query) > 0) {
-                    while ($row = mssql_fetch_assoc($query)) {
-                        $bib_id = $row['id'];
+            if (!empty($dgrp)) {
+                foreach($dgrp->{'DC-1968-source'} as $source)
+                {
+                    $bibref = $source['biblio'];
+                    $source_text = str_replace("'", "''", $source);
+                    $query = mssql_query("SELECT id from biblio where reference=N'$bibref'", $conn);
+                    if (mssql_num_rows($query) > 0) {
+                        while ($row = mssql_fetch_assoc($query)) {
+                            $bib_id = $row['id'];
+                        }
                     }
-                }
-                $query = mssql_query("SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='def' and termid=$term_id", $conn);
-                if (mssql_num_rows($query) > 0) {
-                    while ($row = mssql_fetch_assoc($query)) {
-                        $source_id = $row['id'];
+                    $query = mssql_query("SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='def' and termid=$term_id", $conn);
+                    if (mssql_num_rows($query) > 0) {
+                        while ($row = mssql_fetch_assoc($query)) {
+                            $source_id = $row['id'];
+                        }
                     }
-                }
-                else {
-                    $query = mssql_query("INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'def', $term_id, NULL)", $conn);
-                    $source_id = mssql_insert_id();
+                    else {
+                        $query = mssql_query("INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'def', $term_id, NULL)", $conn);
+                        $source_id = mssql_insert_id();
+                    }
                 }
             }
-
-            foreach($egrp->{'DC-1968-source'} as $source)
-            {
-                $bibref = $source['biblio'];
-                $source_text = str_replace("'", "''", $source);
-                $query = mssql_query("SELECT id from biblio where reference=N'$bibref'", $conn);
-                if (mssql_num_rows($query) > 0) {
-                    while ($row = mssql_fetch_assoc($query)) {
-                        $bib_id = $row['id'];
+            if (!empty($egrp)) {
+                foreach($egrp->{'DC-1968-source'} as $source)
+                {
+                    $bibref = $source['biblio'];
+                    $source_text = str_replace("'", "''", $source);
+                    $query = mssql_query("SELECT id from biblio where reference=N'$bibref'", $conn);
+                    if (mssql_num_rows($query) > 0) {
+                        while ($row = mssql_fetch_assoc($query)) {
+                            $bib_id = $row['id'];
+                        }
                     }
-                }
-                $query = mssql_query("SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='exp' and termid=$term_id", $conn);
-                if (mssql_num_rows($query) > 0) {
-                    while ($row = mssql_fetch_assoc($query)) {
-                        $source_id = $row['id'];
+                    $query = mssql_query("SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='exp' and termid=$term_id", $conn);
+                    if (mssql_num_rows($query) > 0) {
+                        while ($row = mssql_fetch_assoc($query)) {
+                            $source_id = $row['id'];
+                        }
                     }
-                }
-                else {
-                    $query = mssql_query("INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'exp', $term_id, NULL)", $conn);
-                    $source_id = mssql_insert_id();
+                    else {
+                        $query = mssql_query("INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'exp', $term_id, NULL)", $conn);
+                        $source_id = mssql_insert_id();
+                    }
                 }
             }
 
