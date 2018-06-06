@@ -19,7 +19,7 @@ function mssql_insert_id() {
 function clean($string) {
     $string = str_replace("'", "''", $string);
     $string = str_replace("\n", " ", $string);
-    $string = str_replace("                     ", " ", $string);
+    $string = preg_replace('/\s\s+/', ' ', $string);
     return $string;
 }
 
@@ -208,7 +208,7 @@ if ($conn) {
                     }
                     $source = $cgrp->{'DC-1968-source'};
                     $bibref = $source['biblio'];
-                    $source_text = clean("'", "''", $source);
+                    $source_text = clean($source);
                     $query = mssql_query("SELECT id from biblio where reference=N'$bibref'", $conn);
                     if (mssql_num_rows($query) > 0) {
                         while ($row = mssql_fetch_assoc($query)) {
