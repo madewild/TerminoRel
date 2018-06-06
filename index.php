@@ -135,7 +135,7 @@ fbq('track', 'PageView');
          <div id="pageContainer">
            <div id="pageHeader2">
    <a href="http://www.ulb.ac.be">
-      <img alt="search" src="/design/img/logoulb1.gif" style="float:left; margin-top:-2px;">
+      <img alt="Logo ULB" src="http://ulb.be/design/img/logoulb1.gif" style="float:left; margin-top:-2px;">
    </a>
    <div id="pageHeaderContainer">
       <form action="#" id="pageHeaderForm" method="get" onsubmit="return search();">
