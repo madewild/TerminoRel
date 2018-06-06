@@ -9,7 +9,7 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <script src="http://ulb.be/design1/js/script-framework.js" type="text/javascript"></script>
       
-   <title>Homepage de l'Universit&eacute; libre de Bruxelles</title>
+   <title>TerminoRel</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <script type="text/javascript" id="_refScript">
