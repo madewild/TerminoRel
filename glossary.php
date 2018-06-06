@@ -1,7 +1,7 @@
 <h2>Glossaires de l'ULB</h2>
 
 <h3>Rechercher</h3>
-<form>
+<form class="form">
     <fieldset>
         <legend>Vos critères de recherche</legend>
         <p><label for="term">Terme recherché</label><span class="star">*</span>
@@ -36,8 +36,8 @@
     <li>- Télécharger un glossaire au format TBX (format destiné aux outils d'aide à la traduction)</li>
     <li>- Télécharger un glossaire au format PDF</li>
 </ul>
-<hr style="height: 2px;">
-<table>
+<hr style="border: solid 0.5px grey;">
+<table class="">
     <tr>
         <td>À propos des glossaires</td>
         <td>Aide</td>

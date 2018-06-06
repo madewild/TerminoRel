@@ -6,3 +6,8 @@
     top: -0.5em;
     color: red;
 }
+
+table.footer td {
+    padding-right: 10px;
+    font-size: small;
+}
