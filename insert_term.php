@@ -14,7 +14,14 @@ function mssql_insert_id() {
         $id = $row["id"]; 
     }
     return $id; 
-} 
+}
+
+function clean($string) {
+    $string = str_replace("'", "''", $string);
+    $string = str_replace("\n", " ", $string);
+    $string = str_replace("                     ", " ", $string);
+    return $string
+}
 
 $conn = mssql_connect($server, $username, $password);
 if ($conn) {
@@ -98,19 +105,15 @@ if ($conn) {
                 $query = mssql_query("INSERT INTO lang (code) VALUES (N'$lang')", $conn);
                 $lang_id = mssql_insert_id();
             }
-            //echo 'Language: ' . $lang_id . ' ' . $lang . '<br>';
+            echo 'Language: ' . $lang_id . ' ' . $lang . '<br>';
 
             $dgrp = $lgrp->definitionGrp;
             $def = $dgrp->{'DC-168-definition'};
-            $def = str_replace("'", "''", $def);
-            $def = str_replace("\n", " ", $def);
-            $def = str_replace("                     ", " ", $def);
+            $def = clean($def);
 
             $egrp = $lgrp->explicGrp;
             $exp = $egrp->{'DC-223-explanation'};
-            $exp = str_replace("'", "''", $exp);
-            $exp = str_replace("\n", " ", $exp);
-            $exp = str_replace("                     ", " ", $exp);
+            $exp = clean($exp);
 
             $query = mssql_query("SELECT id from langroup where termid=N'$term_id' and lang=N'$lang_id'", $conn);
             if (mssql_num_rows($query) > 0) {
@@ -176,9 +179,7 @@ if ($conn) {
             {
                 $term = $tgrp->{'DC-508-term'};
                 $termlexid = $term['DC-301-lexTermIdentifier'];
-                $termtext = str_replace("'", "''", $term);
-                $termtext = str_replace("\n", " ", $termtext);
-                $termtext = str_replace("                     ", " ", $termtext);
+                $termtext = clean($termtext);
                 $graminfo = $tgrp->{'DC-250-grammaticalInfo'};
                 $pos = $graminfo['DC-396-partOfSpeech'];
                 $gender = $graminfo['DC-245-grammaticalGender'];
@@ -196,9 +197,7 @@ if ($conn) {
                 foreach($tgrp->contextGrp as $cgrp)
                 {
                     $context = $cgrp->{'DC-149-context'};
-                    $context = str_replace("'", "''", $context);
-                    $context = str_replace("\n", " ", $context);
-                    $context = str_replace("                         ", " ", $context);
+                    $context = clean($context);
                     $query = mssql_query("SELECT id from contextgroup where termgroup=$termgroup_id and context=N'$context'", $conn);
                     if (mssql_num_rows($query) > 0) {
                         while ($row = mssql_fetch_assoc($query)) {
