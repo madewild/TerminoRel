@@ -92,6 +92,15 @@ if ($conn) {
             //echo 'Term inserted with ID ' . $term_id . '<br>';
         }
 
+        foreach($doc->{'DC-435-relatedConcept'} as $rel)
+        {
+            $toref = $rel['DC-461-see'];
+            $query = mssql_query("SELECT fromref, toref from related where fromref='$ref' and toref='$toref'", $conn);
+            if (mssql_num_rows($query) == 0) {
+                $query = mssql_query("INSERT INTO related (fromref, toref) VALUES ('$ref', '$toref')", $conn);
+            }
+        }
+
         foreach($doc->langGrp as $lgrp) 
         {
             $lang = $lgrp->attributes("xml", TRUE)->lang;
