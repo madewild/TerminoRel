@@ -198,6 +198,7 @@ if ($conn) {
                     else {
                         $query = mssql_query("INSERT INTO terminfo (dcvalue) VALUES (N'$status')", $conn);
                         $status_id = mssql_insert_id();
+                        $status_id = (int)$status_id;
                     }
                 } else {
                     $status_id = NULL;
@@ -217,8 +218,6 @@ if ($conn) {
                     $query = mssql_query("INSERT INTO terminfo (dcvalue) VALUES (N'$pos')", $conn);
                     $pos_id = mssql_insert_id();
                     $pos_id = (int)$pos_id;
-                    echo($pos_id . " ");
-                    echo(gettype($pos_id) . "<br>");
                 }
 
                 $gender = $graminfo['DC-245-grammaticalGender'];
@@ -233,8 +232,6 @@ if ($conn) {
                         $query = mssql_query("INSERT INTO terminfo (dcvalue) VALUES (N'$gender')", $conn);
                         $gender_id = mssql_insert_id();
                         $gender_id = (int)$gender_id;
-                        echo($gender_id . " ");
-                        echo(gettype($gender_id) . "<br>");
                     }
                 } else {
                     $gender_id = NULL;
