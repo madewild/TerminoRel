@@ -233,7 +233,8 @@ if ($conn) {
                 } else {
                     $gender_id = NULL;
                 }
-                echo("$pos_id, $gender_id, $status_id");
+                echo("gettype($pos_id) gettype($gender_id), gettype($status_id)");
+
 
                 $query = mssql_query("SELECT id from termgroup where langroup=$langroup_id and termlexid=N'$termlexid' and termtext=N'$termtext' and pos=$pos_id", $conn);
                 if (mssql_num_rows($query) > 0) {
