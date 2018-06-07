@@ -186,18 +186,58 @@ if ($conn) {
             {
                 $term = $tgrp->{'DC-508-term'};
                 $termlexid = $term['DC-301-lexTermIdentifier'];
+
+                $status = $term['DC-280-languagePlanningQualifier'];
+                if(!empty($status)) {
+                    $query = mssql_query("SELECT id from terminfo where dcvalue=N'$status'", $conn);
+                    if (mssql_num_rows($query) > 0) {
+                        while ($row = mssql_fetch_assoc($query)) {
+                            $status_id = $row['id'];
+                        }
+                    }
+                    else {
+                        $query = mssql_query("INSERT INTO terminfo (dcvalue) VALUES (N'$status')", $conn);
+                        $status_id = mssql_insert_id();
+                    }
+                }
+                
                 $termtext = clean($term);
+
                 $graminfo = $tgrp->{'DC-250-grammaticalInfo'};
                 $pos = $graminfo['DC-396-partOfSpeech'];
+                $query = mssql_query("SELECT id from terminfo where dcvalue=N'$pos'", $conn);
+                if (mssql_num_rows($query) > 0) {
+                    while ($row = mssql_fetch_assoc($query)) {
+                        $pos_id = $row['id'];
+                    }
+                }
+                else {
+                    $query = mssql_query("INSERT INTO terminfo (dcvalue) VALUES (N'$pos')", $conn);
+                    $pos_id = mssql_insert_id();
+                }
+
                 $gender = $graminfo['DC-245-grammaticalGender'];
-                $query = mssql_query("SELECT id from termgroup where langroup=$langroup_id and termlexid=N'$termlexid' and termtext=N'$termtext' and pos=N'$pos' and gender=N'$gender'", $conn);
+                if(!empty($gender)) {
+                    $query = mssql_query("SELECT id from terminfo where dcvalue=N'$gender'", $conn);
+                    if (mssql_num_rows($query) > 0) {
+                        while ($row = mssql_fetch_assoc($query)) {
+                            $gender_id = $row['id'];
+                        }
+                    }
+                    else {
+                        $query = mssql_query("INSERT INTO terminfo (dcvalue) VALUES (N'$gender')", $conn);
+                        $gender_id = mssql_insert_id();
+                    }
+                }
+
+                $query = mssql_query("SELECT id from termgroup where langroup=$langroup_id and termlexid=N'$termlexid' and termtext=N'$termtext' and pos=$pos_id and gender=$gender_id and status=$status_id", $conn);
                 if (mssql_num_rows($query) > 0) {
                     while ($row = mssql_fetch_assoc($query)) {
                         $termgroup_id = $row['id'];
                     }
                 }
                 else {
-                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender) VALUES ($langroup_id, N'$termlexid', N'$termtext', N'$pos', N'$gender')", $conn);
+                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender, status) VALUES ($langroup_id, N'$termlexid', N'$termtext', $pos_id, $gender_id, $status_id)", $conn);
                     $termgroup_id = mssql_insert_id();
                 }
 
