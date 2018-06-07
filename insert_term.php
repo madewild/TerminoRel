@@ -241,6 +241,7 @@ if ($conn) {
                     }
                 }
                 else {
+                    echo("$langroup_id, N'$termlexid', N'$termtext', $pos_id, $gender_id, $status_id");
                     $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender, qualifier) VALUES ($langroup_id, N'$termlexid', N'$termtext', $pos_id, $gender_id, $status_id)", $conn);
                     $termgroup_id = mssql_insert_id();
                 }
