@@ -216,6 +216,7 @@ if ($conn) {
                 else {
                     $query = mssql_query("INSERT INTO terminfo (dcvalue) VALUES (N'$pos')", $conn);
                     $pos_id = mssql_insert_id();
+                    $pos_id = (int)$pos_id;
                     echo($pos_id . " ");
                     echo(gettype($pos_id) . "<br>");
                 }
@@ -231,8 +232,9 @@ if ($conn) {
                     else {
                         $query = mssql_query("INSERT INTO terminfo (dcvalue) VALUES (N'$gender')", $conn);
                         $gender_id = mssql_insert_id();
-                        echo($gender_id);
-                        echo(gettype($gender_id));
+                        $gender_id = (int)$gender_id;
+                        echo($gender_id . " ");
+                        echo(gettype($gender_id) . "<br>");
                     }
                 } else {
                     $gender_id = NULL;
