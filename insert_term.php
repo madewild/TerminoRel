@@ -186,7 +186,7 @@ if ($conn) {
             {
                 $term = $tgrp->{'DC-508-term'};
                 $termlexid = $term['DC-301-lexTermIdentifier'];
-
+                echo($termlexid);
                 $status = $term['DC-280-languagePlanningQualifier'];
                 if(!empty($status)) {
                     $query = mssql_query("SELECT id from terminfo where dcvalue=N'$status'", $conn);
@@ -216,8 +216,8 @@ if ($conn) {
                 else {
                     $query = mssql_query("INSERT INTO terminfo (dcvalue) VALUES (N'$pos')", $conn);
                     $pos_id = mssql_insert_id();
-                    echo($pos_id);
-                    echo(gettype($pos_id));
+                    echo($pos_id . " ");
+                    echo(gettype($pos_id) . "<br>");
                 }
 
                 $gender = $graminfo['DC-245-grammaticalGender'];
