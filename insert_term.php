@@ -186,7 +186,6 @@ if ($conn) {
             {
                 $term = $tgrp->{'DC-508-term'};
                 $termlexid = $term['DC-301-lexTermIdentifier'];
-                echo($termlexid);
                 $status = $term['DC-280-languagePlanningQualifier'];
                 if(!empty($status)) {
                     $query = mssql_query("SELECT id from terminfo where dcvalue=N'$status'", $conn);
@@ -241,7 +240,7 @@ if ($conn) {
                     }
                 }
                 else {
-                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender, qualifier) VALUES ($langroup_id, N'$termlexid', N'$termtext', $pos_id, '', '')", $conn);
+                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender, qualifier) VALUES ($langroup_id, N'$termlexid', N'$termtext', $pos_id, $gender_id, '')", $conn);
                     $termgroup_id = mssql_insert_id();
                 }
 
