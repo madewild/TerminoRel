@@ -200,7 +200,7 @@ if ($conn) {
                         $status_id = mssql_insert_id();
                     }
                 } else {
-                    $status_id = ""
+                    $status_id = "";
                 }
                 
                 $termtext = clean($term);
@@ -231,7 +231,7 @@ if ($conn) {
                         $gender_id = mssql_insert_id();
                     }
                 } else {
-                    $gender_id = ""
+                    $gender_id = "";
                 }
 
                 $query = mssql_query("SELECT id from termgroup where langroup=$langroup_id and termlexid=N'$termlexid' and termtext=N'$termtext' and pos=$pos_id", $conn);
