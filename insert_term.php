@@ -198,7 +198,6 @@ if ($conn) {
                     else {
                         $query = mssql_query("INSERT INTO terminfo (dcvalue) VALUES (N'$status')", $conn);
                         $status_id = mssql_insert_id();
-                        $status_id = (int)$status_id;
                     }
                 } else {
                     $status_id = NULL;
@@ -217,7 +216,6 @@ if ($conn) {
                 else {
                     $query = mssql_query("INSERT INTO terminfo (dcvalue) VALUES (N'$pos')", $conn);
                     $pos_id = mssql_insert_id();
-                    $pos_id = (int)$pos_id;
                 }
 
                 $gender = $graminfo['DC-245-grammaticalGender'];
@@ -231,12 +229,10 @@ if ($conn) {
                     else {
                         $query = mssql_query("INSERT INTO terminfo (dcvalue) VALUES (N'$gender')", $conn);
                         $gender_id = mssql_insert_id();
-                        $gender_id = (int)$gender_id;
                     }
                 } else {
                     $gender_id = NULL;
                 }
-
 
                 $query = mssql_query("SELECT id from termgroup where langroup=$langroup_id and termlexid=N'$termlexid' and termtext=N'$termtext' and pos=$pos_id", $conn);
                 if (mssql_num_rows($query) > 0) {
@@ -245,7 +241,7 @@ if ($conn) {
                     }
                 }
                 else {
-                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender, status) VALUES ($langroup_id, N'$termlexid', N'$termtext', $pos_id, $gender_id, $status_id)", $conn);
+                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender, qualifier) VALUES ($langroup_id, N'$termlexid', N'$termtext', $pos_id, $gender_id, $status_id)", $conn);
                     $termgroup_id = mssql_insert_id();
                 }
 
