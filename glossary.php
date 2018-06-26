@@ -9,14 +9,14 @@
         <input type="submit" value="Rechercher"></p>
         <p><label for="source">Langue source</label><span class="star">*</span>
         <select name="source">
-            <option value="fr">fr - français</option>
-            <option value="en">en - anglais</option>
+            <option value="français">fr - français</option>
+            <option value="English">en - English</option>
         </select></p>
         <p><label for="cible">Langues cibles</label><span class="star">*</span>
-        <input type="checkbox" name="cible" value="en" checked="checked"> en
-        <input type="checkbox" name="cible" value="fr"> fr
+        <input type="checkbox" name="cible" value="English" checked="checked"> en
+        <input type="checkbox" name="cible" value="français"> fr
         <input type="checkbox" name="cible" value="other"> ...
-        <input type="checkbox" name="cible" value="all"> Toutes</p>
+        <input type="checkbox" name="cible" value="toutes"> Toutes</p>
         <p><label for="domaine">Domaine</label>
         <select name="domaine">
             <option value="tf">Titres et fonctions</option>
