@@ -14,7 +14,7 @@
    <meta name="description" content="">
    <script language='javascript'>
     function validate() {
-    if(document.getElementById('term').value=="") {
+    if(document.getElementById('term').value.trim()=="") {
         alert("Veuillez entrer au moins un caractère !");
         return false;
     }
