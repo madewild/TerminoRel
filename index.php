@@ -13,7 +13,7 @@
    <meta name="keywords" content="">
    <meta name="description" content="">
    <script language='javascript'>
-    function validate () {
+    function validate() {
     if(document.getElementById('term').value=="") {
         alert("Veuillez entrer au moins un caractère !");
         return false;

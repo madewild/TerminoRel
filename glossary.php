@@ -1,11 +1,11 @@
 <h2>Glossaires de l'ULB</h2>
 
 <h3>Rechercher</h3>
-<form class="form" action="#" method="post" onsubmit='return validate ()'>
+<form class="form" action="#" method="post" onsubmit="return validate()">
     <fieldset>
         <legend>Vos critères de recherche</legend>
         <p><label for="term">Terme recherché</label><span class="star">*</span>
-        <input type="text" class="input" name="term" size="80" value="assistant">
+        <input type="text" class="input" id="term" name="term" size="80" value="assistant">
         <input type="submit" value="Rechercher"></p>
         <p><label for="source">Langue source</label><span class="star">*</span>
         <select name="source">
