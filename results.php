@@ -68,11 +68,11 @@ if ($conn) {
             }
             echo "</td></tr><tr>";
             $langroup_source = $row['langroup'];
-            $termid = mssql_query("SELECT termid FROM langroup WHERE id = $langroup_source", $conn);
-            $langroup_target = mssql_query("SELECT id FROM langroup WHERE termid = $termid AND lang = 1", $conn);
-            $translations = mssql_query("SELECT termtext FROM termgroup WHERE langroup = $langroup_target", $conn);
+            $termid = mssql_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
+            $langroup_target = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
+            $translations = mssql_query("SELECT termtext FROM termgroup WHERE langroup=$langroup_target", $conn);
             echo "<td><span class='target_lang'>EN</span></td>";
-            echo "<td><b>" . $translations[0] . "</b></td></tr>";
+            echo "<td><b>" . $translations[0] . "</b></td></tr><tr></tr>";
         }
         echo "</table>";
     }
