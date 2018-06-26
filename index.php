@@ -646,7 +646,15 @@ fbq('track', 'PageView');
             <tr id="rowid:N115CC" class="layoutL">
                 <td id="cellid:N115CC:1" class="layoutL-L"><div style="width:100%;">
                     <table border="0" style="width:100%;margin-left:auto;margin-right:auto;" cellspacing="0" cellpadding="0">
-                        <tr id="rowid:N11691"><td id="cellid:N11693:1" colspan="3" style="background-color:transparent;text-align:left; vertical-align:top;"><?php include("glossary.php"); ?></td></tr>
+                        <tr id="rowid:N11691"><td id="cellid:N11693:1" colspan="3" style="background-color:transparent;text-align:left; vertical-align:top;">
+                        <?php 
+                        if(isset($_POST['term'])) {
+                            include("results.php");
+                        } else {
+                            include("glossary.php");
+                        }
+                        ?>
+                        </td></tr>
                     </table>
                 </td>
             </tr>
