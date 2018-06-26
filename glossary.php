@@ -9,8 +9,8 @@
         <input type="submit" value="Rechercher"></p>
         <p><label for="source">Langue source</label><span class="star">*</span>
         <select name="source">
-            <option value="français">fr - français</option>
-            <option value="English">en - English</option>
+            <option value="fr - français">fr - français</option>
+            <option value="en - English">en - English</option>
         </select></p>
         <p><label for="cible">Langues cibles</label><span class="star">*</span>
         <input type="checkbox" name="cible" value="English" checked="checked"> en

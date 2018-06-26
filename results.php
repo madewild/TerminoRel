@@ -1,6 +1,17 @@
 <?php 
+error_reporting(-1);
+ini_set('display_errors', 'On');
+ini_set('mssql.charset', 'UTF-8');
+include("secret.php");
+$server = SERVER;
+$username = USERNAME;
+$password = PASSWORD;
+
 $term = htmlspecialchars($_POST['term']);
 $source = htmlspecialchars($_POST['source']);
+$code_full = explode(" - ", $source);
+$source_code = $code_full[0];
+$source_full = $code_full[1];
 $cible = htmlspecialchars($_POST['cible']);
 $domaine = htmlspecialchars($_POST['domaine']);
 $types = $_POST['type'];
@@ -19,8 +30,8 @@ $types = $_POST['type'];
     <input type="submit" value="Rechercher"><br>
 </form>
 
-<div class="smaller_text">
-    Langues : <?php echo $source ?> > <?php echo $cible ?> |
+<div class="glossary_footer">
+    Langues : <?php echo $source_full ?> > <?php echo $cible ?> |
     Domaine : <?php echo $domaine ?> |
     Type d'information : <?php 
         if(empty($types)) {
@@ -32,6 +43,23 @@ $types = $_POST['type'];
     ?>
 </div>
 
-<p>X entrées trouvées pour <?php echo $term; ?></p>
+<?php
+$conn = mssql_connect($server, $username, $password);
+if ($conn) {
+    mssql_select_db("terminorel", $conn);
+    $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%'.$source_code AND termtext LIKE '%'.$term.'%'", $conn);
+    $num_rows = mssql_num_rows($query);
+    echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b><br><br>";
+    if ($num_rows > 0) {
+        while ($row = mssql_fetch_assoc($query)) {
+            $termtext = $row['termtext'];
+            echo $termtext . "<br>";
+        }
+    }
+    else {
+        echo "Aucun résultat pour " . $term;
+    }
+}
+?>
 
 <?php include('footer.php'); ?>
