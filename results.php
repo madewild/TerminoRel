@@ -75,7 +75,8 @@ if ($conn) {
             $result = mssql_query("SELECT termtext FROM termgroup WHERE langroup=$langroup_target", $conn);
             $translations = mssql_fetch_assoc($result)['termtext'];
             echo "<td><span class='target_lang'>EN</span></td>";
-            echo "<td><b>" . $translations . "</b></td></tr><tr></tr>";
+            echo "<td><b>" . $translations . "</b></td></tr>";
+            echo "<tr><td colspan='2'></td></tr>";
         }
         echo "</table>";
     }
