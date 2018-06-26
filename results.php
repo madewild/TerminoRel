@@ -19,7 +19,7 @@ $types = $_POST['type'];
     <input type="submit" value="Rechercher"><br>
 </form>
 
-<div class="small">
+<div class="smaller_text">
     Langues : <?php echo $source ?> > <?php echo $cible ?> |
     Domaine : <?php echo $domaine ?> |
     Type d'information : <?php 
@@ -33,3 +33,5 @@ $types = $_POST['type'];
 </div>
 
 <p>X entrées trouvées pour <?php echo $term; ?></p>
+
+<?php include('footer.php'); ?>
