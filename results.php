@@ -41,7 +41,7 @@ $types = $_POST['type'];
             echo $typestring;
         }
     ?>
-</div>
+</div><br>
 
 <?php
 $conn = mssql_connect($server, $username, $password);
@@ -50,10 +50,19 @@ if ($conn) {
     $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%$source_code' AND termtext LIKE '%$term%'", $conn);
     $num_rows = mssql_num_rows($query);
     echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b><br><br>";
+    echo "<b>Domaine : " . $domaine . "</b><br><br>";
     if ($num_rows > 0) {
+        echo "<table>";
         while ($row = mssql_fetch_assoc($query)) {
-            $termtext = $row['termtext'];
-            echo $termtext . "<br>";
+            echo "<tr>";
+            $lang = strtoupper(explode("-", $row['termlexid'])[3]);
+            echo "<td>" . $lang . "</td>";
+            echo "<td>" . $row['termtext'];
+            $variant = $row['variant'];
+            if($variant != NULL) {
+                echo " (" . $variant . ")";
+            }
+            echo "</td></tr>";
         }
     }
     else {
