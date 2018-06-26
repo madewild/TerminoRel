@@ -60,13 +60,19 @@ if ($conn) {
         while ($row = mssql_fetch_assoc($query)) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
-            echo "<td><span class='lang_code'>" . $lang . "</span></td>";
+            echo "<td><span class='source_lang'>" . $lang . "</span></td>";
             echo "<td><span class='term_text'>" . $row['termtext'] . "</span>";
             $variant = $row['variant'];
             if($variant != NULL) {
                 echo " (<span class='term_text'>" . $variant . "</span>)";
             }
-            echo "</td></tr>";
+            echo "</td></tr><tr>";
+            $langroup_source = $row['langroup'];
+            $termid = mssql_query("SELECT termid FROM langroup WHERE id = $langroup", $conn);
+            $langroup_target = mssql_query("SELECT id FROM langroup WHERE termid = $termid AND lang = 1", $conn);
+            $translations = mssql_query("SELECT termtext FROM termgroup WHERE langroup = $langroup_target", $conn);
+            echo "<td><span class='target_lang'>EN</span></td>";
+            echo "<td><b>" . $translations[0] . "</b></td></tr>";
         }
         echo "</table>";
     }

@@ -28,8 +28,13 @@ a:visited{
     color: blue;
 }
 
-.lang_code { 
+.source_lang { 
     background-color: lightgray; 
+}
+
+.target_lang { 
+    background-color: gray;
+    color: white;
 }
 
 .term_text {
