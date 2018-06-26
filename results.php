@@ -47,7 +47,7 @@ $types = $_POST['type'];
 $conn = mssql_connect($server, $username, $password);
 if ($conn) {
     mssql_select_db("terminorel", $conn);
-    $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%'.$source_code AND termtext LIKE '%'.$term.'%'", $conn);
+    $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%$source_code' AND termtext LIKE '%$term%'", $conn);
     $num_rows = mssql_num_rows($query);
     echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b><br><br>";
     if ($num_rows > 0) {
