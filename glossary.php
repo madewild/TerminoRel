@@ -19,14 +19,14 @@
         <input type="checkbox" name="cible" value="toutes"> Toutes</p>
         <p><label for="domaine">Domaine</label>
         <select name="domaine">
-            <option value="tf">Titres et fonctions</option>
+            <option value="Titres et fonctions">Titres et fonctions</option>
         </select></p>
         <p><label for="type">Type d'information</label><br>
-        <input type="checkbox" name="type" value="trad" checked="checked"> Traduction
-        <input type="checkbox" name="type" value="syn" checked="checked"> Synonymes et acronymes
-        <input type="checkbox" name="type" value="def"> Définition (en français)
-        <input type="checkbox" name="type" value="ex" checked="checked"> Exemple d'usage
-        <input type="checkbox" name="type" value="all"> Toutes les informations</p><br>
+        <input type="checkbox" name="type" value="Traduction" checked="checked"> Traduction
+        <input type="checkbox" name="type" value="Synonyme" checked="checked"> Synonymes et acronymes
+        <input type="checkbox" name="type" value="Définition"> Définition (en français)
+        <input type="checkbox" name="type" value="Exemple" checked="checked"> Exemple d'usage
+        <input type="checkbox" name="type" value="Toutes"> Toutes les informations</p><br>
         <p><span class="star">*</span> <i>Ce symbole indique que le champ est obligatoire.</i></p>
     </fieldset>
 </form><br>
