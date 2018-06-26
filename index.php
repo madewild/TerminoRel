@@ -12,6 +12,15 @@
    <title>TerminoRel</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
+   <script language='javascript'>
+    function validate () {
+    if(document.getElementById('term').value=="") {
+        alert("Veuillez entrer au moins un caractère !");
+        return false;
+    }
+    return true;
+    }
+   </script>
    <script type="text/javascript" id="_refScript">
       var intranet_access="https://www.ulb.ac.be/commons/access?_ssl=on&";
       var intranet_status="https://www.ulb.ac.be/commons/access?_prtm=status&_ssl=on&";
@@ -648,13 +657,8 @@ fbq('track', 'PageView');
                     <table border="0" style="width:100%;margin-left:auto;margin-right:auto;" cellspacing="0" cellpadding="0">
                         <tr id="rowid:N11691"><td id="cellid:N11693:1" colspan="3" style="background-color:transparent;text-align:left; vertical-align:top;">
                         <?php 
-                        $term = htmlspecialchars($_POST['term']);
-                        if(isset($term)) {
-                            if(empty($term)) {
-                                include("empty.php");
-                            } else {
-                                include("results.php");
-                            }
+                        if(isset($_POST['term'])) {
+                            include("results.php");
                         } else {
                             include("glossary.php");
                         }

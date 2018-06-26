@@ -1,7 +1,7 @@
 <h2>Glossaires de l'ULB</h2>
 
 <h3>Rechercher</h3>
-<form class="form" action="#" method="post">
+<form class="form" action="#" method="post" onsubmit='return validate ()'>
     <fieldset>
         <legend>Vos critères de recherche</legend>
         <p><label for="term">Terme recherché</label><span class="star">*</span>
