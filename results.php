@@ -26,7 +26,11 @@ $types = $_POST['type'];
     <input type="hidden" name="source" value="<?php echo $source; ?>">
     <input type="hidden" name="cible" value="<?php echo $cible; ?>">
     <input type="hidden" name="domaine" value="<?php echo $domaine; ?>">
-    <input type="hidden" name="type[]" value="<?php echo $types; ?>">
+    <?php
+    foreach($types as $type) {
+        echo '<input type="hidden" name="type[]" value="' . $type . '">';
+    }
+    ?>
     <input type="submit" value="Rechercher"><br>
 </form>
 
