@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../xsl/btulb.xsl"?>
 <!DOCTYPE DC-4025-termbase SYSTEM "../dtd/btulb.dtd">
-<DC-4025-termbase>term
+<DC-4025-termbase>
     <DC-209-terminologicalEntry DC-206-entryIdentifier="P01-0001">
         <DC-489-subjectField cdu="371.53" niveau="1">Personnel ULB</DC-489-subjectField>
         <DC-494-subsetOwner nom="TRADITAL"/>

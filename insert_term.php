@@ -204,6 +204,9 @@ if ($conn) {
                 
                 $termtext = clean($term);
 
+                $variant = $tgrp->{'DC-330-variant'};
+                $fem = clean($variant);
+
                 $graminfo = $tgrp->{'DC-250-grammaticalInfo'};
                 $pos = $graminfo['DC-396-partOfSpeech'];
                 $query = mssql_query("SELECT id from terminfo where dcvalue=N'$pos'", $conn);
@@ -240,7 +243,7 @@ if ($conn) {
                     }
                 }
                 else {
-                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, pos, gender, qualifier) VALUES ($langroup_id, N'$termlexid', N'$termtext', $pos_id, $gender_id, $status_id)", $conn);
+                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, variant, pos, gender, qualifier) VALUES ($langroup_id, N'$termlexid', N'$termtext', N'$fem', $pos_id, $gender_id, $status_id)", $conn);
                     $termgroup_id = mssql_insert_id();
                 }
 
