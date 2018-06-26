@@ -64,6 +64,7 @@ if ($conn) {
             }
             echo "</td></tr>";
         }
+        echo "</table>";
     }
     else {
         echo "Aucun résultat pour " . $term;
