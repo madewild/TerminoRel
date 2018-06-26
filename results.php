@@ -56,7 +56,7 @@ if ($conn) {
     echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b><br><br>";
     echo "<b>Domaine : " . $domaine . "</b><br><br>";
     if ($num_rows > 0) {
-        echo "<table>";
+        echo "<table class='results_table'>";
         while ($row = mssql_fetch_assoc($query)) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
