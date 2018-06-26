@@ -56,11 +56,11 @@ if ($conn) {
         while ($row = mssql_fetch_assoc($query)) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
-            echo "<td>" . $lang . "</td>";
-            echo "<td>" . $row['termtext'];
+            echo "<td><span class='lang_code'>" . $lang . "</span></td>";
+            echo "<td><span class='term_text'>" . $row['termtext'] . "</span>";
             $variant = $row['variant'];
             if($variant != NULL) {
-                echo " (" . $variant . ")";
+                echo " (<span class='term_text'>" . $variant . "</span>)";
             }
             echo "</td></tr>";
         }

@@ -18,3 +18,11 @@
 a:visited{
     color: inherit;
 }
+
+.lang_code { 
+    background-color: lightgray; 
+}
+
+.term_text {
+    background-color: lightgreen
+}
