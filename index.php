@@ -6,7 +6,7 @@
         <link href="http://ulb.be/design1/css/design-framework.css" rel="stylesheet" type="text/css">
         <link href="http://ulb.be/design1/css/design-page.css" rel="stylesheet" type="text/css">
         <link href="http://ulb.be/design1/css/design-print.css" media="print" rel="stylesheet" type="text/css">
-        <link href="css/style.css?version=3" rel="stylesheet" type="text/css">
+        <link href="css/style.css?version=4" rel="stylesheet" type="text/css">
         <script src="http://ulb.be/design1/js/script-framework.js" type="text/javascript"></script>
       
    <title>TerminoRel</title>
@@ -648,8 +648,13 @@ fbq('track', 'PageView');
                     <table border="0" style="width:100%;margin-left:auto;margin-right:auto;" cellspacing="0" cellpadding="0">
                         <tr id="rowid:N11691"><td id="cellid:N11693:1" colspan="3" style="background-color:transparent;text-align:left; vertical-align:top;">
                         <?php 
-                        if(isset($_POST['term'])) {
-                            include("results.php");
+                        $term = htmlspecialchars($_POST['term']);
+                        if(isset($term)) {
+                            if(empty($term)) {
+                                include("empty.php");
+                            } else {
+                                include("results.php");
+                            }
                         } else {
                             include("glossary.php");
                         }
