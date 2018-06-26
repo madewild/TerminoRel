@@ -30,7 +30,7 @@ $types = $_POST['type'];
     <input type="submit" value="Rechercher"><br>
 </form>
 
-<div class="glossary_footer">
+<div class="smaller_text">
     Langues : <?php echo $source_full ?> > <?php echo $cible ?> |
     Domaine : <?php echo $domaine ?> |
     Type d'information : <?php 

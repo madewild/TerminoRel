@@ -6,7 +6,7 @@
         <link href="http://ulb.be/design1/css/design-framework.css" rel="stylesheet" type="text/css">
         <link href="http://ulb.be/design1/css/design-page.css" rel="stylesheet" type="text/css">
         <link href="http://ulb.be/design1/css/design-print.css" media="print" rel="stylesheet" type="text/css">
-        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css?version=1" rel="stylesheet" type="text/css">
         <script src="http://ulb.be/design1/js/script-framework.js" type="text/javascript"></script>
       
    <title>TerminoRel</title>
