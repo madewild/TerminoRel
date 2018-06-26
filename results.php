@@ -70,8 +70,10 @@ if ($conn) {
             $langroup_source = $row['langroup'];
             $result = mssql_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
             $termid = mssql_fetch_assoc($result)['termid'];
-            $langroup_target = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
-            $translations = mssql_query("SELECT termtext FROM termgroup WHERE langroup=$langroup_target", $conn);
+            $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
+            $langroup_target = mssql_fetch_assoc($result)['id'];
+            $result = mssql_query("SELECT termtext FROM termgroup WHERE langroup=$langroup_target", $conn);
+            $translations = mssql_fetch_assoc($result)['termtext'];
             echo "<td><span class='target_lang'>EN</span></td>";
             echo "<td><b>" . $translations[0] . "</b></td></tr><tr></tr>";
         }
