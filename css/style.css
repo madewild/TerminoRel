@@ -14,3 +14,7 @@
 .footer_table td {
     padding-right: 12px;
 }
+
+a:visited{
+    color: inherit;
+}
