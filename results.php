@@ -73,9 +73,9 @@ if ($conn) {
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
             $result = mssql_query("SELECT termtext FROM termgroup WHERE langroup=$langroup_target", $conn);
-            $translations = mssql_fetch_assoc($result)['termtext'];
+            $translation = mssql_fetch_assoc($result)['termtext'];
             echo "<td><span class='target_lang'>EN</span></td>";
-            echo "<td><b>" . $translations . "</b></td></tr>";
+            echo "<td><b>" . $translation . "</b></td></tr>";
             echo "<tr><td colspan='2'></td></tr>";
         }
         echo "</table>";
