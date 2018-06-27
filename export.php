@@ -59,4 +59,4 @@ $tbx += '
   </text>
 </martif>';
 
-file_put_contents('btulb.tbx', $tbx);
+file_put_contents('tbx/btulb.tbx', $tbx);
