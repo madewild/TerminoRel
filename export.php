@@ -37,7 +37,7 @@ if ($conn) {
             $langroup_target = mssql_fetch_assoc($result)['id'];
             $result = mssql_query("SELECT termtext FROM termgroup WHERE langroup=$langroup_target", $conn);
             $translation = mssql_fetch_assoc($result)['termtext'];
-            $tbx += '
+            $tbx .= '
       <termEntry>
         <langSet xml:lang="fr">
           <tig>
@@ -54,7 +54,7 @@ if ($conn) {
     }
 }
 
-$tbx += '
+$tbx .= '
     </body>
   </text>
 </martif>';
