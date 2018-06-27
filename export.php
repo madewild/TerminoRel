@@ -46,7 +46,7 @@ if ($conn) {
         </langSet>
         <langSet xml:lang="en">
           <tig>
-            <term>'.$traduction.'</term>
+            <term>'.$translation.'</term>
           </tig>
         </langSet>
       </termEntry>';
