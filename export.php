@@ -60,4 +60,4 @@ $tbx .= '
 </martif>';
 
 file_put_contents('tbx/btulb.tbx', $tbx);
-echo "Glossaire exporté en TBX avec succès : <a href='tbx/btulb.tbx'>btulb.tbx</a>";
+//echo "Glossaire exporté en TBX avec succès : <a href='tbx/btulb.tbx'>btulb.tbx</a>";

@@ -33,8 +33,11 @@
 
 <h3>Télécharger</h3>
 <ul>
-    <li>- Télécharger un glossaire au format TBX (format destiné aux outils d'aide à la traduction)</li>
+    <li>- Télécharger un glossaire au format <a href='tbx/btulb.tbx'>TBX</a> (format destiné aux outils d'aide à la traduction)</li>
     <li>- Télécharger un glossaire au format PDF</li>
 </ul>
 
-<?php include('footer.php'); ?>
+<?php 
+include('footer.php'); 
+include('export.php');
+?>
