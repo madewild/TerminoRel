@@ -7,6 +7,8 @@
         <link href="http://ulb.be/design1/css/design-page.css" rel="stylesheet" type="text/css">
         <link href="http://ulb.be/design1/css/design-print.css" media="print" rel="stylesheet" type="text/css">
         <link href="css/style.css?version=4" rel="stylesheet" type="text/css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <script src="http://ulb.be/design1/js/script-framework.js" type="text/javascript"></script>
       
    <title>TerminoRel</title>
