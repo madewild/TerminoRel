@@ -12,7 +12,7 @@ $glossary = htmlspecialchars($_GET['glossary']);
 
 <h2>Glossaires de l'ULB</h2>
 
-<p><a href="http://terminorel.ulb.be">Revenir à l'écran initial</a></p><br>
+<p><a href="http://terminorel.ulb.be">Retour à l'écran initial</a></p><br>
 
 <?php
 $conn = mssql_connect($server, $username, $password);
