@@ -33,7 +33,7 @@
 
 <h3>Accéder</h3>
 <ul>
-    <li>Accéder au glossaire <a href="http://terminorel.ulb.be/?glossary=tf">Titres et fonctions</a></li>
+    <li>Accéder au glossaire <a href="/?glossary=tf">Titres et fonctions</a></li>
 </ul>
 
 <h3>Télécharger</h3>
