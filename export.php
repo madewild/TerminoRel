@@ -23,7 +23,7 @@ $tbx = '<?xml version="1.0" encoding="UTF-8"?>
 $conn = mssql_connect($server, $username, $password);
 if ($conn) {
     mssql_select_db("terminorel", $conn);
-    $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%fr'", $conn);
+    $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%fr' ORDER BY termtext", $conn);
     $num_rows = mssql_num_rows($query);
     if ($num_rows > 0) {
         while ($row = mssql_fetch_assoc($query)) {
