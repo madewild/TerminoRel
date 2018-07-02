@@ -646,8 +646,10 @@
                         <?php 
                         if(isset($_POST['term'])) {
                             include("results.php");
-                        } else {
+                        } else if(isset($_GET['glossary'])) {
                             include("glossary.php");
+                        } else {
+                            include("form.php");
                         }
                         ?>
                         </td></tr>

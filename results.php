@@ -19,7 +19,7 @@ $types = $_POST['type'];
 
 <h2>Glossaires de l'ULB</h2>
 
-<p><a href="http://terminorel.ulb.be">Revenir à l'écran de recherche initial</a></p><br>
+<p><a href="http://terminorel.ulb.be">Revenir à l'écran initial</a></p><br>
 
 <form class="form" action="#" method="post" onsubmit="return validate()">
     <input type="text" class="input" id="term" name="term" size="60" value="<?php echo $term ?>">

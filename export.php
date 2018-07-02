@@ -20,7 +20,6 @@ $tbx = '<?xml version="1.0" encoding="UTF-8"?>
   <text>
     <body>';
 
-
 $conn = mssql_connect($server, $username, $password);
 if ($conn) {
     mssql_select_db("terminorel", $conn);

@@ -1,43 +1,56 @@
+<?php 
+error_reporting(-1);
+ini_set('display_errors', 'On');
+ini_set('mssql.charset', 'UTF-8');
+include("secret.php");
+$server = SERVER;
+$username = USERNAME;
+$password = PASSWORD;
+
+$glossary = htmlspecialchars($_GET['glossary']);
+?>
+
 <h2>Glossaires de l'ULB</h2>
 
-<h3>Rechercher</h3>
-<form class="form" action="#" method="post" onsubmit="return validate()">
-    <fieldset>
-        <legend>Vos critères de recherche</legend>
-        <p><label for="term">Terme recherché</label><span class="star">*</span>
-        <input type="text" class="input" id="term" name="term" size="80" value="assistant">
-        <input type="submit" value="Rechercher"></p>
-        <p><label for="source">Langue source</label><span class="star">*</span>
-        <select name="source">
-            <option value="fr - français">fr - français</option>
-            <option value="en - English">en - English</option>
-        </select></p>
-        <p><label for="cible">Langues cibles</label><span class="star">*</span>
-        <input type="checkbox" name="cible" value="English" checked="checked"> en
-        <input type="checkbox" name="cible" value="français"> fr
-        <input type="checkbox" name="cible" value="other"> ...
-        <input type="checkbox" name="cible" value="toutes"> Toutes</p>
-        <p><label for="domaine">Domaine</label>
-        <select name="domaine">
-            <option value="Titres et fonctions">Titres et fonctions</option>
-        </select></p>
-        <p><label for="type">Type d'information</label><br>
-        <input type="checkbox" name="type[]" value="Traduction" checked="checked"> Traduction
-        <input type="checkbox" name="type[]" value="Synonyme" checked="checked"> Synonymes et acronymes
-        <input type="checkbox" name="type[]" value="Définition"> Définition (en français)
-        <input type="checkbox" name="type[]" value="Exemple" checked="checked"> Exemple d'usage
-        <input type="checkbox" name="type[]" value="Toutes"> Toutes les informations</p><br>
-        <p><span class="star">*</span> <i>Ce symbole indique que le champ est obligatoire.</i></p>
-    </fieldset>
-</form><br>
+<p><a href="http://terminorel.ulb.be">Revenir à l'écran initial</a></p><br>
 
-<h3>Télécharger</h3>
-<ul>
-    <li>- Télécharger le glossaire au format <a href='tbx/btulb.tbx' download>TBX</a> (format destiné aux outils d'aide à la traduction)</li>
-    <li>- Télécharger le glossaire au format PDF</li>
-</ul>
-
-<?php 
-include('footer.php'); 
-include('export.php');
+<?php
+$conn = mssql_connect($server, $username, $password);
+if ($conn) {
+    mssql_select_db("terminorel", $conn);
+    $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%fr'", $conn);
+    $num_rows = mssql_num_rows($query);
+    echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b><br><br>";
+    echo "<b>Domaine : " . $domaine . "</b><br><br>";
+    if ($num_rows > 0) {
+        echo "<table class='results_table'>";
+        while ($row = mssql_fetch_assoc($query)) {
+            echo "<tr>";
+            $lang = strtoupper(explode("-", $row['termlexid'])[3]);
+            echo "<td><span class='source_lang'>" . $lang . "</span></td>";
+            echo "<td><span class='term_text'>" . $row['termtext'] . "</span>";
+            $variant = $row['variant'];
+            if($variant != NULL) {
+                echo " (<span class='term_text'>" . $variant . "</span>)";
+            }
+            echo "</td></tr><tr>";
+            $langroup_source = $row['langroup'];
+            $result = mssql_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
+            $termid = mssql_fetch_assoc($result)['termid'];
+            $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
+            $langroup_target = mssql_fetch_assoc($result)['id'];
+            $result = mssql_query("SELECT termtext FROM termgroup WHERE langroup=$langroup_target", $conn);
+            $translation = mssql_fetch_assoc($result)['termtext'];
+            echo "<td><span class='target_lang'>EN</span></td>";
+            echo "<td><b>" . $translation . "</b></td></tr>";
+            echo "<tr><td colspan='2'></td></tr>";
+        }
+        echo "</table>";
+    }
+    else {
+        echo "Glossaire inconnu";
+    }
+}
 ?>
+
+<?php include('footer.php'); ?>
