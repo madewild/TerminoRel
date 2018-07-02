@@ -18,7 +18,7 @@ $glossary = htmlspecialchars($_GET['glossary']);
 $conn = mssql_connect($server, $username, $password);
 if ($conn) {
     mssql_select_db("terminorel", $conn);
-    $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%fr'", $conn);
+    $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%fr' ORDER BY termtext", $conn);
     $num_rows = mssql_num_rows($query);
     echo "<b>" . $num_rows . " entrées</b> trouvées<br><br>";
     echo "<b>Domaine : Titres et fonctions</b><br><br>";
