@@ -71,10 +71,6 @@ if ($conn) {
             $langroup_source = $row['langroup'];
             $result = mssql_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
             $termid = mssql_fetch_assoc($result)['termid'];
-            $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
-            $langroup_target = mssql_fetch_assoc($result)['id'];
-            $result = mssql_query("SELECT termtext FROM termgroup WHERE langroup=$langroup_target", $conn);
-            $translation = mssql_fetch_assoc($result)['termtext'];
 
             if(in_array("Définition", $types)) {
                 $result = mssql_query("SELECT definition FROM langroup WHERE termid=$termid AND lang=0", $conn);
@@ -88,8 +84,15 @@ if ($conn) {
                 echo "<tr><td colspan='2'>" . $explanation . "</td></tr>";
             }
 
-            echo "<tr><td><span class='target_lang'>EN</span></td>";
-            echo "<td><b>" . $translation . "</b></td></tr>";
+            $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
+            $langroup_target = mssql_fetch_assoc($result)['id'];
+            $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target", $conn);
+            while ($row = mssql_fetch_assoc($query)) {
+                $translation = $row['termtext'];
+                $status = $row['qualifier'];
+                echo "<tr><td><span class='target_lang'>EN</span></td>";
+                echo "<td><b>" . $translation . "</b></td></tr>";
+            }
 
             if(in_array("Contexte", $types)) {
                 $result = mssql_query("SELECT id FROM termgroup WHERE langroup=$langroup_target", $conn);
