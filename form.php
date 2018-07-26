@@ -33,14 +33,13 @@
     </fieldset>
 </form><br>
 
-<h3>Accéder</h3>
-<ul>
-    <li>Accéder à un glossaire : 
-    <form class="form" action="#" method="post" onsubmit="return validate()">
-    <select name="glossary">
-        <option value="tf">Titres et fonctions</option>
-    </select>
-</ul>
+<h3>Accéder</h3> 
+<form class="form" action="#" method="post" onsubmit="return validate()">
+<p><label for="glossary">Accéder à un glossaire :</label>
+<select name="glossary">
+    <option value="tf">Titres et fonctions</option>
+</select>
+<input type="submit" value="OK"></p>
 
 <h3>Télécharger</h3>
 <ul>
