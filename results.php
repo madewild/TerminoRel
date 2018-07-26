@@ -58,7 +58,13 @@ if ($conn) {
     mssql_select_db("terminorel", $conn);
     $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%$source_code' AND termtext LIKE '%$term%' ORDER BY termtext", $conn);
     $num_rows = mssql_num_rows($query);
-    echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b><br><br>";
+    if($num_rows == 0) {
+        echo "Aucune entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
+    } else if($num_rows == 1) {
+        echo "<b>1 entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
+    } else {
+        echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b><br><br>";
+    }
     echo "<b>Domaine : " . $domaine . "</b><br><br>";
     if ($num_rows > 0) {
         echo "<table class='results_table'>";
