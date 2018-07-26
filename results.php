@@ -100,9 +100,14 @@ if ($conn) {
             $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target", $conn);
             while ($row = mssql_fetch_assoc($results)) {
                 $translation = $row['termtext'];
-                $status = $row['qualifier'];
+                $qualifier = $row['qualifier'];
+                if($qualifier == 3) {
+                    $status = " (recommandé)";
+                } else if($qualifier == 5) {
+                    $status = "";
+                }
                 echo "<tr><td><span class='target_lang'>EN</span></td>";
-                echo "<td><b>" . $translation . "</b></td></tr>";
+                echo "<td><b>" . $translation . $status . "</b></td></tr>";
             }
 
             if(in_array("Contexte", $types)) {
