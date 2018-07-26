@@ -84,6 +84,7 @@ if ($conn) {
 
             if(in_array("Contexte", $types)) {
                 $result = mssql_query("SELECT * FROM langroup WHERE termid=$termid AND lang=0", $conn);
+                print_r($result);
                 $explanation = mssql_fetch_assoc($result)['explanation'];
                 echo "<tr><td colspan='2'>" . $explanation . "</td></tr>";
             }
