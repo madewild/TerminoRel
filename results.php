@@ -19,6 +19,8 @@ if(isset($_POST['type'])) {
 }
 if(isset($_POST['status'])) {
     $restriction = $_POST['status'];
+} else {
+    $restriction = "none";
 }
 ?>
 
