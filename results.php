@@ -77,7 +77,7 @@ if ($conn) {
             $translation = mssql_fetch_assoc($result)['termtext'];
 
             if(in_array("Définition", $types)) {
-                $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=0", $conn);
+                $result = mssql_query("SELECT definition FROM langroup WHERE termid=$termid AND lang=0", $conn);
                 $definition = mssql_fetch_assoc($result)['definition'];
                 echo "<tr><td colspan='2'>" . $definition . "</td></tr>";
             }
