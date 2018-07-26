@@ -66,19 +66,25 @@ if ($conn) {
             if($variant != NULL) {
                 echo " (<span class='term_text'>" . $variant . "</span>)";
             }
-            echo "</td></tr><tr>";
+            echo "</td></tr>";
+
             $langroup_source = $row['langroup'];
             $result = mssql_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
             $termid = mssql_fetch_assoc($result)['termid'];
-            $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
+            $result = mssql_query("SELECT * FROM langroup WHERE termid=$termid AND lang=1", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
+            $definition = mssql_fetch_assoc($result)['definition'];
+            $explanation = mssql_fetch_assoc($result)['explanation'];
             $result = mssql_query("SELECT termtext FROM termgroup WHERE langroup=$langroup_target", $conn);
             $translation = mssql_fetch_assoc($result)['termtext'];
-            echo "<td><span class='target_lang'>EN</span></td>";
-            echo "<td><b>" . $translation . "</b></td></tr>";
+
             if(in_array("Définition", $types)) {
-                echo "<tr><td colspan='2'>Définition</td></tr>";
-            }  
+
+                echo "<tr><td colspan='2'>" . $definition . "</td></tr>";
+            }
+
+            echo "<tr><td><span class='target_lang'>EN</span></td>";
+            echo "<td><b>" . $translation . "</b></td></tr>";
             echo "<tr><td colspan='2'></td></tr>";
         }
         echo "</table>";
