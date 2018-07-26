@@ -107,7 +107,7 @@ if ($conn) {
                     $status = "";
                 }
                 echo "<tr><td><span class='target_lang'>EN</span></td>";
-                echo "<td><b>" . $translation . $status . "</b></td></tr>";
+                echo "<td><b>" . $translation . "</b>" . $status . "</td></tr>";
             }
 
             if(in_array("Contexte", $types)) {
