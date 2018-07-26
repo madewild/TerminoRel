@@ -103,7 +103,7 @@ if ($conn) {
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
             if($restriction == "approved_only") {
-                $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target and qualifier=3", $conn);
+                $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target and qualifier!=5", $conn);
             } else {
                 $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target", $conn);
             }
