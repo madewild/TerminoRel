@@ -11,12 +11,12 @@
         <select name="source">
             <option value="fr - français">fr - français</option>
             <option value="en - English">en - English</option>
+        </select>
+        <label for="cible">Langue cible</label><span class="star">*</span>
+        <select name="cible">
+            <option value="en">en - English</option>
+            <option value="fr">fr - français</option>
         </select></p>
-        <p><label for="cible">Langues cibles</label><span class="star">*</span>
-        <input type="checkbox" name="cible" value="English" checked="checked"> en
-        <input type="checkbox" name="cible" value="français"> fr
-        <input type="checkbox" name="cible" value="other"> ...
-        <input type="checkbox" name="cible" value="toutes"> Toutes</p>
         <p><label for="domaine">Domaine</label>
         <select name="domaine">
             <option value="Titres et fonctions">Titres et fonctions</option>
