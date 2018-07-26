@@ -24,7 +24,7 @@
         <p><label for="type">Information supplémentaires à afficher</label><br>
         <input type="checkbox" name="type[]" value="Synonyme"> Synonymes et acronymes
         <input type="checkbox" name="type[]" value="Définition"> Définition (en français)
-        <input type="checkbox" name="type[]" value="Exemple"> Exemple d'usage
+        <input type="checkbox" name="type[]" value="Contexte"> Contexte
         <input type="checkbox" name="type[]" value="Toutes"> Toutes les informations</p><br>
         <p><span class="star">*</span> <i>Ce symbole indique que le champ est obligatoire.</i></p>
     </fieldset>
