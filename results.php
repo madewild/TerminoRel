@@ -17,6 +17,9 @@ $domaine = htmlspecialchars($_POST['domaine']);
 if(isset($_POST['type'])) {
     $types = $_POST['type'];    
 }
+if(isset($_POST['status'])) {
+    $restriction = $_POST['status'];
+}
 ?>
 
 <h2>Glossaires de l'ULB</h2>
@@ -97,7 +100,11 @@ if ($conn) {
 
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
-            $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target", $conn);
+            if($restriction == "approved_only") {
+                $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target and qualifier=3", $conn);
+            } else {
+                $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target", $conn);
+            }
             while ($row = mssql_fetch_assoc($results)) {
                 $translation = $row['termtext'];
                 $qualifier = $row['qualifier'];
