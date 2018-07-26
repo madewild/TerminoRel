@@ -14,7 +14,9 @@ $source_code = $code_full[0];
 $source_full = $code_full[1];
 $cible = htmlspecialchars($_POST['cible']);
 $domaine = htmlspecialchars($_POST['domaine']);
-$types = $_POST['type'];
+if(isset($_POST['type'])) {
+    $types = $_POST['type'];    
+}
 ?>
 
 <h2>Glossaires de l'ULB</h2>
@@ -27,8 +29,10 @@ $types = $_POST['type'];
     <input type="hidden" name="cible" value="<?php echo $cible; ?>">
     <input type="hidden" name="domaine" value="<?php echo $domaine; ?>">
     <?php
-    foreach($types as $type) {
-        echo '<input type="hidden" name="type[]" value="' . $type . '">';
+    if(isset($types)) {
+        foreach($types as $type) {
+            echo '<input type="hidden" name="type[]" value="' . $type . '">';
+        }
     }
     ?>
     <input type="submit" value="Rechercher"><br>
@@ -38,11 +42,12 @@ $types = $_POST['type'];
     Langues : <?php echo $source_full ?> > <?php echo $cible ?> |
     Domaine : <?php echo $domaine ?> |
     Information supplémentaire : <?php 
-        if(empty($types)) {
-            echo "Aucune";
-        } else {
+        if(isset($types)) {
             $typestring = implode(", ", $types);
             echo $typestring;
+        } else {
+            echo "Aucune";
+            $types = [];
         }
     ?>
 </div><br>
