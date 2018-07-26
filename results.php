@@ -78,13 +78,14 @@ if ($conn) {
 
             if(in_array("Définition", $types)) {
                 $result = mssql_query("SELECT definition FROM langroup WHERE termid=$termid AND lang=0", $conn);
+                print_r(mssql_fetch_assoc($result));
                 $definition = mssql_fetch_assoc($result)['definition'];
                 echo "<tr><td colspan='2'>" . $definition . "</td></tr>";
             }
 
             if(in_array("Contexte", $types)) {
                 $result = mssql_query("SELECT * FROM langroup WHERE termid=$termid AND lang=0", $conn);
-                print_r($result);
+                print_r(mssql_fetch_assoc($result));
                 $explanation = mssql_fetch_assoc($result)['explanation'];
                 echo "<tr><td colspan='2'>" . $explanation . "</td></tr>";
             }
