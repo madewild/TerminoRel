@@ -37,9 +37,9 @@ $types = $_POST['type'];
 <div class="smaller_text">
     Langues : <?php echo $source_full ?> > <?php echo $cible ?> |
     Domaine : <?php echo $domaine ?> |
-    Type d'information : <?php 
+    Information supplémentaire : <?php 
         if(empty($types)) {
-            echo "Aucun";
+            echo "Aucune";
         } else {
             $typestring = implode(", ", $types);
             echo $typestring;
@@ -76,6 +76,9 @@ if ($conn) {
             $translation = mssql_fetch_assoc($result)['termtext'];
             echo "<td><span class='target_lang'>EN</span></td>";
             echo "<td><b>" . $translation . "</b></td></tr>";
+            if(in_array("Définition", $types)) {
+                echo "<tr><td colspan='2'>Définition</td></tr>";
+            }  
             echo "<tr><td colspan='2'></td></tr>";
         }
         echo "</table>";
