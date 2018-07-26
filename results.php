@@ -110,10 +110,10 @@ if ($conn) {
             while ($row = mssql_fetch_assoc($results)) {
                 $translation = $row['termtext'];
                 $qualifier = $row['qualifier'];
-                if($qualifier == 3) {
-                    $status = " (recommandé)";
-                } else if($qualifier == 5) {
+                if($qualifier == 5) {
                     $status = "";
+                } else {
+                    $status = " (recommandé)";
                 }
                 echo "<tr><td><span class='target_lang'>EN</span></td>";
                 echo "<td><b>" . $translation . "</b>" . $status . "</td></tr>";
