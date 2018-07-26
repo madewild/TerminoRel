@@ -21,7 +21,7 @@
         <select name="domaine">
             <option value="Titres et fonctions">Titres et fonctions</option>
         </select></p>
-        <p><label for="status">Uniquement les termes approuvés</label><br>
+        <p><label for="status">Uniquement les termes approuvés</label> 
         <input type="checkbox" name="status" value="approved_only"></p><br>
         <p><label for="type">Information supplémentaires à afficher</label><br>
         <input type="checkbox" name="type[]" value="Synonyme"> Synonymes et acronymes
