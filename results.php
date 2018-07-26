@@ -92,7 +92,7 @@ if ($conn) {
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
             $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target", $conn);
-            while ($row = mssql_fetch_assoc($query)) {
+            while ($row = mssql_fetch_assoc($results)) {
                 $translation = $row['termtext'];
                 $status = $row['qualifier'];
                 echo "<tr><td><span class='target_lang'>EN</span></td>";
