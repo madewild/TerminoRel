@@ -35,7 +35,11 @@
 
 <h3>Accéder</h3>
 <ul>
-    <li>Accéder au glossaire <a href="/?glossary=tf">Titres et fonctions</a></li>
+    <li>Accéder à un glossaire : 
+    <form class="form" action="#" method="post" onsubmit="return validate()">
+    <select name="glossary">
+        <option value="tf">Titres et fonctions</option>
+    </select>
 </ul>
 
 <h3>Télécharger</h3>
