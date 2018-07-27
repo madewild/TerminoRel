@@ -129,7 +129,7 @@ if ($conn) {
                 $row = mssql_fetch_assoc($result);
                 $contextgroup = $row['id'];
                 $context = $row['context'];
-                if(not(empty($context))) {
+                if(!empty($context)) {
                     $result = mssql_query("SELECT * FROM source WHERE contextgroup=$contextgroup", $conn);
                     $row = mssql_fetch_assoc($result);
                     $bib_id = $row['biblio'];
