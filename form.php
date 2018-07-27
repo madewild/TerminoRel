@@ -10,11 +10,11 @@
         <p><label for="source">Langue source</label><span class="star">*</span>
         <select name="source">
             <option value="fr">français</option>
-            <option value="en">English</option>
+            <option value="en">anglais</option>
         </select>
         <label for="cible">Langue cible</label><span class="star">*</span>
         <select name="cible">
-            <option value="en">English</option>
+            <option value="en">anglais</option>
             <option value="fr">français</option>
         </select></p>
         <p><label for="domaine">Domaine</label>
