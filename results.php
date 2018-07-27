@@ -43,7 +43,7 @@ if(isset($_POST['status'])) {
 <div class="smaller_text">
     Langues : <?php echo $source ?> > <?php echo $cible ?> |
     Domaine : <?php echo $domaine ?> |
-    Information supplémentaire : <?php 
+    Informations additionnelles : <?php 
         if(isset($types)) {
             $typestring = implode(", ", $types);
             echo $typestring;

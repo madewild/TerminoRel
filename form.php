@@ -23,12 +23,10 @@
         </select></p>
         <p><label for="status">Uniquement les termes approuvés</label> 
         <input type="checkbox" name="status" value="approved_only"></p><br>
-        <p><label for="type">Information supplémentaires à afficher</label><br>
-        <input type="checkbox" name="type[]" value="Synonyme"> Synonymes et acronymes
+        <p><label for="type">Information additionnelles à afficher</label><br>
         <input type="checkbox" name="type[]" value="Définition"> Définition (en français)
         <input type="checkbox" name="type[]" value="Explication"> Explication
         <input type="checkbox" name="type[]" value="Exemple"> Exemple d'usage
-        <input type="checkbox" name="type[]" value="Toutes"> Toutes les informations</p><br>
         <p><span class="star">*</span> <i>Ce symbole indique que le champ est obligatoire.</i></p>
     </fieldset>
 </form><br>
