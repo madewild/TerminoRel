@@ -122,12 +122,18 @@ if ($conn) {
                 echo "<td><b>" . $translation . "</b>" . $status . "</td></tr>";
             }
 
-            if(in_array("Contexte", $types)) {
+            if(in_array("Exemple", $types)) {
                 $result = mssql_query("SELECT id FROM termgroup WHERE langroup=$langroup_target", $conn);
                 $termgroup = mssql_fetch_assoc($result)['id'];
-                $result = mssql_query("SELECT context FROM contextgroup WHERE termgroup=$termgroup", $conn);
+                $result = mssql_query("SELECT id, context FROM contextgroup WHERE termgroup=$termgroup", $conn);
+                $contextgroup = mssql_fetch_assoc($result)['id'];
                 $context = mssql_fetch_assoc($result)['context'];
-                echo "<tr><td colspan='2'>" . $context . "</td></tr>";
+                $result = mssql_query("SELECT biblio, text FROM source WHERE contextgroup=$contextgroup", $conn);
+                $bib_id = mssql_fetch_assoc($result)['biblio'];
+                $source_text = mssql_fetch_assoc($result)['text'];
+                $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
+                $bib_title = mssql_fetch_assoc($result)['title'];
+                echo "<tr><td colspan='2'>" . $context . "(" . $bib_title . ", " . $source_text . ")</td></tr>";
             }
 
             echo "<tr><td colspan='2'></td></tr>";
