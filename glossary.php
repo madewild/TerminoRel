@@ -9,13 +9,20 @@ $password = PASSWORD;
 
 $glossary = $_GET['glossary'];
 $sort = $_GET['sort'];
-?>
 
-<h2>Glossaires de l'ULB</h2>
+echo "<h2>Glossaires de l'ULB</h2>";
 
-<p><a href="/">Retour à l'écran initial</a></p><br>
+if($sort == "fr") {
+        $other_code = "en";
+        $other_lang = "l'anglais";
+    } else {
+        $other_code = "fr";
+        $other_lang = "le français";
+    }
 
-<?php
+echo "<p><a href="/">Retour à l'écran initial</a> | ";
+echo "<a href='?glossary=" . $glossary . "&sort=" . $other_code . "'>Trier en se basant sur " . $other_lang . "</a></p><br>";
+
 $conn = mssql_connect($server, $username, $password);
 if ($conn) {
     mssql_select_db("terminorel", $conn);
@@ -23,14 +30,7 @@ if ($conn) {
     $num_rows = mssql_num_rows($query);
     echo "<b>" . $num_rows . " entrées</b> trouvées<br><br>";
     echo "<b>Domaine : Titres et fonctions</b><br><br>";
-    if($sort == "fr") {
-        $other_code = "en";
-        $other_lang = "l'anglais";
-    } else {
-        $other_code = "fr";
-        $other_lang = "le français";
-    }
-    echo "<a href='?glossary=" . $glossary . "&sort=" . $other_code . "'>Trier en se basant sur " . $other_lang . "</a>";
+    
     if ($num_rows > 0) {
         echo "<table class='results_table'>";
         while ($row = mssql_fetch_assoc($query)) {
