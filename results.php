@@ -129,13 +129,15 @@ if ($conn) {
                 $row = mssql_fetch_assoc($result);
                 $contextgroup = $row['id'];
                 $context = $row['context'];
-                $result = mssql_query("SELECT * FROM source WHERE contextgroup=$contextgroup", $conn);
-                $row = mssql_fetch_assoc($result);
-                $bib_id = $row['biblio'];
-                $source_text = $row['text'];
-                $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
-                $bib_title = mssql_fetch_assoc($result)['title'];
-                echo "<tr><td colspan='2'>" . $context . "(" . $bib_title . ", " . $source_text . ")</td></tr>";
+                if(not(empty($context))) {
+                    $result = mssql_query("SELECT * FROM source WHERE contextgroup=$contextgroup", $conn);
+                    $row = mssql_fetch_assoc($result);
+                    $bib_id = $row['biblio'];
+                    $source_text = $row['text'];
+                    $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
+                    $bib_title = mssql_fetch_assoc($result)['title'];
+                    echo "<tr><td colspan='2'>" . $context . "(" . $bib_title . ", " . $source_text . ")</td></tr>";
+                }
             }
 
             echo "<tr><td colspan='2'></td></tr>";
