@@ -7,8 +7,8 @@ $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
 
-$glossary = $_GET['glossary'];
-$sort = $_GET['sort'];
+$glossary = htmlspecialchars($_GET['glossary']);
+$sort = htmlspecialchars($_GET['sort']);
 
 echo "<h2>Glossaires de l'ULB</h2>";
 

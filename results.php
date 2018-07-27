@@ -15,7 +15,7 @@ if(isset($_POST['type'])) {
     $types = $_POST['type'];    
 }
 if(isset($_POST['status'])) {
-    $restriction = $_POST['status'];
+    $restriction = htmlspecialchars($_POST['status']);
 } else {
     $restriction = "none";
 }
