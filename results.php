@@ -129,9 +129,9 @@ if ($conn) {
                 $contextgroup = mssql_fetch_assoc($result)['id'];
                 echo($contextgroup);
                 $context = mssql_fetch_assoc($result)['context'];
+                echo($context . " ");
                 $result = mssql_query("SELECT * FROM source WHERE contextgroup=$contextgroup", $conn);
                 $bib_id = mssql_fetch_assoc($result)['biblio'];
-                echo($bib_id);
                 $source_text = mssql_fetch_assoc($result)['text'];
                 $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
                 $bib_title = mssql_fetch_assoc($result)['title'];
