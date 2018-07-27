@@ -114,7 +114,8 @@ if ($conn) {
             } else {
                 $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target", $conn);
             }
-            if(empty($results)) {
+            $num_results = mssql_num_rows($results);
+            if($num_results == 0) {
                 echo "<tr><td><span class='target_lang'>EN</span></td>";
                 echo "<td>Aucune traduction approuvée.</tr>";
             } else {
@@ -130,7 +131,6 @@ if ($conn) {
                     echo "<td><b>" . $translation . "</b>" . $status . "</td></tr>";
                 }
             }
-            
 
             if(in_array("Exemple", $types)) {
                 $result = mssql_query("SELECT id FROM termgroup WHERE langroup=$langroup_target", $conn);
