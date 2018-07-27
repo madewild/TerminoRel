@@ -114,7 +114,7 @@ if ($conn) {
             } else {
                 $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target", $conn);
             }
-            if(!empty($result)) {
+            if(empty($results)) {
                 echo "<tr><td><span class='target_lang'>EN</span></td>";
                 echo "<td>Aucune traduction approuvée.</tr>";
             } else {
