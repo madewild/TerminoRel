@@ -94,13 +94,13 @@ if ($conn) {
             if(in_array("Définition", $types)) {
                 $result = mssql_query("SELECT definition FROM langroup WHERE termid=$termid AND lang=0", $conn);
                 $definition = mssql_fetch_assoc($result)['definition'];
-                echo "<tr><td colspan='2'>" . $definition . "</td></tr>";
+                echo "<tr><td colspan='2'>Définition : " . $definition . "</td></tr>";
             }
 
             if(in_array("Explication", $types)) {
                 $result = mssql_query("SELECT explanation FROM langroup WHERE termid=$termid AND lang=$source_id", $conn);
                 $explanation = mssql_fetch_assoc($result)['explanation'];
-                echo "<tr><td colspan='2'>" . $explanation . "</td></tr>";
+                echo "<tr><td colspan='2'>Explication : " . $explanation . "</td></tr>";
             }
 
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id", $conn);
@@ -136,7 +136,7 @@ if ($conn) {
                     $source_text = $row['text'];
                     $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
                     $bib_title = mssql_fetch_assoc($result)['title'];
-                    echo "<tr><td colspan='2'>« " . $context . " » (<i>" . $bib_title . "</i>, " . $source_text . ")</td></tr>";
+                    echo "<tr><td colspan='2'>Exemple d'usage : « " . $context . " » (<i>" . $bib_title . "</i>, " . $source_text . ")</td></tr>";
                 }
             }
 
