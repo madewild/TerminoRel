@@ -131,7 +131,8 @@ if ($conn) {
                 $context = mssql_fetch_assoc($result)['context'];
                 $result = mssql_query("SELECT * FROM source WHERE contextgroup=$contextgroup", $conn);
                 $bib_id = mssql_fetch_assoc($result)['biblio'];
-                $source_text = mssql_fetch_assoc($result)['text'];
+                //$source_text = mssql_fetch_assoc($result)['text'];
+                $source_text = "p. 1";
                 $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
                 $bib_title = mssql_fetch_assoc($result)['title'];
                 echo "<tr><td colspan='2'>" . $context . "(" . $bib_title . ", " . $source_text . ")</td></tr>";
