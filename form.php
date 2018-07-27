@@ -34,7 +34,7 @@
 </form><br>
 
 <h3>Accéder</h3> 
-<form class="form" action="#" method="post" onsubmit="return validate()">
+<form class="form" action="#" method="get" onsubmit="return validate()">
 <p><label for="glossary">Accéder à un glossaire :</label>
 <select name="glossary">
     <option value="tf">Titres et fonctions</option>

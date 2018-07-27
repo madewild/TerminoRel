@@ -7,7 +7,7 @@ $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
 
-$glossary = $_POST['glossary'];
+$glossary = $_GET['glossary'];
 ?>
 
 <h2>Glossaires de l'ULB</h2>
