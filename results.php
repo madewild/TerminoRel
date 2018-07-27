@@ -128,7 +128,7 @@ if ($conn) {
                 $result = mssql_query("SELECT id, context FROM contextgroup WHERE termgroup=$termgroup", $conn);
                 $contextgroup = mssql_fetch_assoc($result)['id'];
                 $context = mssql_fetch_assoc($result)['context'];
-                $result = mssql_query("SELECT biblio, text FROM source WHERE contextgroup=$contextgroup", $conn);
+                $result = mssql_query("SELECT * FROM source WHERE contextgroup=$contextgroup", $conn);
                 $bib_id = mssql_fetch_assoc($result)['biblio'];
                 $source_text = mssql_fetch_assoc($result)['text'];
                 $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
