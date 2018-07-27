@@ -85,6 +85,12 @@ if ($conn) {
             $result = mssql_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
             $termid = mssql_fetch_assoc($result)['termid'];
 
+            $result = mssql_query("SELECT id FROM langroup WHERE code LIKE '$source%", $conn);
+            $source_id = mssql_fetch_assoc($result)['id'];
+
+            $result = mssql_query("SELECT id FROM langroup WHERE code LIKE '$cible%", $conn);
+            $cible_id = mssql_fetch_assoc($result)['id'];
+
             if(in_array("Définition", $types)) {
                 $result = mssql_query("SELECT definition FROM langroup WHERE termid=$termid AND lang=0", $conn);
                 $definition = mssql_fetch_assoc($result)['definition'];
@@ -92,12 +98,12 @@ if ($conn) {
             }
 
             if(in_array("Explication", $types)) {
-                $result = mssql_query("SELECT explanation FROM langroup WHERE termid=$termid AND lang=0", $conn);
+                $result = mssql_query("SELECT explanation FROM langroup WHERE termid=$termid AND lang=$source_id", $conn);
                 $explanation = mssql_fetch_assoc($result)['explanation'];
                 echo "<tr><td colspan='2'>" . $explanation . "</td></tr>";
             }
 
-            $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
+            $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
             if($restriction == "approved_only") {
                 $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target and qualifier!=5", $conn);
