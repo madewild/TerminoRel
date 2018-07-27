@@ -85,10 +85,10 @@ if ($conn) {
             $result = mssql_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
             $termid = mssql_fetch_assoc($result)['termid'];
 
-            $result = mssql_query("SELECT id FROM langroup WHERE code LIKE '$source%", $conn);
+            $result = mssql_query("SELECT id FROM langroup WHERE code LIKE '$source%'", $conn);
             $source_id = mssql_fetch_assoc($result)['id'];
 
-            $result = mssql_query("SELECT id FROM langroup WHERE code LIKE '$cible%", $conn);
+            $result = mssql_query("SELECT id FROM langroup WHERE code LIKE '$cible%'", $conn);
             $cible_id = mssql_fetch_assoc($result)['id'];
 
             if(in_array("Définition", $types)) {
