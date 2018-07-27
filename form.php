@@ -9,13 +9,13 @@
         <input type="submit" value="Rechercher"></p>
         <p><label for="source">Langue source</label><span class="star">*</span>
         <select name="source">
-            <option value="fr - français">fr - français</option>
-            <option value="en - English">en - English</option>
+            <option value="fr">français</option>
+            <option value="en">English</option>
         </select>
         <label for="cible">Langue cible</label><span class="star">*</span>
         <select name="cible">
-            <option value="en">en - English</option>
-            <option value="fr">fr - français</option>
+            <option value="en">English</option>
+            <option value="fr">français</option>
         </select></p>
         <p><label for="domaine">Domaine</label>
         <select name="domaine">

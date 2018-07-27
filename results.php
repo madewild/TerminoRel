@@ -9,9 +9,6 @@ $password = PASSWORD;
 
 $term = htmlspecialchars($_POST['term']);
 $source = htmlspecialchars($_POST['source']);
-$code_full = explode(" - ", $source);
-$source_code = $code_full[0];
-$source_full = $code_full[1];
 $cible = htmlspecialchars($_POST['cible']);
 $domaine = htmlspecialchars($_POST['domaine']);
 if(isset($_POST['type'])) {
@@ -44,7 +41,7 @@ if(isset($_POST['status'])) {
 </form>
 
 <div class="smaller_text">
-    Langues : <?php echo $source_full ?> > <?php echo $cible ?> |
+    Langues : <?php echo $source ?> > <?php echo $cible ?> |
     Domaine : <?php echo $domaine ?> |
     Information supplémentaire : <?php 
         if(isset($types)) {
@@ -61,7 +58,7 @@ if(isset($_POST['status'])) {
 $conn = mssql_connect($server, $username, $password);
 if ($conn) {
     mssql_select_db("terminorel", $conn);
-    $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%$source_code' AND termtext LIKE '%$term%' ORDER BY termtext", $conn);
+    $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%$source' AND termtext LIKE '%$term%' ORDER BY termtext", $conn);
     $num_rows = mssql_num_rows($query);
     if($num_rows == 0) {
         echo "Aucune entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
