@@ -20,7 +20,7 @@ if($sort == "fr") {
         $other_lang = "le français";
     }
 
-echo "<p><a href="/">Retour à l'écran initial</a> | ";
+echo "<p><a href='/'>Retour à l'écran initial</a> | ";
 echo "<a href='?glossary=" . $glossary . "&sort=" . $other_code . "'>Trier en se basant sur " . $other_lang . "</a></p><br>";
 
 $conn = mssql_connect($server, $username, $password);
