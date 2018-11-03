@@ -93,9 +93,16 @@ if ($conn) {
             if($variant != NULL) {
                 echo " (<span class='term_text'>" . $variant . "</span>)";
             }
-            echo "</td></tr>";
 
             $langroup_source = $row['langroup'];
+            $abbrev = $row['abbrev'];
+            if($abbrev == 1) {
+                $result = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_source", $conn);
+                $termtextfull = mssql_fetch_assoc($result)['termtext'];
+                echo " (<span class='term_text'>" . $termtextfull . "</span>)";
+            }
+            echo "</td></tr>";
+            
             $result = mssql_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
             $termid = mssql_fetch_assoc($result)['termid'];
 
