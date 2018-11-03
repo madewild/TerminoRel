@@ -23,7 +23,7 @@
         </select></p>
         <p><label for="status">Uniquement les termes approuvés</label> 
         <input type="checkbox" name="status" value="approved_only"></p><br>
-        <p><label for="type">Information additionnelles à afficher</label><br>
+        <p><label for="type">Informations additionnelles à afficher</label><br>
         <input type="checkbox" name="type[]" value="Définition"> Définition (en français)
         <input type="checkbox" name="type[]" value="Explication"> Explication
         <input type="checkbox" name="type[]" value="Exemple"> Exemple d'usage
