@@ -139,8 +139,21 @@ if ($conn) {
                     } else {
                         $status = " (recommandé)";
                     }
+                    $pos_id = $row['pos'];
+                    if($pos_id == 1) {
+                        $pos = "nom";
+                    } else {
+                        $pos = "adjectif";
+                    }
+                    $gender_id = $row['gender'];
+                    if($gender_id == 2) {
+                        $gender = "masculin";
+                    } else {
+                        $gender = "masculin ou féminin";
+                    }
                     echo "<tr><td><span class='target_lang'>EN</span></td>";
-                    echo "<td><b>" . $translation . "</b>" . $status . "</td></tr>";
+                    echo "<td><div class='tooltip'><b>" . $translation . "</b><span class='tooltiptext'>" . $pos . " " . $gender . "</span></div> ";
+                    echo $status . "</td></tr>";
                 }
             }
 
