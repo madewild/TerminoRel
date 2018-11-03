@@ -73,8 +73,20 @@ if ($conn) {
         while ($row = mssql_fetch_assoc($query)) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
+            $pos_id = $row['pos'];
+            if($pos_id == 1) {
+                $pos = "nom";
+            } else {
+                $pos = "adjectif";
+            }
+            $gender_id = $row['gender'];
+            if($gender_id == 2) {
+                $gender = "masculin";
+            } else {
+                $gender = "masculin ou féminin";
+            }
             echo "<td><span class='source_lang'>" . $lang . "</span></td>";
-            echo "<td><div class='tooltip'>" . $row['termtext'] . "<span class='tooltiptext'>...</span></div>";
+            echo "<td><div class='tooltip'>" . $row['termtext'] . "<span class='tooltiptext'>" . $pos . " " . $gender . "</span></div>";
             $variant = $row['variant'];
             if($variant != NULL) {
                 echo " (<span class='term_text'>" . $variant . "</span>)";
