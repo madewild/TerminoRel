@@ -74,7 +74,7 @@ if ($conn) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
             echo "<td><span class='source_lang'>" . $lang . "</span></td>";
-            echo "<td><span class='term_text'>" . $row['termtext'] . "</span>";
+            echo "<td><span class='tooltip'>" . $row['termtext'] . "<span class='tooltiptext'>...</span></span>";
             $variant = $row['variant'];
             if($variant != NULL) {
                 echo " (<span class='term_text'>" . $variant . "</span>)";
