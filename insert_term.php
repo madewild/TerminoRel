@@ -26,6 +26,9 @@ function clean($string) {
 $conn = mssql_connect($server, $username, $password);
 if ($conn) {
     mssql_select_db("terminorel", $conn);
+    $query = mssql_query("TRUNCATE TABLE termgroup", $conn);
+    $query = mssql_query("TRUNCATE TABLE langroup", $conn);
+    $query = mssql_query("TRUNCATE TABLE term", $conn);
     $xml = simplexml_load_file("xml/btulb.xml");
     foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
     {
