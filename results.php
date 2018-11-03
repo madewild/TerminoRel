@@ -82,8 +82,10 @@ if ($conn) {
             $gender_id = $row['gender'];
             if($gender_id == 2) {
                 $gender = "masculin";
-            } else {
+            } else if($gender_id == 4) {
                 $gender = "masculin ou féminin";
+            } else {
+                $gender = "";
             }
             echo "<td><span class='source_lang'>" . $lang . "</span></td>";
             echo "<td><div class='tooltip'>" . $row['termtext'] . "<span class='tooltiptext'>" . $pos . " " . $gender . "</span></div>";
