@@ -53,16 +53,17 @@ if ($conn) {
             }
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
-            $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target", $conn);
+            $results = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_target", $conn);
             while ($row = mssql_fetch_assoc($results)) {
                 $translation = $row['termtext'];
                 $qualifier = $row['qualifier'];
+                $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
                 if($qualifier == 5) {
                     $status = "";
                 } else {
                     $status = " (recommandé)";
                 }
-                echo "<tr><td><span class='target_lang'>EN</span></td>";
+                echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
                 echo "<td><b>" . $translation . "</b>" . $status . "</td></tr>";
             }
             echo "<tr><td colspan='2'></td></tr>";
