@@ -236,6 +236,13 @@ if ($conn) {
                     }
                 }
 
+                $abbrev = $tgrp->{'DC-64-abbreviatedFormFor'};
+                if(empty($abbrev)) {
+                    $is_abbrev = 0;
+                } else {
+                    $is_abbrev = 1;
+                }
+
                 $query = mssql_query("SELECT id from termgroup where langroup=$langroup_id and termlexid=N'$termlexid' and termtext=N'$termtext' and pos=$pos_id", $conn);
                 if (mssql_num_rows($query) > 0) {
                     while ($row = mssql_fetch_assoc($query)) {
@@ -243,7 +250,7 @@ if ($conn) {
                     }
                 }
                 else {
-                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, variant, pos, gender, qualifier) VALUES ($langroup_id, N'$termlexid', N'$termtext', N'$fem', $pos_id, $gender_id, $status_id)", $conn);
+                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, variant, pos, gender, qualifier, abbrev) VALUES ($langroup_id, N'$termlexid', N'$termtext', N'$fem', $pos_id, $gender_id, $status_id, $is_abbrev)", $conn);
                     $termgroup_id = mssql_insert_id();
                 }
 
