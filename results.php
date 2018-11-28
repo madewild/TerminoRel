@@ -58,7 +58,7 @@ if(isset($_POST['status'])) {
 $conn = mssql_connect($server, $username, $password);
 if ($conn) {
     mssql_select_db("terminorel", $conn);
-    $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%$source' AND termtext LIKE '%$term%' ORDER BY termtext", $conn);
+    $query = mssql_query("SELECT * FROM termgroup WHERE termlexid LIKE '%$source' AND (termtext LIKE '%$term%' OR variant LIKE '%$term%' ) ORDER BY termtext", $conn);
     $num_rows = mssql_num_rows($query);
     if($num_rows == 0) {
         echo "Aucune entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
