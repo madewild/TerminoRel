@@ -175,7 +175,7 @@ if ($conn) {
                     $variant = $row['variant'];
                     echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
                     echo "<td><details><summary><b>" . $translation;
-                    if($variant != NULL) {
+                    if($variant != NULL and $lang_trad == 'FR') {
                         echo " | " . $variant;
                     }
                     echo "</b> (terme recommandé)";
@@ -194,6 +194,8 @@ if ($conn) {
                         $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
                         $bib_title_con = mssql_fetch_assoc($result)['title'];
                         echo "<br><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title_con . "</i>, " . $source_text_con . ")";
+                    } else {
+                        echo "<br>Pas d'exemple d'usage pour ce terme.";
                     }
                     echo "</details></td></tr>";
                 }
@@ -203,7 +205,7 @@ if ($conn) {
                         $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
                         echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
                         echo "<td><details><summary><b>" . $translation;
-                        if($variant != NULL) {
+                        if($variant != NULL and $lang_trad == 'FR') {
                             echo " | " . $variant;
                         }
                         echo "</b> (terme suggéré)";
@@ -222,6 +224,8 @@ if ($conn) {
                             $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
                             $bib_title_con = mssql_fetch_assoc($result)['title'];
                             echo "<br><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title_con . "</i>, " . $source_text_con . ")";
+                        } else {
+                            echo "<br>Pas d'exemple d'usage pour ce terme.";
                         }
                         echo "</details></td></tr>";
                     }
