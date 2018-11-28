@@ -145,7 +145,7 @@ if ($conn) {
                     $source_text = $row['text'];
                     $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
                     $bib_title = mssql_fetch_assoc($result)['title'];
-                    echo "<tr><td colspan='2'>Explication : " . $explanation . "(<i>" . $bib_title . "</i>, " . $source_text . ")</td></tr>";
+                    echo "<tr><td></td><td>Explication : " . $explanation . "(<i>" . $bib_title . "</i>, " . $source_text . ")</td></tr>";
                 }
             }
 
@@ -188,7 +188,7 @@ if ($conn) {
                     $source_text = $row['text'];
                     $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
                     $bib_title = mssql_fetch_assoc($result)['title'];
-                    echo "<tr><td colspan='2'>Exemple d'usage : « " . $context . " » (<i>" . $bib_title . "</i>, " . $source_text . ")</td></tr>";
+                    echo "<tr><td></td><td>Exemple d'usage : « " . $context . " » (<i>" . $bib_title . "</i>, " . $source_text . ")</td></tr>";
                 }
             }
 
