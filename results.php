@@ -183,7 +183,7 @@ if ($conn) {
                 }
             }
 
-            echo "<tr><td colspan='2'></td></tr>";
+            echo "<tr><td colspan='2'><hr></td></tr>";
         }
         echo "</table>";
     }
