@@ -150,11 +150,15 @@ if ($conn) {
             echo "</details></td></tr>";
 
             if(in_array("Définition", $types)) {
-                echo "<tr><td></td><td><u>Définition</u> : " . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")</td></tr>";
+                if(!empty($definition)) {
+                    echo "<tr><td></td><td><u>Définition</u> : " . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")</td></tr>";
+                }
             }
 
             if(in_array("Explication", $types)) {
-                echo "<tr><td></td><td><u>Explication</u> : " . $explanation . " (<i>" . $bib_title_exp . "</i>, " . $source_text_exp . ")</td></tr>";
+                if(!empty($explanation)) {
+                    echo "<tr><td></td><td><u>Explication</u> : " . $explanation . " (<i>" . $bib_title_exp . "</i>, " . $source_text_exp . ")</td></tr>";
+                }
             }
 
             $result = mssql_query("SELECT id FROM lang WHERE code LIKE '$cible%'", $conn);
@@ -233,7 +237,9 @@ if ($conn) {
             }
 
             if(in_array("Exemple", $types)) {
-                echo "<tr><td></td><td><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title_con . "</i>, " . $source_text_con . ")</td></tr>";
+                if(!empty($context)) {
+                    echo "<tr><td></td><td><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title_con . "</i>, " . $source_text_con . ")</td></tr>";
+                }
             }
 
             echo "<tr><td colspan='2'><hr style='border: solid 0.5px silver; height: 0px'></td></tr>";
