@@ -130,7 +130,13 @@ if ($conn) {
                 $result = mssql_query("SELECT explanation FROM langroup WHERE termid=$termid AND lang=$source_id", $conn);
                 $explanation = mssql_fetch_assoc($result)['explanation'];
                 if(!empty($explanation)) {
-                    echo "<tr><td colspan='2'>Explication : " . $explanation . "</td></tr>";
+                    $result = mssql_query("SELECT * FROM source WHERE termid=$termid AND type='exp'", $conn);
+                    $row = mssql_fetch_assoc($result);
+                    $bib_id = $row['biblio'];
+                    $source_text = $row['text'];
+                    $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
+                    $bib_title = mssql_fetch_assoc($result)['title'];
+                    echo "<tr><td colspan='2'>Explication : " . $explanation . "(<i>" . $bib_title . "</i>, " . $source_text . ")</td></tr>";
                 }
             }
 
