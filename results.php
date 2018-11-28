@@ -89,10 +89,14 @@ if ($conn) {
                 $gender = "";
             }
             echo "<td><span class='source_lang'>" . $lang . "</span></td>";
-            echo "<td><details><summary><div class='tooltip'>" . $row['termtext'] . "<span class='tooltiptext'>" . $pos . " " . $gender . "</span></div>";
+            echo "<td><details><summary>";
+            //echo "<div class='tooltip'>" . $row['termtext'] . "<span class='tooltiptext'>" . $pos . " " . $gender . "</span></div>";
+            echo $row['termtext'];
             $variant = $row['variant'];
             if($variant != NULL) {
-                echo " | <div class='tooltip'>" . $variant . "<span class='tooltiptext'>" . $pos . " féminin</span></div>";
+                echo " | ";
+                //echo "<div class='tooltip'>" . $variant . "<span class='tooltiptext'>" . $pos . " féminin</span></div>";
+                echo $variant;
             }
 
             $langroup_source = $row['langroup'];
