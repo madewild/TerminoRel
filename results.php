@@ -98,8 +98,9 @@ if ($conn) {
             $abbrev = $row['abbrev'];
             if($abbrev == 1) {
                 $result = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_source", $conn);
-                $termtextfull = mssql_fetch_assoc($result)['termtext'];
-                $termtextfull_variant = mssql_fetch_assoc($result)['variant'];
+                $row = mssql_fetch_assoc($result);
+                $termtextfull = $row['termtext'];
+                $termtextfull_variant = $row['variant'];
                 echo " (<span class='term_text'>" . $termtextfull . "|" . $termtextfull_variant . "</span>)";
             }
             echo "</td></tr>";
