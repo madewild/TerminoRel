@@ -206,7 +206,24 @@ if ($conn) {
                         if($variant != NULL) {
                             echo " | " . $variant;
                         }
-                        echo "</b> (terme suggéré)</td></tr>";
+                        echo "</b> (terme suggéré)";
+                        echo "</summary>";
+                        $result = mssql_query("SELECT id FROM termgroup WHERE langroup=$langroup_target", $conn);
+                        $termgroup = mssql_fetch_assoc($result)['id'];
+                        $result = mssql_query("SELECT id, context FROM contextgroup WHERE termgroup=$termgroup", $conn);
+                        $row = mssql_fetch_assoc($result);
+                        $contextgroup = $row['id'];
+                        $context = $row['context'];
+                        if(!empty($context)) {
+                            $result = mssql_query("SELECT * FROM source WHERE contextgroup=$contextgroup", $conn);
+                            $row = mssql_fetch_assoc($result);
+                            $bib_id = $row['biblio'];
+                            $source_text_con = $row['text'];
+                            $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
+                            $bib_title_con = mssql_fetch_assoc($result)['title'];
+                            echo "<br><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title_con . "</i>, " . $source_text_con . ")";
+                        }
+                        echo "</details></td></tr>";
                     }
                 }
             }
