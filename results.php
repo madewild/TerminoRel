@@ -92,7 +92,7 @@ if ($conn) {
             echo "<td><div class='tooltip'>" . $row['termtext'] . "<span class='tooltiptext'>" . $pos . " " . $gender . "</span></div>";
             $variant = $row['variant'];
             if($variant != NULL) {
-                echo " | " . $variant;
+                echo " | <div class='tooltip'>" . $variant . "<span class='tooltiptext'>" . $pos . " féminin</span></div>";
             }
 
             $langroup_source = $row['langroup'];
