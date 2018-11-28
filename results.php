@@ -116,7 +116,7 @@ if ($conn) {
                 }
             }
             echo "</summary>";
-            echo "<br><br>Définition";
+            echo "<br>Définition";
             echo "<br><br>Explication";
             echo "</details>";
             echo "</td></tr>";
