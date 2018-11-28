@@ -101,7 +101,7 @@ if ($conn) {
                 $row = mssql_fetch_assoc($result);
                 $termtextfull = $row['termtext'];
                 $termtextfull_variant = $row['variant'];
-                echo " (<span class='term_text'>" . $termtextfull . "|" . $termtextfull_variant . "</span>)";
+                echo " (<span class='term_text'>" . $termtextfull . " | " . $termtextfull_variant . "</span>)";
             }
             echo "</td></tr>";
             
