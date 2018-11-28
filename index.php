@@ -23,6 +23,19 @@
     return true;
     }
    </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script>
+    $(document).ready(function () {
+        $("#source").change(function () {
+            var val = $(this).val();
+            if (val == "en") {
+                $("#cible").html("<option value='fr'>français</option>");
+            } else if (val == "fr") {
+                $("#cible").html("<option value='en'>anglais</option>");
+            }
+        });
+    });
+   </script>
    <script type="text/javascript" id="_refScript">
       var intranet_access="https://www.ulb.ac.be/commons/access?_ssl=on&";
       var intranet_status="https://www.ulb.ac.be/commons/access?_prtm=status&_ssl=on&";
