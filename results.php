@@ -115,9 +115,9 @@ if ($conn) {
                     echo " (" . $acro . ")";
                 }
             }
-            echo "</summary><p>Définition</p>";
+            echo "</summary>";
+            echo "<p>Définition</p>";
             echo "<p>Explication</p>";
-            echo "<p>Exemple d'usage</p>";
             echo "</details>";
             echo "</td></tr>";
             
