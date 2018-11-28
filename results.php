@@ -152,26 +152,24 @@ if ($conn) {
 
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
-            if($restriction == "approved_only") {
-                $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target and qualifier!=5", $conn);
-            } else {
-                $results = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target", $conn);
-            }
-            $num_results = mssql_num_rows($results);
-            if($num_results == 0) {
+            $results_recom = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", $conn);
+            $results_prop = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", $conn);
+            $num_recom = mssql_num_rows($results_recom);
+            if($num_recom == 0 and $restriction == "approved_only") {
                 echo "<tr><td><span class='target_lang'>EN</span></td>";
                 echo "<td>Aucune traduction approuvée.</tr>";
             } else {
-                while ($row = mssql_fetch_assoc($results)) {
+                while ($row = mssql_fetch_assoc($results_recom)) {
                     $translation = $row['termtext'];
-                    $qualifier = $row['qualifier'];
-                    if($qualifier == 5) {
-                        $status = " (terme suggéré)";
-                    } else {
-                        $status = " (terme recommandé)";
-                    }
                     echo "<tr><td><span class='target_lang'>EN</span></td>";
-                    echo "<td><b>" . $translation . "</b>" . $status . "</td></tr>";
+                    echo "<td><b>" . $translation . "</b> (terme recommandé)</td></tr>";
+                }
+                if(num_recom == 0) {
+                    while ($row = mssql_fetch_assoc($results_prop)) {
+                        $translation = $row['termtext'];
+                        echo "<tr><td><span class='target_lang'>EN</span></td>";
+                        echo "<td><b>" . $translation . "</b> (terme suggéré)</td></tr>";
+                    }
                 }
             }
 
