@@ -91,7 +91,7 @@ if ($conn) {
             echo "<td><div class='tooltip'>" . $row['termtext'] . "<span class='tooltiptext'>" . $pos . " " . $gender . "</span></div>";
             $variant = $row['variant'];
             if($variant != NULL) {
-                echo " | <span class='term_text'>" . $variant . "</span>";
+                echo " | " . $variant . "";
             }
 
             $langroup_source = $row['langroup'];
@@ -101,7 +101,14 @@ if ($conn) {
                 $row = mssql_fetch_assoc($result);
                 $termtextfull = $row['termtext'];
                 $termtextfull_variant = $row['variant'];
-                echo " (<span class='term_text'>" . $termtextfull . " | " . $termtextfull_variant . "</span>)";
+                echo " (" . $termtextfull . " | " . $termtextfull_variant . ")";
+            } else {
+                $result = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1", $conn);
+                $row = mssql_fetch_assoc($result);
+                if($row) {
+                    $acro = $row['termtext'];
+                    echo " (" . $acro . ")";
+                }
             }
             echo "</td></tr>";
             
