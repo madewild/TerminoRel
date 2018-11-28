@@ -8,6 +8,7 @@ $username = USERNAME;
 $password = PASSWORD;
 
 $term = htmlspecialchars($_POST['term']);
+echo $term;
 $source = htmlspecialchars($_POST['source']);
 $cible = htmlspecialchars($_POST['cible']);
 $domaine = htmlspecialchars($_POST['domaine']);
@@ -165,7 +166,7 @@ if ($conn) {
                     $translation = $row['termtext'];
                     $qualifier = $row['qualifier'];
                     if($qualifier == 5) {
-                        $status = "(terme suggéré)";
+                        $status = " (terme suggéré)";
                     } else {
                         $status = " (terme recommandé)";
                     }
