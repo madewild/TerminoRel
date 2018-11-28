@@ -164,7 +164,7 @@ if ($conn) {
                     echo "<tr><td><span class='target_lang'>EN</span></td>";
                     echo "<td><b>" . $translation . "</b> (terme recommandé)</td></tr>";
                 }
-                if(num_recom == 0) {
+                if($num_recom == 0) {
                     while ($row = mssql_fetch_assoc($results_prop)) {
                         $translation = $row['termtext'];
                         echo "<tr><td><span class='target_lang'>EN</span></td>";
