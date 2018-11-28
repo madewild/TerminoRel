@@ -165,9 +165,9 @@ if ($conn) {
                     $translation = $row['termtext'];
                     $qualifier = $row['qualifier'];
                     if($qualifier == 5) {
-                        $status = "";
+                        $status = "(terme suggéré)";
                     } else {
-                        $status = " (recommandé)";
+                        $status = " (terme recommandé)";
                     }
                     echo "<tr><td><span class='target_lang'>EN</span></td>";
                     echo "<td><b>" . $translation . "</b>" . $status . "</td></tr>";
