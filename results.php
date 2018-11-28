@@ -129,14 +129,24 @@ if ($conn) {
                 $source_text_def = $row['text'];
                 $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
                 $bib_title_def = mssql_fetch_assoc($result)['title'];
+                echo "<br><u>Définition</u> : " . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")";
             }
-
-            echo "<br><u>Définition</u> : " . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")";
 
             $result = mssql_query("SELECT id FROM lang WHERE code LIKE '$source%'", $conn);
             $source_id = mssql_fetch_assoc($result)['id'];
 
-            echo "<br><br>Explication";
+            $result = mssql_query("SELECT explanation FROM langroup WHERE termid=$termid AND lang=$source_id", $conn);
+            $explanation = mssql_fetch_assoc($result)['explanation'];
+            if(!empty($explanation)) {
+                $result = mssql_query("SELECT * FROM source WHERE termid=$termid AND type='exp'", $conn);
+                $row = mssql_fetch_assoc($result);
+                $bib_id = $row['biblio'];
+                $source_text_exp = $row['text'];
+                $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
+                $bib_title_exp = mssql_fetch_assoc($result)['title'];
+                echo "<br><br><u>Explication</u> : " . $explanation . " (<i>" . $bib_title_exp . "</i>, " . $source_text_exp . ")";
+            }
+
             echo "</details>";
             echo "</td></tr>";
 
@@ -145,17 +155,7 @@ if ($conn) {
             }
 
             if(in_array("Explication", $types)) {
-                $result = mssql_query("SELECT explanation FROM langroup WHERE termid=$termid AND lang=$source_id", $conn);
-                $explanation = mssql_fetch_assoc($result)['explanation'];
-                if(!empty($explanation)) {
-                    $result = mssql_query("SELECT * FROM source WHERE termid=$termid AND type='exp'", $conn);
-                    $row = mssql_fetch_assoc($result);
-                    $bib_id = $row['biblio'];
-                    $source_text = $row['text'];
-                    $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
-                    $bib_title = mssql_fetch_assoc($result)['title'];
-                    echo "<tr><td></td><td><u>Explication</u> : " . $explanation . " (<i>" . $bib_title . "</i>, " . $source_text . ")</td></tr>";
-                }
+                echo "<tr><td></td><td><u>Explication</u> : " . $explanation . " (<i>" . $bib_title_exp . "</i>, " . $source_text_exp . ")</td></tr>";
             }
 
             $result = mssql_query("SELECT id FROM lang WHERE code LIKE '$cible%'", $conn);
