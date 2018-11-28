@@ -152,8 +152,8 @@ if ($conn) {
 
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
-            $results_recom = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", $conn);
-            $results_prop = mssql_query("SELECT termtext, qualifier FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", $conn);
+            $results_recom = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", $conn);
+            $results_prop = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", $conn);
             $num_recom = mssql_num_rows($results_recom);
             if($num_recom == 0 and $restriction == "approved_only") {
                 echo "<tr><td><span class='target_lang'>EN</span></td>";
@@ -161,13 +161,15 @@ if ($conn) {
             } else {
                 while ($row = mssql_fetch_assoc($results_recom)) {
                     $translation = $row['termtext'];
-                    echo "<tr><td><span class='target_lang'>EN</span></td>";
+                    $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
+                    echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
                     echo "<td><b>" . $translation . "</b> (terme recommandé)</td></tr>";
                 }
                 if($num_recom == 0) {
                     while ($row = mssql_fetch_assoc($results_prop)) {
                         $translation = $row['termtext'];
-                        echo "<tr><td><span class='target_lang'>EN</span></td>";
+                        $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
+                        echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
                         echo "<td><b>" . $translation . "</b> (terme suggéré)</td></tr>";
                     }
                 }

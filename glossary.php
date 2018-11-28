@@ -37,10 +37,10 @@ if ($conn) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
             echo "<td><span class='source_lang'>" . $lang . "</span></td>";
-            echo "<td><span class='term_text'>" . $row['termtext'] . "</span>";
+            echo "<td>" . $row['termtext'] . "";
             $variant = $row['variant'];
             if($variant != NULL) {
-                echo " (<span class='term_text'>" . $variant . "</span>)";
+                echo " | " . $variant;
             }
             echo "</td></tr><tr>";
             $langroup_source = $row['langroup'];
@@ -53,18 +53,22 @@ if ($conn) {
             }
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
-            $results = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_target", $conn);
-            while ($row = mssql_fetch_assoc($results)) {
+            $results_recom = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", $conn);
+            $results_prop = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", $conn);
+            $num_recom = mssql_num_rows($results_recom);
+            while ($row = mssql_fetch_assoc($results_recom)) {
                 $translation = $row['termtext'];
-                $qualifier = $row['qualifier'];
                 $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
-                if($qualifier == 5) {
-                    $status = "";
-                } else {
-                    $status = " (recommandé)";
-                }
                 echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
-                echo "<td><b>" . $translation . "</b>" . $status . "</td></tr>";
+                echo "<td><b>" . $translation . "</b> (terme recommandé)</td></tr>";
+            }
+            if($num_recom == 0) {
+                while ($row = mssql_fetch_assoc($results_prop)) {
+                    $translation = $row['termtext'];
+                    $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
+                    echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
+                    echo "<td><b>" . $translation . "</b> (terme suggéré)</td></tr>";
+                }
             }
             echo "<tr><td colspan='2'></td></tr>";
         }
