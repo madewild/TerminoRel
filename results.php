@@ -147,8 +147,7 @@ if ($conn) {
                 echo "<br><br><u>Explication</u> : " . $explanation . " (<i>" . $bib_title_exp . "</i>, " . $source_text_exp . ")";
             }
 
-            echo "</details>";
-            echo "</td></tr>";
+            echo "</details></td></tr>";
 
             if(in_array("Définition", $types)) {
                 echo "<tr><td></td><td><u>Définition</u> : " . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")</td></tr>";
@@ -175,18 +174,35 @@ if ($conn) {
                     $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
                     $variant = $row['variant'];
                     echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
-                    echo "<td><b>" . $translation;
+                    echo "<td><details><summary><b>" . $translation;
                     if($variant != NULL) {
                         echo " | " . $variant;
                     }
-                    echo "</b> (terme recommandé)</td></tr>";
+                    echo "</b> (terme recommandé)";
+                    echo "</summary>";
+                    $result = mssql_query("SELECT id FROM termgroup WHERE langroup=$langroup_target", $conn);
+                    $termgroup = mssql_fetch_assoc($result)['id'];
+                    $result = mssql_query("SELECT id, context FROM contextgroup WHERE termgroup=$termgroup", $conn);
+                    $row = mssql_fetch_assoc($result);
+                    $contextgroup = $row['id'];
+                    $context = $row['context'];
+                    if(!empty($context)) {
+                        $result = mssql_query("SELECT * FROM source WHERE contextgroup=$contextgroup", $conn);
+                        $row = mssql_fetch_assoc($result);
+                        $bib_id = $row['biblio'];
+                        $source_text_con = $row['text'];
+                        $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
+                        $bib_title_con = mssql_fetch_assoc($result)['title'];
+                        echo "<br><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title_con . "</i>, " . $source_text_con . ")";
+                    }
+                    echo "</details></td></tr>";
                 }
                 if($num_recom == 0) {
                     while ($row = mssql_fetch_assoc($results_prop)) {
                         $translation = $row['termtext'];
                         $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
                         echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
-                        echo "<td><b>" . $translation;
+                        echo "<td><details><summary><b>" . $translation;
                         if($variant != NULL) {
                             echo " | " . $variant;
                         }
@@ -196,21 +212,7 @@ if ($conn) {
             }
 
             if(in_array("Exemple", $types)) {
-                $result = mssql_query("SELECT id FROM termgroup WHERE langroup=$langroup_target", $conn);
-                $termgroup = mssql_fetch_assoc($result)['id'];
-                $result = mssql_query("SELECT id, context FROM contextgroup WHERE termgroup=$termgroup", $conn);
-                $row = mssql_fetch_assoc($result);
-                $contextgroup = $row['id'];
-                $context = $row['context'];
-                if(!empty($context)) {
-                    $result = mssql_query("SELECT * FROM source WHERE contextgroup=$contextgroup", $conn);
-                    $row = mssql_fetch_assoc($result);
-                    $bib_id = $row['biblio'];
-                    $source_text = $row['text'];
-                    $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
-                    $bib_title = mssql_fetch_assoc($result)['title'];
-                    echo "<tr><td></td><td><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title . "</i>, " . $source_text . ")</td></tr>";
-                }
+                echo "<tr><td></td><td><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title_con . "</i>, " . $source_text_con . ")</td></tr>";
             }
 
             echo "<tr><td colspan='2'><hr style='border: solid 0.5px silver; height: 0px'></td></tr>";
