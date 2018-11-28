@@ -111,6 +111,11 @@ if ($conn) {
                     echo " (" . $acro . ")";
                 }
             }
+            echo "<details><summary>Informations additionnelles</summary>";
+            echo "<p>Définition</p>";
+            echo "<p>Explication</p>";
+            echo "<p>Exemple d'usage</p>";
+            echo "</details>";
             echo "</td></tr>";
             
             $result = mssql_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
