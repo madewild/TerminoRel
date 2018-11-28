@@ -92,7 +92,7 @@ if ($conn) {
             echo "<td><div class='tooltip'>" . $row['termtext'] . "<span class='tooltiptext'>" . $pos . " " . $gender . "</span></div>";
             $variant = $row['variant'];
             if($variant != NULL) {
-                echo " | " . $variant . "";
+                echo " | " . $variant;
             }
 
             $langroup_source = $row['langroup'];
@@ -162,15 +162,24 @@ if ($conn) {
                 while ($row = mssql_fetch_assoc($results_recom)) {
                     $translation = $row['termtext'];
                     $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
+                    $variant = $row['variant'];
                     echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
-                    echo "<td><b>" . $translation . "</b> (terme recommandé)</td></tr>";
+                    echo "<td><b>" . $translation;
+                    if($variant != NULL) {
+                        echo " | " . $variant;
+                    }
+                    echo "</b> (terme recommandé)</td></tr>";
                 }
                 if($num_recom == 0) {
                     while ($row = mssql_fetch_assoc($results_prop)) {
                         $translation = $row['termtext'];
                         $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
                         echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
-                        echo "<td><b>" . $translation . "</b> (terme suggéré)</td></tr>";
+                        echo "<td><b>" . $translation;
+                        if($variant != NULL) {
+                            echo " | " . $variant;
+                        }
+                        echo "</b> (terme suggéré)</td></tr>";
                     }
                 }
             }
