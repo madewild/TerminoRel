@@ -116,32 +116,32 @@ if ($conn) {
                 }
             }
             echo "</summary>";
-            echo "<br>Définition";
-            echo "<br><br>Explication";
-            echo "</details>";
-            echo "</td></tr>";
-            
+
             $result = mssql_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
             $termid = mssql_fetch_assoc($result)['termid'];
+
+            $result = mssql_query("SELECT definition FROM langroup WHERE termid=$termid AND lang=0", $conn);
+            $definition = mssql_fetch_assoc($result)['definition'];
+            if(!empty($definition)) {
+                $result = mssql_query("SELECT * FROM source WHERE termid=$termid AND type='def'", $conn);
+                $row = mssql_fetch_assoc($result);
+                $bib_id = $row['biblio'];
+                $source_text_def = $row['text'];
+                $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
+                $bib_title_def = mssql_fetch_assoc($result)['title'];
+            }
+
+            echo "<br><u>Définition</u> : " . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")";
 
             $result = mssql_query("SELECT id FROM lang WHERE code LIKE '$source%'", $conn);
             $source_id = mssql_fetch_assoc($result)['id'];
 
-            $result = mssql_query("SELECT id FROM lang WHERE code LIKE '$cible%'", $conn);
-            $cible_id = mssql_fetch_assoc($result)['id'];
+            echo "<br><br>Explication";
+            echo "</details>";
+            echo "</td></tr>";
 
             if(in_array("Définition", $types)) {
-                $result = mssql_query("SELECT definition FROM langroup WHERE termid=$termid AND lang=0", $conn);
-                $definition = mssql_fetch_assoc($result)['definition'];
-                if(!empty($definition)) {
-                    $result = mssql_query("SELECT * FROM source WHERE termid=$termid AND type='def'", $conn);
-                    $row = mssql_fetch_assoc($result);
-                    $bib_id = $row['biblio'];
-                    $source_text = $row['text'];
-                    $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
-                    $bib_title = mssql_fetch_assoc($result)['title'];
-                    echo "<tr><td></td><td><u>Définition</u> : " . $definition . " (<i>" . $bib_title . "</i>, " . $source_text . ")</td></tr>";
-                }
+                echo "<tr><td></td><td><u>Définition</u> : " . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")</td></tr>";
             }
 
             if(in_array("Explication", $types)) {
@@ -157,6 +157,9 @@ if ($conn) {
                     echo "<tr><td></td><td><u>Explication</u> : " . $explanation . " (<i>" . $bib_title . "</i>, " . $source_text . ")</td></tr>";
                 }
             }
+
+            $result = mssql_query("SELECT id FROM lang WHERE code LIKE '$cible%'", $conn);
+            $cible_id = mssql_fetch_assoc($result)['id'];
 
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
