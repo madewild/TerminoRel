@@ -42,8 +42,25 @@ if ($conn) {
             if($variant != NULL) {
                 echo " | " . $variant;
             }
-            echo "</td></tr><tr>";
+
             $langroup_source = $row['langroup'];
+            $abbrev = $row['abbrev'];
+            if($abbrev == 1) {
+                $result = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_source", $conn);
+                $row = mssql_fetch_assoc($result);
+                $termtextfull = $row['termtext'];
+                $termtextfull_variant = $row['variant'];
+                echo " (" . $termtextfull . " | " . $termtextfull_variant . ")";
+            } else {
+                $result = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1", $conn);
+                $row = mssql_fetch_assoc($result);
+                if($row) {
+                    $acro = $row['termtext'];
+                    echo " (" . $acro . ")";
+                }
+            }
+
+            echo "</td></tr><tr>";
             $result = mssql_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
             $termid = mssql_fetch_assoc($result)['termid'];
             if($sort == "fr") {
