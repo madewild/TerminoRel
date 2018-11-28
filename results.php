@@ -88,7 +88,7 @@ if ($conn) {
                 $gender = "";
             }
             echo "<td><span class='source_lang'>" . $lang . "</span></td>";
-            echo $row['termtext'] . "<td><div class='tooltip'><sup>?</sup><span class='tooltiptext'>" . $pos . " " . $gender . "</span></div>";
+            echo "<td>" . $row['termtext'] . "<div class='tooltip'><sup>?</sup><span class='tooltiptext'>" . $pos . " " . $gender . "</span></div>";
             $variant = $row['variant'];
             if($variant != NULL) {
                 echo " | <span class='term_text'>" . $variant . "</span>";
