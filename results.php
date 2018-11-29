@@ -93,7 +93,7 @@ if ($conn) {
             echo "<td><span class='source_lang'>" . $lang . "</span></td>";
             echo "<td><details><summary>";
             //echo "<div class='tooltip'>" . $row['termtext'] . "<span class='tooltiptext'>" . $pos . " " . $gender . "</span></div>";
-            echo "<span title='Cliquez sur le triangle pour obtenir plus d&apos;information sur ce terme.'>" . $row['termtext'] . "</span>";
+            echo "<span title='Cliquez sur le triangle pour voir la définition.'>" . $row['termtext'] . "</span>";
             $variant = $row['variant'];
             if($variant != NULL) {
                 echo " | ";
@@ -180,11 +180,11 @@ if ($conn) {
                     $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
                     $variant = $row['variant'];
                     echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
-                    echo "<td><details><summary><b>" . $translation;
+                    echo "<td><details><summary><span title='Cliquez sur le triangle pour voir un exemple.'><b>" . $translation;
                     if($variant != NULL and $lang_trad == 'FR') {
                         echo " | " . $variant;
                     }
-                    echo "</b> (terme recommandé)";
+                    echo "</span></b> (terme recommandé)";
                     echo "</summary>";
                     $result = mssql_query("SELECT id FROM termgroup WHERE langroup=$langroup_target", $conn);
                     $termgroup = mssql_fetch_assoc($result)['id'];
