@@ -6,7 +6,7 @@
         <legend>Vos critères de recherche</legend>
         <ul><li><label for="term">Terme recherché</label><!--<span class="star">*</span>-->
         <input type="text" class="input" id="term" name="term" size="80">
-        <input type="submit" value="Rechercher"></li>
+        <input type="submit" value="Rechercher"></li><br>
         <li><label for="source">Langue source</label><!--<span class="star">*</span>-->
         <select id="source" name="source">
             <option value="fr">français</option>
