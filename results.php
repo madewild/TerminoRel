@@ -210,37 +210,8 @@ if ($conn) {
                 echo "<td>Aucune traduction approuvée.</tr>";
             } else {
                 show_trad($conn, $langroup_target, $results_recom, "recommandé");
-
                 if($num_recom == 0) {
-                    while ($row = mssql_fetch_assoc($results_prop)) {
-                        $translation = $row['termtext'];
-                        $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
-                        echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
-                        echo "<td><details><summary><span title='Cliquez sur le terme pour voir un exemple.'><b>" . $translation;
-                        if($variant != NULL and $lang_trad == 'FR') {
-                            echo " | " . $variant;
-                        }
-                        echo "</span></b> (terme suggéré)";
-                        echo "</summary>";
-                        $result = mssql_query("SELECT id FROM termgroup WHERE langroup=$langroup_target", $conn);
-                        $termgroup = mssql_fetch_assoc($result)['id'];
-                        $result = mssql_query("SELECT id, context FROM contextgroup WHERE termgroup=$termgroup", $conn);
-                        $row = mssql_fetch_assoc($result);
-                        $contextgroup = $row['id'];
-                        $context = $row['context'];
-                        if(!empty($context)) {
-                            $result = mssql_query("SELECT * FROM source WHERE contextgroup=$contextgroup", $conn);
-                            $row = mssql_fetch_assoc($result);
-                            $bib_id = $row['biblio'];
-                            $source_text_con = $row['text'];
-                            $result = mssql_query("SELECT title FROM biblio WHERE id=$bib_id", $conn);
-                            $bib_title_con = mssql_fetch_assoc($result)['title'];
-                            echo "<br><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title_con . "</i>, " . $source_text_con . ")";
-                        } else {
-                            echo "<br>Pas d'exemple d'usage pour ce terme.";
-                        }
-                        echo "</details></td></tr>";
-                    }
+                    show_trad($conn, $langroup_target, $results_prop, "suggéré");
                 }
             }
 
