@@ -93,13 +93,14 @@ if ($conn) {
             echo "<td><span class='source_lang'>" . $lang . "</span></td>";
             echo "<td><details><summary>";
             //echo "<div class='tooltip'>" . $row['termtext'] . "<span class='tooltiptext'>" . $pos . " " . $gender . "</span></div>";
-            echo "<span title='Cliquez sur le triangle pour voir la définition.'>" . $row['termtext'] . "</span>";
+            echo "<span title='Cliquez sur le terme pour voir la définition.'>" . $row['termtext'];
             $variant = $row['variant'];
             if($variant != NULL) {
                 echo " | ";
                 //echo "<div class='tooltip'>" . $variant . "<span class='tooltiptext'>" . $pos . " féminin</span></div>";
                 echo $variant;
             }
+            echo "</span>";
 
             $langroup_source = $row['langroup'];
             $abbrev = $row['abbrev'];
@@ -180,7 +181,7 @@ if ($conn) {
                     $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
                     $variant = $row['variant'];
                     echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
-                    echo "<td><details><summary><span title='Cliquez sur le triangle pour voir un exemple.'><b>" . $translation;
+                    echo "<td><details><summary><span title='Cliquez sur le terme pour voir un exemple.'><b>" . $translation;
                     if($variant != NULL and $lang_trad == 'FR') {
                         echo " | " . $variant;
                     }

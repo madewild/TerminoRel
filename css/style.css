@@ -73,3 +73,7 @@ a:visited{
 #form li {
     margin: 12px 0 0 0;
 }
+
+summary{
+    outline:none;
+}
