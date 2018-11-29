@@ -39,7 +39,7 @@
 </select>
 <input type="hidden" name="sort" value="fr">
 <input type="submit" value="OK">
-</li></ul><br>
+</li></ul>
 
 <h3>Télécharger</h3>
 <ul>
