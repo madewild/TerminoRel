@@ -6,7 +6,7 @@
         <legend>Vos critères de recherche</legend>
         <p><label for="term">Terme recherché</label><!--<span class="star">*</span>-->
         <input type="text" class="input" id="term" name="term" size="80">
-        <input type="submit" value="Rechercher"></p>
+        <input type="submit" value="Rechercher"></p><br>
         <p><label for="source">Langue source</label><!--<span class="star">*</span>-->
         <select id="source" name="source">
             <option value="fr">français</option>
@@ -15,11 +15,11 @@
         <label for="cible">Langue cible</label><!--<span class="star">*</span>-->
         <select id="cible" name="cible">
             <option value="en">anglais</option>
-        </select></p>
+        </select></p><br>
         <p><label for="domaine">Domaine</label>
         <select name="domaine">
             <option value="Titres et fonctions">Titres et fonctions</option>
-        </select></p>
+        </select></p><br>
         <p><label for="status">Uniquement les termes approuvés</label> 
         <input type="checkbox" name="status" value="approved_only"></p>
         <!--<br><p><label for="type">Informations additionnelles à afficher</label><br>
@@ -37,7 +37,7 @@
     <option value="tf">Titres et fonctions</option>
 </select>
 <input type="hidden" name="sort" value="fr">
-<input type="submit" value="OK">
+<input type="submit" value="OK"><br>
 
 <h3>Télécharger</h3>
 <ul>
