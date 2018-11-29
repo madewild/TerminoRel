@@ -6,7 +6,7 @@
         <link href="http://www.ulb.be/design1/css/design-framework.css" rel="stylesheet" type="text/css">
         <link href="http://www.ulb.be/design1/css/design-page.css" rel="stylesheet" type="text/css">
         <link href="http://www.ulb.be/design1/css/design-print.css" media="print" rel="stylesheet" type="text/css">
-        <link href="css/style.css?version=7" rel="stylesheet" type="text/css">
+        <link href="css/style.css?version=8" rel="stylesheet" type="text/css">
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <script src="http://www.ulb.be/design1/js/script-framework.js" type="text/javascript"></script>

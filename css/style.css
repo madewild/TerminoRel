@@ -69,3 +69,7 @@ a:visited{
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+#form li {
+    margin: 0 0 3px 3px;
+}

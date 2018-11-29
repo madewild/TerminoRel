@@ -4,7 +4,7 @@
 <form class="form" action="" method="post" onsubmit="return validate()">
     <fieldset>
         <legend>Vos critères de recherche</legend>
-        <ul><li><label for="term">Terme recherché</label><!--<span class="star">*</span>-->
+        <div id="form"><ul><li><label for="term">Terme recherché</label><!--<span class="star">*</span>-->
         <input type="text" class="input" id="term" name="term" size="80">
         <input type="submit" value="Rechercher"></li><br>
         <li><label for="source">Langue source</label><!--<span class="star">*</span>-->
@@ -21,7 +21,7 @@
             <option value="Titres et fonctions">Titres et fonctions</option>
         </select></li>
         <li><label for="status">Uniquement les termes approuvés</label>
-        <input type="checkbox" name="status" value="approved_only"></li></ul>
+        <input type="checkbox" name="status" value="approved_only"></li></ul></div>
         <!--<br><p><label for="type">Informations additionnelles à afficher</label><br>
         <input type="checkbox" name="type[]" value="Définition"> Définition (en français)
         <input type="checkbox" name="type[]" value="Explication"> Explications supplémentaires (en français)
