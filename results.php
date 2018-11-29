@@ -21,7 +21,7 @@ if(isset($_POST['status'])) {
     $restriction = "none";
 }
 
-function show_trad($results, $type) {
+function show_trad($conn, $langroup_target, $results, $type) {
     while ($row = mssql_fetch_assoc($results)) {
         $translation = $row['termtext'];
         $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
@@ -209,8 +209,8 @@ if ($conn) {
                 echo "<tr><td><span class='target_lang'>EN</span></td>";
                 echo "<td>Aucune traduction approuvée.</tr>";
             } else {
-                show_trad($results_recom, "recommandé");
-                
+                show_trad($conn, $langroup_target, $results_recom, "recommandé");
+
                 if($num_recom == 0) {
                     while ($row = mssql_fetch_assoc($results_prop)) {
                         $translation = $row['termtext'];
