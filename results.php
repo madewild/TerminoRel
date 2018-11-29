@@ -36,6 +36,8 @@ if(isset($_POST['status'])) {
         foreach($types as $type) {
             echo '<input type="hidden" name="type[]" value="' . $type . '">';
         }
+    } else {
+        $types = [];
     }
     ?>
     <input type="submit" value="Rechercher"><br>
@@ -51,7 +53,6 @@ if(isset($_POST['status'])) {
             echo $typestring;
         } else {
             echo "Aucune";
-            $types = [];
         }*/
     ?>
 </div><br>
