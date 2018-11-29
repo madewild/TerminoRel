@@ -30,14 +30,16 @@
     </fieldset>
 </form><br>
 
-<h3>Accéder</h3> 
+<h3>Accéder</h3>
+<ul><li>
 <form class="form" action="" method="get">
 <label for="glossary">Accéder à un glossaire :</label>
 <select name="glossary">
     <option value="tf">Titres et fonctions</option>
 </select>
 <input type="hidden" name="sort" value="fr">
-<input type="submit" value="OK"><br>
+<input type="submit" value="OK">
+</li></ul>
 
 <h3>Télécharger</h3>
 <ul>
