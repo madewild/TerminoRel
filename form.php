@@ -4,10 +4,10 @@
 <form class="form" action="" method="post" onsubmit="return validate()">
     <fieldset>
         <legend>Vos critères de recherche</legend>
-        <p><label for="term">Terme recherché</label><!--<span class="star">*</span>-->
+        <ul><li><label for="term">Terme recherché</label><!--<span class="star">*</span>-->
         <input type="text" class="input" id="term" name="term" size="80">
-        <input type="submit" value="Rechercher"></p><br>
-        <p><label for="source">Langue source</label><!--<span class="star">*</span>-->
+        <input type="submit" value="Rechercher"></li>
+        <li><label for="source">Langue source</label><!--<span class="star">*</span>-->
         <select id="source" name="source">
             <option value="fr">français</option>
             <option value="en">anglais</option>
@@ -15,13 +15,13 @@
         <label for="cible">Langue cible</label><!--<span class="star">*</span>-->
         <select id="cible" name="cible">
             <option value="en">anglais</option>
-        </select></p><br>
-        <p><label for="domaine">Domaine</label>
+        </select></li>
+        <li><label for="domaine">Domaine</label>
         <select name="domaine">
             <option value="Titres et fonctions">Titres et fonctions</option>
-        </select></p><br>
-        <p><label for="status">Uniquement les termes approuvés</label> 
-        <input type="checkbox" name="status" value="approved_only"></p>
+        </select></li>
+        <li><label for="status">Uniquement les termes approuvés</label>
+        <input type="checkbox" name="status" value="approved_only"></li></ul>
         <!--<br><p><label for="type">Informations additionnelles à afficher</label><br>
         <input type="checkbox" name="type[]" value="Définition"> Définition (en français)
         <input type="checkbox" name="type[]" value="Explication"> Explications supplémentaires (en français)
