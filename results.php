@@ -93,7 +93,7 @@ if ($conn) {
             echo "<td><span class='source_lang'>" . $lang . "</span></td>";
             echo "<td><details><summary>";
             //echo "<div class='tooltip'>" . $row['termtext'] . "<span class='tooltiptext'>" . $pos . " " . $gender . "</span></div>";
-            echo "<span title='Cliquez sur le triangle pour obtenir plus d'information sur ce terme.>" . $row['termtext'] . "</span>";
+            echo "<span title='Cliquez sur le triangle pour obtenir plus d\'information sur ce terme.'>" . $row['termtext'] . "</span>";
             $variant = $row['variant'];
             if($variant != NULL) {
                 echo " | ";
