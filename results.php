@@ -32,11 +32,11 @@ if(isset($_POST['status'])) {
     <input type="hidden" name="cible" value="<?php echo $cible; ?>">
     <input type="hidden" name="domaine" value="<?php echo $domaine; ?>">
     <?php
-    if(isset($types)) {
+    /*if(isset($types)) {
         foreach($types as $type) {
             echo '<input type="hidden" name="type[]" value="' . $type . '">';
         }
-    }
+    }*/
     ?>
     <input type="submit" value="Rechercher"><br>
 </form>
@@ -44,14 +44,15 @@ if(isset($_POST['status'])) {
 <div class="smaller_text">
     Langues : <?php echo $source ?> > <?php echo $cible ?> |
     Domaine : <?php echo $domaine ?> |
-    Informations additionnelles : <?php 
-        if(isset($types)) {
+    <!--Informations additionnelles : -->
+    <?php 
+        /*if(isset($types)) {
             $typestring = implode(", ", $types);
             echo $typestring;
         } else {
             echo "Aucune";
             $types = [];
-        }
+        }*/
     ?>
 </div><br>
 
