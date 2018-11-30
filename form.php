@@ -5,7 +5,7 @@
     <fieldset>
         <legend>Vos critères de recherche</legend>
         <nav id="form"><ul><li><label for="term">Terme recherché</label><!--<span class="star">*</span>-->
-        <input type="text" class="input" id="term" name="term" size="60">
+        <input type="text" class="input" id="term" name="term" size="70">
         <input type="submit" value="Rechercher"></li>
         <li><label for="source">Langue source</label><!--<span class="star">*</span>-->
         <select id="source" name="source">
