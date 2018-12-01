@@ -3,9 +3,9 @@
 <table class="footer_table">
     <tr>
         <td><a href="/?page=about">À propos des glossaires</a></td>
-        <td>Aide</td>
-        <td>&copy; Droits d'auteur</td>
-        <td>Nous contacter</td>
+        <td><a href="/?page=help">Aide</a></td>
+        <td><a href="/?page=copyright">&copy; Droits d'auteur</a></td>
+        <td><a href="/?page=contact">Nous contacter</a></td>
     </tr>
 </table>
 </div>
