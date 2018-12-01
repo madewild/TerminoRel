@@ -22,8 +22,8 @@
         <select name="domaine">
             <option value="Titres et fonctions">Titres et fonctions</option>
         </select></li>
-        <li><label for="status"><span title="Termes validés officiellement par le comité terminologique de l'ULB.">
-        Uniquement les termes approuvés &#9432;</span></label>
+        <li><label for="status"><span title="Traductions validées officiellement par le comité terminologique de l'ULB.">
+        Uniquement les traductions approuvées &#9432;</span></label>
         <input type="checkbox" name="status" value="approved_only"></li></ul></nav>
         <!--<br><p><label for="type">Informations additionnelles à afficher</label><br>
         <input type="checkbox" name="type[]" value="Définition"> Définition (en français)
