@@ -663,6 +663,12 @@
                             include("results.php");
                         } else if(isset($_GET['glossary'])) {
                             include("glossary.php");
+                        } else if(isset($_GET['page'])) {
+                           if($_GET['page'] == 'about') {
+                              include("about.php");
+                           } else {
+                              include("error.php");
+                           }
                         } else {
                             include("form.php");
                         }

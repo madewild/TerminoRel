@@ -1,0 +1,3 @@
+<h2>Erreur</h2>
+
+Désolé, la page que vous avez demandé n'existe pas...

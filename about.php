@@ -1,0 +1,3 @@
+<h2>À propos des glossaires</h2>
+
+Page en construction...
