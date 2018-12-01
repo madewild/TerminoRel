@@ -204,6 +204,22 @@ if ($conn) {
                         $status_id = mssql_insert_id();
                     }
                 }
+
+                $auth = $term['DC-374-normativeAuthorization'];
+                $query = mssql_query("SELECT id from terminfo where dcvalue=N'$auth'", $conn);
+                if (mssql_num_rows($query) > 0) {
+                    while ($row = mssql_fetch_assoc($query)) {
+                        $auth_id = $row['id'];
+                    }
+                }
+                else {
+                    if(empty($auth)) {
+                        $auth_id = 0;
+                    } else {
+                        $query = mssql_query("INSERT INTO terminfo (dcvalue) VALUES (N'$auth')", $conn);
+                        $auth_id = mssql_insert_id();
+                    }
+                }
                 
                 $termtext = clean($term);
 
@@ -253,7 +269,7 @@ if ($conn) {
                     }
                 }
                 else {
-                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, variant, pos, gender, qualifier, abbrev) VALUES ($langroup_id, N'$termlexid', N'$termtext', N'$fem', $pos_id, $gender_id, $status_id, $is_abbrev)", $conn);
+                    $query = mssql_query("INSERT INTO termgroup (langroup, termlexid, termtext, variant, pos, gender, qualifier, auth, abbrev) VALUES ($langroup_id, N'$termlexid', N'$termtext', N'$fem', $pos_id, $gender_id, $status_id, $auth_id, $is_abbrev)", $conn);
                     $termgroup_id = mssql_insert_id();
                 }
 
