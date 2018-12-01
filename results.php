@@ -109,31 +109,14 @@ if ($conn) {
         while ($row = mssql_fetch_assoc($query)) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
-            $pos_id = $row['pos'];
-            if($pos_id == 1) {
-                $pos = "nom";
-            } else {
-                $pos = "adjectif";
-            }
-            $gender_id = $row['gender'];
-            if($gender_id == 2) {
-                $gender = "masculin";
-            } else if($gender_id == 4) {
-                $gender = "masculin ou féminin";
-            } else {
-                $gender = "";
-            }
             echo "<td><span class='source_lang'>" . $lang . "</span></td>";
             echo "<td><details><summary>";
-            //echo "<div class='tooltip'>" . $row['termtext'] . "<span class='tooltiptext'>" . $pos . " " . $gender . "</span></div>";
-            echo "<span title='Cliquez sur le terme pour voir la définition.'>" . $row['termtext'];
+            echo "<span title='Cliquez sur le terme pour voir sa définition.'>" . $row['termtext'];
             $variant = $row['variant'];
             if($variant != NULL) {
                 echo " | ";
-                //echo "<div class='tooltip'>" . $variant . "<span class='tooltiptext'>" . $pos . " féminin</span></div>";
                 echo $variant;
             }
-            echo "</span>";
 
             $langroup_source = $row['langroup'];
             $abbrev = $row['abbrev'];
@@ -151,7 +134,24 @@ if ($conn) {
                     echo " (" . $acro . ")";
                 }
             }
-            echo " +</summary>";
+            echo " +</span></summary>";
+
+            $pos_id = $row['pos'];
+            if($pos_id == 1) {
+                $pos = "Nom";
+            } else {
+                $pos = "Adjectif";
+            }
+            /*$gender_id = $row['gender'];
+            if($gender_id == 2) {
+                $gender = "masculin";
+            } else if($gender_id == 4) {
+                $gender = "masculin ou féminin";
+            } else {
+                $gender = "";
+            }*/
+
+            echo "<br>" . $pos . " masculin ou féminin<br>";
 
             $result = mssql_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
             $termid = mssql_fetch_assoc($result)['termid'];
