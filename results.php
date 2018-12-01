@@ -31,7 +31,7 @@ function show_trad($conn, $langroup_target, $results, $type) {
         if($variant != NULL and $lang_trad == 'FR') {
             echo " | " . $variant;
         }
-        echo "</span></b> (terme " . $type . ")";
+        echo "</span></b> (terme " . $type . ") +";
         echo "</summary>";
         $result = mssql_query("SELECT id FROM termgroup WHERE langroup=$langroup_target", $conn);
         $termgroup = mssql_fetch_assoc($result)['id'];
@@ -151,7 +151,7 @@ if ($conn) {
                     echo " (" . $acro . ")";
                 }
             }
-            echo "</summary>";
+            echo " +</summary>";
 
             $result = mssql_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
             $termid = mssql_fetch_assoc($result)['termid'];
