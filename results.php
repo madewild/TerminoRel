@@ -31,8 +31,8 @@ function show_trad($conn, $langroup_target, $results, $type) {
         if($variant != NULL and $lang_trad == 'FR') {
             echo " | " . $variant;
         }
-        echo "</span></b> (terme " . $type . ") &#9432;";
-        echo "</summary>";
+        echo "</b> (terme " . $type . ") &#9432;";
+        echo "</span></summary>";
         $result = mssql_query("SELECT id FROM termgroup WHERE langroup=$langroup_target", $conn);
         $termgroup = mssql_fetch_assoc($result)['id'];
         $result = mssql_query("SELECT id, context FROM contextgroup WHERE termgroup=$termgroup", $conn);
