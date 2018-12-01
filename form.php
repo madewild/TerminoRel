@@ -5,7 +5,7 @@
     <fieldset>
         <legend>Vos critères de recherche</legend>
         <nav id="form"><ul><li><label for="term">
-        <span title="Mot ou partie de mot : une recherche sur 'rec' renverra recteur, directeur, recherche, etc.">
+        <span title="Mot ou partie de mot : 'rec' renverra recteur, directeur, recherche&hellip;">
         Terme recherché &#9432;</span></label><!--<span class="star">*</span>-->
         <input type="text" class="input" id="term" name="term" size="70">
         <input type="submit" value="Rechercher"></li>
