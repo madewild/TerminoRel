@@ -4,7 +4,9 @@
 <form class="form" action="" method="post" onsubmit="return validate()">
     <fieldset>
         <legend>Vos critères de recherche</legend>
-        <nav id="form"><ul><li><label for="term">Terme recherché</label><!--<span class="star">*</span>-->
+        <nav id="form"><ul><li><label for="term">
+        <span title="Mot ou partie de mot : une recherche sur 'rec' renverra recteur, directeur, recherche, etc.">
+        Terme recherché &#9432;</span></label><!--<span class="star">*</span>-->
         <input type="text" class="input" id="term" name="term" size="70">
         <input type="submit" value="Rechercher"></li>
         <li><label for="source">Langue source</label><!--<span class="star">*</span>-->
