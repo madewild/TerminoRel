@@ -122,15 +122,15 @@ if ($conn) {
             $abbrev = $row['abbrev'];
             if($abbrev == 1) {
                 $result = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_source", $conn);
-                $row = mssql_fetch_assoc($result);
-                $termtextfull = $row['termtext'];
-                $termtextfull_variant = $row['variant'];
+                $row2 = mssql_fetch_assoc($result);
+                $termtextfull = $row2['termtext'];
+                $termtextfull_variant = $row2['variant'];
                 echo " (" . $termtextfull . " | " . $termtextfull_variant . ")";
             } else {
                 $result = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1", $conn);
-                $row = mssql_fetch_assoc($result);
-                if($row) {
-                    $acro = $row['termtext'];
+                $row2 = mssql_fetch_assoc($result);
+                if($row2) {
+                    $acro = $row2['termtext'];
                     echo " (" . $acro . ")";
                 }
             }
