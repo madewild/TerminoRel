@@ -7,6 +7,7 @@
         <link href="http://www.ulb.be/design1/css/design-page.css" rel="stylesheet" type="text/css">
         <link href="http://www.ulb.be/design1/css/design-print.css" media="print" rel="stylesheet" type="text/css">
         <link href="css/style.css?version=11" rel="stylesheet" type="text/css">
+        <link href="css/details-shim.css" rel="stylesheet" type="text/css">
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <script src="http://www.ulb.be/design1/js/script-framework.js" type="text/javascript"></script>
@@ -24,6 +25,7 @@
     }
    </script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="js/details-shim.js"></script>
    <script>
     $(document).ready(function () {
         $("#source").change(function () {
