@@ -57,7 +57,7 @@ function show_trad($conn, $langroup_target, $results, $type) {
 
 <h2>Glossaires de l'ULB</h2>
 
-<p><a href="/">Retour à l'écran initial</a></p><br>
+<?php include('retour.php'); ?>
 
 <form class="form" action="#" method="post" onsubmit="return validate()">
     <input type="text" class="input" id="term" name="term" size="60" value="<?php echo $term ?>">
@@ -231,7 +231,6 @@ if ($conn) {
 }
 ?>
 
-<p><a href="/">Retour à l'écran initial</a></p><br>
-
+<?php include('retour.php'); ?>
 
 <?php include('footer.php'); ?>
