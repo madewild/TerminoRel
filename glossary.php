@@ -10,7 +10,8 @@ $password = PASSWORD;
 $glossary = htmlspecialchars($_GET['glossary']);
 $sort = htmlspecialchars($_GET['sort']);
 
-echo "<h2>Glossaires de l'ULB</h2>";
+echo "<h2>TerminoRel – Glossaire
+académique de l’ULB pour la rédaction de textes en anglais</h2>";
 
 if($sort == "fr") {
         $other_code = "en";
