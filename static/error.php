@@ -2,4 +2,4 @@
 
 <?php include('static/retour.php'); ?>
 
-Désolé, la page que vous avez demandé n'existe pas...
+Désolé, il semble que la page à laquelle vous tentez d'accéder n'existe pas.
