@@ -1,43 +1,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-   <head>
-        <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-        <link href="http://www.ulb.be/design1/css/design-framework.css" rel="stylesheet" type="text/css">
-        <link href="http://www.ulb.be/design1/css/design-page.css" rel="stylesheet" type="text/css">
-        <link href="http://www.ulb.be/design1/css/design-print.css" media="print" rel="stylesheet" type="text/css">
-        <link href="css/style.css?version=11" rel="stylesheet" type="text/css">
-        <link href="css/details-shim.css" rel="stylesheet" type="text/css">
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <script src="http://www.ulb.be/design1/js/script-framework.js" type="text/javascript"></script>
-      
+<head>
    <title>TerminoRel</title>
+
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
    <meta name="keywords" content="">
    <meta name="description" content="">
-   <script language='javascript'>
-    function validate() {
-    if(document.getElementById('term').value.trim()=="") {
-        alert("Veuillez entrer au moins un caractère !");
-        return false;
-    }
-    return true;
-    }
-   </script>
+
+   <link href="http://www.ulb.be/design1/css/design-framework.css" rel="stylesheet" type="text/css">
+   <link href="http://www.ulb.be/design1/css/design-page.css" rel="stylesheet" type="text/css">
+   <link href="http://www.ulb.be/design1/css/design-print.css" media="print" rel="stylesheet" type="text/css">
+   <link href="css/style.css?version=11" rel="stylesheet" type="text/css">
+   <link href="css/details-shim.css" rel="stylesheet" type="text/css">
+   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+   <script src="http://www.ulb.be/design1/js/script-framework.js" type="text/javascript"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="js/validate.js"></script>
    <script src="js/details-shim.js"></script>
-   <script>
-    $(document).ready(function () {
-        $("#source").change(function () {
-            var val = $(this).val();
-            if (val == "en") {
-                $("#cible").html("<option value='fr'>français</option>");
-            } else if (val == "fr") {
-                $("#cible").html("<option value='en'>anglais</option>");
-            }
-        });
-    });
-   </script>
+   <script src="js/language-selection.js"></script>
    <script type="text/javascript" id="_refScript">
       var intranet_access="https://www.ulb.ac.be/commons/access?_ssl=on&";
       var intranet_status="https://www.ulb.ac.be/commons/access?_prtm=status&_ssl=on&";
