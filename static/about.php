@@ -1,6 +1,6 @@
 <h2>À propos des glossaires Terminorel</h2>
 
-<?php include('retour.php'); ?>
+<?php include('static/retour.php'); ?>
 
 <p>Les outils Terminorel offrent une aide à la décision rédactionnelle en langue anglaise. Ils permettent au traducteur ou au rédacteur de textes pour l'ULB vers l'anglais de vérifier s'il existe des équivalents recommandés ou simplement suggérés en anglais aux termes utilisés dans les textes en français.</p>
 <p>Ces aides sont au nombre de trois&nbsp;:

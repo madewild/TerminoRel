@@ -18,5 +18,5 @@ if(isset($_POST['term'])) {
 } else {
     include("form.php");
 }
-include("footer.php");
+include("static/footer.php");
 ?>

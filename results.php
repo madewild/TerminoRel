@@ -2,7 +2,7 @@
 error_reporting(-1);
 ini_set('display_errors', 'On');
 ini_set('mssql.charset', 'UTF-8');
-include("secret.php");
+include("static/secret.php");
 $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
@@ -57,7 +57,7 @@ function show_trad($conn, $langroup_target, $results, $type) {
 
 <h2>Glossaires de l'ULB</h2>
 
-<?php include('retour.php'); ?>
+<?php include('static/retour.php'); ?>
 
 <form class="form" action="#" method="post" onsubmit="return validate()">
     <input type="text" class="input" id="term" name="term" size="60" value="<?php echo $term ?>">
@@ -231,4 +231,4 @@ if ($conn) {
 }
 ?>
 
-<?php include('retour.php'); ?>
+<?php include('static/retour.php'); ?>
