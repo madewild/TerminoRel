@@ -2,4 +2,4 @@
 
 <?php include('static/retour.php'); ?>
 
-Page en construction...
+<p>Pour toute observation, proposition ou autre, veuillez nous contacter.</p>
