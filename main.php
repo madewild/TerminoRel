@@ -5,15 +5,15 @@ if(isset($_POST['term'])) {
     include("glossary.php");
 } else if(isset($_GET['page'])) {
    if($_GET['page'] == 'about') {
-      include("about.php");
+      include("static/about.php");
    } else if($_GET['page'] == 'help') {
-      include("help.php");
+      include("static/help.php");
    } else if($_GET['page'] == 'copyright') {
-      include("copyright.php");
+      include("static/copyright.php");
    } else if($_GET['page'] == 'contact') {
-      include("contact.php");
+      include("static/contact.php");
    } else {
-      include("error.php");
+      include("static/error.php");
    }
 } else {
     include("form.php");
