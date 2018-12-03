@@ -641,28 +641,7 @@
                 <td id="cellid:N115CC:1" class="layoutL-L"><div style="width:100%;">
                     <table border="0" style="width:100%;margin-left:auto;margin-right:auto;" cellspacing="0" cellpadding="0">
                         <tr id="rowid:N11691"><td id="cellid:N11693:1" colspan="3" style="background-color:transparent;text-align:left; vertical-align:top;">
-                        <?php 
-                        if(isset($_POST['term'])) {
-                            include("results.php");
-                        } else if(isset($_GET['glossary'])) {
-                            include("glossary.php");
-                        } else if(isset($_GET['page'])) {
-                           if($_GET['page'] == 'about') {
-                              include("about.php");
-                           } else if($_GET['page'] == 'help') {
-                              include("help.php");
-                           } else if($_GET['page'] == 'copyright') {
-                              include("copyright.php");
-                           } else if($_GET['page'] == 'contact') {
-                              include("contact.php");
-                           } else {
-                              include("error.php");
-                           }
-                        } else {
-                            include("form.php");
-                        }
-                        include("footer.php");
-                        ?>
+                        <?php include("main.php"); ?>
                         </td></tr>
                     </table>
                 </td>
