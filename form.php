@@ -1,6 +1,6 @@
-<h2>Glossaires de l'ULB</h2>
+<h2>TerminoRel – Glossaire académique de l’ULB pour la rédaction de textes en anglais</h2>
 
-<h3>Rechercher</h3>
+<h3>Rechercher un terme dans les glossaires</h3>
 <form class="form" action="" method="post" onsubmit="return validate()">
     <fieldset>
         <legend>Vos critères de recherche</legend>
@@ -33,10 +33,10 @@
     </fieldset>
 </form><br>
 
-<h3>Accéder</h3>
+<h3>Afficher toutes les entrées des glossaires</h3>
 <ul><li>
 <form class="form" action="" method="get">
-<label for="glossary">Accéder à un glossaire :</label>
+<label for="glossary">Accéder à un glossaire&nbsp;:</label>
 <select name="glossary">
     <option value="tf">Titres et fonctions</option>
 </select>
@@ -44,7 +44,7 @@
 <input type="submit" value="OK">
 </li></ul>
 
-<h3>Télécharger</h3>
+<h3>Télécharger un glossaire au format TBX</h3>
 <ul>
     <li>Télécharger le glossaire au format <a href='tbx/btulb.tbx' download>TBX</a> (format destiné aux outils d'aide à la traduction)</li>
 </ul>
