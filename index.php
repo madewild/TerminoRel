@@ -678,6 +678,7 @@
                         } else {
                             include("form.php");
                         }
+                        include("footer.php");
                         ?>
                         </td></tr>
                     </table>

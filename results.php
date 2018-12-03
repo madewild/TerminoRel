@@ -232,5 +232,3 @@ if ($conn) {
 ?>
 
 <?php include('retour.php'); ?>
-
-<?php include('footer.php'); ?>

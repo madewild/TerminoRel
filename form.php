@@ -50,6 +50,5 @@
 </ul>
 
 <?php 
-include('footer.php'); 
 include('export.php');
 ?>
