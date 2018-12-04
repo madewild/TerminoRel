@@ -78,7 +78,7 @@ summary{
     outline:none;
 }
 
-.static ul {
+ul.static {
     display: block;
     list-style-type: disc;
     margin-top: 1em;
@@ -86,8 +86,5 @@ summary{
     margin-left: 0;
     margin-right: 0;
     padding-left: 40px;
-}
-
-.static ul li a {
     color: #444444;
 }
