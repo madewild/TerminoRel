@@ -50,13 +50,17 @@
 <h3>Télécharger un glossaire au format TBX</h3>
 <ul>
     <li>
-        <form class="form" action="tbx/titres_fonctions.tbx" method="post">
+        <!--<form class="form" action="tbx/titres_fonctions.tbx" method="post">
             <label for="tbx">Télécharger un glossaire&nbsp;:</label>
             <select name="tbx">
                 <option value="tf">Titres et fonctions</option>
             </select>
             <input type="submit" value="OK">
-        </form>
+        </form>-->
+        Télécharger un glossaire au format TBX (format destiné aux outils d'aide à la traduction) :
+        <ul>
+            <li><a href='tbx/titres_fonctions.tbx' download>Titres et fonctions</a></li>
+        </ul>
     </li>
 </ul>
 
