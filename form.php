@@ -58,7 +58,7 @@
             <input type="submit" value="OK">
         </form>-->
         Télécharger un glossaire au format TBX (format destiné aux outils d'aide à la traduction) :
-        <ul>
+        <ul class="static">
             <li><a href='tbx/titres_fonctions.tbx' download>Titres et fonctions</a></li>
         </ul>
     </li>
