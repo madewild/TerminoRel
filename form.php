@@ -34,24 +34,30 @@
 </form><br>
 
 <h3>Afficher toutes les entrées des glossaires</h3>
-<ul><li>
-<form class="form" action="" method="get">
-<label for="glossary">Accéder à un glossaire&nbsp;:</label>
-<select name="glossary">
-    <option value="tf">Titres et fonctions</option>
-</select>
-<input type="hidden" name="sort" value="fr">
-<input type="submit" value="OK">
-</li></ul>
+<ul>
+    <li>
+        <form class="form" action="" method="get">
+            <label for="glossary">Accéder à un glossaire&nbsp;:</label>
+            <select name="glossary">
+                <option value="tf">Titres et fonctions</option>
+            </select>
+            <input type="hidden" name="sort" value="fr">
+            <input type="submit" value="OK">
+        </form>
+    </li>
+</ul>
 
 <h3>Télécharger un glossaire au format TBX</h3>
-<ul><li>
-<form class="form" action="tbx/titres_fonctions.tbx" method="get">
-<label for="tbx">Télécharger un glossaire&nbsp;:</label>
-<select name="tbx">
-    <option value="tf">Titres et fonctions</option>
-</select>
-<input type="submit" value="OK">
-</li></ul>
+<ul>
+    <li>
+        <form class="form" action="tbx/titres_fonctions.tbx" method="get">
+            <label for="tbx">Télécharger un glossaire&nbsp;:</label>
+            <select name="tbx">
+                <option value="tf">Titres et fonctions</option>
+            </select>
+            <input type="submit" value="OK">
+        </form>
+    </li>
+</ul>
 
 <?php include('export.php'); ?>
