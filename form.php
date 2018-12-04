@@ -45,10 +45,13 @@
 </li></ul>
 
 <h3>Télécharger un glossaire au format TBX</h3>
-<ul>
-    <li>Télécharger le glossaire au format <a href='tbx/btulb.tbx' download>TBX</a> (format destiné aux outils d'aide à la traduction)</li>
-</ul>
+<ul><li>
+<form class="form" action="tbx/titres_fonctions.tbx" method="get">
+<label for="tbx">Télécharger un glossaire&nbsp;:</label>
+<select name="tbx">
+    <option value="tf">Titres et fonctions</option>
+</select>
+<input type="submit" value="OK">
+</li></ul>
 
-<?php 
-include('export.php');
-?>
+<?php include('export.php'); ?>
