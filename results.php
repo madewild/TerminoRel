@@ -221,7 +221,9 @@ if ($conn) {
                 }
             }
 
-            echo "<tr><td colspan='2'><hr style='border: solid 0.5px silver; height: 0px'></td></tr>";
+            if(--$num_rows > 0) {
+                echo "<tr><td colspan='2'><hr style='border: solid 0.5px silver; height: 0px'></td></tr>";
+            }
         }
         echo "</table>";
     }
