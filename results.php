@@ -230,5 +230,3 @@ if ($conn) {
     }
 }
 ?>
-
-/*<?php include('static/retour.php'); ?>*/
