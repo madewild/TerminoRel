@@ -50,7 +50,7 @@
 <h3>Télécharger un glossaire au format TBX</h3>
 <ul>
     <li>
-        <form class="form" action="tbx/titres_fonctions.tbx" method="get">
+        <form class="form" action="tbx/titres_fonctions.tbx" method="post">
             <label for="tbx">Télécharger un glossaire&nbsp;:</label>
             <select name="tbx">
                 <option value="tf">Titres et fonctions</option>
