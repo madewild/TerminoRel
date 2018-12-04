@@ -33,11 +33,11 @@
     </fieldset>
 </form><br>
 
-<h3>Afficher toutes les entrées des glossaires</h3>
+<h3>Afficher toutes les entrées d'un glossaire</h3>
 <ul>
     <li>
         <form class="form" action="" method="get">
-            <label for="glossary">Accéder à un glossaire&nbsp;:</label>
+            <label for="glossary">Choisir un glossaire&nbsp;:</label>
             <select name="glossary">
                 <option value="tf">Titres et fonctions</option>
             </select>
@@ -47,7 +47,7 @@
     </li>
 </ul>
 
-<h3>Télécharger un glossaire au format TBX</h3>
+<h3>Télécharger un glossaire</h3>
 <ul>
     <li>
         <!--<form class="form" action="tbx/titres_fonctions.tbx" method="post">
