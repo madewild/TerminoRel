@@ -48,8 +48,23 @@ if ($conn) {
             }
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=0", $conn);
             $langroup_source = mssql_fetch_assoc($result)['id'];
-            $result = mssql_query("SELECT termtext FROM termgroup WHERE langroup=$langroup_source", $conn);
-            $term = mssql_fetch_assoc($result)['termtext'];
+            $result = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_source", $conn);
+            $termgroup = mssql_fetch_assoc($result);
+            $term = $termgroup['termtext'];
+            $variant = $termgroup['variant'];
+
+            $tbx .= '
+        <langSet xml:lang="fr-BE">
+          <tig>
+            <term>' . $term . '</term>';
+
+            if($variant != NULL) {
+              $tbx .= '
+            <note>Forme féminine : ' . $variant . '</note>';
+            } else {
+              $tbx .= '
+            <note>Terme épicène</note>';
+            }
 
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
@@ -57,9 +72,6 @@ if ($conn) {
             $translation = mssql_fetch_assoc($result)['termtext'];
             
             $tbx .= '
-        <langSet xml:lang="fr-BE">
-          <tig>
-            <term>'.$term.'</term>
           </tig>
         </langSet>
         <langSet xml:lang="en-UK">
