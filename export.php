@@ -38,7 +38,7 @@ if ($conn) {
             $ref = $row['reference'];
             $tbx .= '
       <termEntry id ="' . $ref . '">';
-            $result = mssql_query("SELECT * FROM subjectfield where term=$ref", $conn);
+            $result = mssql_query("SELECT * FROM subjectfield where term=N'$ref'", $conn);
             while ($row2 = mssql_fetch_assoc($query)) {
               $subjectid = $row2['subject'];
               $result = mssql_query("SELECT * FROM subject where id=$subjectid", $conn);
