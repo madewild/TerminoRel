@@ -115,7 +115,7 @@ if ($conn) {
             
             $tig = print_trad($results_recom, "approuvé");
             if($num_recom == 0) {
-                $tig = print_trad($results_prop, "suggéré");
+              $tig = print_trad($results_prop, "suggéré");
             }
 
             $tbx .= $tig;
