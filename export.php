@@ -42,8 +42,8 @@ if ($conn) {
             while ($row2 = mssql_fetch_assoc($result)) {
               print_r($row2);
               $subjectid = $row2['subject'];
-              $result = mssql_query("SELECT * FROM subject where id=$subjectid", $conn);
-              $subject = $result['text'];
+              $result2 = mssql_query("SELECT * FROM subject where id=$subjectid", $conn);
+              $subject = $result2['text'];
               $tbx .= '
         <descrip type="subjectField">' . $subject . '</descrip>';
             }
