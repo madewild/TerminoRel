@@ -16,7 +16,9 @@ function print_trad($results, $type) {
             <term>' . $translation . '</term>
             <note>Terme ' . $type . '</note>
           </tig>';
+  }
   return $tig;
+}
 
 $tbx = '<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE martif SYSTEM "TBXBasiccoreStructV02.dtd">
