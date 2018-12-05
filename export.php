@@ -39,9 +39,8 @@ if ($conn) {
             $tbx .= '
       <termEntry id ="' . $ref . '">';
             $result = mssql_query("SELECT * FROM subjectfield where term LIKE '$ref'", $conn);
-            $num_rows2 = mssql_num_rows($result);
-            echo($num_rows2);
             while ($row2 = mssql_fetch_assoc($result)) {
+              echo($row2);
               $subjectid = $row2['subject'];
               $result = mssql_query("SELECT * FROM subject where id=$subjectid", $conn);
               $subject = $result['text'];
