@@ -79,15 +79,12 @@ if ($conn) {
         $date = $doc->{'DC-274-inputDate'};
         $query = mssql_query("SELECT id from term where reference=N'$ref'", $conn);
         if (mssql_num_rows($query) > 0) {
-            while ($row = mssql_fetch_assoc($query)) {
-                echo "Reference already in DB<br>";
-                $term_id = $row['id'];
-            }
+            echo "Reference already in DB<br>";
+            $term_id = mssql_fetch_assoc($query)['id'];
         }
         else {
             $query = mssql_query("INSERT INTO term (reference, subsetowner, createdby, inputdate) VALUES (N'$ref', $owner_id, $creator_id, N'$date')", $conn);
             $term_id = mssql_insert_id();
-            //echo 'Term inserted with ID ' . $term_id . '<br>';
         }
 
         foreach($doc->{'DC-435-relatedConcept'} as $rel)
@@ -104,15 +101,12 @@ if ($conn) {
             $lang = $lgrp->attributes("xml", TRUE)->lang;
             $query = mssql_query("SELECT id from lang where code=N'$lang'", $conn);
             if (mssql_num_rows($query) > 0) {
-                while ($row = mssql_fetch_assoc($query)) {
-                    $lang_id = $row['id'];
-                }
+                $lang_id = mssql_fetch_assoc($query)['id'];
             }
             else {
                 $query = mssql_query("INSERT INTO lang (code) VALUES (N'$lang')", $conn);
                 $lang_id = mssql_insert_id();
             }
-            //echo 'Language: ' . $lang_id . ' ' . $lang . '<br>';
 
             $dgrp = $lgrp->definitionGrp;
             $def = $dgrp->{'DC-168-definition'};
@@ -124,10 +118,8 @@ if ($conn) {
 
             $query = mssql_query("SELECT id from langroup where termid=N'$term_id' and lang=N'$lang_id'", $conn);
             if (mssql_num_rows($query) > 0) {
-                while ($row = mssql_fetch_assoc($query)) {
-                    echo "This term has already an entry for " . $lang . "<br>";
-                    $langroup_id = $row['id'];
-                }
+                echo "This term has already an entry for " . $lang . "<br>";
+                $langroup_id = mssql_fetch_assoc($query)['id'];
             }
             else {
                 $query = mssql_query("INSERT INTO langroup (termid, lang, definition, explanation) VALUES ($term_id, $lang_id, N'$def', N'$exp')", $conn);
@@ -140,15 +132,11 @@ if ($conn) {
                     $source_text = str_replace("'", "''", $source);
                     $query = mssql_query("SELECT id from biblio where reference=N'$bibref'", $conn);
                     if (mssql_num_rows($query) > 0) {
-                        while ($row = mssql_fetch_assoc($query)) {
-                            $bib_id = $row['id'];
-                        }
+                        $bib_id = mssql_fetch_assoc($query)['id'];
                     }
                     $query = mssql_query("SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='def' and termid=$term_id", $conn);
                     if (mssql_num_rows($query) > 0) {
-                        while ($row = mssql_fetch_assoc($query)) {
-                            $source_id = $row['id'];
-                        }
+                        $source_id = mssql_fetch_assoc($query)['id'];
                     }
                     else {
                         $query = mssql_query("INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'def', $term_id, NULL)", $conn);
@@ -163,15 +151,11 @@ if ($conn) {
                     $source_text = str_replace("'", "''", $source);
                     $query = mssql_query("SELECT id from biblio where reference=N'$bibref'", $conn);
                     if (mssql_num_rows($query) > 0) {
-                        while ($row = mssql_fetch_assoc($query)) {
-                            $bib_id = $row['id'];
-                        }
+                        $bib_id = mssql_fetch_assoc($query)['id'];
                     }
                     $query = mssql_query("SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='exp' and termid=$term_id", $conn);
                     if (mssql_num_rows($query) > 0) {
-                        while ($row = mssql_fetch_assoc($query)) {
-                            $source_id = $row['id'];
-                        }
+                        $source_id = mssql_fetch_assoc($query)['id'];
                     }
                     else {
                         $query = mssql_query("INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'exp', $term_id, NULL)", $conn);
