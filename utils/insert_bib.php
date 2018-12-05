@@ -17,7 +17,7 @@ function clean($string) {
 $conn = mssql_connect($server, $username, $password);
 if ($conn) {
     mssql_select_db("terminorel", $conn);
-    $xml = simplexml_load_file("xml/biblio.xml");
+    $xml = simplexml_load_file("../xml/biblio.xml");
     foreach($xml->entrée as $doc)
     {
         $ref = $doc['id'];
