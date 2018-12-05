@@ -65,8 +65,6 @@ if ($conn) {
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=0", $conn);
             $langroup_source = mssql_fetch_assoc($result)['id'];
             $result2 = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_source", $conn);
-            $num_rows_bis = mssql_num_rows($result2);
-            echo($num_rows_bis);
             while ($termgroup = mssql_fetch_assoc($result2)) {
               $term = $termgroup['termtext'];
               $tbx .= '
