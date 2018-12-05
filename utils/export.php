@@ -46,48 +46,50 @@ if ($conn) {
               $tbx .= '
         <descrip type="subjectField">' . $subject . '</descrip>';
             }
+            $tbx .= '
+        <langSet xml:lang="fr-BE">';
+
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=0", $conn);
             $langroup_source = mssql_fetch_assoc($result)['id'];
             $result = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_source", $conn);
-            $termgroup = mssql_fetch_assoc($result);
-            $term = $termgroup['termtext'];
-
-            $tbx .= '
-        <langSet xml:lang="fr-BE">
-          <tig>
-            <term>' . $term . '</term>';
-
-            $variant = $termgroup['variant'];
-            if($variant != NULL) {
+            while ($termgroup = mssql_fetch_assoc($result)) {
+              $term = $termgroup['termtext'];
               $tbx .= '
-            <note>Forme féminine : ' . $variant . '</note>';
-            } else {
+            <tig>
+              <term>' . $term . '</term>';
+
+              $variant = $termgroup['variant'];
+              if($variant != NULL) {
+                $tbx .= '
+              <note>Forme féminine : ' . $variant . '</note>';
+              } else {
+                $tbx .= '
+              <note>Terme épicène</note>';
+              }
+
+              $posid = $termgroup['pos'];
+              $result = mssql_query("SELECT dcvalue FROM terminfo WHERE id=$posid", $conn);
+              $dcvalue = mssql_fetch_assoc($result)['dcvalue'];
+              $pos = explode("-", $dcvalue)[2];
+
               $tbx .= '
-            <note>Terme épicène</note>';
+              <termNote type="partOfSpeech">' . $pos . '</termNote>';
+
+              $gendid = $termgroup['gender'];
+              $result = mssql_query("SELECT dcvalue FROM terminfo WHERE id=$gendid", $conn);
+              $dcvalue = mssql_fetch_assoc($result)['dcvalue'];
+              if($dcvalue == "DC-246-masculine_or_DC-247-feminine") {
+                $gender = "other";
+              } else {
+                $gender = explode("-", $dcvalue)[2];
+              }
+
+              $tbx .= '
+              <termNote type="grammaticalGender">' . $gender . '</termNote>
+            </tig>';
             }
-
-            $posid = $termgroup['pos'];
-            $result = mssql_query("SELECT dcvalue FROM terminfo WHERE id=$posid", $conn);
-            $dcvalue = mssql_fetch_assoc($result)['dcvalue'];
-            $pos = explode("-", $dcvalue)[2];
-
-            $tbx .= '
-            <termNote type="partOfSpeech">' . $pos . '</termNote>';
-
-            $gendid = $termgroup['gender'];
-            $result = mssql_query("SELECT dcvalue FROM terminfo WHERE id=$gendid", $conn);
-            $dcvalue = mssql_fetch_assoc($result)['dcvalue'];
-            if($dcvalue == "DC-246-masculine_or_DC-247-feminine") {
-              $gender = "other";
-            } else {
-              $gender = explode("-", $dcvalue)[2];
-            }
-
-            $tbx .= '
-            <termNote type="grammaticalGender">' . $gender . '</termNote>';
             
             $tbx .= '
-          </tig>
         </langSet>';
 
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
@@ -97,7 +99,7 @@ if ($conn) {
             $translation = $termgroup['termtext'];
 
             $tbx .= '
-        <langSet xml:lang="en-UK">
+        <langSet xml:lang="en-GB">
           <tig>
             <term>' . $translation . '</term>';
 
