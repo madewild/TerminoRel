@@ -42,24 +42,23 @@ if ($conn) {
             $subject = str_replace("'", "''", $subject);
             $query = mssql_query("SELECT id from subject where level=$level and text=N'$subject'", $conn);
             if (mssql_num_rows($query) > 0) {
-                while ($row = mssql_fetch_assoc($query)) {
-                    $subject_id = $row['id'];
-                }
+                $subject_id = mssql_fetch_assoc($query)['id'];
             }
             else {
                 $query = mssql_query("INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')", $conn);
                 $subject_id = mssql_insert_id();
             }
-            $query = mssql_query("INSERT INTO subjectfield (term, subject) VALUES (N'$ref', $subject_id)", $conn);
+            $query = mssql_query("SELECT * from subjectfield where term=$ref and subject=$subject_id", $conn);
+            if (mssql_num_rows($query) == 0) {
+                $query = mssql_query("INSERT INTO subjectfield (term, subject) VALUES ($ref, $subject_id)", $conn);
+            }
         }
 
         $owner = $doc->{'DC-494-subsetOwner'};
         $owner_name = $owner['nom'];
         $query = mssql_query("SELECT id from subsetowner where name=N'$owner_name'", $conn);
         if (mssql_num_rows($query) > 0) {
-            while ($row = mssql_fetch_assoc($query)) {
-                $owner_id = $row['id'];
-            }
+            $owner_id = mssql_fetch_assoc($query)['id'];
         }
         else {
             $query = mssql_query("INSERT INTO subsetowner (name) VALUES (N'$owner_name')", $conn);
@@ -70,15 +69,12 @@ if ($conn) {
         $creator_name = str_replace("'", "''", $creator);
         $query = mssql_query("SELECT id from creator where name=N'$creator_name'", $conn);
         if (mssql_num_rows($query) > 0) {
-            while ($row = mssql_fetch_assoc($query)) {
-                $creator_id = $row['id'];
-            }
+            $creator_id = mssql_fetch_assoc($query)['id'];
         }
         else {
             $query = mssql_query("INSERT INTO creator (name) VALUES (N'$creator_name')", $conn);
             $creator_id = mssql_insert_id();
         }
-        //echo 'Created by: ' . $creator_id . ' ' . $creator_name . '<br>';
 
         $date = $doc->{'DC-274-inputDate'};
         $query = mssql_query("SELECT id from term where reference=N'$ref'", $conn);

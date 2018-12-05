@@ -92,13 +92,26 @@ if ($conn) {
 
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
-            $result = mssql_query("SELECT termtext FROM termgroup WHERE langroup=$langroup_target", $conn);
-            $translation = mssql_fetch_assoc($result)['termtext'];
+            $result = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_target", $conn);
+            $termgroup = mssql_fetch_assoc($result);
+            $translation = $termgroup['termtext'];
 
             $tbx .= '
         <langSet xml:lang="en-UK">
           <tig>
-            <term>'.$translation.'</term>
+            <term>' . $translation . '</term>';
+
+            $qualifid = $termgroup['qualifier'];
+            if($qualifid == 5) {
+              $qualifier = "Terme suggéré";
+            } else {
+              $qualifier = "Terme approuvé";
+            }
+
+            $tbx .= '
+            <note>' . $qualifier . '</note>';
+
+            $tbx .= '
           </tig>
         </langSet>
       </termEntry>';
