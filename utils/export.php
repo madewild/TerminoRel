@@ -118,7 +118,7 @@ if ($conn) {
                 $tig = print_trad($results_prop, "suggéré");
             }
 
-            $tbx .= $tig
+            $tbx .= $tig;
 
             $tbx .= '
         </langSet>
