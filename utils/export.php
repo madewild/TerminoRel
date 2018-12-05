@@ -73,6 +73,18 @@ if ($conn) {
 
             $tbx .= '
             <termNote type="partOfSpeech">' . $pos . '</termNote>';
+
+            $gendid = $termgroup['gender'];
+            $result = mssql_query("SELECT dcvalue FROM terminfo WHERE id=$gendid", $conn);
+            $dcvalue = mssql_fetch_assoc($result)['dcvalue'];
+            if($dcvalue == "DC-246-masculine_or_DC-247-feminine") {
+              $gender = "other";
+            } else {
+              $gender = explode("-", $dcvalue)[2];
+            }
+
+            $tbx .= '
+            <termNote type="grammaticalGender">' . $gender . '</termNote>';
             
             $tbx .= '
           </tig>
