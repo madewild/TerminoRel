@@ -77,4 +77,6 @@ $tbx .= '
   </text>
 </martif>';
 
-file_put_contents('tbx/titres_fonctions.tbx', $tbx);
+file_put_contents('../tbx/titres_fonctions.tbx', $tbx);
+echo "Glossaire exporté avec succès.";
+?>
