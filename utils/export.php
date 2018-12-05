@@ -2,7 +2,7 @@
 error_reporting(-1);
 ini_set('display_errors', 'On');
 ini_set('mssql.charset', 'UTF-8');
-include("static/secret.php");
+include("../static/secret.php");
 $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;

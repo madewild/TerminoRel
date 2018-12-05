@@ -63,5 +63,3 @@
         </ul>
     </li>
 </ul>
-
-<?php include('export.php'); ?>
