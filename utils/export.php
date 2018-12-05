@@ -125,5 +125,15 @@ $tbx .= '
 </martif>';
 
 file_put_contents('../tbx/titres_fonctions.tbx', $tbx);
-echo "Glossaire exporté avec succès.";
+echo "Glossaire exporté en TBX avec succès.";
+
+$zip = new ZipArchive;
+if ($zip->open('../tbx/titres_fonctions.zip') === TRUE) {
+    $zip->addFile('../tbx/titres_fonctions.tbx', 'titres_fonctions.tbx');
+    $zip->close();
+    echo 'La compression ZIP a réussi.';
+} else {
+    echo 'La compression ZIP a échoué.';
+}
+
 ?>
