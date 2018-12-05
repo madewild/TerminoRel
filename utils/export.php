@@ -51,13 +51,13 @@ if ($conn) {
             $result = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_source", $conn);
             $termgroup = mssql_fetch_assoc($result);
             $term = $termgroup['termtext'];
-            $variant = $termgroup['variant'];
 
             $tbx .= '
         <langSet xml:lang="fr-BE">
           <tig>
             <term>' . $term . '</term>';
 
+            $variant = $termgroup['variant'];
             if($variant != NULL) {
               $tbx .= '
             <note>Forme féminine : ' . $variant . '</note>';
@@ -66,14 +66,24 @@ if ($conn) {
             <note>Terme épicène</note>';
             }
 
+            $posid = $termgroup['pos'];
+            $result = mssql_query("SELECT dcvalue FROM terminfo WHERE id=$posid", $conn);
+            $dcvalue = mssql_fetch_assoc($result)['dcvalue'];
+            $pos = explode("-", $dcvalue)[2];
+
+            $tbx .= '
+            <termNote type="partOfSpeech">' . $pos . '</termNote>';
+            
+            $tbx .= '
+          </tig>
+        </langSet>';
+
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
             $result = mssql_query("SELECT termtext FROM termgroup WHERE langroup=$langroup_target", $conn);
             $translation = mssql_fetch_assoc($result)['termtext'];
-            
+
             $tbx .= '
-          </tig>
-        </langSet>
         <langSet xml:lang="en-UK">
           <tig>
             <term>'.$translation.'</term>
