@@ -48,7 +48,7 @@ if ($conn) {
                 $query = mssql_query("INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')", $conn);
                 $subject_id = mssql_insert_id();
             }
-            $query2 = mssql_query("SELECT * from subjectfield where term=$ref and subject=$subject_id", $conn);
+            $query2 = mssql_query("SELECT * from subjectfield where term=N'$ref' and subject=$subject_id", $conn);
             if (mssql_num_rows($query2) == 0) {
                 $query3 = mssql_query("INSERT INTO subjectfield (term, subject) VALUES ($ref, $subject_id)", $conn);
             }
