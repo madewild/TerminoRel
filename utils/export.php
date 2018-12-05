@@ -7,6 +7,17 @@ $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
 
+function print_trad($results, $type) {
+  $tig = '';
+  while ($row = mssql_fetch_assoc($results)) {
+    $translation = $row['termtext'];
+    $tig .= '
+          <tig>
+            <term>' . $translation . '</term>
+            <note>Terme ' . $type . '</note>
+          </tig>';
+  return $tig;
+
 $tbx = '<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE martif SYSTEM "TBXBasiccoreStructV02.dtd">
 <martif type="TBX-Basic" xml:lang="en">
@@ -92,31 +103,24 @@ if ($conn) {
             }
             
             $tbx .= '
-        </langSet>';
+        </langSet>
+        <langSet xml:lang="en-GB">';
 
             $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
             $langroup_target = mssql_fetch_assoc($result)['id'];
-            $result = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_target", $conn);
-            $termgroup = mssql_fetch_assoc($result);
-            $translation = $termgroup['termtext'];
 
-            $tbx .= '
-        <langSet xml:lang="en-GB">
-          <tig>
-            <term>' . $translation . '</term>';
-
-            $qualifid = $termgroup['qualifier'];
-            if($qualifid == 5) {
-              $qualifier = "Terme suggéré";
-            } else {
-              $qualifier = "Terme approuvé";
+            $results_recom = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", $conn);
+            $results_prop = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", $conn);
+            $num_recom = mssql_num_rows($results_recom);
+            
+            $tig = print_trad($results_recom, "approuvé");
+            if($num_recom == 0) {
+                $tig = print_trad($results_prop, "suggéré");
             }
 
-            $tbx .= '
-            <note>' . $qualifier . '</note>';
+            $tbx .= $tig
 
             $tbx .= '
-          </tig>
         </langSet>
       </termEntry>';
         }
