@@ -14,9 +14,14 @@ function clean($string) {
     return $string;
 }
 
-$conn = sqlsrv_connect($server, $username, $password);
+$conninfo = array(
+    "Database" => "terminorel",
+    "UID" => $username,
+    "PWD" => $password
+);
+
+$conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    sqlsrv_select_db("terminorel", $conn);
     $xml = simplexml_load_file("../xml/biblio.xml");
     foreach($xml->entrée as $doc)
     {

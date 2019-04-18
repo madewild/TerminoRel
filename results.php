@@ -91,9 +91,14 @@ function show_trad($conn, $langroup_target, $results, $type) {
 </div><br>
 
 <?php
-$conn = sqlsrv_connect($server, $username, $password);
+$conninfo = array(
+    "Database" => "terminorel",
+    "UID" => $username,
+    "PWD" => $password
+);
+
+$conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    sqlsrv_select_db("terminorel", $conn);
     $query = sqlsrv_query("SELECT * FROM termgroup WHERE termlexid LIKE '%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext", $conn);
     $num_rows = sqlsrv_num_rows($query);
     if($num_rows == 0) {

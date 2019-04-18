@@ -12,9 +12,15 @@ include("../static/secret.php");
 $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
-$conn = sqlsrv_connect($server, $username, $password);
+
+$conninfo = array(
+    "Database" => "terminorel",
+    "UID" => $username,
+    "PWD" => $password
+);
+
+$conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    sqlsrv_select_db("terminorel", $conn);
     $query = sqlsrv_query("SELECT * FROM biblio", $conn);
     if ($query) {
         echo '<table><tr><th>ID</th><th>Titre</th><th>Type</th><th>Date</th><th>Source</th><th>Service</th></tr>';

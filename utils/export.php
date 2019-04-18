@@ -40,9 +40,14 @@ $tbx = '<?xml version="1.0" encoding="UTF-8"?>
   <text>
     <body>';
 
-$conn = sqlsrv_connect($server, $username, $password);
-if ($conn) {
-    sqlsrv_select_db("terminorel", $conn);
+    $conninfo = array(
+      "Database" => "terminorel",
+      "UID" => $username,
+      "PWD" => $password
+  );
+  
+  $conn = sqlsrv_connect($server, $conninfo);
+  if ($conn) {
     $query = sqlsrv_query("SELECT * FROM term", $conn);
     $num_rows = sqlsrv_num_rows($query);
     if ($num_rows > 0) {

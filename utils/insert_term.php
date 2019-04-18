@@ -23,9 +23,14 @@ function clean($string) {
     return $string;
 }
 
-$conn = sqlsrv_connect($server, $username, $password);
+$conninfo = array(
+    "Database" => "terminorel",
+    "UID" => $username,
+    "PWD" => $password
+);
+
+$conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    sqlsrv_select_db("terminorel", $conn);
     $query = sqlsrv_query("TRUNCATE TABLE termgroup", $conn);
     $query = sqlsrv_query("TRUNCATE TABLE langroup", $conn);
     $query = sqlsrv_query("TRUNCATE TABLE term", $conn);
