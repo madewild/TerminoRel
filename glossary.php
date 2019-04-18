@@ -32,7 +32,7 @@ $conninfo = array(
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    $query = sqlsrv_query("SELECT * FROM termgroup WHERE termlexid LIKE '%$sort' ORDER BY termtext", $conn);
+    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '%$sort' ORDER BY termtext");
     $num_rows = sqlsrv_num_rows($query);
     echo "<b>Domaine : Titres et fonctions</b><br><br>";
     echo "<b>" . $num_rows . " entrées</b> trouvées<br><br>";
@@ -52,13 +52,13 @@ if ($conn) {
             $langroup_source = $row['langroup'];
             $abbrev = $row['abbrev'];
             if($abbrev == 1) {
-                $result = sqlsrv_query("SELECT * FROM termgroup WHERE langroup=$langroup_source", $conn);
+                $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source");
                 $row = sqlsrv_fetch_assoc($result);
                 $termtextfull = $row['termtext'];
                 $termtextfull_variant = $row['variant'];
                 echo " (" . $termtextfull . " | " . $termtextfull_variant . ")";
             } else {
-                $result = sqlsrv_query("SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1", $conn);
+                $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1");
                 $row = sqlsrv_fetch_assoc($result);
                 if($row) {
                     $acro = $row['termtext'];
@@ -67,17 +67,17 @@ if ($conn) {
             }
 
             echo "</td></tr><tr>";
-            $result = sqlsrv_query("SELECT termid FROM langroup WHERE id=$langroup_source", $conn);
+            $result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source");
             $termid = sqlsrv_fetch_assoc($result)['termid'];
             if($sort == "fr") {
                 $cible_id = 1;
             } else {
                 $cible_id = 0;
             }
-            $result = sqlsrv_query("SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id", $conn);
+            $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id");
             $langroup_target = sqlsrv_fetch_assoc($result)['id'];
-            $results_recom = sqlsrv_query("SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", $conn);
-            $results_prop = sqlsrv_query("SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", $conn);
+            $results_recom = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5");
+            $results_prop = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5");
             $num_recom = sqlsrv_num_rows($results_recom);
             while ($row = sqlsrv_fetch_assoc($results_recom)) {
                 $translation = $row['termtext'];

@@ -41,7 +41,7 @@ if ($conn) {
         $filename = $doc->nomFichier;
         $filename = str_replace("'", "''", $filename);
         echo 'Importing ' . $ref . '...<br>';
-        $query = sqlsrv_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$url', N'$filename')", $conn);
+        $query = sqlsrv_query($conn, "INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$url', N'$filename')");
     }
 }
 ?>

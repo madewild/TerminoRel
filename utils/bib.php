@@ -21,7 +21,7 @@ $conninfo = array(
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    $query = sqlsrv_query("SELECT * FROM biblio", $conn);
+    $query = sqlsrv_query($conn, "SELECT * FROM biblio");
     if ($query) {
         echo '<table><tr><th>ID</th><th>Titre</th><th>Type</th><th>Date</th><th>Source</th><th>Service</th></tr>';
         while ($row = sqlsrv_fetch_assoc($query))
