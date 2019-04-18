@@ -32,7 +32,7 @@ $conninfo = array(
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '%$sort' ORDER BY termtext");
+    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '%$sort' ORDER BY termtext", array(), array("Scrollable" => 'static'));
     $num_rows = sqlsrv_num_rows($query);
     if ($num_rows === false) {
         echo "ERROR<br>";
@@ -55,13 +55,13 @@ if ($conn) {
             $langroup_source = $row['langroup'];
             $abbrev = $row['abbrev'];
             if($abbrev == 1) {
-                $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source");
+                $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source", array(), array("Scrollable" => 'static'));
                 $row = sqlsrv_fetch_array($result);
                 $termtextfull = $row['termtext'];
                 $termtextfull_variant = $row['variant'];
                 echo " (" . $termtextfull . " | " . $termtextfull_variant . ")";
             } else {
-                $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1");
+                $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1", array(), array("Scrollable" => 'static'));
                 $row = sqlsrv_fetch_array($result);
                 if($row) {
                     $acro = $row['termtext'];
@@ -70,17 +70,17 @@ if ($conn) {
             }
 
             echo "</td></tr><tr>";
-            $result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source");
+            $result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source", array(), array("Scrollable" => 'static'));
             $termid = sqlsrv_fetch_array($result)['termid'];
             if($sort == "fr") {
                 $cible_id = 1;
             } else {
                 $cible_id = 0;
             }
-            $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id");
+            $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id", array(), array("Scrollable" => 'static'));
             $langroup_target = sqlsrv_fetch_array($result)['id'];
-            $results_recom = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5");
-            $results_prop = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5");
+            $results_recom = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", array(), array("Scrollable" => 'static'));
+            $results_prop = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", array(), array("Scrollable" => 'static'));
             $num_recom = sqlsrv_num_rows($results_recom);
             while ($row = sqlsrv_fetch_array($results_recom)) {
                 $translation = $row['termtext'];
