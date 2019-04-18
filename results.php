@@ -22,7 +22,7 @@ if(isset($_POST['status'])) {
 }
 
 function show_trad($conn, $langroup_target, $results, $type) {
-    while ($row = sqlsrv_fetch_assoc($results)) {
+    while ($row = sqlsrv_fetch_array($results)) {
         $translation = $row['termtext'];
         $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
         $variant = $row['variant'];
@@ -34,18 +34,18 @@ function show_trad($conn, $langroup_target, $results, $type) {
         echo "</b> (terme " . $type . ") &#9432;";
         echo "</span></summary>";
         $result = sqlsrv_query($conn, "SELECT id FROM termgroup WHERE langroup=$langroup_target");
-        $termgroup = sqlsrv_fetch_assoc($result)['id'];
+        $termgroup = sqlsrv_fetch_array($result)['id'];
         $result = sqlsrv_query($conn, "SELECT id, context FROM contextgroup WHERE termgroup=$termgroup");
-        $row = sqlsrv_fetch_assoc($result);
+        $row = sqlsrv_fetch_array($result);
         $contextgroup = $row['id'];
         $context = $row['context'];
         if(!empty($context)) {
             $result = sqlsrv_query($conn, "SELECT * FROM source WHERE contextgroup=$contextgroup");
-            $row = sqlsrv_fetch_assoc($result);
+            $row = sqlsrv_fetch_array($result);
             $bib_id = $row['biblio'];
             $source_text_con = $row['text'];
             $result = sqlsrv_query($conn, "SELECT title FROM biblio WHERE id=$bib_id");
-            $bib_title_con = sqlsrv_fetch_assoc($result)['title'];
+            $bib_title_con = sqlsrv_fetch_array($result)['title'];
             echo "<br><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title_con . "</i>, " . $source_text_con . ")";
         } else {
             echo "<br>Pas d'exemple d'usage pour ce terme.";
@@ -111,7 +111,7 @@ if ($conn) {
     echo "<b>Domaine : " . $domaine . "</b><br><br>";
     if ($num_rows > 0) {
         echo "<table class='results_table'>";
-        while ($row = sqlsrv_fetch_assoc($query)) {
+        while ($row = sqlsrv_fetch_array($query)) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
             echo "<td><span class='source_lang'>" . $lang . "</span></td>";
@@ -127,13 +127,13 @@ if ($conn) {
             $abbrev = $row['abbrev'];
             if($abbrev == 1) {
                 $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source");
-                $row2 = sqlsrv_fetch_assoc($result);
+                $row2 = sqlsrv_fetch_array($result);
                 $termtextfull = $row2['termtext'];
                 $termtextfull_variant = $row2['variant'];
                 echo " (" . $termtextfull . " | " . $termtextfull_variant . ")";
             } else {
                 $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1");
-                $row2 = sqlsrv_fetch_assoc($result);
+                $row2 = sqlsrv_fetch_array($result);
                 if($row2) {
                     $acro = $row2['termtext'];
                     echo " (" . $acro . ")";
@@ -159,32 +159,32 @@ if ($conn) {
             echo "<br>" . $pos . " masculin ou féminin<br>";
 
             $result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source");
-            $termid = sqlsrv_fetch_assoc($result)['termid'];
+            $termid = sqlsrv_fetch_array($result)['termid'];
 
             $result = sqlsrv_query($conn, "SELECT definition FROM langroup WHERE termid=$termid AND lang=0");
-            $definition = sqlsrv_fetch_assoc($result)['definition'];
+            $definition = sqlsrv_fetch_array($result)['definition'];
             if(!empty($definition)) {
                 $result = sqlsrv_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='def'");
-                $row = sqlsrv_fetch_assoc($result);
+                $row = sqlsrv_fetch_array($result);
                 $bib_id = $row['biblio'];
                 $source_text_def = $row['text'];
                 $result = sqlsrv_query($conn, "SELECT title FROM biblio WHERE id=$bib_id");
-                $bib_title_def = sqlsrv_fetch_assoc($result)['title'];
+                $bib_title_def = sqlsrv_fetch_array($result)['title'];
                 echo "<br><u>Définition</u> : " . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")";
             }
 
             $result = sqlsrv_query($conn, "SELECT id FROM lang WHERE code LIKE '$source%'");
-            $source_id = sqlsrv_fetch_assoc($result)['id'];
+            $source_id = sqlsrv_fetch_array($result)['id'];
 
             $result = sqlsrv_query($conn, "SELECT explanation FROM langroup WHERE termid=$termid AND lang=$source_id");
-            $explanation = sqlsrv_fetch_assoc($result)['explanation'];
+            $explanation = sqlsrv_fetch_array($result)['explanation'];
             if(!empty($explanation)) {
                 $result = sqlsrv_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='exp'");
-                $row = sqlsrv_fetch_assoc($result);
+                $row = sqlsrv_fetch_array($result);
                 $bib_id = $row['biblio'];
                 $source_text_exp = $row['text'];
                 $result = sqlsrv_query($conn, "SELECT title FROM biblio WHERE id=$bib_id");
-                $bib_title_exp = sqlsrv_fetch_assoc($result)['title'];
+                $bib_title_exp = sqlsrv_fetch_array($result)['title'];
                 echo "<br><br><u>Explication</u> : " . $explanation . " (<i>" . $bib_title_exp . "</i>, " . $source_text_exp . ")";
             }
 
@@ -203,10 +203,10 @@ if ($conn) {
             }
 
             $result = sqlsrv_query($conn, "SELECT id FROM lang WHERE code LIKE '$cible%'");
-            $cible_id = sqlsrv_fetch_assoc($result)['id'];
+            $cible_id = sqlsrv_fetch_array($result)['id'];
 
             $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id");
-            $langroup_target = sqlsrv_fetch_assoc($result)['id'];
+            $langroup_target = sqlsrv_fetch_array($result)['id'];
             $results_recom = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5");
             $results_prop = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5");
             $num_recom = sqlsrv_num_rows($results_recom);

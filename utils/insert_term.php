@@ -10,7 +10,7 @@ $password = PASSWORD;
 function sqlsrv_insert_id() { 
     $id = 0; 
     $res = sqlsrv_query("SELECT @@identity AS id"); 
-    if ($row = sqlsrv_fetch_assoc($res)) { 
+    if ($row = sqlsrv_fetch_array($res)) { 
         $id = $row["id"]; 
     }
     return $id; 
@@ -47,7 +47,7 @@ if ($conn) {
             $subject = str_replace("'", "''", $subject);
             $query = sqlsrv_query($conn, "SELECT id from subject where level=$level and text=N'$subject'");
             if (sqlsrv_num_rows($query) > 0) {
-                $subject_id = sqlsrv_fetch_assoc($query)['id'];
+                $subject_id = sqlsrv_fetch_array($query)['id'];
             }
             else {
                 $query = sqlsrv_query($conn, "INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')");
@@ -63,7 +63,7 @@ if ($conn) {
         $owner_name = $owner['nom'];
         $query = sqlsrv_query($conn, "SELECT id from subsetowner where name=N'$owner_name'");
         if (sqlsrv_num_rows($query) > 0) {
-            $owner_id = sqlsrv_fetch_assoc($query)['id'];
+            $owner_id = sqlsrv_fetch_array($query)['id'];
         }
         else {
             $query = sqlsrv_query($conn, "INSERT INTO subsetowner (name) VALUES (N'$owner_name')");
@@ -74,7 +74,7 @@ if ($conn) {
         $creator_name = str_replace("'", "''", $creator);
         $query = sqlsrv_query($conn, "SELECT id from creator where name=N'$creator_name'");
         if (sqlsrv_num_rows($query) > 0) {
-            $creator_id = sqlsrv_fetch_assoc($query)['id'];
+            $creator_id = sqlsrv_fetch_array($query)['id'];
         }
         else {
             $query = sqlsrv_query($conn, "INSERT INTO creator (name) VALUES (N'$creator_name')");
@@ -85,7 +85,7 @@ if ($conn) {
         $query = sqlsrv_query($conn, "SELECT id from term where reference=N'$ref'");
         if (sqlsrv_num_rows($query) > 0) {
             echo "Reference already in DB<br>";
-            $term_id = sqlsrv_fetch_assoc($query)['id'];
+            $term_id = sqlsrv_fetch_array($query)['id'];
         }
         else {
             $query = sqlsrv_query($conn, "INSERT INTO term (reference, subsetowner, createdby, inputdate) VALUES (N'$ref', $owner_id, $creator_id, N'$date')");
@@ -106,7 +106,7 @@ if ($conn) {
             $lang = $lgrp->attributes("xml", TRUE)->lang;
             $query = sqlsrv_query($conn, "SELECT id from lang where code=N'$lang'");
             if (sqlsrv_num_rows($query) > 0) {
-                $lang_id = sqlsrv_fetch_assoc($query)['id'];
+                $lang_id = sqlsrv_fetch_array($query)['id'];
             }
             else {
                 $query = sqlsrv_query($conn, "INSERT INTO lang (code) VALUES (N'$lang')");
@@ -124,7 +124,7 @@ if ($conn) {
             $query = sqlsrv_query($conn, "SELECT id from langroup where termid=N'$term_id' and lang=N'$lang_id'");
             if (sqlsrv_num_rows($query) > 0) {
                 echo "This term has already an entry for " . $lang . "<br>";
-                $langroup_id = sqlsrv_fetch_assoc($query)['id'];
+                $langroup_id = sqlsrv_fetch_array($query)['id'];
             }
             else {
                 $query = sqlsrv_query($conn, "INSERT INTO langroup (termid, lang, definition, explanation) VALUES ($term_id, $lang_id, N'$def', N'$exp')");
@@ -137,11 +137,11 @@ if ($conn) {
                     $source_text = str_replace("'", "''", $source);
                     $query = sqlsrv_query($conn, "SELECT id from biblio where reference=N'$bibref'");
                     if (sqlsrv_num_rows($query) > 0) {
-                        $bib_id = sqlsrv_fetch_assoc($query)['id'];
+                        $bib_id = sqlsrv_fetch_array($query)['id'];
                     }
                     $query = sqlsrv_query($conn, "SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='def' and termid=$term_id");
                     if (sqlsrv_num_rows($query) > 0) {
-                        $source_id = sqlsrv_fetch_assoc($query)['id'];
+                        $source_id = sqlsrv_fetch_array($query)['id'];
                     }
                     else {
                         $query = sqlsrv_query($conn, "INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'def', $term_id, NULL)");
@@ -156,11 +156,11 @@ if ($conn) {
                     $source_text = str_replace("'", "''", $source);
                     $query = sqlsrv_query($conn, "SELECT id from biblio where reference=N'$bibref'");
                     if (sqlsrv_num_rows($query) > 0) {
-                        $bib_id = sqlsrv_fetch_assoc($query)['id'];
+                        $bib_id = sqlsrv_fetch_array($query)['id'];
                     }
                     $query = sqlsrv_query($conn, "SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='exp' and termid=$term_id");
                     if (sqlsrv_num_rows($query) > 0) {
-                        $source_id = sqlsrv_fetch_assoc($query)['id'];
+                        $source_id = sqlsrv_fetch_array($query)['id'];
                     }
                     else {
                         $query = sqlsrv_query($conn, "INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'exp', $term_id, NULL)");
@@ -176,7 +176,7 @@ if ($conn) {
                 $status = $term['DC-280-languagePlanningQualifier'];
                 $query = sqlsrv_query($conn, "SELECT id from terminfo where dcvalue=N'$status'");
                 if (sqlsrv_num_rows($query) > 0) {
-                    while ($row = sqlsrv_fetch_assoc($query)) {
+                    while ($row = sqlsrv_fetch_array($query)) {
                         $status_id = $row['id'];
                     }
                 }
@@ -192,7 +192,7 @@ if ($conn) {
                 $auth = $term['DC-374-normativeAuthorization'];
                 $query = sqlsrv_query($conn, "SELECT id from terminfo where dcvalue=N'$auth'");
                 if (sqlsrv_num_rows($query) > 0) {
-                    while ($row = sqlsrv_fetch_assoc($query)) {
+                    while ($row = sqlsrv_fetch_array($query)) {
                         $auth_id = $row['id'];
                     }
                 }
@@ -214,7 +214,7 @@ if ($conn) {
                 $pos = $graminfo['DC-396-partOfSpeech'];
                 $query = sqlsrv_query($conn, "SELECT id from terminfo where dcvalue=N'$pos'");
                 if (sqlsrv_num_rows($query) > 0) {
-                    while ($row = sqlsrv_fetch_assoc($query)) {
+                    while ($row = sqlsrv_fetch_array($query)) {
                         $pos_id = $row['id'];
                     }
                 }
@@ -226,7 +226,7 @@ if ($conn) {
                 $gender = $graminfo['DC-245-grammaticalGender'];
                 $query = sqlsrv_query($conn, "SELECT id from terminfo where dcvalue=N'$gender'");
                 if (sqlsrv_num_rows($query) > 0) {
-                    while ($row = sqlsrv_fetch_assoc($query)) {
+                    while ($row = sqlsrv_fetch_array($query)) {
                         $gender_id = $row['id'];
                     }
                 }
@@ -248,7 +248,7 @@ if ($conn) {
 
                 $query = sqlsrv_query($conn, "SELECT id from termgroup where langroup=$langroup_id and termlexid=N'$termlexid' and termtext=N'$termtext' and pos=$pos_id");
                 if (sqlsrv_num_rows($query) > 0) {
-                    while ($row = sqlsrv_fetch_assoc($query)) {
+                    while ($row = sqlsrv_fetch_array($query)) {
                         $termgroup_id = $row['id'];
                     }
                 }
@@ -263,7 +263,7 @@ if ($conn) {
                     $context = clean($context);
                     $query = sqlsrv_query($conn, "SELECT id from contextgroup where termgroup=$termgroup_id and context=N'$context'");
                     if (sqlsrv_num_rows($query) > 0) {
-                        while ($row = sqlsrv_fetch_assoc($query)) {
+                        while ($row = sqlsrv_fetch_array($query)) {
                             $contextgroup_id = $row['id'];
                         }
                     }
@@ -276,13 +276,13 @@ if ($conn) {
                     $source_text = clean($source);
                     $query = sqlsrv_query($conn, "SELECT id from biblio where reference=N'$bibref'");
                     if (sqlsrv_num_rows($query) > 0) {
-                        while ($row = sqlsrv_fetch_assoc($query)) {
+                        while ($row = sqlsrv_fetch_array($query)) {
                             $bib_id = $row['id'];
                         }
                     }
                     $query = sqlsrv_query($conn, "SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='con' and termid=$term_id and contextgroup=$contextgroup_id");
                     if (sqlsrv_num_rows($query) > 0) {
-                        while ($row = sqlsrv_fetch_assoc($query)) {
+                        while ($row = sqlsrv_fetch_array($query)) {
                             $source_id = $row['id'];
                         }
                     }

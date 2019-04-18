@@ -39,7 +39,7 @@ if ($conn) {
     
     if ($num_rows > 0) {
         echo "<table class='results_table'>";
-        while ($row = sqlsrv_fetch_assoc($query)) {
+        while ($row = sqlsrv_fetch_array($query)) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
             echo "<td><span class='source_lang'>" . $lang . "</span></td>";
@@ -53,13 +53,13 @@ if ($conn) {
             $abbrev = $row['abbrev'];
             if($abbrev == 1) {
                 $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source");
-                $row = sqlsrv_fetch_assoc($result);
+                $row = sqlsrv_fetch_array($result);
                 $termtextfull = $row['termtext'];
                 $termtextfull_variant = $row['variant'];
                 echo " (" . $termtextfull . " | " . $termtextfull_variant . ")";
             } else {
                 $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1");
-                $row = sqlsrv_fetch_assoc($result);
+                $row = sqlsrv_fetch_array($result);
                 if($row) {
                     $acro = $row['termtext'];
                     echo " (" . $acro . ")";
@@ -68,18 +68,18 @@ if ($conn) {
 
             echo "</td></tr><tr>";
             $result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source");
-            $termid = sqlsrv_fetch_assoc($result)['termid'];
+            $termid = sqlsrv_fetch_array($result)['termid'];
             if($sort == "fr") {
                 $cible_id = 1;
             } else {
                 $cible_id = 0;
             }
             $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id");
-            $langroup_target = sqlsrv_fetch_assoc($result)['id'];
+            $langroup_target = sqlsrv_fetch_array($result)['id'];
             $results_recom = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5");
             $results_prop = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5");
             $num_recom = sqlsrv_num_rows($results_recom);
-            while ($row = sqlsrv_fetch_assoc($results_recom)) {
+            while ($row = sqlsrv_fetch_array($results_recom)) {
                 $translation = $row['termtext'];
                 $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
                 $variant = $row['variant'];
@@ -91,7 +91,7 @@ if ($conn) {
                     echo "</b> (terme recommandé)</td></tr>";
             }
             if($num_recom == 0) {
-                while ($row = sqlsrv_fetch_assoc($results_prop)) {
+                while ($row = sqlsrv_fetch_array($results_prop)) {
                     $translation = $row['termtext'];
                     $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
                     $variant = $row['variant'];

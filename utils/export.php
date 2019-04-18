@@ -9,7 +9,7 @@ $password = PASSWORD;
 
 function print_trad($results, $type) {
   $tig = '';
-  while ($row = sqlsrv_fetch_assoc($results)) {
+  while ($row = sqlsrv_fetch_array($results)) {
     $translation = $row['termtext'];
     $tig .= '
           <tig>
@@ -51,16 +51,16 @@ $tbx = '<?xml version="1.0" encoding="UTF-8"?>
     $query = sqlsrv_query($conn, "SELECT * FROM term");
     $num_rows = sqlsrv_num_rows($query);
     if ($num_rows > 0) {
-        while ($row = sqlsrv_fetch_assoc($query)) {
+        while ($row = sqlsrv_fetch_array($query)) {
             $termid = $row['id'];
             $ref = $row['reference'];
             $tbx .= '
       <termEntry id ="' . $ref . '">';
             $result = sqlsrv_query($conn, "SELECT * FROM subjectfield where term LIKE '$ref'");
-            while ($row2 = sqlsrv_fetch_assoc($result)) {
+            while ($row2 = sqlsrv_fetch_array($result)) {
               $subjectid = $row2['subject'];
               $result2 = sqlsrv_query($conn, "SELECT text FROM subject where id=$subjectid");
-              $subject = sqlsrv_fetch_assoc($result2)['text'];
+              $subject = sqlsrv_fetch_array($result2)['text'];
               $tbx .= '
         <descrip type="subjectField">' . $subject . '</descrip>';
             }
@@ -68,9 +68,9 @@ $tbx = '<?xml version="1.0" encoding="UTF-8"?>
         <langSet xml:lang="fr-BE">';
 
             $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang=0");
-            $langroup_source = sqlsrv_fetch_assoc($result)['id'];
+            $langroup_source = sqlsrv_fetch_array($result)['id'];
             $result2 = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source");
-            while ($termgroup = sqlsrv_fetch_assoc($result2)) {
+            while ($termgroup = sqlsrv_fetch_array($result2)) {
               $term = $termgroup['termtext'];
               $tbx .= '
             <tig>
@@ -87,7 +87,7 @@ $tbx = '<?xml version="1.0" encoding="UTF-8"?>
 
               $posid = $termgroup['pos'];
               $result = sqlsrv_query($conn, "SELECT dcvalue FROM terminfo WHERE id=$posid");
-              $dcvalue = sqlsrv_fetch_assoc($result)['dcvalue'];
+              $dcvalue = sqlsrv_fetch_array($result)['dcvalue'];
               $pos = explode("-", $dcvalue)[2];
 
               $tbx .= '
@@ -95,7 +95,7 @@ $tbx = '<?xml version="1.0" encoding="UTF-8"?>
 
               $gendid = $termgroup['gender'];
               $result = sqlsrv_query($conn, "SELECT dcvalue FROM terminfo WHERE id=$gendid");
-              $dcvalue = sqlsrv_fetch_assoc($result)['dcvalue'];
+              $dcvalue = sqlsrv_fetch_array($result)['dcvalue'];
               if($dcvalue == "DC-246-masculine_or_DC-247-feminine") {
                 $gender = "other";
               } else {
@@ -112,7 +112,7 @@ $tbx = '<?xml version="1.0" encoding="UTF-8"?>
         <langSet xml:lang="en-GB">';
 
             $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang=1");
-            $langroup_target = sqlsrv_fetch_assoc($result)['id'];
+            $langroup_target = sqlsrv_fetch_array($result)['id'];
 
             $results_recom = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5");
             $results_prop = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5");

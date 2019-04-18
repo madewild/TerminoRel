@@ -24,7 +24,7 @@ if ($conn) {
     $query = sqlsrv_query($conn, "SELECT * FROM biblio");
     if ($query) {
         echo '<table><tr><th>ID</th><th>Titre</th><th>Type</th><th>Date</th><th>Source</th><th>Service</th></tr>';
-        while ($row = sqlsrv_fetch_assoc($query))
+        while ($row = sqlsrv_fetch_array($query))
         {
             $ref = $row['reference'];
             $title = $row['title'];
