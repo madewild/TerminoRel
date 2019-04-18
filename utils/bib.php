@@ -7,7 +7,6 @@
 <?php
 error_reporting(-1);
 ini_set('display_errors', 'On');
-ini_set('mssql.charset', 'UTF-8');
 include("../static/secret.php");
 $server = SERVER;
 $username = USERNAME;
@@ -16,7 +15,8 @@ $password = PASSWORD;
 $conninfo = array(
     "Database" => "terminorel",
     "UID" => $username,
-    "PWD" => $password
+    "PWD" => $password,
+    "CharacterSet" => "UTF-8"
 );
 
 $conn = sqlsrv_connect($server, $conninfo);
