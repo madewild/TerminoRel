@@ -24,9 +24,14 @@ if($sort == "fr") {
 echo "<p><a href='/'>Retour à l'écran initial</a> | ";
 echo "<a href='?glossary=" . $glossary . "&sort=" . $other_code . "'>Trier en se basant sur " . $other_lang . "</a></p><br>";
 
-$conn = sqlsrv_connect($server, $username, $password);
+$conninfo = array(
+    "Database" => "terminorel",
+    "UID" => $username,
+    "PWD" => $password
+);
+
+$conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    sqlsrv_select_db("terminorel", $conn);
     $query = sqlsrv_query("SELECT * FROM termgroup WHERE termlexid LIKE '%$sort' ORDER BY termtext", $conn);
     $num_rows = sqlsrv_num_rows($query);
     echo "<b>Domaine : Titres et fonctions</b><br><br>";
