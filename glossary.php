@@ -34,6 +34,9 @@ $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
     $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '%$sort' ORDER BY termtext");
     $num_rows = sqlsrv_num_rows($query);
+    if ($num_rows === false) {
+        echo "ERROR<br>";
+    }
     echo "<b>Domaine : Titres et fonctions</b><br><br>";
     echo "<b>" . $num_rows . " entrées</b> trouvées<br><br>";
     
