@@ -12,13 +12,13 @@ include("../static/secret.php");
 $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
-$conn = mssql_connect($server, $username, $password);
+$conn = sqlsrv_connect($server, $username, $password);
 if ($conn) {
-    mssql_select_db("terminorel", $conn);
-    $query = mssql_query("SELECT * FROM biblio", $conn);
+    sqlsrv_select_db("terminorel", $conn);
+    $query = sqlsrv_query("SELECT * FROM biblio", $conn);
     if ($query) {
         echo '<table><tr><th>ID</th><th>Titre</th><th>Type</th><th>Date</th><th>Source</th><th>Service</th></tr>';
-        while ($row = mssql_fetch_assoc($query))
+        while ($row = sqlsrv_fetch_assoc($query))
         {
             $ref = $row['reference'];
             $title = $row['title'];

@@ -9,7 +9,7 @@ $password = PASSWORD;
 
 function print_trad($results, $type) {
   $tig = '';
-  while ($row = mssql_fetch_assoc($results)) {
+  while ($row = sqlsrv_fetch_assoc($results)) {
     $translation = $row['termtext'];
     $tig .= '
           <tig>
@@ -40,32 +40,32 @@ $tbx = '<?xml version="1.0" encoding="UTF-8"?>
   <text>
     <body>';
 
-$conn = mssql_connect($server, $username, $password);
+$conn = sqlsrv_connect($server, $username, $password);
 if ($conn) {
-    mssql_select_db("terminorel", $conn);
-    $query = mssql_query("SELECT * FROM term", $conn);
-    $num_rows = mssql_num_rows($query);
+    sqlsrv_select_db("terminorel", $conn);
+    $query = sqlsrv_query("SELECT * FROM term", $conn);
+    $num_rows = sqlsrv_num_rows($query);
     if ($num_rows > 0) {
-        while ($row = mssql_fetch_assoc($query)) {
+        while ($row = sqlsrv_fetch_assoc($query)) {
             $termid = $row['id'];
             $ref = $row['reference'];
             $tbx .= '
       <termEntry id ="' . $ref . '">';
-            $result = mssql_query("SELECT * FROM subjectfield where term LIKE '$ref'", $conn);
-            while ($row2 = mssql_fetch_assoc($result)) {
+            $result = sqlsrv_query("SELECT * FROM subjectfield where term LIKE '$ref'", $conn);
+            while ($row2 = sqlsrv_fetch_assoc($result)) {
               $subjectid = $row2['subject'];
-              $result2 = mssql_query("SELECT text FROM subject where id=$subjectid", $conn);
-              $subject = mssql_fetch_assoc($result2)['text'];
+              $result2 = sqlsrv_query("SELECT text FROM subject where id=$subjectid", $conn);
+              $subject = sqlsrv_fetch_assoc($result2)['text'];
               $tbx .= '
         <descrip type="subjectField">' . $subject . '</descrip>';
             }
             $tbx .= '
         <langSet xml:lang="fr-BE">';
 
-            $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=0", $conn);
-            $langroup_source = mssql_fetch_assoc($result)['id'];
-            $result2 = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_source", $conn);
-            while ($termgroup = mssql_fetch_assoc($result2)) {
+            $result = sqlsrv_query("SELECT id FROM langroup WHERE termid=$termid AND lang=0", $conn);
+            $langroup_source = sqlsrv_fetch_assoc($result)['id'];
+            $result2 = sqlsrv_query("SELECT * FROM termgroup WHERE langroup=$langroup_source", $conn);
+            while ($termgroup = sqlsrv_fetch_assoc($result2)) {
               $term = $termgroup['termtext'];
               $tbx .= '
             <tig>
@@ -81,16 +81,16 @@ if ($conn) {
               }
 
               $posid = $termgroup['pos'];
-              $result = mssql_query("SELECT dcvalue FROM terminfo WHERE id=$posid", $conn);
-              $dcvalue = mssql_fetch_assoc($result)['dcvalue'];
+              $result = sqlsrv_query("SELECT dcvalue FROM terminfo WHERE id=$posid", $conn);
+              $dcvalue = sqlsrv_fetch_assoc($result)['dcvalue'];
               $pos = explode("-", $dcvalue)[2];
 
               $tbx .= '
               <termNote type="partOfSpeech">' . $pos . '</termNote>';
 
               $gendid = $termgroup['gender'];
-              $result = mssql_query("SELECT dcvalue FROM terminfo WHERE id=$gendid", $conn);
-              $dcvalue = mssql_fetch_assoc($result)['dcvalue'];
+              $result = sqlsrv_query("SELECT dcvalue FROM terminfo WHERE id=$gendid", $conn);
+              $dcvalue = sqlsrv_fetch_assoc($result)['dcvalue'];
               if($dcvalue == "DC-246-masculine_or_DC-247-feminine") {
                 $gender = "other";
               } else {
@@ -106,12 +106,12 @@ if ($conn) {
         </langSet>
         <langSet xml:lang="en-GB">';
 
-            $result = mssql_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
-            $langroup_target = mssql_fetch_assoc($result)['id'];
+            $result = sqlsrv_query("SELECT id FROM langroup WHERE termid=$termid AND lang=1", $conn);
+            $langroup_target = sqlsrv_fetch_assoc($result)['id'];
 
-            $results_recom = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", $conn);
-            $results_prop = mssql_query("SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", $conn);
-            $num_recom = mssql_num_rows($results_recom);
+            $results_recom = sqlsrv_query("SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", $conn);
+            $results_prop = sqlsrv_query("SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", $conn);
+            $num_recom = sqlsrv_num_rows($results_recom);
             
             $tig = print_trad($results_recom, "approuvé");
             if($num_recom == 0) {

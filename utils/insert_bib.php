@@ -14,9 +14,9 @@ function clean($string) {
     return $string;
 }
 
-$conn = mssql_connect($server, $username, $password);
+$conn = sqlsrv_connect($server, $username, $password);
 if ($conn) {
-    mssql_select_db("terminorel", $conn);
+    sqlsrv_select_db("terminorel", $conn);
     $xml = simplexml_load_file("../xml/biblio.xml");
     foreach($xml->entrée as $doc)
     {
@@ -36,7 +36,7 @@ if ($conn) {
         $filename = $doc->nomFichier;
         $filename = str_replace("'", "''", $filename);
         echo 'Importing ' . $ref . '...<br>';
-        $query = mssql_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$url', N'$filename')", $conn);
+        $query = sqlsrv_query("INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$url', N'$filename')", $conn);
     }
 }
 ?>
