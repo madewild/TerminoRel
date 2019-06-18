@@ -37,6 +37,7 @@ if ($conn) {
         $service = str_replace("'", "''", $service);
         $url = $doc->url;
         $auteur = $doc->auteur;
+        $auteur = str_replace("'", "''", $auteur);
         $filename = $doc->nomFichier;
         $filename = str_replace("'", "''", $filename);
         echo 'Importing ' . $ref . '...<br>';
