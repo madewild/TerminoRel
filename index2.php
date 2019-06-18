@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />     
     <meta property="og:description" content="L&#39;ULB vous accueille lors de ses différentes activités d&#39;information sur les études et la vie étudiante, sur ses campus et près de chez vous!" />
-    <meta property="og:title" content="Bienvenue à l'ULB" />
+    <meta property="og:title" content="Glossaires de l'ULB" />
     <meta property="og:site_name" content="ULB" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://www.ulb.be/fr/ulb-accueil" />
