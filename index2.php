@@ -6627,7 +6627,17 @@
     <div id="page_deco">
         <div id="contenu-encadres">             
             <div id="contenu_sans_nav_sans_encadres" class="contenu" role="main">
-                <?php include("main.php"); ?>
+                <div class="layout">
+                    <div class="layout layout__simple-grid layout__simple-grid--mainHomePage js-layout">
+                        <div class="layout__slot layout__slot--filled layout__dragNDropSlot   layout__slot--1x0 js-layout__slot">
+                            <div class="card processusCard">
+                                <div class="processusCard__wrapper">
+                                    <?php include("main.php"); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div> <!-- .contenu -->
         </div><!-- #contenu-encadres -->
     </div><!-- #page_deco -->
