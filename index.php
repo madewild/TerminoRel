@@ -49,9 +49,9 @@
     <link rel="alternate" type="application/rss+xml" title="Fil RSS des dix dernières actualités" href="https://www.ulb.be/adminsite/webservices/export_rss.jsp?NOMBRE=10&amp;CODE_RUBRIQUE=1571625036018525&amp;LANGUE=0" />
     <link rel="stylesheet" type="text/css" media="print" href="https://www.ulb.be/wro/styles-print/cdc1004c3e47f6f37bed7b80799de8c427bd59a7.css"/>
     <link rel="stylesheet" type="text/css" href="https://www.ulb.be/uas/ulbout/NOM_PROPRIETE_SURCHARGE_CSS/ksup-ulb.css" media="all"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css"/>
-    <link href="css/style.css?version=18" rel="stylesheet" type="text/css">
-    <link href="css/details-shim.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css?version=1"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css?version=19">
+    <link rel="stylesheet" type="text/css" href="css/details-shim.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
