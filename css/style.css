@@ -19,6 +19,11 @@
     padding-right: 12px;
 }
 
+.results_table {
+    border-collapse:collapse;
+    margin: 50px;
+}
+
 .results_table td {
     padding-right: 5px;    
     padding-bottom: 10px;
@@ -27,6 +32,7 @@
 .results_table th {
     border: none;
     padding-top: 5px;
+    background: #003361;
 }
 
 .smaller_text {
