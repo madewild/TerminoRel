@@ -48,7 +48,7 @@
     <link rel="start" title="Accueil" href="https://www.ulb.be/" />
     <link rel="alternate" type="application/rss+xml" title="Fil RSS des dix dernières actualités" href="https://www.ulb.be/adminsite/webservices/export_rss.jsp?NOMBRE=10&amp;CODE_RUBRIQUE=1571625036018525&amp;LANGUE=0" />
     <link rel="stylesheet" type="text/css" media="print" href="https://www.ulb.be/wro/styles-print/cdc1004c3e47f6f37bed7b80799de8c427bd59a7.css"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="https://www.ulb.be/wro/styles/b885776b320cf5fa37ba8e0e071ebf069d24b0dc.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css"/>
     <link href="css/style.css?version=15" rel="stylesheet" type="text/css">
     <link href="css/details-shim.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
