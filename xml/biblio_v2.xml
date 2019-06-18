@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblio SYSTEM "/home/linux/NextCloud/2-ulb/termisti/TerminoRel/terminorel/phase-1-b/sortie/dtd/biblio.dtd">
+<!-- alimenté par K. Persin (P01) et Susan Black (P2)-->
+<biblio>
+    <entrée id="ULB-0001">
+        <titre>Règlement de discipline du corps professoral et du corps scientifique</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2010-06-14</date>
+        <source>Greffe</source>
+        <service>INST</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.ac.be/ulb/greffe/documents/docs/</url>
+        <nomFichier>REGLEMENT-DISCIPLINE-PROF-SCIENT.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0002">
+        <titre>Statuts organiques de l’Université libre de Bruxelles</titre>
+        <type>Statuts</type>
+        <date norme="ISO8601">2013-10-07</date>
+        <source>Greffe</source>
+        <service>INST</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.be/ulb/greffe/documents/docs/</url>
+        <nomFichier>STATUTS-ORGANIQUES.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0003">
+        <titre>Texte coordonné des dispositions relatives à la carrière du corps scientifique et du corps académique</titre>
+        <type>Compendium légal</type>
+        <date norme="ISO8601">2016-12-19</date>
+        <source>Greffe</source>
+        <service>DRH + INST</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.ac.be/ulb/greffe/documents/docs/</url>
+        <nomFichier>DISPO-SCIENT-ACA.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0004">
+        <titre>Règlement d'ordre intérieur de la Faculté des sciences psychologiques et de l'éducation</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2016-08-25</date>
+        <source>Faculté des sciences psychologiques et de l'éducation</source>
+        <service>Conseil facultaire</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.be/facs/psycho/docs/</url>
+        <nomFichier>ROI_Psycho.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0005">
+        <titre>Règlement électoral de la Faculté des sciences</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2015</date>
+        <source>Faculté des sciences</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.be/facs/sciences/admin/docs/</url>
+        <nomFichier>RegElec.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0006">
+        <titre>Règlement d'ordre intérieur de l'École de santé publique</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2015-02-19</date>
+        <source>École de santé publique</source>
+        <service>Conseil facultaire</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.be/ulb/greffe/documents/docs/</url>
+        <nomFichier>ROI-ESP.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0007">
+        <titre>Table des modalités relatives à l’engagement dans les corps académique et scientifique de l’Université libre de Bruxelles</titre>
+        <type>Document d'information</type>
+        <date norme="ISO8601">2017-01</date>
+        <source>Greffe</source>
+        <service>INST</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.ac.be/ulb/greffe/documents/docs/</url>
+        <nomFichier>Table-des-modalites.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0008">
+        <titre>Vacance d'un poste scientifique logisticien de recherche temps plein</titre>
+        <type>Vacance d'emploi</type>
+        <date norme="ISO8601"/>
+        <source>Greffe</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <nomFichier>5491</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0009">
+        <titre>Règlement d'ordre intérieur de la Faculté d'architecture</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2015-04-28</date>
+        <source>Faculté d'architecture</source>
+        <service>Conseil facultaire</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://archi.ulb.ac.be/sites/default/files/documents/</url>
+        <nomFichier>facarchi-roi_soumis_cf_28042015_0.docx</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0010">
+        <titre>Vade-mecum pension du personnel enseignant &amp; scientifique nommé à titre définitif</titre>
+        <type>Document d'information'</type>
+        <date norme="ISO8601">2012</date>
+        <source>Greffe</source>
+        <service>SPES</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.be/ulb/greffe/documents/docs/</url>
+        <nomFichier>VADE-MECUM-PENSION.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0011">
+        <titre>Règlement du doctorat de la Faculté de droit et de criminologie</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2015-10-19</date>
+        <source>Faculté de droit et de criminologie</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.be/facs/droit/docs/</url>
+        <nomFichier>RegDoc2015.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0012">
+        <titre>Guide pratique chercheurs – chercheuses à l’ULB</titre>
+        <type>Document d'information</type>
+        <date norme="ISO8601">2015-12</date>
+        <source>Greffe</source>
+        <service>DRE + DRH</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.ac.be/ulb/greffe/documents/docs/</url>
+        <nomFichier>guide-chercheurs-2015-16.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0013">
+        <titre>Vade-mecum des bourses de doctorat et de post-doctorat</titre>
+        <type>Document d'information</type>
+        <date norme="ISO8601">2016-03</date>
+        <source>DRH</source>
+        <service>SPRC</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.ac.be/drh/prc/prc-docs/</url>
+        <nomFichier>Vademecum_bourses.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0014">
+        <titre>Brochure d’information destinée au corps scientifique de l’ULB</titre>
+        <type>Document d'information</type>
+        <date norme="ISO8601">2001-06</date>
+        <source>DRH</source>
+        <service>SPES</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.ac.be/docs/bienvenues/services/spes-docs/</url>
+        <nomFichier>corps-scientifique.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0015">
+        <titre>>Modalités pratiques de mise en œuvre des mandats post-doctoraux pour les assistants</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2007-07-02</date>
+        <source>Greffe</source>
+        <service>INST</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.be/ulb/greffe/documents/docs/</url>
+        <nomFichier>modal-applic-post-doc.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0016">
+        <titre>Règlement des évaluations et des jurys : Dispositions complémentaires de la Faculté des Sciences</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2016-09-26</date>
+        <source>Département études et étudiants</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>M.-C. Lenain</auteur>
+        <url>http://www.ulb.be/ulb/greffe/documents/docs/</url>
+        <nomFichier>REGLEMENT-EXAMENS-JURYS-DISPOSITIONS-SCIENCES-2016-2017.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0017">
+        <titre>Règlement d'ordre intérieur de la Faculté de pharmacie</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601"/>
+        <source>Faculté de pharmacie</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.be/facs/pharma/docs/reglements/</url>
+        <nomFichier>ROI.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0018">
+        <titre>EURAXESS Rights</titre>
+        <type>Déclaration</type>
+        <date norme="ISO8601">2013-05-01</date>
+        <source>Département des relations extérieures</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>https://www.ulb.ac.be/recherche/presentation/euraxess/docs/</url>
+        <nomFichier>euraxessn.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0019">
+        <titre>ULB Researcher's Handbook</titre>
+        <type>Document d'information</type>
+        <date norme="ISO8601">2015-12</date>
+        <source>DRE + DRH</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>https://www.ulb.ac.be/ulb/greffe/documents/docs/</url>
+        <nomFichier>researchers-handbook-2015-16.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0020">
+        <titre>New staff members' guide</titre>
+        <type>Document d'iformation'</type>
+        <date norme="ISO8601">2016</date>
+        <source>DRH</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.ac.be/liseuse/new_staff_members_guide/content/</url>
+        <nomFichier>guidenanglais2016_2017.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0021">
+        <titre>A guide to doctoral and postdoctoral fellowships</titre>
+        <type>Document d'information</type>
+        <date norme="ISO8601">2016-03</date>
+        <source>DRH</source>
+        <service>SPRC</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>https://www.ulb.ac.be/drh/prc/prc-docs/</url>
+        <nomFichier>Fellowships_guide.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0022">
+        <titre>Statut équivalent du corps professoral et scientifique</titre>
+        <type>Statuts</type>
+        <date norme="ISO8601">2009-06-16</date>
+        <source>Greffe</source>
+        <service>INST</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.ac.be/ulb/greffe/documents/docs/</url>
+        <nomFichier>STATUT-PROF-SCIENT.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0023">
+        <titre>Lexique Kroeger</titre>
+        <type>Lexique</type>
+        <date norme="ISO8601"/>
+        <source>DRE</source>
+        <emetteur/>
+        <auteur>Simon Kroeger</auteur>
+        <nomFichier/>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0024">
+        <titre equiv="traduction">ULB 12 Months - 12 Experts 2016</titre>
+        <type inst="site web de l'Université Libre de Nruxelles'">Contenu informatif en ligne</type>
+        <date norme="ISO8601"/>
+        <source>DRE</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>Simon Kroeger </auteur>
+        <url>http://www.ulb.ac.be/ulb12months12experts/</url>
+        <nomFichier>retrospective-en-nahavandi2016.html</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="ULB-0025">
+        <titre equiv="traduction">Coordination committee on research communication (3CR)</titre>
+        <type inst="site web de l'Université Libre de Bruxelles'">Contenu informatif en ligne</type>
+        <date norme="ISO8601">2009-06-16</date>
+        <source>DRE</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>Simon Kroeger</auteur>
+        <url>https://www.ulb.be/dre/recherche/</url>
+        <nomFichier>contact-en.html</nomFichier>
+         <responsable>Kevin Persin</responsable>
+    </entrée>
+
+ <entrée id="ULB-0026">
+        <titre>Esprit Libre, n° 39, sept. 2015, Université Libre de Bruxelles</titre>
+        <type>magazine</type>
+        <date norme="ISO8601">2015-09</date>
+        <source>DRE</source>
+        <service>Service de communication de l'ULB</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.ac.be/el/Les_Hauts_Faits__2015/content/</url>
+        <nomFichier>rapport2015.pdf</nomFichier>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+    <entrée id="ULB-0027">
+        <titre>Esprit Libre, n° 34, sept. 2014, Université Libre de Bruxelles</titre>
+        <type>magazine</type>
+       <date norme="ISO8601">2014-09</date>
+        <source>DRE</source>
+        <service>Service de communication de l'ULB</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>http://www.ulb.be/el/rapportULB2014/content/</url>
+        <nomFichier>rapportULB2014.pdf</nomFichier>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+    <entrée id="ULB-0028">
+        <titre>Règlement général des études, année académique 2012-2013</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601"/>
+        <source>DRE</source>
+        <service>Département Enseignement</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <url>n/a</url>
+        <nomFichier>n/a</nomFichier>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+    <entrée id="ULB-0029">
+        <titre>Charte du doctorat (12 novembre 2012, amendée par le Conseil académique le 30.06.2014 et le 19.10.2015)</titre>
+        <type>Charte</type>
+        <date norme="ISO8601"/>
+        <source>n/a</source>
+        <service>n/a</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>n/a</auteur>
+        <url>n/a</url>
+        <nomFichier>n/a</nomFichier>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+       <entrée id="ULB-0030">
+        <titre>Règlement du doctorat (01.07.2013, amendé par le Conseil académique les 26.05.2014, 20.04.2015 et 19.10.2015)</titre>
+        <type>Règlement</type>
+         <date norme="ISO8601"/>
+         <source>n/a</source>
+        <service>n/a</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>n/a</auteur>
+        <url>n/a</url>
+        <nomFichier>n/a</nomFichier>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+    <entrée id="ULB-0031">
+        <titre>Guide de l'étudiant, année académique 2014-2015</titre>
+        <type>Document d'information</type>
+        <date norme="ISO8601"/>
+       <source>n/a</source>
+        <service>n/a</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>n/a</auteur>
+        <url>n/a</url>
+        <nomFichier>n/a</nomFichier>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+    <entrée id="ULB-0032">
+        <titre>Conditions d'accès aux études de Bachelier</titre>
+        <type inst="site web de l’Université Libre de Bruxelles">Contenu informatif en ligne</type>
+        <date norme="ISO8601"/>
+       <source>n/a</source>
+        <service>n/a</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>n/a</auteur>
+        <url>n/a</url>
+        <nomFichier>n/a</nomFichier>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+    <entrée id="ULB-0033">
+        <titre>Maîtrise de la langue française (1er cycle)</titre>
+        <type inst="site web de l’Université Libre de Bruxelles">Contenu informatif en ligne</type>
+        <date norme="ISO8601"/>
+       <source>n/a</source>
+        <service>n/a</service>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>n/a</auteur>
+        <url>n/a</url>
+        <nomFichier>n/a</nomFichier>
+        <responsable>Susan Black</responsable>
+     </entrée>
+
+     <entrée id="ULB-0034">
+        <titre>Assimilation à un étudiant ressortissant de l'Union européenne</titre>
+        <type  inst="site web de l’Université Libre de Bruxelles">Contenu informatif en ligne</type>
+        <date norme="ISO8601"/>
+        <source>n/a</source>
+        <service/>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>n/a</auteur>
+        <url>n/a</url>
+        <nomFichier>n/a</nomFichier>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+     <entrée id="ULB-0035">
+        <titre>Critères d'admission de la Commission d'admission en 1ère année de 1er  cycle des étudiants ressortissants de pays hors UE</titre>
+        <type inst="site web de l’Université Libre de Bruxelles">Contenu informatif en ligne</type>
+        <date norme="ISO8601"/>
+        <source>n/a</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>n/a</auteur>
+        <url original="http://www.ulb.ac.be/enseignements/inscriptions/adm-BA1.html">n/a</url>
+        <nomFichier>n/a</nomFichier>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+     <entrée id="ULB-0036">
+        <titre>Brochure d’information, Faculté des sciences psychologiques et de l'éducation</titre>
+        <type>Document d'information</type>
+        <date norme="ISO8601"/>
+        <source>n/a</source>
+        <service/>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>n/a</auteur>
+        <url>n/a</url>
+        <nomFichier/>
+         <responsable>Susan Black</responsable>
+    </entrée>
+
+    <entrée id="ULB-0037">
+        <titre>ULB Connect, Newsletter, décembre 2015</titre>
+        <type inst="site web de l’Université Libre de Bruxelles">magazine en ligne</type>
+        <date norme="ISO8601">2015-12</date>
+        <source>n/a</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>n/a</auteur>
+        <url>http://www.ulb.ac.be/newsletters/ulbconnect.php</url>
+        <nomFichier/>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+<entrée id="ULB-0038">
+        <titre>Guide de l'étudiant d'échanges (LLP-Erasmus ou conventions bilatérales)</titre>
+        <type>Document d'information</type>
+        <source>n/a</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>Service de Mobilité Etudiante</auteur>
+        <url>https://www.brukot.be/pdf/brussels/guide-ulb-etudiant-erasmus-fr.pdf?v55</url>
+        <nomFichier>guide-ulb-etudiant-erasmus-fr.pdf</nomFichier>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+<entrée id="ULB-0039">
+        <titre>Projet d’école doctorale dans le cadre du partenariat privilégié entre l’ULB et l’USP</titre>
+        <type>Document d'information'</type>
+        <date norme="ISO8601">2010-03</date>
+        <source>n/a</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>M. Cândido da Silva (USP), F. Louault (ULB), A. Wilkin (ULB)</auteur>
+        <url>n/a</url>
+        <nomFichier>n/a</nomFichier>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+ <entrée id="ULB-0040">
+        <titre>ULB Alumni</titre>
+        <type>n/a</type>
+        <date norme="ISO8601">n/a</date>
+        <source>n/a</source>
+        <emetteur>n/a</emetteur>
+        <auteur>n/a</auteur>
+        <url>n/a</url>
+        <nomFichier>n/a</nomFichier>
+        <responsable>Susan Black</responsable>
+</entrée>
+
+<entrée id="ULB-0041">
+        <titre>Règlement du doctorat et dispositions complémentaires, version du 1er juillet 2013 telle qu’amendée par le Conseil académique les 26.04.2014, 20.04.2015 et 19.10.2015</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2015-10-19</date>
+        <source>n/a</source>
+        <emetteur>Université Libre de Bruxelles</emetteur>
+        <auteur>n/a</auteur>
+        <url>n/a</url>
+        <nomFichier>n/a</nomFichier>
+        <responsable>Susan Black</responsable>
+</entrée>
+
+<entrée id="FNRS-0001">
+        <titre>Règlement. Mandat chargé de recherches (CR)</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2016-04-26</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <emetteur>Fonds national de la recherche scientifique</emetteur>
+        <url>http://www.fnrs.be/docs/Reglement-et-documents/</url>
+        <nomFichier>FRS-FNRS_REGL_CR_FR.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+</entrée>
+
+<entrée id="FNRS-0002">
+        <titre equiv="traduction">Specific Provisions Regarding The Call 2014: "Research Logistic Collaborators" (LOG)</titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2014-04-24</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <emetteur>Fonds national de la recherche scientifique</emetteur>
+        <url>http://www.fnrs.be/en/docs/Reglement-et-documents/</url>
+        <nomFichier>FRS-FNRS_REGL_LOG_EN.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="FNRS-0003">
+        <titre equiv="traduction">Rules and Regulations - Research Fellow Fellowship (ASP - Aspirant)</titre>
+        <type>Règlement</type>
+        <date  norme="ISO8601">2016-12-06</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <emetteur>Fonds national de la recherche scientifique</emetteur>
+        <url>http://www.fnrs.be/en/docs/Reglement-et-documents/</url>
+        <nomFichier>FRS-FNRS_REGL_ASP_EN.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="FNRS-0004">
+        <titre equiv="traduction">Rules and Regulations - Postdoctoral Researcher Fellowship (CR - Chargé de Recherches)</titre>
+        <type>Règlement</type>
+        <date  norme="ISO8601">2016-04-26</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <emetteur>Fonds national de la recherche scientifique</emetteur>
+        <url>http://www.fnrs.be/en/docs/Reglement-et-documents/</url>
+        <nomFichier>FRS-FNRS_REGL_CR_EN.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="FNRS-0005">
+        <titre>Dispositions particulières « Appel logisticiens de recherche 2014 » (LOG) </titre>
+        <type>Règlement</type>
+        <date norme="ISO8601">2014-04-24</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <emetteur>Fonds national de la recherche scientifique</emetteur>
+        <url>http://www.fnrs.be/en/docs/Reglement-et-documents/</url>
+        <nomFichier>FRS-FNRS_REGL_LOG_EN.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="FNRS-0006">
+        <titre equiv="traduction">Rules and Regulations - Open-Ended Fellowships: Research Associate (CQ - Chercheur Qualifié), Senior Research Associate (MR - Maître De Recherches), Research Director (DR - Directeur De Recherches)</titre>
+        <type>Règlement</type>
+        <date  norme="ISO8601">2016-04-26</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <emetteur>Fonds national de la recherche scientifique</emetteur>
+        <url>http://www.fnrs.be/en/docs/Reglement-et-documents/</url>
+        <nomFichier>FRS-FNRS_REGL_CQ_MR_DR_EN.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="FNRS-0007">
+        <titre>Règlement. Mandats à durée indéterminée (CQ, MR, DR)</titre>
+        <type>Règlement</type>
+        <date  norme="ISO8601">2016-04-26</date>
+        <source>FNRS</source>
+        <service>Conseil d'administration du F.R.S.-FNRS</service>
+        <emetteur>Fonds national de la recherche scientifique</emetteur>
+        <url>http://www.fnrs.be/en/docs/Reglement-et-documents/</url>
+        <nomFichier>FRS-FNRS_REGL_CQ_MR_DR_FR.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="FNRS-0008">
+        <titre>Guide du proposant. Année 2016.</titre>
+        <type>Règlement</type>
+        <date  norme="ISO8601"/>
+        <source>FNRS</source>
+        <service/>
+        <emetteur>Fonds national de la recherche scientifique</emetteur>
+        <url original="http://www.fnrs.be/docs/Reglement-et-documents/FRS-FNRS_Guide_proposant_2016_FR.pdf">n/a</url>
+        <nomFichier>n/a</nomFichier>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+    <entrée id="CFB-0001">
+        <titre>Décret relatif à la carrière des chercheurs scientifiques</titre>
+        <type>Décret</type>
+        <date norme="ISO8601">1991-07-19</date>
+        <source>Communauté française de Belgique</source>
+        <service>Centre de documentation administrative</service>
+        <emetteur>Communauté française de Belgique</emetteur>
+        <url>http://www.gallilex.cfwb.be/document/pdf/06319_002.pdf</url>
+        <nomFichier>06319_002_carrière-scientifique.pdf</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="CFB-0002">
+        <titre>Décret portant création de la fonction de logisticien de recherche au sein des
+            universités en Communauté française</titre>
+        <type>Décret</type>
+        <date norme="ISO8601">2013-01-24</date>
+        <source>Communauté française de Belgique</source>
+        <service>Centre de documentation administrative</service>
+        <emetteur>Communauté française de Belgique</emetteur>
+        <url>http://www.gallilex.cfwb.be/document/pdf/38529_000.pdf</url>
+        <nomFichier>06319_002_carrière_scientifiqu</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+    <entrée id="CFB-0003">
+        <titre>Arrêté royal fixant le statut des agrégés, des répétiteurs et des membres du
+            personnel scientifique des universités de l'Etat</titre>
+        <type>Arrêté</type>
+        <date  norme="ISO8601">1953-10-31</date>
+        <source>Communauté française de Belgique</source>
+        <service>Centre de documentation administrative</service>
+        <emetteur>Communauté française de Belgique</emetteur>
+        <url>http://www.gallilex.cfwb.be/document/pdf/06317_000.pdf</url>
+        <nomFichier>06317_000_arrete1953</nomFichier>
+        <responsable>Kevin Persin</responsable>
+    </entrée>
+
+     <entrée id="CFB-0004">
+        <titre>Décret définissant le paysage de l'enseignement supérieur et l'organisation académique des études, Moniteur belge du 18.12.2013</titre>
+        <type>Décret</type>
+        <date norme="ISO8601">2013-12-18</date>
+        <source>Communauté française de Belgique</source>
+        <service>Centre de documentation administrative</service>
+        <emetteur>Communauté française de Belgique</emetteur>
+        <url>https://gallilex.cfwb.be/document/pdf/</url>
+        <nomFichier>39681_035.pdf</nomFichier>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+    <entrée id="DIV-0001">
+        <titre>Bologne – Communiqué de la Conférence des ministres européens chargés de l'Enseignement supérieur, Louvain et Louvain-la-Neuve, 28 et 29.04.2009</titre>
+        <type>Document d'information</type>
+        <date  norme="ISO8601">2013-12-18</date>
+        <source/>
+        <service/>
+        <emetteur/>
+        <url/>
+        <nomFichier/>
+        <responsable>Susan Black</responsable>
+    </entrée>
+
+</biblio>

@@ -22,7 +22,7 @@ $conninfo = array(
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    $xml = simplexml_load_file("../xml/biblio.xml");
+    $xml = simplexml_load_file("../xml/biblio_v2.xml");
     foreach($xml->entrée as $doc)
     {
         $ref = $doc['id'];
@@ -31,17 +31,16 @@ if ($conn) {
         $type = $doc->type;
         $type = str_replace("'", "''", $type);
         $date = $doc->date;
-        //$date = str_replace("-", "", $date);
         $source = $doc->source;
         $source = str_replace("'", "''", $source);
         $service = $doc->service;
         $service = str_replace("'", "''", $service);
         $url = $doc->url;
-        //$auteur = $doc->auteur;
+        $auteur = $doc->auteur;
         $filename = $doc->nomFichier;
         $filename = str_replace("'", "''", $filename);
         echo 'Importing ' . $ref . '...<br>';
-        $query = sqlsrv_query($conn, "INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$url', N'$filename')", array(), array("Scrollable" => 'static'));
+        $query = sqlsrv_query($conn, "INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, author, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$auteur', N'$url', N'$filename')", array(), array("Scrollable" => 'static'));
     }
 }
 ?>
