@@ -6,7 +6,7 @@ $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
 
-function sqlsrv_insert_id() { 
+function sqlsrv_insert_id($conn) {
     $id = 0; 
     $res = sqlsrv_query($conn, "SELECT @@identity AS id", array(), array("Scrollable" => 'static')); 
     if ($row = sqlsrv_fetch_array($res)) { 
@@ -52,7 +52,7 @@ if ($conn) {
             }
             else {
                 $query = sqlsrv_query($conn, "INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')", array(), array("Scrollable" => 'static'));
-                $subject_id = sqlsrv_insert_id();
+                $subject_id = sqlsrv_insert_id($conn);
             }
             $query2 = sqlsrv_query($conn, "SELECT * from subjectfield where term=N'$ref' and subject=$subject_id", array(), array("Scrollable" => 'static'));
             if (sqlsrv_num_rows($query2) == 0) {
@@ -68,7 +68,7 @@ if ($conn) {
         }
         else {
             $query = sqlsrv_query($conn, "INSERT INTO subsetowner (name) VALUES (N'$owner_name')", array(), array("Scrollable" => 'static'));
-            $owner_id = sqlsrv_insert_id();
+            $owner_id = sqlsrv_insert_id($conn);
         }
 
         $creator = $doc->{'DC-162-createdBy'};
@@ -79,7 +79,7 @@ if ($conn) {
         }
         else {
             $query = sqlsrv_query($conn, "INSERT INTO creator (name) VALUES (N'$creator_name')", array(), array("Scrollable" => 'static'));
-            $creator_id = sqlsrv_insert_id();
+            $creator_id = sqlsrv_insert_id($conn);
         }
 
         $date = $doc->{'DC-274-inputDate'};
@@ -90,7 +90,7 @@ if ($conn) {
         }
         else {
             $query = sqlsrv_query($conn, "INSERT INTO term (reference, subsetowner, createdby, inputdate) VALUES (N'$ref', $owner_id, $creator_id, N'$date')", array(), array("Scrollable" => 'static'));
-            $term_id = sqlsrv_insert_id();
+            $term_id = sqlsrv_insert_id($conn);
         }
 
         foreach($doc->{'DC-435-relatedConcept'} as $rel)
@@ -111,7 +111,7 @@ if ($conn) {
             }
             else {
                 $query = sqlsrv_query($conn, "INSERT INTO lang (code) VALUES (N'$lang')", array(), array("Scrollable" => 'static'));
-                $lang_id = sqlsrv_insert_id();
+                $lang_id = sqlsrv_insert_id($conn);
             }
 
             $dgrp = $lgrp->definitionGrp;
@@ -129,7 +129,7 @@ if ($conn) {
             }
             else {
                 $query = sqlsrv_query($conn, "INSERT INTO langroup (termid, lang, definition, explanation) VALUES ($term_id, $lang_id, N'$def', N'$exp')", array(), array("Scrollable" => 'static'));
-                $langroup_id = sqlsrv_insert_id();
+                $langroup_id = sqlsrv_insert_id($conn);
             }
             if (!empty($dgrp)) {
                 foreach($dgrp->{'DC-1968-source'} as $source)
@@ -146,7 +146,7 @@ if ($conn) {
                     }
                     else {
                         $query = sqlsrv_query($conn, "INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'def', $term_id, NULL)", array(), array("Scrollable" => 'static'));
-                        $source_id = sqlsrv_insert_id();
+                        $source_id = sqlsrv_insert_id($conn);
                     }
                 }
             }
@@ -165,7 +165,7 @@ if ($conn) {
                     }
                     else {
                         $query = sqlsrv_query($conn, "INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'exp', $term_id, NULL)", array(), array("Scrollable" => 'static'));
-                        $source_id = sqlsrv_insert_id();
+                        $source_id = sqlsrv_insert_id($conn);
                     }
                 }
             }
@@ -186,7 +186,7 @@ if ($conn) {
                         $status_id = 0;
                     } else {
                         $query = sqlsrv_query($conn, "INSERT INTO terminfo (dcvalue) VALUES (N'$status')", array(), array("Scrollable" => 'static'));
-                        $status_id = sqlsrv_insert_id();
+                        $status_id = sqlsrv_insert_id($conn);
                     }
                 }
 
@@ -202,7 +202,7 @@ if ($conn) {
                         $auth_id = 0;
                     } else {
                         $query = sqlsrv_query($conn, "INSERT INTO terminfo (dcvalue) VALUES (N'$auth')", array(), array("Scrollable" => 'static'));
-                        $auth_id = sqlsrv_insert_id();
+                        $auth_id = sqlsrv_insert_id($conn);
                     }
                 }
                 
@@ -221,7 +221,7 @@ if ($conn) {
                 }
                 else {
                     $query = sqlsrv_query($conn, "INSERT INTO terminfo (dcvalue) VALUES (N'$pos')", array(), array("Scrollable" => 'static'));
-                    $pos_id = sqlsrv_insert_id();
+                    $pos_id = sqlsrv_insert_id($conn);
                 }
 
                 $gender = $graminfo['DC-245-grammaticalGender'];
@@ -236,7 +236,7 @@ if ($conn) {
                         $gender_id = 0;
                     } else {
                         $query = sqlsrv_query($conn, "INSERT INTO terminfo (dcvalue) VALUES (N'$gender')", array(), array("Scrollable" => 'static'));
-                        $gender_id = sqlsrv_insert_id();
+                        $gender_id = sqlsrv_insert_id($conn);
                     }
                 }
 
@@ -255,7 +255,7 @@ if ($conn) {
                 }
                 else {
                     $query = sqlsrv_query($conn, "INSERT INTO termgroup (langroup, termlexid, termtext, variant, pos, gender, qualifier, auth, abbrev) VALUES ($langroup_id, N'$termlexid', N'$termtext', N'$fem', $pos_id, $gender_id, $status_id, $auth_id, $is_abbrev)", array(), array("Scrollable" => 'static'));
-                    $termgroup_id = sqlsrv_insert_id();
+                    $termgroup_id = sqlsrv_insert_id($conn);
                 }
 
                 foreach($tgrp->contextGrp as $cgrp)
@@ -270,7 +270,7 @@ if ($conn) {
                     }
                     else {
                         $query = sqlsrv_query($conn, "INSERT INTO contextgroup (termgroup, context) VALUES ($termgroup_id, N'$context')", array(), array("Scrollable" => 'static'));
-                        $contextgroup_id = sqlsrv_insert_id();
+                        $contextgroup_id = sqlsrv_insert_id($conn);
                     }
                     $source = $cgrp->{'DC-1968-source'};
                     $bibref = $source['biblio'];
@@ -289,7 +289,7 @@ if ($conn) {
                     }
                     else {
                         $query = sqlsrv_query($conn, "INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'con', $term_id, $contextgroup_id)", array(), array("Scrollable" => 'static'));
-                        $source_id = sqlsrv_insert_id();
+                        $source_id = sqlsrv_insert_id($conn);
                     }
                 }
             }
