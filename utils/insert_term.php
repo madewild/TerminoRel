@@ -8,7 +8,7 @@ $password = PASSWORD;
 
 function sqlsrv_insert_id() { 
     $id = 0; 
-    $res = sqlsrv_query("SELECT @@identity AS id", array(), array("Scrollable" => 'static')); 
+    $res = sqlsrv_query($conn, "SELECT @@identity AS id", array(), array("Scrollable" => 'static')); 
     if ($row = sqlsrv_fetch_array($res)) { 
         $id = $row["id"]; 
     }
