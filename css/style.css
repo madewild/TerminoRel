@@ -33,12 +33,12 @@ a:visited{
 }
 
 .source_lang { 
-    background-color: lightgray; 
+    /*background-color: lightgray; */
 }
 
 .target_lang { 
-    background-color: gray;
-    color: white;
+    /*background-color: gray;
+    color: white;*/
 }
 
 .term_text {
