@@ -40,6 +40,7 @@
             <label for="glossary">Choisir un glossaire&nbsp;:</label>
             <select name="glossary">
                 <option value="tf">Titres et fonctions</option>
+                <option value="es">Enseignement supérieur</option>
             </select>
             <input type="hidden" name="sort" value="fr">
             <input type="submit" value="OK">
@@ -60,6 +61,7 @@
         Télécharger un glossaire au format TBX (format destiné aux outils d'aide à la traduction) :
         <ul class="static">
             <li><a href='tbx/titres_fonctions.zip' download>Titres et fonctions</a></li>
+            <li><a href='tbx/enseignement_superieur.zip' download>Enseignement supérieur</a></li>
         </ul>
     </li>
 </ul>
