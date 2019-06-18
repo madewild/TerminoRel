@@ -15,7 +15,7 @@
     <link rel="alternate" href="https://www.ulb.be/en" hreflang="en" />
     <link rel="canonical" href="https://www.ulb.be" />
 
-    <link rel="icon" type="image/png" href="/uas/ulbout/FAVICON/favicon.png" />
+    <link rel="icon" type="image/png" href="https://www.ulb.be/uas/ulbout/FAVICON/favicon.png" />
     <meta http-equiv="pragma" content="no-cache" />
 
     <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
@@ -567,7 +567,7 @@
         <a href="#connexion">Connexion</a>
     </p>
     
-        <link rel="stylesheet" type="text/css" href="/uas/ulbout/NOM_PROPRIETE_SURCHARGE_CSS/ksup-ulb.css" media="all"/>
+        <link rel="stylesheet" type="text/css" href="https://www.ulb.be/uas/ulbout/NOM_PROPRIETE_SURCHARGE_CSS/ksup-ulb.css" media="all"/>
     
      
     
@@ -725,7 +725,7 @@
 
 <div class="banniere" role="banner">
     <a href="https://www.ulb.be/" class="banniere__logo" title="Retour à la page d'accueil">
-        <img src="/uas/ulbout/LOGO/Logo-ULB.svg" alt="logo-ULB" title="Retour à la page d'accueil"/>
+        <img src="https://www.ulb.be/uas/ulbout/LOGO/Logo-ULB.svg" alt="logo-ULB" title="Retour à la page d'accueil"/>
     </a>
 </div>
 
@@ -6663,7 +6663,7 @@
 
             
             
-                <img src="/uas/ulbout/NOM_PROPRIETE_LOGO_FOOTER/logo-footer.png" alt="" title=""/>
+                <img src="https://www.ulb.be/uas/ulbout/NOM_PROPRIETE_LOGO_FOOTER/logo-footer.png" alt="" title=""/>
             
         </div>
 
