@@ -605,7 +605,7 @@
     --><div id="menu_deroulant1" class="header_toggle">
         <button class="header_toggle__libelle header_toggle__lvl1" data-toggle="[data-toggle-id='menuderoulant1']" data-toggle-group="menus" type="button">
             
-                <span class="header_toggle__picto"><img src="/medias/photo/acces-restreints-header_1534254852458-png" alt="Accès restreints"></span>
+                <span class="header_toggle__picto"><img src="https://www.ulb.be/medias/photo/acces-restreints-header_1534254852458-png" alt="Accès restreints"></span>
             
             <span class="header_toggle__libelle-texte">
             	Accès restreints
@@ -884,7 +884,7 @@
             
                 
                 --><button class="item__control type_rubrique_MDEROUL1 item__control-level-0" type="button"  data-toggle="[data-toggle-id='1571625036010916']" data-toggle-group="menu" data-toggle-event="menu-riche-toggle" aria-expanded="false"><!--
-                     --><span class="item__picto"><img src="/medias/photo/acces-restreints-header_1534254852458-png"/></span><!--
+                     --><span class="item__picto"><img src="https://www.ulb.be/medias/photo/acces-restreints-header_1534254852458-png"/></span><!--
                   --><span class="item__label">
                         Accès restreints
                     </span><!-- 
@@ -7441,27 +7441,27 @@
                 <ul class="reseaux-sociaux__liste">
                 
                     <li class="reseaux-sociaux__item">
-                        <a href="https://www.ulb.be/fr/facebook" class="reseaux-sociaux__type-rubrique_0004" title="Facebook"><img src="/medias/photo/fa-facebook_1530799267627-png" alt="picto-Facebook" /></a>
+                        <a href="https://www.ulb.be/fr/facebook" class="reseaux-sociaux__type-rubrique_0004" title="Facebook"><img src="https://www.ulb.be/medias/photo/fa-facebook_1530799267627-png" alt="picto-Facebook" /></a>
                     </li>
                 
                     <li class="reseaux-sociaux__item">
-                        <a href="https://www.ulb.be/fr/twitter" class="reseaux-sociaux__type-rubrique_0004" title="Twitter"><img src="/medias/photo/fa-twitter_1530799267625-png" alt="picto-Twitter" /></a>
+                        <a href="https://www.ulb.be/fr/twitter" class="reseaux-sociaux__type-rubrique_0004" title="Twitter"><img src="https://www.ulb.be/medias/photo/fa-twitter_1530799267625-png" alt="picto-Twitter" /></a>
                     </li>
                 
                     <li class="reseaux-sociaux__item">
-                        <a href="https://www.ulb.be/fr/instagram" class="reseaux-sociaux__type-rubrique_0004" title="Instagram"><img src="/medias/photo/fa-instagram_1530799267602-png" alt="picto-Instagram" /></a>
+                        <a href="https://www.ulb.be/fr/instagram" class="reseaux-sociaux__type-rubrique_0004" title="Instagram"><img src="https://www.ulb.be/medias/photo/fa-instagram_1530799267602-png" alt="picto-Instagram" /></a>
                     </li>
                 
                     <li class="reseaux-sociaux__item">
-                        <a href="https://www.ulb.be/fr/linkedin" class="reseaux-sociaux__type-rubrique_0004" title="Linkedin"><img src="/medias/photo/fa-linkedin_1530799267623-png" alt="picto-Linkedin" /></a>
+                        <a href="https://www.ulb.be/fr/linkedin" class="reseaux-sociaux__type-rubrique_0004" title="Linkedin"><img src="https://www.ulb.be/medias/photo/fa-linkedin_1530799267623-png" alt="picto-Linkedin" /></a>
                     </li>
                 
                     <li class="reseaux-sociaux__item">
-                        <a href="https://www.ulb.be/fr/ulb-tv" class="reseaux-sociaux__type-rubrique_0004" title="ULB TV"><img src="/medias/photo/fa-youtube_1530799267632-png" alt="picto-ULB TV" /></a>
+                        <a href="https://www.ulb.be/fr/ulb-tv" class="reseaux-sociaux__type-rubrique_0004" title="ULB TV"><img src="https://www.ulb.be/medias/photo/fa-youtube_1530799267632-png" alt="picto-ULB TV" /></a>
                     </li>
                 
                     <li class="reseaux-sociaux__item">
-                        <a href="https://www.ulb.be/fr/scoop-it" class="reseaux-sociaux__type-rubrique_0004" title="Scoop.it!"><img src="/medias/photo/ksup-scoopit_1531143129139-png" alt="picto-Scoop.it!" /></a>
+                        <a href="https://www.ulb.be/fr/scoop-it" class="reseaux-sociaux__type-rubrique_0004" title="Scoop.it!"><img src="https://www.ulb.be/medias/photo/ksup-scoopit_1531143129139-png" alt="picto-Scoop.it!" /></a>
                     </li>
                 
                 </ul>
@@ -7480,7 +7480,7 @@
 	                                
 	                                
 	                            
-	                            <div class="grille_pictos__img_wrapper"><img src="/medias/photo/illustration-footer-soutenir_1530799267705-png"/></div>
+	                            <div class="grille_pictos__img_wrapper"><img src="https://www.ulb.be/medias/photo/illustration-footer-soutenir_1530799267705-png"/></div>
 	                            <span>Soutenez l'Université</span>
 	                            
 	                                
@@ -7496,7 +7496,7 @@
 	                                
 	                                
 	                            
-	                            <div class="grille_pictos__img_wrapper"><img src="/medias/photo/civis_1553847691371-png"/></div>
+	                            <div class="grille_pictos__img_wrapper"><img src="https://www.ulb.be/medias/photo/civis_1553847691371-png"/></div>
 	                            <span>CIVIS</span>
 	                            
 	                                
@@ -7514,7 +7514,7 @@
 	                                
 	                                
 	                            
-	                            <div class="grille_pictos__img_wrapper"><img src="/medias/photo/illustration-footer-contacts_1530799267576-png"/></div>
+	                            <div class="grille_pictos__img_wrapper"><img src="https://www.ulb.be/medias/photo/illustration-footer-contacts_1530799267576-png"/></div>
 	                            <span>Contacts</span>
 	                            
 	                                
@@ -7530,7 +7530,7 @@
 	                                
 	                                
 	                            
-	                            <div class="grille_pictos__img_wrapper"><img src="/medias/photo/illustration-footer-emploi_1531408924254-png"/></div>
+	                            <div class="grille_pictos__img_wrapper"><img src="https://www.ulb.be/medias/photo/illustration-footer-emploi_1531408924254-png"/></div>
 	                            <span>Emploi</span>
 	                            
 	                                
@@ -7569,7 +7569,7 @@
     --><div id="menu_deroulant_footer1" class="header_toggle">
         <button class="header_toggle__libelle header_toggle__lvl1" data-toggle="[data-toggle-id='menuderoulantfooter1']" data-toggle-group="menus" type="button">
             
-                <span class="header_toggle__picto"><img src="/medias/photo/acces-restreints-header_1534254852458-png" alt="Accès restreints"></span>
+                <span class="header_toggle__picto"><img src="https://www.ulb.be/medias/photo/acces-restreints-header_1534254852458-png" alt="Accès restreints"></span>
             
             <span class="header_toggle__libelle-texte">
             	Accès restreints
