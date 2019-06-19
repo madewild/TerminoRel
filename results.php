@@ -26,7 +26,7 @@ if(isset($_POST['status'])) {
 function show_trad($conn, $langroup_target, $results, $type) {
     while ($row = sqlsrv_fetch_array($results)) {
         $translation = $row['termtext'];
-        $lang_trad = strtoupper(explode("-", $row['termlexid'])[3]);
+        $lang_trad = strtoupper(end(explode("-", $row['termlexid'])));
         $variant = $row['variant'];
         echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
         echo "<td><details><summary><span title='Cliquez sur le terme pour voir un exemple.'><b>" . $translation;
