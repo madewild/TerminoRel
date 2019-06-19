@@ -29,7 +29,7 @@ function show_trad($conn, $langroup_target, $results, $lang_trad, $type) {
         if($variant != NULL and $lang_trad == 'fr') {
             echo " | " . $variant;
         }
-        echo "</b> (terme " . $type . ") &#9432;";
+        echo "</b> (terme " . $type . ")";
         echo "</span></summary>";
         $result = sqlsrv_query($conn, "SELECT id FROM termgroup WHERE langroup=$langroup_target", array(), array("Scrollable" => 'static'));
         $termgroup = sqlsrv_fetch_array($result)['id'];
@@ -123,7 +123,7 @@ if ($conn) {
                     echo " (" . $acro . ")";
                 }
             }
-            echo " &#9432;</span></summary>";
+            echo "</span></summary>";
 
             $pos_id = $row['pos'];
             if($pos_id == 1) {
@@ -132,10 +132,10 @@ if ($conn) {
                 $pos = "Adjectif";
             }
             $gender_id = $row['gender'];
-            if($gender_id == 2) {
-                $gender = "masculin";
-            } else if($gender_id == 4 or $mf) {
+            if($gender_id == 4 or $mf) {
                 $gender = "masculin ou féminin";
+            } else if($gender_id == 2) {
+                $gender = "masculin";
             } else if($gender_id == 8) {
                 $gender = "féminin";
             } else {
