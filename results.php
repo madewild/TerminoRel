@@ -177,7 +177,8 @@ if ($conn) {
             $langroup_target = sqlsrv_fetch_array($result)['id'];
             $results_recom = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier<>5", array(), array("Scrollable" => 'static'));
             if($results_recom === FALSE) {
-                die( print_r( sqlsrv_errors(), true));
+                print_r(sqlsrv_errors(), true);
+                print_r($langroup_target);
             }
             $results_prop = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", array(), array("Scrollable" => 'static'));
             $num_recom = sqlsrv_num_rows($results_recom);
