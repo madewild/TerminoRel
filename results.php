@@ -85,7 +85,7 @@ if ($conn) {
     $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext", array(), array("Scrollable" => 'static'));
     $num_rows = sqlsrv_num_rows($query);
     if($num_rows == 0) {
-        echo "Aucune entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
+        echo "<b>Aucune entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
     } else if($num_rows == 1) {
         echo "<b>1 entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
     } else {
@@ -175,6 +175,9 @@ if ($conn) {
             $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE '$cible%'", array(), array("Scrollable" => 'static'));
             $langroup_target = sqlsrv_fetch_array($result)['id'];
             $results_recom = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", array(), array("Scrollable" => 'static'));
+            if($results_recom === FALSE) {
+                die( print_r( sqlsrv_errors(), true));
+            }
             $results_prop = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", array(), array("Scrollable" => 'static'));
             $num_recom = sqlsrv_num_rows($results_recom);
             if($num_recom == 0 and $restriction == "approved_only") {
