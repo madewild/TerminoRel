@@ -161,7 +161,7 @@ if ($conn) {
             $result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source", array(), array("Scrollable" => 'static'));
             $termid = sqlsrv_fetch_array($result)['termid'];
 
-            $result = sqlsrv_query($conn, "SELECT definition FROM langroup WHERE termid=$termid AND lang LIKE 'fr%''", array(), array("Scrollable" => 'static'));
+            $result = sqlsrv_query($conn, "SELECT definition FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'", array(), array("Scrollable" => 'static'));
             $definition = sqlsrv_fetch_array($result)['definition'];
             if(!empty($definition)) {
                 $result = sqlsrv_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='def'", array(), array("Scrollable" => 'static'));
