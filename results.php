@@ -22,12 +22,12 @@ if(isset($_POST['status'])) {
 }
 
 function show_trad($conn, $langroup_target, $results, $lang_trad, $type) {
-    echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td><td>";
+    echo "<tr><td><span class='target_lang'>" . strtoupper($lang_trad) . "</span></td><td>";
     while ($row = sqlsrv_fetch_array($results)) {
         $translation = $row['termtext'];
         $variant = $row['variant'];
         echo "<details><summary><span title='Cliquez sur le terme pour voir un exemple.'><b>" . $translation;
-        if($variant != NULL and $lang_trad == 'FR') {
+        if($variant != NULL and $lang_trad == 'fr') {
             echo " | " . $variant;
         }
         echo "</b> (terme " . $type . ") &#9432;";
