@@ -151,16 +151,18 @@ if ($conn) {
             } else {
                 $pos = "Adjectif";
             }
-            /*$gender_id = $row['gender'];
+            $gender_id = $row['gender'];
             if($gender_id == 2) {
                 $gender = "masculin";
             } else if($gender_id == 4) {
                 $gender = "masculin ou féminin";
+            } else if($gender_id == 8) {
+                $gender = "féminin";
             } else {
                 $gender = "";
-            }*/
+            }
 
-            echo "<br>" . $pos . " masculin ou féminin<br>";
+            echo "<br>" . $pos . " " . $gender . "<br>";
 
             $result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source", array(), array("Scrollable" => 'static'));
             $termid = sqlsrv_fetch_array($result)['termid'];
