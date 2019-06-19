@@ -21,12 +21,10 @@ if(isset($_POST['status'])) {
     $restriction = "none";
 }
 
-function show_trad($conn, $langroup_target, $results, $type) {
+function show_trad($conn, $langroup_target, $results, $lang_trad, $type) {
     echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td><td>";
     while ($row = sqlsrv_fetch_array($results)) {
         $translation = $row['termtext'];
-        $temp_array = explode("-", $row['termlexid']);
-        $lang_trad = strtoupper(end($temp_array));
         $variant = $row['variant'];
         echo "<details><summary><span title='Cliquez sur le terme pour voir un exemple.'><b>" . $translation;
         if($variant != NULL and $lang_trad == 'FR') {
@@ -180,17 +178,16 @@ if ($conn) {
             $results_prop = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", array(), array("Scrollable" => 'static'));
             $num_recom = sqlsrv_num_rows($results_recom);
             if($num_recom == 0 and $restriction == "approved_only") {
-                echo "<tr><td><span class='target_lang'>EN</span></td>";
+                echo "<tr><td><span class='target_lang'>" . $cible . "</span></td>";
                 echo "<td>Aucune traduction approuvée.</tr>";
             } else {
-                show_trad($conn, $langroup_target, $results_recom, "recommandé");
+                show_trad($conn, $langroup_target, $results_recom, $cible, "recommandé");
                 if($num_recom == 0) {
-                    show_trad($conn, $langroup_target, $results_prop, "suggéré");
+                    show_trad($conn, $langroup_target, $results_prop, $cible, "suggéré");
                 }
             }
 
             if(--$num_rows > 0) {
-                //echo "<tr><td colspan='2'><hr style='border: solid 0.5px silver; height: 0px'></td></tr>";
                 echo "<tr><th></th></tr><tr><th></th></tr>";
             }
         }
