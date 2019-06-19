@@ -22,13 +22,13 @@ if(isset($_POST['status'])) {
 }
 
 function show_trad($conn, $langroup_target, $results, $type) {
+    echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td><td>";
     while ($row = sqlsrv_fetch_array($results)) {
         $translation = $row['termtext'];
         $temp_array = explode("-", $row['termlexid']);
         $lang_trad = strtoupper(end($temp_array));
         $variant = $row['variant'];
-        echo "<tr><td><span class='target_lang'>" . $lang_trad . "</span></td>";
-        echo "<td><details><summary><span title='Cliquez sur le terme pour voir un exemple.'><b>" . $translation;
+        echo "<details><summary><span title='Cliquez sur le terme pour voir un exemple.'><b>" . $translation;
         if($variant != NULL and $lang_trad == 'FR') {
             echo " | " . $variant;
         }
@@ -51,8 +51,9 @@ function show_trad($conn, $langroup_target, $results, $type) {
         } else {
             echo "<br>Pas d'exemple d'usage pour ce terme.";
         }
-        echo "</details></td></tr>";
+        echo "</details>";
     }
+    echo "</td></tr>";
 }
 ?>
 
