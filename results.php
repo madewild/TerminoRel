@@ -65,7 +65,7 @@ function show_trad($conn, $langroup_target, $results, $type) {
     <input type="text" class="input" id="term" name="term" size="60" value="<?php echo $term ?>">
     <input type="hidden" name="source" value="<?php echo $source; ?>">
     <input type="hidden" name="cible" value="<?php echo $cible; ?>">
-    <input type="hidden" name="domaine" value="<?php echo $domaine; ?>">
+    <input type="hidden" name="domaine" value="<?php echo $fulldomain; ?>">
     <?php
     if(isset($types)) {
         foreach($types as $type) {
