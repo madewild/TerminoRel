@@ -95,6 +95,7 @@ if ($conn) {
         while ($row = sqlsrv_fetch_array($query)) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
+            $mf = False;
             echo "<td><span class='source_lang'>" . $lang . "</span></td>";
             echo "<td><details><summary>";
             echo "<span title='Cliquez sur le terme pour voir sa définition.'>" . $row['termtext'];
@@ -102,6 +103,7 @@ if ($conn) {
             if($variant != NULL) {
                 echo " | ";
                 echo $variant;
+                $mf = True;
             }
 
             $langroup_source = $row['langroup'];
@@ -112,6 +114,7 @@ if ($conn) {
                 $termtextfull = $row2['termtext'];
                 $termtextfull_variant = $row2['variant'];
                 echo " (" . $termtextfull . " | " . $termtextfull_variant . ")";
+                $mf = True;
             } else {
                 $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1", array(), array("Scrollable" => 'static'));
                 $row2 = sqlsrv_fetch_array($result);
@@ -131,7 +134,7 @@ if ($conn) {
             $gender_id = $row['gender'];
             if($gender_id == 2) {
                 $gender = "masculin";
-            } else if($gender_id == 4) {
+            } else if($gender_id == 4 or $mf) {
                 $gender = "masculin ou féminin";
             } else if($gender_id == 8) {
                 $gender = "féminin";
