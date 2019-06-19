@@ -50,7 +50,7 @@
     <link rel="stylesheet" type="text/css" media="print" href="https://www.ulb.be/wro/styles-print/cdc1004c3e47f6f37bed7b80799de8c427bd59a7.css"/>
     <link rel="stylesheet" type="text/css" href="https://www.ulb.be/uas/ulbout/NOM_PROPRIETE_SURCHARGE_CSS/ksup-ulb.css" media="all"/>
     <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css?version=1"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css?version=20">
+    <link rel="stylesheet" type="text/css" href="css/style.css?version=21">
     <link rel="stylesheet" type="text/css" href="css/details-shim.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />

@@ -14,9 +14,7 @@ $fulldomain = htmlspecialchars($_POST['domaine']);
 $result_explode = explode('-', $fulldomain);
 $refcode = $result_explode[0];
 $domaine = $result_explode[1];
-if(isset($_POST['type'])) {
-    $types = $_POST['type'];    
-}
+
 if(isset($_POST['status'])) {
     $restriction = htmlspecialchars($_POST['status']);
 } else {
@@ -67,30 +65,12 @@ function show_trad($conn, $langroup_target, $results, $type) {
     <input type="hidden" name="source" value="<?php echo $source; ?>">
     <input type="hidden" name="cible" value="<?php echo $cible; ?>">
     <input type="hidden" name="domaine" value="<?php echo $fulldomain; ?>">
-    <?php
-    if(isset($types)) {
-        foreach($types as $type) {
-            echo '<input type="hidden" name="type[]" value="' . $type . '">';
-        }
-    } else {
-        $types = [];
-    }
-    ?>
     <input type="submit" value="Rechercher"><br>
 </form>
 
 <div class="smaller_text">
     Langues : <?php echo $source ?> > <?php echo $cible ?>
     | Domaine : <?php echo $domaine ?>
-    <!--| Informations additionnelles : -->
-    <?php 
-        /*if(isset($types)) {
-            $typestring = implode(", ", $types);
-            echo $typestring;
-        } else {
-            echo "Aucune";
-        }*/
-    ?>
 </div><br>
 
 <?php
@@ -193,18 +173,6 @@ if ($conn) {
 
             echo "</details></td></tr>";
 
-            if(in_array("Définition", $types)) {
-                if(!empty($definition)) {
-                    echo "<tr><td></td><td><u>Définition</u> : " . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")</td></tr>";
-                }
-            }
-
-            if(in_array("Explication", $types)) {
-                if(!empty($explanation)) {
-                    echo "<tr><td></td><td><u>Explication</u> : " . $explanation . " (<i>" . $bib_title_exp . "</i>, " . $source_text_exp . ")</td></tr>";
-                }
-            }
-
             $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE '$cible%'", array(), array("Scrollable" => 'static'));
             $langroup_target = sqlsrv_fetch_array($result)['id'];
             $results_recom = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", array(), array("Scrollable" => 'static'));
@@ -217,12 +185,6 @@ if ($conn) {
                 show_trad($conn, $langroup_target, $results_recom, "recommandé");
                 if($num_recom == 0) {
                     show_trad($conn, $langroup_target, $results_prop, "suggéré");
-                }
-            }
-
-            if(in_array("Exemple", $types)) {
-                if(!empty($context)) {
-                    echo "<tr><td></td><td><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title_con . "</i>, " . $source_text_con . ")</td></tr>";
                 }
             }
 

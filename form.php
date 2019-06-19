@@ -6,15 +6,15 @@
         <legend>Vos critères de recherche</legend>
         <nav id="form"><ul><li><label for="term">
         <span title="Expression, mot ou partie de mot : 'rec' renverra recteur, directeur, recherche, etc.">
-        Terme recherché &#9432;</span></label><!--<span class="star">*</span>-->
+        Terme recherché &#9432;</span></label>
         <input type="text" class="input" id="term" name="term" size="70">
         <input type="submit" value="Rechercher"></li>
-        <li><label for="source">Langue source</label><!--<span class="star">*</span>-->
+        <li><label for="source">Langue source</label>
         <select id="source" name="source">
             <option value="fr">français</option>
             <option value="en">anglais</option>
         </select>
-        <label for="cible">Langue cible</label><!--<span class="star">*</span>-->
+        <label for="cible">Langue cible</label>
         <select id="cible" name="cible">
             <option value="en">anglais</option>
         </select></li>
@@ -26,11 +26,6 @@
         <li><label for="status"><span title="Traductions validées officiellement par le comité terminologique de l'ULB.">
         Uniquement les traductions approuvées &#9432;</span></label>
         <input type="checkbox" name="status" value="approved_only"></li></ul></nav>
-        <!--<br><p><label for="type">Informations additionnelles à afficher</label><br>
-        <input type="checkbox" name="type[]" value="Définition"> Définition (en français)
-        <input type="checkbox" name="type[]" value="Explication"> Explications supplémentaires (en français)
-        <input type="checkbox" name="type[]" value="Exemple"> Exemple(s) d'usage (en langue cible)
-        <p><span class="star">*</span> <i>Ce symbole indique que le champ est obligatoire.</i></p>-->
     </fieldset>
 </form><br>
 
