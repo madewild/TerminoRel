@@ -67,7 +67,7 @@ $tbx = '<?xml version="1.0" encoding="UTF-8"?>
             $tbx .= '
         <langSet xml:lang="fr-BE">';
 
-            $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang=0", array(), array("Scrollable" => 'static'));
+            $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'", array(), array("Scrollable" => 'static'));
             $langroup_source = sqlsrv_fetch_array($result)['id'];
             $result2 = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source", array(), array("Scrollable" => 'static'));
             while ($termgroup = sqlsrv_fetch_array($result2)) {
@@ -111,7 +111,7 @@ $tbx = '<?xml version="1.0" encoding="UTF-8"?>
         </langSet>
         <langSet xml:lang="en-GB">';
 
-            $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang=1", array(), array("Scrollable" => 'static'));
+            $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE 'en%'", array(), array("Scrollable" => 'static'));
             $langroup_target = sqlsrv_fetch_array($result)['id'];
 
             $results_recom = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", array(), array("Scrollable" => 'static'));
