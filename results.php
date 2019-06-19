@@ -10,7 +10,10 @@ $term = htmlspecialchars($_POST['term']);
 $clean_term = str_replace("'", "''", $term);
 $source = htmlspecialchars($_POST['source']);
 $cible = htmlspecialchars($_POST['cible']);
-$domaine = htmlspecialchars($_POST['domaine']);
+$fulldomain = htmlspecialchars($_POST['domaine']);
+$result_explode = explode('-', $fulldomain);
+$refcode = $result_explode[0];
+$domaine = $result_explode[1];
 if(isset($_POST['type'])) {
     $types = $_POST['type'];    
 }
@@ -99,7 +102,7 @@ $conninfo = array(
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext", array(), array("Scrollable" => 'static'));
+    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext", array(), array("Scrollable" => 'static'));
     $num_rows = sqlsrv_num_rows($query);
     if($num_rows == 0) {
         echo "Aucune entrée</b> trouvée pour <b>" . $term . "</b><br><br>";

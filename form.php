@@ -20,7 +20,8 @@
         </select></li>
         <li><label for="domaine">Domaine</label>
         <select name="domaine">
-            <option value="Titres et fonctions">Titres et fonctions</option>
+            <option value="P01-Titres et fonctions" >Titres et fonctions</option>
+            <option value="P02-Enseignement supérieur">Enseignement supérieur</option>
         </select></li>
         <li><label for="status"><span title="Traductions validées officiellement par le comité terminologique de l'ULB.">
         Uniquement les traductions approuvées &#9432;</span></label>
