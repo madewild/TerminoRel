@@ -105,14 +105,14 @@ if ($conn) {
         foreach($doc->langGrp as $lgrp) 
         {
             $lang = $lgrp->attributes("xml", TRUE)->lang;
-            $query = sqlsrv_query($conn, "SELECT id from lang where code=N'$lang'", array(), array("Scrollable" => 'static'));
+            /*$query = sqlsrv_query($conn, "SELECT id from lang where code=N'$lang'", array(), array("Scrollable" => 'static'));
             if (sqlsrv_num_rows($query) > 0) {
                 $lang_id = sqlsrv_fetch_array($query)['id'];
             }
             else {
                 $query = sqlsrv_query($conn, "INSERT INTO lang (code) VALUES (N'$lang')", array(), array("Scrollable" => 'static'));
                 $lang_id = sqlsrv_insert_id($conn);
-            }
+            }*/
 
             $dgrp = $lgrp->definitionGrp;
             $def = $dgrp->{'DC-168-definition'};
@@ -122,13 +122,13 @@ if ($conn) {
             $exp = $egrp->{'DC-223-explanation'};
             $exp = clean($exp);
 
-            $query = sqlsrv_query($conn, "SELECT id from langroup where termid=N'$term_id' and lang=N'$lang_id'", array(), array("Scrollable" => 'static'));
+            $query = sqlsrv_query($conn, "SELECT id from langroup where termid=N'$term_id' and lang=N'$lang'", array(), array("Scrollable" => 'static'));
             if (sqlsrv_num_rows($query) > 0) {
                 echo "This term has already an entry for " . $lang . "<br>";
                 $langroup_id = sqlsrv_fetch_array($query)['id'];
             }
             else {
-                $query = sqlsrv_query($conn, "INSERT INTO langroup (termid, lang, definition, explanation) VALUES ($term_id, $lang_id, N'$def', N'$exp')", array(), array("Scrollable" => 'static'));
+                $query = sqlsrv_query($conn, "INSERT INTO langroup (termid, lang, definition, explanation) VALUES ($term_id, $lang, N'$def', N'$exp')", array(), array("Scrollable" => 'static'));
                 $langroup_id = sqlsrv_insert_id($conn);
             }
             if (!empty($dgrp)) {
