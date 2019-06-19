@@ -22,6 +22,7 @@ if(isset($_POST['status'])) {
 }
 
 function show_trad($conn, $langroup_target, $results, $lang_trad, $type) {
+    $counter = sqlsrv_num_rows($results);
     while ($row = sqlsrv_fetch_array($results)) {
         $translation = $row['termtext'];
         $variant = $row['variant'];
@@ -49,6 +50,9 @@ function show_trad($conn, $langroup_target, $results, $lang_trad, $type) {
             echo "<br>Pas d'exemple d'usage pour ce terme.";
         }
         echo "</details>";
+        if(--$counter > 0) {
+            echo "<br>";
+        }
     }
 }
 ?>
