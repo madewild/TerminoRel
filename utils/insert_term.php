@@ -128,7 +128,7 @@ if ($conn) {
                 $langroup_id = sqlsrv_fetch_array($query)['id'];
             }
             else {
-                $query = sqlsrv_query($conn, "INSERT INTO langroup (termid, lang, definition, explanation) VALUES ($term_id, $lang, N'$def', N'$exp')", array(), array("Scrollable" => 'static'));
+                $query = sqlsrv_query($conn, "INSERT INTO langroup (termid, lang, definition, explanation) VALUES ($term_id, N'$lang', N'$def', N'$exp')", array(), array("Scrollable" => 'static'));
                 $langroup_id = sqlsrv_insert_id($conn);
             }
             if (!empty($dgrp)) {
