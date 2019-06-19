@@ -161,7 +161,7 @@ if ($conn) {
             $result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source", array(), array("Scrollable" => 'static'));
             $termid = sqlsrv_fetch_array($result)['termid'];
 
-            $result = sqlsrv_query($conn, "SELECT definition FROM langroup WHERE termid=$termid AND lang=0", array(), array("Scrollable" => 'static'));
+            $result = sqlsrv_query($conn, "SELECT definition FROM langroup WHERE termid=$termid AND lang LIKE 'fr%''", array(), array("Scrollable" => 'static'));
             $definition = sqlsrv_fetch_array($result)['definition'];
             if(!empty($definition)) {
                 $result = sqlsrv_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='def'", array(), array("Scrollable" => 'static'));
@@ -173,10 +173,7 @@ if ($conn) {
                 echo "<br><u>Définition</u> : " . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")";
             }
 
-            $result = sqlsrv_query($conn, "SELECT id FROM lang WHERE code LIKE '$source%'", array(), array("Scrollable" => 'static'));
-            $source_id = sqlsrv_fetch_array($result)['id'];
-
-            $result = sqlsrv_query($conn, "SELECT explanation FROM langroup WHERE termid=$termid AND lang=$source_id", array(), array("Scrollable" => 'static'));
+            $result = sqlsrv_query($conn, "SELECT explanation FROM langroup WHERE termid=$termid AND lang LIKE '$source%'", array(), array("Scrollable" => 'static'));
             $explanation = sqlsrv_fetch_array($result)['explanation'];
             if(!empty($explanation)) {
                 $result = sqlsrv_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='exp'", array(), array("Scrollable" => 'static'));
@@ -202,10 +199,7 @@ if ($conn) {
                 }
             }
 
-            $result = sqlsrv_query($conn, "SELECT id FROM lang WHERE code LIKE '$cible%'", array(), array("Scrollable" => 'static'));
-            $cible_id = sqlsrv_fetch_array($result)['id'];
-
-            $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang=$cible_id", array(), array("Scrollable" => 'static'));
+            $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE '$cible%'", array(), array("Scrollable" => 'static'));
             $langroup_target = sqlsrv_fetch_array($result)['id'];
             $results_recom = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", array(), array("Scrollable" => 'static'));
             $results_prop = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", array(), array("Scrollable" => 'static'));
