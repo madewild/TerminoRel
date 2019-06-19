@@ -31,6 +31,7 @@ $conninfo = array(
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
+    $query = sqlsrv_query($conn, "TRUNCATE TABLE contextgroup", array(), array("Scrollable" => 'static'));
     $query = sqlsrv_query($conn, "TRUNCATE TABLE termgroup", array(), array("Scrollable" => 'static'));
     $query = sqlsrv_query($conn, "TRUNCATE TABLE langroup", array(), array("Scrollable" => 'static'));
     $query = sqlsrv_query($conn, "TRUNCATE TABLE term", array(), array("Scrollable" => 'static'));
