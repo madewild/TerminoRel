@@ -96,7 +96,7 @@ if ($conn) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
             $mf = False;
-            echo "<td><span class='source_lang'>" . $lang . "</span></td>";
+            echo "<td width='45'>" . $lang . "</td>";
             echo "<td><details><summary>";
             echo "<span title='Cliquez sur le terme pour voir sa définition.'>" . $row['termtext'];
             $variant = $row['variant'];
@@ -181,7 +181,7 @@ if ($conn) {
             }
             $results_prop = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", array(), array("Scrollable" => 'static'));
             $num_recom = sqlsrv_num_rows($results_recom);
-            echo "<tr><td><span class='target_lang'>" . strtoupper($cible) . "</span></td><td>";
+            echo "<tr><td>" . strtoupper($cible) . "</td><td>";
             if($num_recom == 0 and $restriction == "approved_only") {
                 echo "Aucune traduction approuvée.";
             } else {
