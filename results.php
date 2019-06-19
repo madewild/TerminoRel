@@ -48,7 +48,7 @@ function show_trad($conn, $langroup_target, $results, $lang_trad, $type) {
         } else {
             echo "<br>Pas d'exemple d'usage pour ce terme.";
         }
-        echo "</details><br>";
+        echo "</details>";
     }
 }
 ?>
