@@ -9,8 +9,17 @@ $password = PASSWORD;
 $glossary = htmlspecialchars($_GET['glossary']);
 $sort = htmlspecialchars($_GET['sort']);
 
-echo "<h2>TerminoRel – Glossaire
-académique de l’ULB pour la rédaction de textes en anglais</h2>";
+if($glossary == 'tf') {
+    $refcode = "P01";
+    $gloname = "Titres et fonctions";
+} else if($glossary == 'es') {
+    $refcode = "P02";
+    $gloname = "Enseignement supérieur";
+} else {
+    die("Glossaire inconnu.");
+}
+
+echo "<h2>TerminoRel – Glossaires académiques de l'ULB pour la rédaction de textes en anglais</h2>";
 
 if($sort == "fr") {
         $other_code = "en";
@@ -32,12 +41,12 @@ $conninfo = array(
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '%$sort' ORDER BY termtext", array(), array("Scrollable" => 'static'));
+    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$sort' ORDER BY termtext", array(), array("Scrollable" => 'static'));
     $num_rows = sqlsrv_num_rows($query);
     if ($num_rows === false) {
         echo "ERROR<br>";
     }
-    echo "<b>Domaine : Titres et fonctions</b><br><br>";
+    echo "<b>Domaine : " . $gloname . "</b><br><br>";
     echo "<b>" . $num_rows . " entrées</b> trouvées<br><br>";
     
     if ($num_rows > 0) {
@@ -111,7 +120,7 @@ if ($conn) {
         echo "</table>";
     }
     else {
-        echo "Glossaire inconnu";
+        echo "Aucune entrée trouvée dans ce glossaire.";
     }
 }
 ?>

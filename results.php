@@ -57,7 +57,7 @@ function show_trad($conn, $langroup_target, $results, $lang_trad, $type) {
 }
 ?>
 
-<h2>TerminoRel – Glossaires académiques de l’ULB pour la rédaction de textes en anglais</h2>
+<h2>TerminoRel – Glossaires académiques de l'ULB pour la rédaction de textes en anglais</h2>
 
 <?php include('static/retour.php'); ?>
 
