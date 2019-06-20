@@ -144,20 +144,20 @@ if ($conn) {
 
             $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE '$cible%'", array(), array("Scrollable" => 'static'));
             $langroup_target = sqlsrv_fetch_array($result)['id'];
-            $results_recom = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier<>5", array(), array("Scrollable" => 'static'));
-            if($results_recom === FALSE) {
+            $results_pref = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=7", array(), array("Scrollable" => 'static'));
+            if($results_pref === FALSE) {
                 print_r(sqlsrv_errors(), true);
                 print_r($langroup_target);
             }
-            $results_prop = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", array(), array("Scrollable" => 'static'));
-            $num_recom = sqlsrv_num_rows($results_recom);
+            $results_adm = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth IN (0,9)", array(), array("Scrollable" => 'static'));
+            $num_pref = sqlsrv_num_rows($results_pref);
             echo "<tr><td>" . strtoupper($cible) . "</td><td>";
-            if($num_recom == 0 and $restriction == "approved_only") {
+            if($num_pref == 0 and $restriction == "approved_only") {
                 echo "Aucune traduction approuvée.";
             } else {
-                show_trad($conn, $langroup_target, $results_recom, $cible, "recommandé");
-                if($num_recom == 0) {
-                    show_trad($conn, $langroup_target, $results_prop, $cible, "suggéré");
+                show_trad($conn, $langroup_target, $results_pref, $cible, "privilégié");
+                if($num_pref == 0) {
+                    show_trad($conn, $langroup_target, $results_adm, $cible, "admis");
                 }
             }
             echo "</td></tr>";
