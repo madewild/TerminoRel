@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['term'])) {
+if(isset($_GET['term'])) {
     include("results.php");
 } else if(isset($_GET['glossary'])) {
     include("glossary.php");
