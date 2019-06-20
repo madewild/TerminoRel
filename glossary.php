@@ -24,8 +24,7 @@ if ($glossary == 'all') {
 
 include("functions.php");
 include("static/header.php");
-include('static/retour.php'); 
-?>
+include('static/retour.php');
 
 if($sort == "fr") {
         $cible = "en";
