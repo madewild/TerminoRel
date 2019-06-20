@@ -49,7 +49,7 @@ $conninfo = array(
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    echo "<b>Domaine : " . $domaine . "</b><br><br>";
+    //echo "<b>Domaine : " . $domaine . "</b><br><br>";
 
     $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext", array(), array("Scrollable" => 'static'));
     
@@ -88,7 +88,7 @@ if ($conn) {
     } else if($num_rows == 1) {
         echo "<b>1 entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
     } else {
-        echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b> (" . $pages . " pages)<br><br>";
+        echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b><br><br>";
     }
     if ($num_rows > 0) {
         // Display the paging information
