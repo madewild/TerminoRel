@@ -41,7 +41,7 @@ if ($conn) {
         foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
         {
             $ref = $doc['DC-206-entryIdentifier'];
-            echo 'Importing ' . $ref . '...<br>';
+            echo $ref . ' inserted<br>';
 
             foreach($doc->{'DC-489-subjectField'} as $subject)
             {
@@ -299,4 +299,5 @@ if ($conn) {
         }
     }
 }
+include("export.php");
 ?>
