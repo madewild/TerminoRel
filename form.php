@@ -1,7 +1,7 @@
 <?php include("static/header.php"); ?>
 
 <h3>Rechercher un terme dans les glossaires</h3>
-<form class="form" action="" method="post" onsubmit="return validate()">
+<form class="form" action="" method="get" onsubmit="return validate()">
     <fieldset>
         <legend>Vos critères de recherche</legend>
         <nav id="form"><ul>
@@ -15,12 +15,12 @@
                 <option value="fr">français</option>
                 <option value="en">anglais</option>
             </select>
-            <label for="cible">Langue cible</label>
-            <select id="cible" name="cible">
+            <label for="target">Langue cible</label>
+            <select id="target" name="target">
                 <option value="en">anglais</option>
             </select></li>
-            <li><label for="domaine">Domaine</label>
-            <select name="domaine">
+            <li><label for="domain">Domaine</label>
+            <select name="domain">
                 <option value="P-Tous">Tous</option>
                 <option value="P01-Titres et fonctions">Titres et fonctions</option>
                 <option value="P02-Enseignement supérieur">Enseignement supérieur</option>

@@ -6,17 +6,17 @@ $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
 
-$term = htmlspecialchars($_POST['term']);
+$term = htmlspecialchars($_GET['term']);
 $clean_term = str_replace("'", "''", $term);
-$source = htmlspecialchars($_POST['source']);
-$cible = htmlspecialchars($_POST['cible']);
-$fulldomain = htmlspecialchars($_POST['domaine']);
+$source = htmlspecialchars($_GET['source']);
+$cible = htmlspecialchars($_GET['target']);
+$fulldomain = htmlspecialchars($_GET['domain']);
 $result_explode = explode('-', $fulldomain);
 $refcode = $result_explode[0];
 $domaine = $result_explode[1];
 
-if(isset($_POST['status'])) {
-    $restriction = htmlspecialchars($_POST['status']);
+if(isset($_GET['status'])) {
+    $restriction = htmlspecialchars($_GET['status']);
 } else {
     $restriction = "none";
 }
@@ -26,11 +26,11 @@ include("static/header.php");
 include('static/retour.php'); 
 ?>
 
-<form class="form" action="#" method="post" onsubmit="return validate()">
+<form class="form" action="#" method="get" onsubmit="return validate()">
     <input type="text" class="input" id="term" name="term" size="60" value="<?php echo $term ?>">
     <input type="hidden" name="source" value="<?php echo $source; ?>">
-    <input type="hidden" name="cible" value="<?php echo $cible; ?>">
-    <input type="hidden" name="domaine" value="<?php echo $fulldomain; ?>">
+    <input type="hidden" name="target" value="<?php echo $cible; ?>">
+    <input type="hidden" name="domain" value="<?php echo $fulldomain; ?>">
     <input type="submit" value="Rechercher"><br>
 </form>
 
