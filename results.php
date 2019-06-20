@@ -78,10 +78,10 @@ if ($conn) {
     $end = min(($offset + $limit), $num_rows);
 
     // The "back" link
-    $prevlink = ($page > 1) ? '<a href="?page=1" title="Première page">&laquo;</a> <a href="?page=' . ($page - 1) . '" title="Page précedente">&lsaquo;</a>' : '<span class="disabled">&laquo;</span> <span class="disabled">&lsaquo;</span>';
+    $prevlink = ($page > 1) ? '<a href="?term='.$term.'&source='.$source.'&target='.$cible.'&domain='.$fulldomain.'&page=1" title="Première page">&laquo;</a> <a href="?term='.$term.'&source='.$source.'&target='.$cible.'&domain='.$fulldomain.'&page=' . ($page - 1) . '" title="Page précedente">&lsaquo;</a>' : '<span class="disabled">&laquo;</span> <span class="disabled">&lsaquo;</span>';
 
     // The "forward" link
-    $nextlink = ($page < $pages) ? '<a href="?term='.$term.'&source='.$source.'&target='.$cible.'&domain='.$fulldomain.'&page=' . ($page + 1) . '" title="Page suivante">&rsaquo;</a> <a href="?page=' . $pages . '" title="Dernière page">&raquo;</a>' : '<span class="disabled">&rsaquo;</span> <span class="disabled">&raquo;</span>';
+    $nextlink = ($page < $pages) ? '<a href="?term='.$term.'&source='.$source.'&target='.$cible.'&domain='.$fulldomain.'&page=' . ($page + 1) . '" title="Page suivante">&rsaquo;</a> <a href="?term='.$term.'&source='.$source.'&target='.$cible.'&domain='.$fulldomain.'&page=' . $pages . '" title="Dernière page">&raquo;</a>' : '<span class="disabled">&rsaquo;</span> <span class="disabled">&raquo;</span>';
 
     if($num_rows == 0) {
         echo "<b>Aucune entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
