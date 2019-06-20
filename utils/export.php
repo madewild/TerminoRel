@@ -99,10 +99,14 @@ foreach($domains as $domain) {
                 $gendid = $termgroup['gender'];
                 $result = sqlsrv_query($conn, "SELECT dcvalue FROM terminfo WHERE id=$gendid", array(), array("Scrollable" => 'static'));
                 $dcvalue = sqlsrv_fetch_array($result)['dcvalue'];
-                if($dcvalue == "DC-246-masculine_or_DC-247-feminine") {
-                  $gender = "other";
+                if($dcvalue) {
+                  if($dcvalue == "DC-246-masculine_or_DC-247-feminine") {
+                    $gender = "other";
+                  } else {
+                    $gender = explode("-", $dcvalue)[2];
+                  }
                 } else {
-                  $gender = explode("-", $dcvalue)[2];
+                  $gender = "";
                 }
 
                 $tbx .= '
