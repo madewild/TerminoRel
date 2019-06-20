@@ -22,15 +22,15 @@ if($glossary == 'tf') {
 echo "<h2>TerminoRel – Glossaires académiques de l'ULB pour la rédaction de textes en anglais</h2>";
 
 if($sort == "fr") {
-        $other_code = "en";
+        $cible = "en";
         $other_lang = "l'anglais";
     } else {
-        $other_code = "fr";
+        $cible = "fr";
         $other_lang = "le français";
     }
 
 echo "<p><a href='/'>Retour à l'écran initial</a> | ";
-echo "<a href='?glossary=" . $glossary . "&sort=" . $other_code . "'>Trier en se basant sur " . $other_lang . "</a></p><br>";
+echo "<a href='?glossary=" . $glossary . "&sort=" . $cible . "'>Trier en se basant sur " . $other_lang . "</a></p><br>";
 
 $conninfo = array(
     "Database" => "terminorel",
