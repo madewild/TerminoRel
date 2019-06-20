@@ -215,7 +215,7 @@ if ($conn) {
                 echo "<tr><th></th></tr><tr><th></th></tr>";
             }
         }
-        echo "</table><br><br>";
+        echo "</table>";
         // Display the paging information
         echo '<div id="paging"><p>', $prevlink, ' Page ', $page, ' sur ', $pages, ' (entrées ', $start, '-', $end, ') ', $nextlink, ' </p></div>';
 
