@@ -95,7 +95,7 @@ if ($conn) {
         echo '<div id="paging"><p>', $prevlink, ' Page ', $page, ' sur ', $pages, ' (entrées ', $start, '-', $end, ') ', $nextlink, ' </p></div>';
 
         echo "<table class='results_table'>";
-        $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext OFFSET '$offset' ROWS FETCH NEXT '$limit' ROWS ONLY", array(), array("Scrollable" => 'static'));
+        $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext OFFSET $offset ROWS FETCH NEXT $limit ROWS ONLY", array(), array("Scrollable" => 'static'));
         if($query === FALSE) {
             if( ($errors = sqlsrv_errors() ) != null) {  
                 foreach( $errors as $error) {  
