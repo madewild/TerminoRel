@@ -19,6 +19,8 @@ if($glossary == 'tf') {
     die("Glossaire inconnu.");
 }
 
+include("functions.php");
+
 echo "<h2>TerminoRel – Glossaires académiques de l'ULB pour la rédaction de textes en anglais</h2>";
 
 if($sort == "fr") {
