@@ -2,7 +2,6 @@
 <?xml-stylesheet type="text/xsl" href="../xsl/btulb.xsl"?>
 <!DOCTYPE DC-4025-termbase SYSTEM "dtd/btulb.dtd">
 <DC-4025-termbase>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0001">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -35,7 +34,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0002">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -65,7 +63,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0003">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -133,7 +130,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0005">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -164,7 +160,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0006">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -196,7 +191,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0008">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -226,7 +220,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0010">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -238,7 +231,6 @@
 					d'enseignement supérieur</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-247-feminine"/>
-
 				<DC-241-fullFormFor>ARES</DC-241-fullFormFor>
 				<contextGrp>
 					<DC-149-context>L'enseignement supérieur organisé ou subventionné par la
@@ -256,7 +248,6 @@
 					DC-245-grammaticalGender="DC-247-feminine"/>
 				<DC-64-abbreviatedFormFor>Académie de recherche et d'enseignement
 					supérieur</DC-64-abbreviatedFormFor>
-
 				<contextGrp>
 					<DC-149-context>Pour des raisons d'urgence motivées,‭ ‬le Gouvernement peut
 						solliciter un avis de l'ARES dans des délais plus courts,‭ ‬à charge du
@@ -277,7 +268,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0011">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -308,7 +298,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0012">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -377,7 +366,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0014">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -407,7 +395,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0015">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -474,7 +461,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0017">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -486,7 +472,6 @@
 					pédagogique approprié à l'enseignement supérieur </DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
-
 				<DC-241-fullFormFor>CAPAES</DC-241-fullFormFor>
 				<contextGrp>
 					<DC-149-context>Cette disposition n'est d'application ni pour la formation du
@@ -502,7 +487,6 @@
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<DC-64-abbreviatedFormFor>Certificat d'aptitude pédagogique approprié à
 					l'enseignement supérieur </DC-64-abbreviatedFormFor>
-
 				<contextGrp>
 					<DC-149-context>Cette disposition n'est d'application ni pour la formation du
 						certificat d'aptitude pédagogique approprié à l'enseignement supérieur‭
@@ -513,7 +497,6 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-
 			<!--BA-bascule FR-EN-->
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0017-01-en"
@@ -539,7 +522,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0019">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -571,7 +553,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0020">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -605,7 +586,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0021">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -674,7 +654,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0025">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -704,7 +683,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0026">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -734,7 +712,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0027">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -775,7 +752,6 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0030-01-fr">clinicien-chercheur doctorant </DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
-
 				<DC-241-fullFormFor>CCD</DC-241-fullFormFor>
 				<contextGrp>
 					<DC-149-context>Pour les candidats aspirant,‭ ‬bourse spéciale de doctorat,‭
@@ -791,7 +767,6 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<DC-64-abbreviatedFormFor>clinicien-chercheur doctorant </DC-64-abbreviatedFormFor>
-
 				<contextGrp>
 					<DC-149-context>Le candidat qui obtient un mandat de VETE-CCD doit,‭ ‬au plus
 						tard au moment de l’octroi,‭ ‬être inscrit à l’Ecole doctorale en Sciences
@@ -801,7 +776,6 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-
 			<!--BA-bascule FR-EN-->
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0030-01-en"
@@ -883,7 +857,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0036">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -913,7 +886,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0037">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -945,7 +917,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0038">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -976,7 +947,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0039">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1008,7 +978,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0040">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1040,7 +1009,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0041">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1085,7 +1053,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0042">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1118,7 +1085,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0043">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1151,7 +1117,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0044">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1194,7 +1159,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0045">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1217,7 +1181,6 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0045-02-fr">décerner un
 					grade</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-4336-other-part-of-speech"/>
-
 
 				<contextGrp>
 					<DC-149-context>Le promoteur ou le co-promoteur doit être membre du corps
@@ -1244,7 +1207,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0046">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1275,7 +1237,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0047">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1307,7 +1268,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0048">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1338,7 +1298,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0050">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1371,7 +1330,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0051">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1402,7 +1360,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0052">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1435,7 +1392,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0053">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1466,7 +1422,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0054">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1498,7 +1453,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0055">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1532,7 +1486,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0056">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1563,7 +1516,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0057">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1594,7 +1546,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0058">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1626,7 +1577,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0059">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1657,7 +1607,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0060">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1767,7 +1716,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0063">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1799,7 +1747,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0064">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1908,7 +1855,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0067">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1937,7 +1883,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0068">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1967,7 +1912,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0069">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1999,7 +1943,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0070">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2103,7 +2046,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0074">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2136,7 +2078,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0075">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2168,7 +2109,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0076">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2197,7 +2137,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0077">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2227,7 +2166,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0078">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2258,7 +2196,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0079">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2288,7 +2225,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0080">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2319,7 +2255,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0081">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2349,7 +2284,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0082">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2414,7 +2348,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0085">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2445,7 +2378,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0092">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2513,7 +2445,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0095">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2543,7 +2474,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0096">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2618,7 +2548,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0099">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2680,7 +2609,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0103">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2711,7 +2639,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0104">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2781,7 +2708,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0106">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2813,7 +2739,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0107">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2913,7 +2838,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0110">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2943,7 +2867,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0111">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2974,7 +2897,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0112">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3005,7 +2927,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0113">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3027,7 +2948,6 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0113-02-fr">minerval</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
-
 
 				<contextGrp>
 					<DC-149-context>Le paiement du minerval peut être postposé jusqu'au‭ ‬30‭
@@ -3055,7 +2975,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0114">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3124,7 +3043,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0116">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3196,7 +3114,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0118">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3227,7 +3144,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0119">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3298,7 +3214,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0121">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3329,7 +3244,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0122">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3361,7 +3275,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0123">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3427,7 +3340,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0126">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3458,7 +3370,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0127">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3495,7 +3406,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0128">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3564,7 +3474,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0130">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3595,7 +3504,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0131">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3702,7 +3610,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0135">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3732,7 +3639,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0136">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3769,7 +3675,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0137">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3799,7 +3704,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0138">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3969,7 +3873,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0144">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4000,7 +3903,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0145">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4032,7 +3934,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0146">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4064,7 +3965,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0147">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4096,7 +3996,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0148">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4129,7 +4028,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0149">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4160,7 +4058,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0150">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4192,7 +4089,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0151">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4224,7 +4120,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0152">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4236,7 +4131,6 @@
 					francophones</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-247-feminine"/>
-
 				<DC-241-fullFormFor>FEF</DC-241-fullFormFor>
 				<contextGrp>
 					<DC-149-context>Enfin,‭ ‬le BEA représente également les étudiants de l'ULB au
@@ -4251,7 +4145,6 @@
 					DC-245-grammaticalGender="DC-247-feminine"/>
 				<DC-64-abbreviatedFormFor>Fédération des étudiants
 					francophones</DC-64-abbreviatedFormFor>
-
 				<contextGrp>
 					<DC-149-context>Enfin,‭ ‬le BEA représente également les étudiants de l'ULB au
 						niveau de la Communauté française via la Fédération des Étudiant(e)s
@@ -4300,7 +4193,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0155">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4330,7 +4222,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0156">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4361,7 +4252,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0157">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4391,7 +4281,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0158">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4426,7 +4315,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0160">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4438,7 +4326,6 @@
 					recherche scientifique</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
-
 				<DC-241-fullFormFor>FNRS</DC-241-fullFormFor>
 				<contextGrp>
 					<DC-149-context>Il confirme d'autres indices de qualité,‭ ‬comme l'obtention
@@ -4456,7 +4343,6 @@
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<DC-64-abbreviatedFormFor>Fonds national belge de la recherche
 					scientifique</DC-64-abbreviatedFormFor>
-
 				<contextGrp>
 					<DC-149-context>Maître de recherche au FNRS,‭ ‬Arnaud Marchant a mené ses
 						recherches notamment‭ ‬aux Laboratoires du Medical Research Council‭ ‬en
@@ -4484,7 +4370,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0161">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4517,7 +4402,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0162">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4549,7 +4433,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0163">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4580,7 +4463,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0164">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4612,7 +4494,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0165">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4645,7 +4526,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0166">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4676,7 +4556,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0167">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4707,7 +4586,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0168">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4770,7 +4648,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0171">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4853,7 +4730,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0173">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4959,7 +4835,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0176">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -4989,7 +4864,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0177">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5020,9 +4894,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<!--#N/D-->
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0180">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5053,7 +4925,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0181">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5118,7 +4989,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0183">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5186,7 +5056,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0185">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5218,7 +5087,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0186">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5254,7 +5122,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0187">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5286,7 +5153,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0188">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5298,7 +5164,6 @@
 					médicale</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
-
 				<DC-241-fullFormFor>IMI</DC-241-fullFormFor>
 				<contextGrp>
 					<DC-149-context>Médecin,‭ ‬chercheur à l'Institut d’Immunologie médicale,‭
@@ -5312,7 +5177,6 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<DC-64-abbreviatedFormFor>Institut d'Immunologie médicale</DC-64-abbreviatedFormFor>
-
 				<contextGrp>
 					<DC-149-context>Directeur de l‭’‬Institut d‭’‬Immunologie médicale‭ (‬IMI‭) ‬et‭
 						‬ enseignant en Faculté de Médecine,‭ ‬il étudie en particulier
@@ -5340,7 +5204,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0190">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5371,7 +5234,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0191">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5404,7 +5266,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0192">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5416,7 +5277,6 @@
 					nouveaux étudiants</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-247-feminine"/>
-
 				<DC-241-fullFormFor>JANE</DC-241-fullFormFor>
 				<contextGrp>
 					<DC-149-context>Nous vous invitons vivement par ailleurs à assister‭ ‬:‭ à la
@@ -5431,7 +5291,6 @@
 					DC-245-grammaticalGender="DC-247-feminine"/>
 				<DC-64-abbreviatedFormFor>journée d'accueil pour les nouveaux
 					étudiants</DC-64-abbreviatedFormFor>
-
 				<contextGrp>
 					<DC-149-context>Nous vous invitons vivement par ailleurs à assister‭ ‬:‭ à la
 						journée d'accueil pour les nouveaux étudiants‭ (‬JANE‭) ‬qui est organisée
@@ -5458,7 +5317,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0194">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5489,7 +5347,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0195">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5518,7 +5375,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0196">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5548,7 +5404,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0197">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5645,7 +5500,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0202">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5675,7 +5529,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0203">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5707,7 +5560,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0205">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5737,7 +5589,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0211">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5809,7 +5660,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0213">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5853,7 +5703,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0217">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5936,7 +5785,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0220">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -5966,7 +5814,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0222">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6027,7 +5874,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0226">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6059,7 +5905,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0227">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6089,7 +5934,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0228">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6159,7 +6003,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0230">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6190,7 +6033,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0231">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6236,7 +6078,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0232">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6266,7 +6107,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0233">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6313,7 +6153,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0234">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6389,7 +6228,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0237">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6498,7 +6336,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0240">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6560,7 +6397,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0243">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6641,7 +6477,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0245">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6653,7 +6488,6 @@
 					technique, de gestion et spécialisé</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
-
 				<DC-241-fullFormFor>PATGS</DC-241-fullFormFor>
 				<contextGrp>
 					<DC-149-context>Pour vos‭ « ‬Premiers pas à l’ULB‭ »‬,‭ ‬nous vous invitons à
@@ -6671,7 +6505,6 @@
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<DC-64-abbreviatedFormFor>personnel administratif, technique, de gestion et
 					spécialisé</DC-64-abbreviatedFormFor>
-
 				<contextGrp>
 					<DC-149-context>Tous les corps‭ (‬PATGS,‭ ‬estudiantin,‭ ‬académique et
 						scientifique‭) ‬se voient invités à venir voter via un mail
@@ -6691,7 +6524,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0247">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6722,7 +6554,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0249">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6746,8 +6577,6 @@
 					d'évaluation</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-247-feminine"/>
-
-
 				<contextGrp>
 					<DC-149-context>‬Le calendrier des études découpe l'année académique en périodes
 						d'enseignement et‭ ‬périodes d'évaluation</DC-149-context>
@@ -6773,7 +6602,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0250">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6805,7 +6633,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0251">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6972,7 +6799,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0260">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7004,7 +6830,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0262">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7035,7 +6860,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0266">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7067,7 +6891,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0267">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7101,7 +6924,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0268">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7163,7 +6985,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0271">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7193,7 +7014,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0272">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7260,7 +7080,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0275">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7292,7 +7111,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0276">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7323,7 +7141,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0277">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7354,7 +7171,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0278">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7424,7 +7240,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0280">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7454,7 +7269,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0281">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7485,7 +7299,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0282">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7517,7 +7330,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0283">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7549,7 +7361,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0284">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7613,7 +7424,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0286">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7643,7 +7453,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0287">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7673,7 +7482,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0288">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7703,7 +7511,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0289">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7732,7 +7539,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0290">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7762,7 +7568,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0291">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7810,7 +7615,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0292">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7858,7 +7662,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0293">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7926,7 +7729,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0295">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7957,7 +7759,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0296">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7987,7 +7788,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0297">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8017,7 +7817,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0298">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8087,7 +7886,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0300">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8119,7 +7917,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0301">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8148,7 +7945,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0302">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8179,7 +7975,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0304">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8199,7 +7994,8 @@
 					<DC-1968-source biblio="ULB-0031"/>
 				</contextGrp>
 			</termGrp>
-
+		</langGrp>
+		<langGrp xml:lang="en-GB">
 			<!--BA-bascule FR-EN-->
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0304-01-en"
@@ -8242,7 +8038,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0306">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8273,7 +8068,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0308">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8305,7 +8099,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0309">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8414,7 +8207,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0312">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8552,7 +8344,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0320">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8583,7 +8374,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0321">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8614,7 +8404,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0322">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8645,7 +8434,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0323">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8677,7 +8465,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0324">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8708,7 +8495,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0325">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8737,7 +8523,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0326">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8818,7 +8603,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0328">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -8880,7 +8664,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0331">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9030,7 +8813,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0336">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9122,7 +8904,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0343">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9153,7 +8934,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0344">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9184,7 +8964,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0346">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9214,7 +8993,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0347">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9226,7 +9004,6 @@
 					Bruxelles</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-247-feminine"/>
-
 				<DC-241-fullFormFor>ULB</DC-241-fullFormFor>
 				<contextGrp>
 					<DC-149-context>Les règlements en vigueur à l'Université libre de Bruxelles
@@ -9241,7 +9018,6 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-247-feminine"/>
 				<DC-64-abbreviatedFormFor>Université libre de Bruxelles</DC-64-abbreviatedFormFor>
-
 				<contextGrp>
 					<DC-149-context>Au cours de cette année,‭ ‬l’ULB a aussi accueilli le colloque
 						international organisé dans le cadre du G3‭ «‬La qualité dans tous ses
@@ -9269,7 +9045,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0349">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9281,7 +9056,6 @@
 					virtuelle</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-247-feminine"/>
-
 				<DC-241-fullFormFor>UV</DC-241-fullFormFor>
 				<contextGrp>
 					<DC-149-context>En complément,‭ ‬si le cours dispose d'un espace dans
@@ -9290,7 +9064,8 @@
 					<DC-1968-source biblio="ULB-0028"/>
 				</contextGrp>
 			</termGrp>
-
+		</langGrp>
+		<langGrp xml:lang="en-GB">
 			<!--BA-bascule FR-EN-->
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0349-01-en"
@@ -9345,7 +9120,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0352">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9419,7 +9193,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0357">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9450,7 +9223,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0362">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9481,7 +9253,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0363">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9544,7 +9315,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0365">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9575,7 +9345,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0366">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9607,7 +9376,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0367">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9636,7 +9404,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0368">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9667,7 +9434,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0369">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9679,7 +9445,6 @@
 					secondaire supérieur</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-247-feminine"/>
-
 				<DC-241-fullFormFor>AESS</DC-241-fullFormFor>
 				<contextGrp>
 					<DC-149-context>Nul ne peut être admis aux épreuves d'une année d'études de
@@ -9690,7 +9455,8 @@
 					<DC-1968-source biblio="ULB-0028"/>
 				</contextGrp>
 			</termGrp>
-
+		</langGrp>
+		<langGrp xml:lang="en-GB">
 			<!--BA-bascule FR-EN-->
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0369-01-en"
@@ -9701,7 +9467,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<!-- pas de contexte-->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0371">
 		<DC-489-subjectField cdu="378" niveau="1"/>
@@ -9733,7 +9498,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0372">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9803,7 +9567,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0374">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9834,7 +9597,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0375">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9867,7 +9629,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0376">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9929,7 +9690,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0381">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -10024,7 +9784,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0383">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -10070,7 +9829,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0384">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -10116,7 +9874,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0385">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -10146,7 +9903,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0388">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -10157,6 +9913,8 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0388-01-fr">boursier</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
+				<!-- ajout direct de données dans la sortie XML par PGM : forme au féminin -->
+				<DC-330-variant DC-2677-termType="DC-247-feminine">boursière</DC-330-variant>
 				<contextGrp>
 					<DC-149-context>En ce qui concerne la déclaration d'impôts à remplir par les
 						boursiers,‭ ‬et dans la mesure où l'allocation de bourse n'est pas un revenu
@@ -10200,7 +9958,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0387">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -10247,7 +10004,6 @@
 					supérieur</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
-
 				<DC-241-fullFormFor>BES</DC-241-fullFormFor>
 				<contextGrp>
 					<DC-149-context>Des études supérieures peuvent conduire à l'obtention du Brevet
@@ -10263,7 +10019,6 @@
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<DC-64-abbreviatedFormFor>brevet de l'enseignement
 					supérieur</DC-64-abbreviatedFormFor>
-
 				<contextGrp>
 					<DC-149-context>Des études supérieures peuvent conduire à l'obtention du Brevet
 						de l'Enseignement Supérieur‭ (‬BES‭) ‬si elles sanctionnent des études de‭
@@ -10318,7 +10073,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0395">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -10340,8 +10094,6 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0395-02-fr">implantation</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-247-feminine"/>
-
-
 				<contextGrp>
 					<DC-149-context>Sur avis conforme de l'ARES,‭ ‬un établissement d'enseignement
 						supérieur peut organiser une partie des activités d'apprentissage en dehors
@@ -10509,7 +10261,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0405">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -10550,7 +10301,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0406">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -10582,7 +10332,6 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0407">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -10666,5 +10415,4 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-
 </DC-4025-termbase>
