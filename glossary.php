@@ -147,14 +147,10 @@ if ($conn) {
 
             $num_pref = sqlsrv_num_rows($results_pref);
             echo "<tr><td>" . strtoupper($cible) . "</td><td>";
-            if($num_pref == 0 and $restriction == "approved_only") {
-                echo "Aucune traduction approuvée.";
-            } else {
-                show_trad($conn, $langroup_target, $results_pref, $cible, "privilégié");
-                if($num_pref == 0) {
-                    show_trad($conn, $langroup_target, $results_admi, $cible, "admis");
-                    show_trad($conn, $langroup_target, $results_depr, $cible, "à éviter");
-                }
+            show_trad($conn, $langroup_target, $results_pref, $cible, "privilégié");
+            if($num_pref == 0) {
+                show_trad($conn, $langroup_target, $results_admi, $cible, "admis");
+                show_trad($conn, $langroup_target, $results_depr, $cible, "à éviter");
             }
             echo "</td></tr>";
 
