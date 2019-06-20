@@ -5,10 +5,11 @@ function show_trad($conn, $langroup_target, $results, $lang_trad, $type) {
     while ($row = sqlsrv_fetch_array($results)) {
         if($type == "à éviter") { // quick fix, to improve later
             echo "<br>";
+            $color = "tomato";
         }
         $translation = $row['termtext'];
         $variant = $row['variant'];
-        echo "<details><summary><span title='Cliquez sur le terme pour voir un exemple.'><b>" . $translation;
+        echo "<details><summary><span title='Cliquez sur le terme pour voir un exemple.' style='color: " . $color . "'><b>" . $translation;
         if($variant != NULL and $lang_trad == 'fr') {
             echo " | " . $variant;
         }
