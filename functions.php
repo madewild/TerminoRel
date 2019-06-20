@@ -3,6 +3,9 @@
 function show_trad($conn, $langroup_target, $results, $lang_trad, $type) {
     $counter = sqlsrv_num_rows($results);
     while ($row = sqlsrv_fetch_array($results)) {
+        if($type == "à éviter") { // quick fix, to improve later
+            echo "<br>";
+        }
         $translation = $row['termtext'];
         $variant = $row['variant'];
         echo "<details><summary><span title='Cliquez sur le terme pour voir un exemple.'><b>" . $translation;
