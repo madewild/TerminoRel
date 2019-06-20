@@ -215,7 +215,10 @@ if ($conn) {
                 echo "<tr><th></th></tr><tr><th></th></tr>";
             }
         }
-        echo "</table>";
+        echo "</table><br><br>";
+        // Display the paging information
+        echo '<div id="paging"><p>', $prevlink, ' Page ', $page, ' sur ', $pages, ' (entrées ', $start, '-', $end, ') ', $nextlink, ' </p></div>';
+
     }
     else {
         echo "Aucun résultat pour " . $term;
