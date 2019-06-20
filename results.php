@@ -149,7 +149,9 @@ if ($conn) {
                 print_r(sqlsrv_errors(), true);
                 print_r($langroup_target);
             }
-            $results_adm = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth IN (0,9)", array(), array("Scrollable" => 'static'));
+            $results_admi = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth IN (0,9)", array(), array("Scrollable" => 'static'));
+            $results_depr = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=10", array(), array("Scrollable" => 'static'));
+
             $num_pref = sqlsrv_num_rows($results_pref);
             echo "<tr><td>" . strtoupper($cible) . "</td><td>";
             if($num_pref == 0 and $restriction == "approved_only") {
@@ -157,7 +159,8 @@ if ($conn) {
             } else {
                 show_trad($conn, $langroup_target, $results_pref, $cible, "privilégié");
                 if($num_pref == 0) {
-                    show_trad($conn, $langroup_target, $results_adm, $cible, "admis");
+                    show_trad($conn, $langroup_target, $results_admi, $cible, "admis");
+                    show_trad($conn, $langroup_target, $results_depr, $cible, "à éviter");
                 }
             }
             echo "</td></tr>";
