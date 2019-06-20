@@ -553,7 +553,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/validate.js"></script>
     <script src="js/details-shim.js"></script>
-    <script src="js/language-selection.js"></script>
+    <script src="js/language-selection.js?version=2"></script>
 
     <script type="text/javascript">var html = document.getElementsByTagName('html')[0]; html.className = html.className.replace('no-js', 'js');</script>
     <script type="text/javascript" src="https://www.ulb.be/wro/scripts/f07b661a65d78d88ddbe4b7f014a97ae339a6a6e.js"></script>
