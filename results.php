@@ -50,13 +50,22 @@ $conninfo = array(
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
     $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext", array(), array("Scrollable" => 'static'));
+    
+    // Total number of results to display
     $num_rows = sqlsrv_num_rows($query);
+
+    // How many items to list per page
+    $limit = 10;
+
+    // How many pages will there be
+    $pages = ceil($num_rows / $limit);
+
     if($num_rows == 0) {
         echo "<b>Aucune entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
     } else if($num_rows == 1) {
         echo "<b>1 entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
     } else {
-        echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b><br><br>";
+        echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b> (" . $pages . " pages)<br><br>";
     }
     echo "<b>Domaine : " . $domaine . "</b><br><br>";
     if ($num_rows > 0) {
