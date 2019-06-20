@@ -34,8 +34,6 @@ if($sort == "fr") {
         $other_lang = "le français";
     }
 
-echo "<a href='?glossary=" . $glossary . "&sort=" . $cible . "'>Trier en se basant sur " . $other_lang . "</a></p><br>";
-
 $conninfo = array(
     "Database" => "terminorel",
     "UID" => $username,
@@ -50,7 +48,8 @@ if ($conn) {
     if ($num_rows === false) {
         echo "ERROR<br>";
     }
-    echo "<b>Domaine : " . $gloname . "</b><br><br>";
+    echo "<b>Domaine : " . $gloname . "</b> | ";
+    echo "<a href='?glossary=" . $glossary . "&sort=" . $cible . "'>Trier en se basant sur " . $other_lang . "</a><br><br>";
     echo "<b>" . $num_rows . " entrées</b> trouvées<br><br>";
     
     if ($num_rows > 0) {
