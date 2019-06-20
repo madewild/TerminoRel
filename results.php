@@ -62,6 +62,27 @@ if ($conn) {
     // How many pages will there be
     $pages = ceil($num_rows / $limit);
 
+    // What page are we currently on?
+    $page = min($pages, filter_input(INPUT_GET, 'page', FILTER_VALIDATE_INT, array(
+        'options' => array(
+            'default'   => 1,
+            'min_range' => 1,
+        ),
+    )));
+
+    // Calculate the offset for the query
+    $offset = ($page - 1)  * $limit;
+
+    // Some information to display to the user
+    $start = $offset + 1;
+    $end = min(($offset + $limit), $num_rows);
+
+    // The "back" link
+    $prevlink = ($page > 1) ? '<a href="?page=1" title="Première page">&laquo;</a> <a href="?page=' . ($page - 1) . '" title="Page précedente">&lsaquo;</a>' : '<span class="disabled">&laquo;</span> <span class="disabled">&lsaquo;</span>';
+
+    // The "forward" link
+    $nextlink = ($page < $pages) ? '<a href="?page=' . ($page + 1) . '" title="Page suivante">&rsaquo;</a> <a href="?page=' . $pages . '" title="Dernière page">&raquo;</a>' : '<span class="disabled">&rsaquo;</span> <span class="disabled">&raquo;</span>';
+
     if($num_rows == 0) {
         echo "<b>Aucune entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
     } else if($num_rows == 1) {
@@ -70,6 +91,9 @@ if ($conn) {
         echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b> (" . $pages . " pages)<br><br>";
     }
     if ($num_rows > 0) {
+        // Display the paging information
+        echo '<div id="paging"><p>', $prevlink, ' Page ', $page, ' sur ', $pages, ' pages, entrées ', $start, '-', $end, ' sur un total de ', $num_rows, $nextlink, ' </p></div>';
+
         echo "<table class='results_table'>";
         while ($row = sqlsrv_fetch_array($query)) {
             echo "<tr>";
