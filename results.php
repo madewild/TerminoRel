@@ -98,6 +98,8 @@ if ($conn) {
         $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext OFFSET '$offset' ROWS FETCH NEXT '$limit' ROWS ONLY", array(), array("Scrollable" => 'static'));
         if($query === FALSE) {
             print_r(sqlsrv_errors(), true);
+        } else {
+            print_r($query);
         }
         while ($row = sqlsrv_fetch_array($query)) {
             echo "<tr>";
