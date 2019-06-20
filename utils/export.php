@@ -12,7 +12,7 @@ function print_trad($results, $type) {
   return $tig;
 }
 
-$domains = array("P01", "P02");
+$domains = array("P", "P01", "P02");
 
 foreach($domains as $domain) {
   $tbx = '<?xml version="1.0" encoding="UTF-8"?>
