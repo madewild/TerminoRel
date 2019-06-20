@@ -35,7 +35,7 @@ if ($conn) {
     $query = sqlsrv_query($conn, "TRUNCATE TABLE termgroup", array(), array("Scrollable" => 'static'));
     $query = sqlsrv_query($conn, "TRUNCATE TABLE langroup", array(), array("Scrollable" => 'static'));
     $query = sqlsrv_query($conn, "TRUNCATE TABLE term", array(), array("Scrollable" => 'static'));
-    $domains = array("btulb", "ensup");
+    $domains = array("tifon", "ensup");
     foreach($domains as $domain) {
         $xml = simplexml_load_file("../xml/".$domain.".xml");
         foreach($xml->{'DC-209-terminologicalEntry'} as $doc)

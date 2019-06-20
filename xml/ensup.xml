@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../xsl/btulb.xsl"?>
-<!DOCTYPE DC-4025-termbase SYSTEM "dtd/btulb.dtd">
+<!DOCTYPE DC-4025-termbase SYSTEM "../dtd/btulb.dtd">
 <DC-4025-termbase>
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0001">
 		<DC-489-subjectField cdu="378" niveau="1"/>
