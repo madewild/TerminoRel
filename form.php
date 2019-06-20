@@ -36,6 +36,7 @@
         <form class="form" action="" method="get">
             <label for="glossary">Choisir un glossaire&nbsp;:</label>
             <select name="glossary">
+                <option value="all">Tous</option>
                 <option value="tf">Titres et fonctions</option>
                 <option value="es">Enseignement supérieur</option>
             </select>

@@ -9,7 +9,10 @@ $password = PASSWORD;
 $glossary = htmlspecialchars($_GET['glossary']);
 $sort = htmlspecialchars($_GET['sort']);
 
-if($glossary == 'tf') {
+if ($glossary == 'all') {
+    $refcode = "P";
+    $gloname = "Tous";
+} else if($glossary == 'tf') {
     $refcode = "P01";
     $gloname = "Titres et fonctions";
 } else if($glossary == 'es') {
