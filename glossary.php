@@ -118,7 +118,7 @@ if ($conn) {
                 echo "<br><u>Définition</u> : " . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")";
             }
 
-            $result = sqlsrv_query($conn, "SELECT explanation FROM langroup WHERE termid=$termid AND lang LIKE '$source%'", array(), array("Scrollable" => 'static'));
+            $result = sqlsrv_query($conn, "SELECT explanation FROM langroup WHERE termid=$termid AND lang LIKE '$sort%'", array(), array("Scrollable" => 'static'));
             $explanation = sqlsrv_fetch_array($result)['explanation'];
             if(!empty($explanation)) {
                 $result = sqlsrv_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='exp'", array(), array("Scrollable" => 'static'));
