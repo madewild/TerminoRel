@@ -151,9 +151,9 @@ foreach($domains as $domain) {
   if ($zip->open('../tbx/'.$domain.'.zip') === TRUE) {
       $zip->addFile('../tbx/'.$domain.'.tbx', $domain.'.tbx');
       $zip->close();
-      echo 'La compression ZIP a réussi.';
+      echo 'La compression ZIP a réussi.<br>';
   } else {
-      echo 'La compression ZIP a échoué.';
+      echo 'La compression ZIP a échoué.<br>';
   }
 }
 ?>
