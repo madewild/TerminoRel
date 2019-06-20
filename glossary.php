@@ -144,14 +144,12 @@ if ($conn) {
             $results_prop = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", array(), array("Scrollable" => 'static'));
             $num_recom = sqlsrv_num_rows($results_recom);
             echo "<tr><td>" . strtoupper($cible) . "</td><td>";
-            if($num_recom == 0 and $restriction == "approved_only") {
-                echo "Aucune traduction approuvée.";
-            } else {
-                show_trad($conn, $langroup_target, $results_recom, $cible, "recommandé");
-                if($num_recom == 0) {
-                    show_trad($conn, $langroup_target, $results_prop, $cible, "suggéré");
-                }
+
+            show_trad($conn, $langroup_target, $results_recom, $cible, "recommandé");
+            if($num_recom == 0) {
+                show_trad($conn, $langroup_target, $results_prop, $cible, "suggéré");
             }
+
             echo "</td></tr>";
 
             if(--$num_rows > 0) {
