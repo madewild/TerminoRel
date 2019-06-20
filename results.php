@@ -22,11 +22,9 @@ if(isset($_POST['status'])) {
 }
 
 include("functions.php");
+include("static/header.php");
+include('static/retour.php'); 
 ?>
-
-<h2>TerminoRel – Glossaires académiques de l'ULB pour la rédaction de textes en anglais</h2>
-
-<?php include('static/retour.php'); ?>
 
 <form class="form" action="#" method="post" onsubmit="return validate()">
     <input type="text" class="input" id="term" name="term" size="60" value="<?php echo $term ?>">

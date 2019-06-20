@@ -20,8 +20,7 @@ if($glossary == 'tf') {
 }
 
 include("functions.php");
-
-echo "<h2>TerminoRel – Glossaires académiques de l'ULB pour la rédaction de textes en anglais</h2>";
+include("static/header.php");
 
 if($sort == "fr") {
         $cible = "en";

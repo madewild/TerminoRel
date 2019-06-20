@@ -1,4 +1,4 @@
-<h2>TerminoRel – Glossaire académique de l’ULB pour la rédaction de textes en anglais</h2>
+<?php include("static/header.php"); ?>
 
 <h3>Rechercher un terme dans les glossaires</h3>
 <form class="form" action="" method="post" onsubmit="return validate()">
