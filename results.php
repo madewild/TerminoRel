@@ -104,7 +104,7 @@ if ($conn) {
                     echo "message: ".$error[ 'message']."\n";  
                 }  
             } else {
-                echo "no error!"
+                echo "no error!";
             }
         }
         while ($row = sqlsrv_fetch_array($query)) {
