@@ -92,7 +92,7 @@ if ($conn) {
     }
     if ($num_rows > 0) {
         // Display the paging information
-        echo '<div id="paging"><p>', $prevlink, ' Page ', $page, ' sur ', $pages, ' pages, entrées ', $start, '-', $end, ' sur un total de ', $num_rows, $nextlink, ' </p></div>';
+        echo '<div id="paging"><p>', $prevlink, ' Page ', $page, ' sur ', $pages, ' (entrées ', $start, '-', $end, ') ', $nextlink, ' </p></div>';
 
         echo "<table class='results_table'>";
         while ($row = sqlsrv_fetch_array($query)) {
