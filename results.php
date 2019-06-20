@@ -128,7 +128,11 @@ if ($conn) {
                 $row2 = sqlsrv_fetch_array($result);
                 $termtextfull = $row2['termtext'];
                 $termtextfull_variant = $row2['variant'];
-                echo " (" . $termtextfull . " | " . $termtextfull_variant . ")";
+                echo " (" . $termtextfull;
+                if($termtextfull_variant) {
+                    echo " | " . $termtextfull_variant;
+                }
+                echo ")";
                 $mf = True;
             } else {
                 $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1", array(), array("Scrollable" => 'static'));
