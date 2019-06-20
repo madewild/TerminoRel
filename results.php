@@ -49,6 +49,8 @@ $conninfo = array(
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
+    echo "<b>Domaine : " . $domaine . "</b><br><br>";
+
     $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext", array(), array("Scrollable" => 'static'));
     
     // Total number of results to display
@@ -67,7 +69,6 @@ if ($conn) {
     } else {
         echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b> (" . $pages . " pages)<br><br>";
     }
-    echo "<b>Domaine : " . $domaine . "</b><br><br>";
     if ($num_rows > 0) {
         echo "<table class='results_table'>";
         while ($row = sqlsrv_fetch_array($query)) {
