@@ -107,14 +107,6 @@ if ($conn) {
             foreach($doc->langGrp as $lgrp) 
             {
                 $lang = $lgrp->attributes("xml", TRUE)->lang;
-                /*$query = sqlsrv_query($conn, "SELECT id from lang where code=N'$lang'", array(), array("Scrollable" => 'static'));
-                if (sqlsrv_num_rows($query) > 0) {
-                    $lang_id = sqlsrv_fetch_array($query)['id'];
-                }
-                else {
-                    $query = sqlsrv_query($conn, "INSERT INTO lang (code) VALUES (N'$lang')", array(), array("Scrollable" => 'static'));
-                    $lang_id = sqlsrv_insert_id($conn);
-                }*/
 
                 $dgrp = $lgrp->definitionGrp;
                 $def = $dgrp->{'DC-168-definition'};
