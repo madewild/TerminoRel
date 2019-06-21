@@ -47,7 +47,11 @@ if ($conn) {
     $num_rows = sqlsrv_num_rows($query);
 
     // How many items to list per page
-    $limit = 10;
+    if(isset($_GET['limit'])) {
+        $limit = htmlspecialchars($_GET['limit']);
+    } else {
+        $limit = 10;
+    }
 
     // How many pages will there be
     $pages = ceil($num_rows / $limit);
