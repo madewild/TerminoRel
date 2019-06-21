@@ -45,15 +45,45 @@ $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
     $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$sort' ORDER BY termtext", array(), array("Scrollable" => 'static'));
     $num_rows = sqlsrv_num_rows($query);
-    if ($num_rows === false) {
-        echo "ERROR<br>";
-    }
+
+    // How many items to list per page
+    $limit = 10;
+
+    // How many pages will there be
+    $pages = ceil($num_rows / $limit);
+
+    // What page are we currently on?
+    $page = min($pages, filter_input(INPUT_GET, 'page', FILTER_VALIDATE_INT, array(
+        'options' => array(
+            'default'   => 1,
+            'min_range' => 1,
+        ),
+    )));
+
+    // Calculate the offset for the query
+    $offset = ($page - 1)  * $limit;
+
+    // Some information to display to the user
+    $start = $offset + 1;
+    $end = min(($offset + $limit), $num_rows);
+
+    // The "back" link
+    $prevlink = ($page > 1) ? '<a href="?glossary='.$glossary.'&sort='.$sort.'&page=1" title="Première page">&laquo;</a> <a href="?glossary='.$glossary.'&sort='.$sort.'&page=' . ($page - 1) . '" title="Page précedente">&lsaquo;</a>' : '<span class="disabled">&laquo;</span> <span class="disabled">&lsaquo;</span>';
+
+    // The "forward" link
+    $nextlink = ($page < $pages) ? '<a href="?glossary='.$glossary.'&sort='.$sort.'&page=' . ($page + 1) . '" title="Page suivante">&rsaquo;</a> <a href="?glossary='.$glossary.'&sort='.$sort.'&page=' . $pages . '" title="Dernière page">&raquo;</a>' : '<span class="disabled">&rsaquo;</span> <span class="disabled">&raquo;</span>';
+
+
     echo "<b>Domaine : " . $gloname . "</b> | ";
     echo "<a href='?glossary=" . $glossary . "&sort=" . $cible . "'>Trier en se basant sur " . $other_lang . "</a><br><br>";
     echo "<b>" . $num_rows . " entrées</b> trouvées<br><br>";
     
     if ($num_rows > 0) {
+        // Display the paging information
+        echo '<div id="paging"><p>', $prevlink, ' Page ', $page, ' sur ', $pages, ' (entrées ', $start, '-', $end, ') ', $nextlink, ' </p></div>';
+
         echo "<table class='results_table'>";
+    	$query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$sort' ORDER BY termtext OFFSET $offset ROWS FETCH NEXT $limit ROWS ONLY", array(), array("Scrollable" => 'static'));
         while ($row = sqlsrv_fetch_array($query)) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
@@ -75,7 +105,11 @@ if ($conn) {
                 $row2 = sqlsrv_fetch_array($result);
                 $termtextfull = $row2['termtext'];
                 $termtextfull_variant = $row2['variant'];
-                echo " (" . $termtextfull . " | " . $termtextfull_variant . ")";
+                echo " (" . $termtextfull;
+                if($termtextfull_variant) {
+                    echo " | " . $termtextfull_variant;
+                }
+                echo ")";
                 $mf = True;
             } else {
                 $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1", array(), array("Scrollable" => 'static'));
@@ -159,6 +193,9 @@ if ($conn) {
             }
         }
         echo "</table>";
+        // Display the paging information
+        echo '<div id="paging"><p>', $prevlink, ' Page ', $page, ' sur ', $pages, ' (entrées ', $start, '-', $end, ') ', $nextlink, ' </p></div>';
+
     }
     else {
         echo "Aucune entrée trouvée dans ce glossaire.";
