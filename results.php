@@ -155,6 +155,7 @@ if ($conn) {
             } else {
                 $pos = "Locution";
             }
+
             $gender_id = $row['gender'];
             if($gender_id == 4 or $mf) {
                 $gender = "masculin ou féminin";
@@ -166,7 +167,14 @@ if ($conn) {
                 $gender = "";
             }
 
-            echo "<br>" . $pos . " " . $gender . "<br>";
+            $number_id = $row['number'];
+            if($number_id == 12) {
+                $number = "pluriel";
+            } else {
+                $number = "";
+            }
+
+            echo "<br>" . $pos . " " . $gender . " " . $number . "<br>";
 
             $result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source", array(), array("Scrollable" => 'static'));
             $termid = sqlsrv_fetch_array($result)['termid'];
