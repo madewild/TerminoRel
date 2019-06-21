@@ -264,7 +264,7 @@ if ($conn) {
                         }
                     }
                     else {
-                        $query = sqlsrv_query($conn, "INSERT INTO termgroup (langroup, termlexid, termtext, variant, pos, gender, qualifier, auth, abbrev) VALUES ($langroup_id, N'$termlexid', N'$termtext', N'$fem', $pos_id, $gender_id, $status_id, $auth_id, $is_abbrev)", array(), array("Scrollable" => 'static'));
+                        $query = sqlsrv_query($conn, "INSERT INTO termgroup (langroup, termlexid, termtext, variant, pos, gender, number, qualifier, auth, abbrev) VALUES ($langroup_id, N'$termlexid', N'$termtext', N'$fem', $pos_id, $gender_id, $number_id, $status_id, $auth_id, $is_abbrev)", array(), array("Scrollable" => 'static'));
                         $termgroup_id = sqlsrv_insert_id($conn);
                     }
 
