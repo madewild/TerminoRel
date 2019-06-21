@@ -60,9 +60,9 @@
         </form>-->
         Télécharger un glossaire au format TBX (format destiné aux outils d'aide à la traduction) :
         <ul class="static">
-            <li><a href='tbx/P.zip' download>Tous les glossaires</a></li>
-            <li><a href='tbx/P01.zip' download>Titres et fonctions</a></li>
-            <li><a href='tbx/P02.zip' download>Enseignement supérieur</a></li>
+            <li><a href='tbx/P.zip' download="all">Tous les glossaires</a></li>
+            <li><a href='tbx/P01.zip' download="titres_fonctions">Titres et fonctions</a></li>
+            <li><a href='tbx/P02.zip' download="enseignement_superieur">Enseignement supérieur</a></li>
         </ul>
     </li>
 </ul>
