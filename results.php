@@ -87,12 +87,15 @@ if ($conn) {
         echo "<b>Aucune entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
     } else if($num_rows == 1) {
         echo "<b>1 entrée</b> trouvée pour <b>" . $term . "</b><br><br>";
+        $entree = "entrée";
     } else {
         echo "<b>" . $num_rows . " entrées</b> trouvées pour <b>" . $term . "</b><br><br>";
+        $entree = "entrées";
     }
     if ($num_rows > 0) {
         // Display the paging information
-        echo '<div id="paging"><p>', $prevlink, ' Page ', $page, ' sur ', $pages, ' (entrées ', $start, '-', $end, ') ', $nextlink, ' </p></div>';
+        $nav = '<div id="paging"><p>'.$prevlink.' Page '.$page.' sur '.$pages.' ('.$entree.' '.$start.'-'.$end.') '.$nextlink.' </p></div>';
+        echo $nav;
 
         echo "<table class='results_table'>";
         $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext OFFSET $offset ROWS FETCH NEXT $limit ROWS ONLY", array(), array("Scrollable" => 'static'));
@@ -220,9 +223,8 @@ if ($conn) {
             }
         }
         echo "</table>";
-        // Display the paging information
-        echo '<div id="paging"><p>', $prevlink, ' Page ', $page, ' sur ', $pages, ' (entrées ', $start, '-', $end, ') ', $nextlink, ' </p></div>';
-
+        // Display the paging information again
+        echo $nav;
     }
 }
 ?>
