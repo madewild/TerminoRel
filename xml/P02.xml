@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../xsl/btulb.xsl"?>
-<!DOCTYPE DC-4025-termbase SYSTEM "../dtd/btulb.dtd">
+<!DOCTYPE DC-4025-termbase SYSTEM "dtd/btulb.dtd">
 <DC-4025-termbase>
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0001">
 		<DC-489-subjectField cdu="378" niveau="1"/>
@@ -29,7 +29,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0001-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-378-deprecatedTerm">learning outcomes </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">learning outcomes</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -58,7 +58,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0002-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">learning activity </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">learning activity</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -215,7 +215,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0008-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">assistantship </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">assistantship</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -456,7 +456,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0016-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">certificate </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">certificate</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -469,7 +469,7 @@
 		<langGrp xml:lang="fr-BE">
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0017-01-fr">Certificat d'aptitude
-					pédagogique approprié à l'enseignement supérieur </DC-508-term>
+					pédagogique approprié à l'enseignement supérieur</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<DC-241-fullFormFor>CAPAES</DC-241-fullFormFor>
@@ -486,7 +486,7 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<DC-64-abbreviatedFormFor>Certificat d'aptitude pédagogique approprié à
-					l'enseignement supérieur </DC-64-abbreviatedFormFor>
+					l'enseignement supérieur</DC-64-abbreviatedFormFor>
 				<contextGrp>
 					<DC-149-context>Cette disposition n'est d'application ni pour la formation du
 						certificat d'aptitude pédagogique approprié à l'enseignement supérieur‭
@@ -502,7 +502,7 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0017-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
 					DC-374-normativeAuthorization="DC-377-admittedTerm">Higher education teaching
-					certificate </DC-508-term>
+					certificate</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
@@ -612,7 +612,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0021-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">registration certificate </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">registration certificate</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
@@ -749,7 +749,7 @@
 		<DC-274-inputDate norme="ISO8601">2019-03-01</DC-274-inputDate>
 		<langGrp xml:lang="fr-BE">
 			<termGrp>
-				<DC-508-term DC-301-lexTermIdentifier="P02-0030-01-fr">clinicien-chercheur doctorant </DC-508-term>
+				<DC-508-term DC-301-lexTermIdentifier="P02-0030-01-fr">clinicien-chercheur doctorant</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<DC-241-fullFormFor>CCD</DC-241-fullFormFor>
@@ -766,7 +766,7 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0030-02-fr">CCD</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
-				<DC-64-abbreviatedFormFor>clinicien-chercheur doctorant </DC-64-abbreviatedFormFor>
+				<DC-64-abbreviatedFormFor>clinicien-chercheur doctorant</DC-64-abbreviatedFormFor>
 				<contextGrp>
 					<DC-149-context>Le candidat qui obtient un mandat de VETE-CCD doit,‭ ‬au plus
 						tard au moment de l’octroi,‭ ‬être inscrit à l’Ecole doctorale en Sciences
@@ -1194,17 +1194,18 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0045-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">award a degree</DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">award a degree (to)</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
-			<termGrp>
-				<!--BO-bascule Equiv1-Equiv2-->
+<!-- pgm 2019-06-20 			<termGrp>
+				!-BO-bascule Equiv1-Equiv2-
 				<DC-508-term DC-301-lexTermIdentifier="P02-0045-02-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
 					DC-374-normativeAuthorization="DC-377-admittedTerm">to award a
 					degree</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
+			-->
 		</langGrp>
 	</DC-209-terminologicalEntry>
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0046">
@@ -1511,7 +1512,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0056-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">Environmental coordination </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">Environmental coordination</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -1541,7 +1542,7 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0057-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
 					DC-374-normativeAuthorization="DC-377-admittedTerm">Mobility and transport
-					coordination </DC-508-term>
+					coordination</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -1684,7 +1685,8 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0062">
+<!--	pgm - 2019-06-20 - Doublon P01
+		<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0062">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
 		<DC-162-createdBy>Susan Black</DC-162-createdBy>
@@ -1707,7 +1709,7 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			BA-bascule FR-EN
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0062-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
@@ -1716,6 +1718,8 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+	-->
+	<!--	pgm - 2019-06-20 - Doublon P01
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0063">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1738,7 +1742,7 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			BA-bascule FR-EN
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0063-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
@@ -1747,6 +1751,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+	-->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0064">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1792,7 +1797,7 @@
 		<DC-274-inputDate norme="ISO8601">2019-03-01</DC-274-inputDate>
 		<langGrp xml:lang="fr-BE">
 			<termGrp>
-				<DC-508-term DC-301-lexTermIdentifier="P02-0065-01-fr">cotutelle de thèse </DC-508-term>
+				<DC-508-term DC-301-lexTermIdentifier="P02-0065-01-fr">cotutelle de thèse</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-247-feminine"/>
 				<contextGrp>
@@ -1820,7 +1825,7 @@
 				<!--BO-bascule Equiv1-Equiv2-->
 				<DC-508-term DC-301-lexTermIdentifier="P02-0065-02-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">joint PhD/doctorate </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">joint PhD/doctorate</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -1862,7 +1867,7 @@
 		<DC-274-inputDate norme="ISO8601">2019-03-01</DC-274-inputDate>
 		<langGrp xml:lang="fr-BE">
 			<termGrp>
-				<DC-508-term DC-301-lexTermIdentifier="P02-0067-01-fr">cours isolé </DC-508-term>
+				<DC-508-term DC-301-lexTermIdentifier="P02-0067-01-fr">cours isolé</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<contextGrp>
@@ -1878,7 +1883,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0067-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">individual course </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">individual course</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -2132,7 +2137,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0076-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">representative </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">representative</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -2279,7 +2284,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0081-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">scientific ethics </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">scientific ethics</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -2409,7 +2414,7 @@
 				<!--BO-bascule Equiv1-Equiv2-->
 				<DC-508-term DC-301-lexTermIdentifier="P02-0092-02-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">thesis submission </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">thesis submission</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -2579,6 +2584,7 @@
 		</langGrp>
 	</DC-209-terminologicalEntry>
 	<!--100 pas de contexte-->
+	<!--	pgm - 2019-06-20 - Doublon P01
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0102">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2599,7 +2605,7 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			-BA-bascule FR-EN-
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0102-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
@@ -2609,6 +2615,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+	-->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0103">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2782,7 +2789,7 @@
 		<DC-274-inputDate norme="ISO8601">2019-03-01</DC-274-inputDate>
 		<langGrp xml:lang="fr-BE">
 			<termGrp>
-				<DC-508-term DC-301-lexTermIdentifier="P02-0108-01-fr">doctorat </DC-508-term>
+				<DC-508-term DC-301-lexTermIdentifier="P02-0108-01-fr">doctorat</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<contextGrp>
@@ -2867,6 +2874,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+	<!--	pgm - 2019-06-20 - Doublon P01
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0111">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2888,7 +2896,7 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			BA-bascule FR-EN
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0111-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
@@ -2897,6 +2905,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+	-->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0112">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -2969,7 +2978,7 @@
 				<!--BO-bascule Equiv1-Equiv2-->
 				<DC-508-term DC-301-lexTermIdentifier="P02-0113-02-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-378-deprecatedTerm">enrolment
+					DC-374-normativeAuthorization="DC-377-admittedTerm">enrolment
 					fees</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
@@ -3181,7 +3190,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0120">
+<!-- mod PGM - attente de la forme au féminin	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0120">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
 		<DC-162-createdBy>Susan Black</DC-162-createdBy>
@@ -3204,7 +3213,7 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			-BA-bascule FR-EN-
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0120-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
@@ -3213,7 +3222,7 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
-	</DC-209-terminologicalEntry>
+	</DC-209-terminologicalEntry>-->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0121">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3439,7 +3448,7 @@
 				<!--BO-bascule Equiv1-Equiv2-->
 				<DC-508-term DC-301-lexTermIdentifier="P02-0128-02-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">university education </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">university education</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -3634,7 +3643,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0135-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">coordinating institution </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">coordinating institution</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -3675,6 +3684,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+<!--	pgm MOD 2019-06-20
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0137">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3682,7 +3692,7 @@
 		<DC-274-inputDate norme="ISO8601">2019-03-01</DC-274-inputDate>
 		<langGrp xml:lang="fr-BE">
 			<termGrp>
-				<DC-508-term DC-301-lexTermIdentifier="P02-0137-01-fr">étalement </DC-508-term>
+				<DC-508-term DC-301-lexTermIdentifier="P02-0137-01-fr">étalement</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<contextGrp>
@@ -3694,7 +3704,7 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			BA-bascule FR-EN
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0137-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
@@ -3703,7 +3713,7 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
-	</DC-209-terminologicalEntry>
+	</DC-209-terminologicalEntry>-->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0138">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -3960,7 +3970,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0146-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">Faculty of Medicine </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">Faculty of Medicine</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -4023,7 +4033,7 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0148-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
 					DC-374-normativeAuthorization="DC-377-admittedTerm">Faculty of Philosophy and
-					Social Sciences </DC-508-term>
+					Social Sciences</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -4053,7 +4063,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0149-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">Faculty of Sciences </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">Faculty of Sciences</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -4217,7 +4227,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0155-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">research focus </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">research focus</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -4276,7 +4286,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0157-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">professional focus </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">professional focus</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -4655,7 +4665,7 @@
 		<DC-274-inputDate norme="ISO8601">2019-03-01</DC-274-inputDate>
 		<langGrp xml:lang="fr-BE">
 			<termGrp>
-				<DC-508-term DC-301-lexTermIdentifier="P02-0171-01-fr">grade académique </DC-508-term>
+				<DC-508-term DC-301-lexTermIdentifier="P02-0171-01-fr">grade académique</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<contextGrp>
@@ -4718,7 +4728,7 @@
 				<!--BO-bascule Equiv1-Equiv2-->
 				<DC-508-term DC-301-lexTermIdentifier="P02-0172-02-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">PhD </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">PhD</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
@@ -5148,7 +5158,7 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0187-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
 					DC-374-normativeAuthorization="DC-377-admittedTerm">Institute for European
-					Studies </DC-508-term>
+					Studies</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -5495,7 +5505,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0201-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">free enquiry </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">free enquiry</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -6033,6 +6043,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+<!-- pgm MOD 2019-06-20 - neutralisé 
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0231">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6054,7 +6065,7 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			BA-bascule FR-EN
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0231-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
@@ -6062,14 +6073,14 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
-				<!--BO-bascule Equiv1-Equiv2-->
+				BO-bascule Equiv1-Equiv2
 				<DC-508-term DC-301-lexTermIdentifier="P02-0231-02-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
 					DC-374-normativeAuthorization="DC-377-admittedTerm">the grant</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
-				<!--CB-bascule Equiv2-Equiv3-->
+				CB-bascule Equiv2-Equiv3
 				<DC-508-term DC-301-lexTermIdentifier="P02-0231-03-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
 					DC-374-normativeAuthorization="DC-377-admittedTerm">the
@@ -6077,7 +6088,7 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
-	</DC-209-terminologicalEntry>
+	</DC-209-terminologicalEntry>-->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0232">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6102,7 +6113,7 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0232-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
 					DC-374-normativeAuthorization="DC-377-admittedTerm">grounds of legality and
-					expediency </DC-508-term>
+					expediency</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -6602,6 +6613,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+<!-- pgm MOD 2019-06-20 doublon P01
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0250">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6624,7 +6636,7 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			-BA-bascule FR-EN-
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0250-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
@@ -6633,6 +6645,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+	 -->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0251">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -6646,7 +6659,7 @@
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<contextGrp>
 					<DC-149-context>Nombre de chercheurs,‭ ‬professeurs,‭ ‬étudiants et membres du
-						personnel administratif de l'ULB sont actifs dans des pays du Sud.‭ </DC-149-context>
+						personnel administratif de l'ULB sont actifs dans des pays du Sud.‭</DC-149-context>
 					<DC-1968-source biblio="ULB-0026"/>
 				</contextGrp>
 			</termGrp>
@@ -6670,7 +6683,7 @@
 		<DC-274-inputDate norme="ISO8601">2019-03-01</DC-274-inputDate>
 		<langGrp xml:lang="fr-BE">
 			<termGrp>
-				<DC-508-term DC-301-lexTermIdentifier="P02-0253-01-fr">personnel scientifique </DC-508-term>
+				<DC-508-term DC-301-lexTermIdentifier="P02-0253-01-fr">personnel scientifique</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-246-masculine"/>
 				<contextGrp>
@@ -7021,7 +7034,7 @@
 		<DC-274-inputDate norme="ISO8601">2019-03-01</DC-274-inputDate>
 		<langGrp xml:lang="fr-BE">
 			<termGrp>
-				<DC-508-term DC-301-lexTermIdentifier="P02-0272-01-fr">proclamation </DC-508-term>
+				<DC-508-term DC-301-lexTermIdentifier="P02-0272-01-fr">proclamation</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
 					DC-245-grammaticalGender="DC-247-feminine"/>
 				<contextGrp>
@@ -7330,6 +7343,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+<!-- pgm MOD 2019-06-20 doublon P01
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0283">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7346,13 +7360,13 @@
 						Doyens des facultés,‭ ‬le Président de l'Université,‭ ‬le Recteur,‭ ‬le
 						Pro-Recteur,‭ ‬le Directeur général,‭ ‬les Vice-Recteurs,‭ ‬les cooptés
 						académiques internes et les externes ainsi que des membres à voix
-						consultative‭. </DC-149-context>
+						consultative‭.</DC-149-context>
 					<DC-1968-source biblio="ULB-0012"/>
 				</contextGrp>
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			-BA-bascule FR-EN-
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0283-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
@@ -7360,7 +7374,7 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
-	</DC-209-terminologicalEntry>
+	</DC-209-terminologicalEntry>-->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0284">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7506,7 +7520,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0288-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">scientific research </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">scientific research</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -7534,11 +7548,12 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0289-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">appeal </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">appeal</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+	<!--pgm MOD 2019-06-20 doublon P01
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0290">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7559,15 +7574,15 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			-BA-bascule FR-EN-
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0290-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">rector </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">rector</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
-	</DC-209-terminologicalEntry>
+	</DC-209-terminologicalEntry>-->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0291">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7587,13 +7602,26 @@
 					<DC-1968-source biblio="ULB-0028"/>
 				</contextGrp>
 			</termGrp>
+			<termGrp>
+				<DC-508-term DC-301-lexTermIdentifier="P02-0291-02-fr">réduction de droits
+					d'inscription</DC-508-term>
+				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
+					DC-245-grammaticalGender="DC-247-feminine"/>
+				<contextGrp>
+					<DC-149-context>Les dossiers complets de demande de réduction de droits
+						d'inscription doivent être déposés au plus tard le‭ ‬31‭ ‬octobre de l'année
+						académique concernée‭; ‬aucun document n'est plus accepté au-delà de cette
+						date.‭</DC-149-context>
+					<DC-1968-source biblio="ULB-0028"/>
+				</contextGrp>
+			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
 			<!--BA-bascule FR-EN-->
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0291-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">reduction in registration
+					DC-374-normativeAuthorization="DC-376-preferredTerm">reduction in registration
 					fees</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
@@ -7615,6 +7643,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+	<!--pgm MOD 2019-06-20 - syn de p02-291
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0292">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7636,7 +7665,7 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			-BA-bascule FR-EN-
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0292-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
@@ -7645,7 +7674,7 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
-				<!--BO-bascule Equiv1-Equiv2-->
+				-BO-bascule Equiv1-Equiv2-
 				<DC-508-term DC-301-lexTermIdentifier="P02-0292-02-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
 					DC-374-normativeAuthorization="DC-377-admittedTerm">reduction in tuition
@@ -7653,7 +7682,7 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
-				<!--CB-bascule Equiv2-Equiv3-->
+				-CB-bascule Equiv2-Equiv3-
 				<DC-508-term DC-301-lexTermIdentifier="P02-0292-03-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
 					DC-374-normativeAuthorization="DC-377-admittedTerm">reduction in enrolment
@@ -7662,6 +7691,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+	-->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0293">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -7783,7 +7813,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0296-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">PhD Regulations </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">PhD Regulations</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -7940,7 +7970,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0301-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">renewal </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">renewal</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -8122,7 +8152,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0309-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">sector </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">sector</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
@@ -8339,7 +8369,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0319-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">International Office </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">International Office</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -8429,7 +8459,7 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0322-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
 					DC-374-normativeAuthorization="DC-377-admittedTerm">Solvay Brussels School of
-					Economics and Management </DC-508-term>
+					Economics and Management</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -8764,7 +8794,7 @@
 				<!--BO-bascule Equiv1-Equiv2-->
 				<DC-508-term DC-301-lexTermIdentifier="P02-0334-02-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">research work </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">research work</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -8793,7 +8823,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0335-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">practicals </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">practicals</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
@@ -8866,7 +8896,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0338-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">ULB Culture </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">ULB Culture</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -9193,6 +9223,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+<!-- pgm MOD 2019-06-20 doublon P01 (et incohérence min/maj)
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0357">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9214,7 +9245,7 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			-BA-bascule FR-EN-
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0357-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
@@ -9222,7 +9253,7 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
-	</DC-209-terminologicalEntry>
+	</DC-209-terminologicalEntry>-->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0362">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9271,11 +9302,12 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			<!--BA-bascule FR-EN--><!-- mod PGM 2019-06-20 DC-374-normativeAuthorization="DC-377-admittedTerm">academic (n)</DC-508-term>-->
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0363-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">academic (n)</DC-508-term>
+					
+					DC-374-normativeAuthorization="DC-377-admittedTerm">academic</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
@@ -9629,6 +9661,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+<!--	pgm MOD 2019-06-20 doublon p01
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0376">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9648,7 +9681,7 @@
 			</termGrp>
 		</langGrp>
 		<langGrp xml:lang="en-GB">
-			<!--BA-bascule FR-EN-->
+			BA-bascule FR-EN
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0376-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
@@ -9657,6 +9690,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
+	-->
 	<!--377 pas de contexte-->
 	<!--378 pas de contexte-->
 	<!--379 pas de contexte-->
@@ -9713,7 +9747,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0381-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">certificate </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">certificate</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
@@ -9763,7 +9797,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0382-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">registration certificate </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">registration certificate</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
@@ -9853,7 +9887,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0384-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">specialised Bachelor's </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">specialised Bachelor's</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
@@ -9902,7 +9936,7 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
-	</DC-209-terminologicalEntry>
+	</DC-209-terminologicalEntry>	
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0388">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9945,7 +9979,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0388-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-377-admittedTerm">fellowship holder </DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">fellowship holder</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
