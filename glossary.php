@@ -72,10 +72,10 @@ if ($conn) {
     $end = min(($offset + $limit), $num_rows);
 
     // The "back" link
-    $prevlink = ($page > 1) ? '<a href="?glossary='.$glossary.'&sort='.$sort.'&page=1" title="Première page">&laquo;</a> <a href="?glossary='.$glossary.'&sort='.$sort.'&page=' . ($page - 1) . '" title="Page précedente">&lsaquo;</a>' : '<span class="disabled">&laquo;</span> <span class="disabled">&lsaquo;</span>';
+    $prevlink = ($page > 1) ? '<a href="?glossary='.$glossary.'&sort='.$sort.'&page=1&limit='.$limit.'" title="Première page">&laquo;</a> <a href="?glossary='.$glossary.'&sort='.$sort.'&page='.($page - 1).'&limit='.$limit.'" title="Page précedente">&lsaquo;</a>' : '<span class="disabled">&laquo;</span> <span class="disabled">&lsaquo;</span>';
 
     // The "forward" link
-    $nextlink = ($page < $pages) ? '<a href="?glossary='.$glossary.'&sort='.$sort.'&page=' . ($page + 1) . '" title="Page suivante">&rsaquo;</a> <a href="?glossary='.$glossary.'&sort='.$sort.'&page=' . $pages . '" title="Dernière page">&raquo;</a>' : '<span class="disabled">&rsaquo;</span> <span class="disabled">&raquo;</span>';
+    $nextlink = ($page < $pages) ? '<a href="?glossary='.$glossary.'&sort='.$sort.'&page='.($page + 1).'&limit='.$limit.'" title="Page suivante">&rsaquo;</a> <a href="?glossary='.$glossary.'&sort='.$sort.'&page='.$pages.'&limit='.$limit.'" title="Dernière page">&raquo;</a>' : '<span class="disabled">&rsaquo;</span> <span class="disabled">&raquo;</span>';
 
 
     echo "<b>Domaine : " . $gloname . "</b> | ";
