@@ -278,7 +278,7 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0011-01-fr">autorités
 					académiques</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
-					DC-245-grammaticalGender="DC-247-feminine"/>
+					DC-245-grammaticalGender="DC-247-feminine" DC-251-grammaticalNumber="DC-1906-plural"/>
 				<contextGrp>
 					<DC-149-context>Les diplômes attestant les grades académiques et les certificats
 						sanctionnant la réussite d'études sont délivrés par les jurys constitués par
@@ -6043,7 +6043,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-<!-- pgm MOD 2019-06-20 - neutralisé 
+<!-- pgm MOD 2019-06-20 - neutralisé
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0231">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -9306,7 +9306,7 @@
 			<termGrp>
 				<DC-508-term DC-301-lexTermIdentifier="P02-0363-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					
+
 					DC-374-normativeAuthorization="DC-377-admittedTerm">academic</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
@@ -9936,7 +9936,7 @@
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
-	</DC-209-terminologicalEntry>	
+	</DC-209-terminologicalEntry>
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0388">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
