@@ -242,7 +242,7 @@ if ($conn) {
                         }
                     }
 
-                    $number = $graminfo['DC-245-grammaticalNumber'];
+                    $number = $graminfo['DC-251-grammaticalNumber'];
                     $query = sqlsrv_query($conn, "SELECT id from terminfo where dcvalue=N'$number'", array(), array("Scrollable" => 'static'));
                     if (sqlsrv_num_rows($query) > 0) {
                         while ($row = sqlsrv_fetch_array($query)) {
