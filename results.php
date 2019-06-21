@@ -150,8 +150,10 @@ if ($conn) {
             $pos_id = $row['pos'];
             if($pos_id == 1) {
                 $pos = "Nom";
+            } else if($pos_id == 6) {
+                $pos = "Adjectif"; // Also add Verbe
             } else {
-                $pos = "Adjectif";
+                $pos = "Locution";
             }
             $gender_id = $row['gender'];
             if($gender_id == 4 or $mf) {

@@ -242,6 +242,22 @@ if ($conn) {
                         }
                     }
 
+                    $number = $graminfo['DC-245-grammaticalNumber'];
+                    $query = sqlsrv_query($conn, "SELECT id from terminfo where dcvalue=N'$number'", array(), array("Scrollable" => 'static'));
+                    if (sqlsrv_num_rows($query) > 0) {
+                        while ($row = sqlsrv_fetch_array($query)) {
+                            $number_id = $row['id'];
+                        }
+                    }
+                    else {
+                        if(empty($number)) {
+                            $number_id = 0;
+                        } else {
+                            $query = sqlsrv_query($conn, "INSERT INTO terminfo (dcvalue) VALUES (N'$number')", array(), array("Scrollable" => 'static'));
+                            $number_id = sqlsrv_insert_id($conn);
+                        }
+                    }
+
                     $abbrev = $tgrp->{'DC-64-abbreviatedFormFor'};
                     if(empty($abbrev)) {
                         $is_abbrev = 0;
