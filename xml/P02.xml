@@ -1117,7 +1117,7 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-<!-- 44 - Mod 2019-11-12 - on Susan Black request - added conference paper as rejected and added seminar as accepted -->
+<!-- 44 - Mod 2019-11-12 - on Susan Black request - added conference paper as rejected and added seminar as accepted + 2019-11-13 - SB request to change conferencence -->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0044">
 		<DC-489-subjectField cdu="378" niveau="1"/>
 		<DC-494-subsetOwner nom="Service international"/>
@@ -1148,14 +1148,14 @@
 				<!--BO-bascule Equiv1-Equiv2-->
 				<DC-508-term DC-301-lexTermIdentifier="P02-0044-02-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-378-deprecatedTerm">paper</DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">paper</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
 				<!--BO-bascule Equiv1-Equiv2-->
 				<DC-508-term DC-301-lexTermIdentifier="P02-0044-03-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
-					DC-374-normativeAuthorization="DC-378-deprecatedTerm">conference paper</DC-508-term>
+					DC-374-normativeAuthorization="DC-377-admittedTerm">conference paper</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 			<termGrp>
@@ -8441,7 +8441,7 @@
 				<DC-508-term DC-301-lexTermIdentifier="P02-0320-01-en"
 					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
 					DC-374-normativeAuthorization="DC-377-admittedTerm">Payroll
-					Office</DC-508-term>
+					office</DC-508-term>
 				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
 			</termGrp>
 		</langGrp>
@@ -10124,8 +10124,44 @@
 			</termGrp>
 		</langGrp>
 	</DC-209-terminologicalEntry>
-	<!--391 pas de contexte / 392 est FR syn -->
-	<!-- 392 pas de contexte -->
+	<!--391 pas de contexte / 392 est FR syn de 391 - regroupés - 2019-11-13 - demande de publication malgré absence de contexte par Susan Black - CONTEXTE BIDON AJOUTÉ-->
+	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0391">
+		<DC-489-subjectField cdu="378" niveau="1"/>
+		<DC-494-subsetOwner nom="Service international"/>
+		<DC-162-createdBy>Susan Black</DC-162-createdBy>
+		<DC-274-inputDate norme="ISO8601">2019-11-13</DC-274-inputDate>
+		<langGrp xml:lang="fr-BE">
+			<termGrp>
+				<DC-508-term DC-301-lexTermIdentifier="P02-0391-01-fr">bureau des étudiants administrateurs</DC-508-term>
+				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
+					DC-245-grammaticalGender="DC-246-masculine"/>
+				<DC-241-fullFormFor>BEA</DC-241-fullFormFor>
+				<contextGrp>
+					<DC-149-context>Contexte non approuvé et source (DC-1968) bidon: Le Bureau des Étudiant∙e∙s Administrateurs∙trices (ou BEA) est le Conseil Etudiant de l’ULB, l’organe représentatif des étudiant·e·s au Conseil d’Administration, au Conseil Académique et dans leurs différentes commissions.‭</DC-149-context>
+					<DC-1968-source biblio="CFB-0004"/>
+				</contextGrp>
+			</termGrp>
+			<termGrp>
+				<DC-508-term DC-301-lexTermIdentifier="P02-0391-02-fr">BEA</DC-508-term>
+				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"
+					DC-245-grammaticalGender="DC-246-masculine"/>
+				<DC-64-abbreviatedFormFor>bureau des étudiants administrateurs</DC-64-abbreviatedFormFor>
+				<contextGrp>
+					<DC-149-context>Contexte non approuvé et source (DC-1968) bidon: Le Bureau des Étudiant∙e∙s Administrateurs∙trices (ou BEA) est le Conseil Etudiant de l’ULB, l’organe représentatif des étudiant·e·s au Conseil d’Administration, au Conseil Académique et dans leurs différentes commissions.‭</DC-149-context>
+					<DC-1968-source biblio="CFB-0004"/>
+				</contextGrp>
+			</termGrp>
+		</langGrp>
+		<langGrp xml:lang="en-GB">
+			<!--BA-bascule FR-EN-->
+			<termGrp>
+				<DC-508-term DC-301-lexTermIdentifier="P02-0391-01-en"
+					DC-280-languagePlanningQualifier="DC-283-proposedTerm"
+					DC-374-normativeAuthorization="DC-377-admittedTerm">bureau of student representatives</DC-508-term>
+				<DC-250-grammaticalInfo DC-396-partOfSpeech="DC-1333-noun"/>
+			</termGrp>
+		</langGrp>
+	</DC-209-terminologicalEntry>
 	<!--393 pas de contexte-->
 	<DC-209-terminologicalEntry DC-206-entryIdentifier="P02-0394">
 		<DC-489-subjectField cdu="378" niveau="1"/>
