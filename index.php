@@ -560,17 +560,18 @@
 </head>
 <body id="body" class="fiche ficheaccueil  sitepublic sans-bandeau" data-toggle=".sitepublic #menu .active, .header_toggle .active, #call-to-actions .active, #call-to-actions-contents .active" data-toggle-bubble itemtype="http://schema.org/WebPage" itemscope><meta itemprop="http://schema.org/lastReviewed" content="2019-06-05">
 
-<header itemscope itemtype="http://schema.org/WPHeader">
-    <meta itemprop="name" content=""/>
-    <meta itemprop="description" content="L&#39;ULB vous accueille lors de ses différentes activités d&#39;information sur les études et la vie étudiante, sur ses campus et près de chez vous!" />
-    <meta itemprop="keywords" content="ULB Accueil, site de l&#39;ULB, Bienvenue à l&#39;ULB" />
+<header itemscope="" itemtype="http://schema.org/WPHeader">
+    <meta itemprop="name" content="">
+    <meta itemprop="description" content="L&#39;ULB vous accueille lors de ses différentes activités d&#39;information sur les études et la vie étudiante, sur ses campus et près de chez vous!">
+    <meta itemprop="keywords" content="ULB Accueil, site de l&#39;ULB, Bienvenue à l&#39;ULB">
     <p id="liens_evitement">
-        <a href="#contenu-encadres">Contenu</a> |
-        <a href="#menu_principal">Navigation</a> |
-        <a href="#acces_directs">Accès directs</a> |
-        <a href="#connexion">Connexion</a>
+        <a href="https://www.ulb.be/#contenu-encadres">Aller au contenu</a> |
+        <a href="https://www.ulb.be/#menu_principal">Navigation</a> |
+        <a href="https://www.ulb.be/#acces_directs">Accès directs</a> |
+        <a href="https://www.ulb.be/#connexion">Connexion</a>
     </p>
 
+        <link rel="stylesheet" type="text/css" href="https://www.ulb.be/uas/ulbout/NOM_PROPRIETE_SURCHARGE_CSS/ksup-ulb.css" media="all">
    <div class="header_ligne2"><!--
 
 
