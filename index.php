@@ -591,10 +591,10 @@
                 <span class="header_toggle__picto"><img src="https://www.ulb.be/medias/photo/acces-restreints-header_1534254852458-png" alt="Accès restreints"></span>
 
             <span class="header_toggle__libelle-texte">
-            	Accès restreints
+            	Intranet
         	</span>
         </button>
-        <div data-toggle-id="menuderoulant1" class="header_toggle__menu menuderoulant" data-toggle-target>
+        <div data-toggle-id="menuderoulant1" class="header_toggle__menu menuderoulant" data-toggle-target="">
             <ul class="menuderoulant">
 
                     <li class="menuderoulant__item">
@@ -616,10 +616,12 @@
                     </li>
 
                     <li class="menuderoulant__item">
-                        <a href="https://www.ulb.be/fr/connexion-k-sup" class="type_rubrique_0001">
-
+                        <a href="https://www.ulb.be/fr/mode-edition" class="type_rubrique_CONN">
+                            
+                                <span class="header_toggle__picto"><img src="https://www.ulb.be/medias/photo/noun-pencil-3102612_1581950006718-png" title="Mode édition"></span>
+                            
                             <span class="header_toggle__libelle">
-                            Connexion adminsite
+                            Mode édition
                         </span>
                         </a>
                     </li>
