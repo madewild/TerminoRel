@@ -573,9 +573,19 @@
 
    <div class="header_ligne2"><!--
 
+
+
+
+	
+	    --><a href="https://www.ulb.be/fr/info-coronavirus" class="acces_direct__item type_rubrique_FICO">
+	        <span class="acces_direct__libelle">
+	            INFOS COVID-19
+	        </span>
+	    </a><!--
+	
 	    --><a href="https://www.ulb.be/fr/plan-et-acces" class="acces_direct__item type_rubrique_0001">
 	        <span class="acces_direct__libelle">
-	            PLAN ET ACCÈS
+	            PLANS ET ACCÈS
 	        </span>
 	    </a><!--
 
@@ -584,6 +594,13 @@
 	            BIBLIOTHÈQUES
 	        </span>
 	    </a><!--
+	
+	    --><a href="https://www.ulb.be/fr/nos-formations" class="acces_direct__item type_rubrique_0001">
+	        <span class="acces_direct__libelle">
+	            NOS FORMATIONS
+	        </span>
+	    </a><!--
+	
 
     --><div id="menu_deroulant1" class="header_toggle">
         <button class="header_toggle__libelle header_toggle__lvl1" data-toggle="[data-toggle-id='menuderoulant1']" data-toggle-group="menus" type="button">
@@ -746,7 +763,7 @@
                 --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/plan-et-acces" aria-expanded="false"><!-- 
 
                     --><span class="item__label">
-                        Plan et accès
+                        Plans et accès
                     </span><!-- 
                 --></a><!--
 
@@ -782,7 +799,7 @@
                 --><button class="item__control type_rubrique_MDEROUL1 item__control-level-0" type="button"  data-toggle="[data-toggle-id='1571625036010916']" data-toggle-group="menu" data-toggle-event="menu-riche-toggle" aria-expanded="false"><!--
                      --><span class="item__picto"><img src="https://www.ulb.be/medias/photo/acces-restreints-header_1534254852458-png"/></span><!--
                   --><span class="item__label">
-                        Accès restreints
+                        Intranet
                     </span><!-- 
               --></button><!--
 
@@ -793,7 +810,7 @@
 
 --></div><!--
 
-                            --><div class="menu__level menu__level--1" data-toggle-target><!--
+                            --><div class="menu__level menu__level--1" data-toggle-target=""><!--
 
                                 --><ul class="menu__level__items"><!--
 
@@ -866,14 +883,14 @@
                     </span><!-- 
               --></button><!--
 
-                --><button class="item__toggler " type="button" data-toggle="[data-toggle-id='1571625035970722']" data-toggle-group="menu-toggler" aria-expanded="false">
+                --><button class="item__toggler " type="button" data-toggle="[data-toggle-id=&#39;1571625035970722&#39;]" data-toggle-group="menu-toggler" aria-expanded="false">
                     <span class="icon-expand_more more"></span>
                     <span class="icon-expand_less less"></span>
                 </button><!--
 
 --></div><!--
 
-                            --><div class="menu__level menu__level--1" data-toggle-target><!--
+                            --><div class="menu__level menu__level--1" data-toggle-target=""><!--
 
                                     --><div class="menu__level__parent">
                                         <a href="https://www.ulb.be/fr/etudier">
@@ -1049,14 +1066,14 @@
                     </span><!-- 
                 --></a><!--
 
-                --><button class="item__control type_rubrique_0001 item__control-level-2" type="button" data-link="https://www.ulb.be/fr/etudier/se-former" data-toggle="[data-toggle-id='1571625036051962']" data-toggle-group="menu-1571625035970722" data-toggle-event="menu-riche-toggle" aria-expanded="false"><!--
+                --><button class="item__control type_rubrique_0001 item__control-level-2" type="button" data-link="https://www.ulb.be/fr/etudier/se-former" data-toggle="[data-toggle-id=&#39;1571625036051962&#39;]" data-toggle-group="menu-1571625035970722" data-toggle-event="menu-riche-toggle" aria-expanded="false"><!--
 
                   --><span class="item__label">
                         Se former
                     </span><!-- 
               --></button><!--
 
-                --><button class="item__toggler " type="button" data-toggle="[data-toggle-id='1571625036051962']" data-toggle-group="menu-1571625035970722-toggler" aria-expanded="false">
+                --><button class="item__toggler " type="button" data-toggle="[data-toggle-id=&#39;1571625036051962&#39;]" data-toggle-group="menu-1571625035970722-toggler" aria-expanded="false">
                     <span class="icon-expand_more more"></span>
                     <span class="icon-expand_less less"></span>
                 </button><!--
