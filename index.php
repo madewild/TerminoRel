@@ -556,26 +556,37 @@
     <script src="js/language-selection.js?version=2"></script>
 
     <script type="text/javascript">var html = document.getElementsByTagName('html')[0]; html.className = html.className.replace('no-js', 'js');</script>
-    <script type="text/javascript" src="https://www.ulb.be/wro/scripts/f07b661a65d78d88ddbe4b7f014a97ae339a6a6e.js"></script>
+    <script type="text/javascript" src="https://www.ulb.be/wro/scripts/ab0a3f1398fc9ba91f3aa9319fda64515b6e39eb.js"></script>
 </head>
-<body id="body" class="fiche ficheaccueil  sitepublic sans-bandeau" data-toggle=".sitepublic #menu .active, .header_toggle .active, #call-to-actions .active, #call-to-actions-contents .active" data-toggle-bubble itemtype="http://schema.org/WebPage" itemscope><meta itemprop="http://schema.org/lastReviewed" content="2019-06-05">
+<body id="body" class="fiche ficheaccueil  sitepublic site-ulbout sans-bandeau" data-toggle=".sitepublic #menu .active, .header_toggle .active, #call-to-actions .active, #call-to-actions-contents .active" data-toggle-bubble itemtype="http://schema.org/WebPage" itemscope><meta itemprop="http://schema.org/lastReviewed" content="2020-06-02">
 
 <header itemscope itemtype="http://schema.org/WPHeader">
     <meta itemprop="name" content=""/>
     <meta itemprop="description" content="L&#39;ULB vous accueille lors de ses différentes activités d&#39;information sur les études et la vie étudiante, sur ses campus et près de chez vous!" />
     <meta itemprop="keywords" content="ULB Accueil, site de l&#39;ULB, Bienvenue à l&#39;ULB" />
     <p id="liens_evitement">
-        <a href="#contenu-encadres">Contenu</a> |
+        <a href="#contenu-encadres">Aller au contenu</a> |
         <a href="#menu_principal">Navigation</a> |
         <a href="#acces_directs">Accès directs</a> |
         <a href="#connexion">Connexion</a>
     </p>
 
+        <link rel="stylesheet" type="text/css" href="https://www.ulb.be/uas/ulbout/NOM_PROPRIETE_SURCHARGE_CSS/ksup-ulb.css" media="all"/>
    <div class="header_ligne2"><!--
 
+
+
+
+	
+	    --><a href="https://www.ulb.be/fr/info-coronavirus" class="acces_direct__item type_rubrique_FICO">
+	        <span class="acces_direct__libelle">
+	            INFOS COVID-19
+	        </span>
+	    </a><!--
+	
 	    --><a href="https://www.ulb.be/fr/plan-et-acces" class="acces_direct__item type_rubrique_0001">
 	        <span class="acces_direct__libelle">
-	            PLAN ET ACCÈS
+	            PLANS ET ACCÈS
 	        </span>
 	    </a><!--
 
@@ -584,14 +595,21 @@
 	            BIBLIOTHÈQUES
 	        </span>
 	    </a><!--
+	
+	    --><a href="https://www.ulb.be/fr/nos-formations" class="acces_direct__item type_rubrique_0001">
+	        <span class="acces_direct__libelle">
+	            NOS FORMATIONS
+	        </span>
+	    </a><!--
+	
 
     --><div id="menu_deroulant1" class="header_toggle">
         <button class="header_toggle__libelle header_toggle__lvl1" data-toggle="[data-toggle-id='menuderoulant1']" data-toggle-group="menus" type="button">
 
-                <span class="header_toggle__picto"><img src="https://www.ulb.be/medias/photo/acces-restreints-header_1534254852458-png" alt="Accès restreints"></span>
+                <span class="header_toggle__picto"><img src="https://www.ulb.be/medias/photo/acces-restreints-header_1534254852458-png" alt="Intranet"></span>
 
             <span class="header_toggle__libelle-texte">
-            	Accès restreints
+            	Intranet
         	</span>
         </button>
         <div data-toggle-id="menuderoulant1" class="header_toggle__menu menuderoulant" data-toggle-target>
@@ -616,10 +634,12 @@
                     </li>
 
                     <li class="menuderoulant__item">
-                        <a href="https://www.ulb.be/fr/connexion-k-sup" class="type_rubrique_0001">
-
+                        <a href="https://www.ulb.be/fr/mode-edition" class="type_rubrique_CONN">
+                            
+                                <span class="header_toggle__picto"><img src="https://www.ulb.be/medias/photo/noun-pencil-3102612_1581950006718-png" title="Mode édition"/></span>
+                            
                             <span class="header_toggle__libelle">
-                            Connexion adminsite
+                            Mode édition
                         </span>
                         </a>
                     </li>
@@ -639,11 +659,11 @@
             <meta itemprop="target" content="https://www.ulb.be/servlet/search?beanKey=&l=0&q={q}"/>
             <input type="hidden" name="page" value="" />
 
-            <input type="hidden" name="l" value="0">
+            <input type="hidden" name="l" value="">
             <input type="hidden" name="RH" value="1571625036018525">
             <input type="hidden" data-inputfor="MOTS_CLEFS" id="MOTS_CLEFS_AUTOCOMPLETE"/>
 
-            <div class="header_toggle__radios">
+            <div class="header_toggle__radios js-radio-search">
                 <span class="header_toggle__radios__block">
 	                <input type="radio" id="tout_le_site" name="beanKey" value="150bfcee-1f87-11e7-a0e0-b753bedcad22" checked="checked"/>
 	                <label for="tout_le_site">Tout le site</label>
@@ -657,7 +677,7 @@
 	                <label for="formations">Formation</label>
                 </span>
             </div>
-            <input class="header_toggle__input" name="q" itemprop="query-input" autocomplete="on" role="search" type="search" id="MOTS_CLEFS" value="" data-formparams="true" data-bean="multiFicheAutoComplete" data-submitonselect="true" placeholder="Formation, info, annuaire" title="Rechercher par mots-clés" />
+            <input class="header_toggle__input js-search-header" name="q" itemprop="query-input" autocomplete="on" role="search" type="search" id="MOTS_CLEFS" value="" data-formparams="true" data-bean="multiFicheAutoComplete" data-autocompleteurl="/servlet/com.kportal.servlet.autoCompletionServlet" data-submitonselect="true" placeholder="Formation, info, annuaire" title="Recherche par mots-clés" />
             <button class="header_toggle__submit"  formnovalidate="formnovalidate" type="submit" value="Rechercher">
                 <span class="icon icon-ulb-search"></span>
             </button>
@@ -667,18 +687,18 @@
 </div><!--
 
     --><div id="versions" class="header_toggle">
-        <button class="header_toggle__libelle header_toggle__lvl1" data-toggle="[data-toggle-id='menuversions']" data-toggle-group="menus" type="button">
+        <button class="header_toggle__libelle header_toggle__lvl1" data-toggle="[data-toggle-id='menuversions']" data-toggle-group="menus" type="button" aria-label="français (changer la langue)" aria-expanded="false">
             <span class="header_toggle__libelle-texte">fr</span>
         </button>
         <div data-toggle-id="menuversions" class="header_toggle__menu" data-toggle-target>
             <ul class="versions">
                         <li class="versions__item versions__item--fr" lang="fr">
-                            <a href="https://www.ulb.be/fr/ulb-accueil" hreflang="fr">
+                            <a href="https://www.ulb.be/fr/ulb-accueil" aria-label="FR" hreflang="fr">
                                 français
                             </a>
                         </li>
                         <li class="versions__item versions__item--en" lang="en">
-                            <a href="https://www.ulb.be/en/ulb-homepage" hreflang="en">
+                            <a href="https://www.ulb.be/en/ulb-homepage" aria-label="EN" hreflang="en">
                                 anglais
                             </a>
                         </li>
@@ -692,6 +712,9 @@
 	 --><div class="header_ligne3__col1"> 
 
 <div class="banniere" role="banner">
+    <a href="https://www.ulb.be/" class="banniere__logo logo_mobile" title="Retour à la page d'accueil">
+        <img src="/uas/ulbout/NOM_PROPRIETE_LOGO_MOBILE/ulb-mobile.svg" alt="logo-ULB" title="Retour à la page d'accueil"/>
+    </a>
     <a href="https://www.ulb.be/" class="banniere__logo" title="Retour à la page d'accueil">
         <img src="https://www.ulb.be/uas/ulbout/LOGO/Logo-ULB.svg" alt="logo-ULB" title="Retour à la page d'accueil"/>
     </a>
@@ -736,7 +759,35 @@
                             --><div class="menu__level menu__level--1" data-toggle-target><!--
 
                                 --><ul class="menu__level__items"><!--
+                                        --><li class="menu__level__item menu__level__item--first-column" data-toggle-id="1583870542241"><!--
 
+--><div class="item item--has-link"><!--
+    
+        
+            
+                
+                --><a class="item__control type_rubrique_FICO" href="https://www.ulb.be/fr/info-coronavirus" aria-expanded="false"><!-- 
+                    
+                    --><span class="item__label">
+                        Infos Covid-19
+                    </span><!-- 
+                --></a><!--
+            
+            
+        
+        
+    
+--></div><!--
+
+                                            
+                                            
+
+
+
+
+
+
+                                        --></li><!--
                                         --><li class="menu__level__item menu__level__item--first-column" data-toggle-id="1558532037398"><!--
 
 --><div class="item item--has-link"><!--
@@ -744,7 +795,7 @@
                 --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/plan-et-acces" aria-expanded="false"><!-- 
 
                     --><span class="item__label">
-                        Plan et accès
+                        Plans et accès
                     </span><!-- 
                 --></a><!--
 
@@ -762,7 +813,35 @@
                         Bibliothèques
                     </span><!-- 
                 --></a><!--
+--></div><!--
 
+                                        --></li><!--
+                                    
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          
+                                        --><li class="menu__level__item menu__level__item--last-column" data-toggle-id="1560857787374"><!--
+                                            
+                                            
+
+
+
+
+
+--><div class="item item--has-link"><!--
+    
+        
+            
+                
+                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/nos-formations" aria-expanded="false"><!-- 
+                    
+                    --><span class="item__label">
+                        Nos formations
+                    </span><!-- 
+                --></a><!--
 --></div><!--
 
                                         --></li><!--
@@ -780,7 +859,7 @@
                 --><button class="item__control type_rubrique_MDEROUL1 item__control-level-0" type="button"  data-toggle="[data-toggle-id='1571625036010916']" data-toggle-group="menu" data-toggle-event="menu-riche-toggle" aria-expanded="false"><!--
                      --><span class="item__picto"><img src="https://www.ulb.be/medias/photo/acces-restreints-header_1534254852458-png"/></span><!--
                   --><span class="item__label">
-                        Accès restreints
+                        Intranet
                     </span><!-- 
               --></button><!--
 
@@ -825,14 +904,15 @@
 
                                         --></li><!--
 
-                                        --><li class="menu__level__item menu__level__item--last-column" data-toggle-id="1556281172169"><!--
+                                        --><li class="menu__level__item menu__level__item--last-column" data-toggle-id="1583914523003"><!--
 
 --><div class="item item--has-link"><!--
 
-                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/connexion-k-sup" aria-expanded="false"><!-- 
+                --><a class="item__control type_rubrique_CONN" href="https://www.ulb.be/fr/mode-edition" aria-expanded="false"><!-- 
+                     --><span class="item__picto"><img src="https://www.ulb.be/medias/photo/noun-pencil-3102612_1581950006718-png"/></span><!--
 
                     --><span class="item__label">
-                        Connexion adminsite
+                        Mode édition
                     </span><!-- 
                 --></a><!--
 
@@ -1275,7 +1355,32 @@
                         Avant les études
                     </span><!-- 
                 --></a><!--
+--></div><!--
 
+                --></li><!--
+            
+                
+                
+                
+                --><li class="menu__level__item" data-toggle-id="1531383406512"><!--
+                    
+                    
+
+
+
+
+
+--><div class="item item--has-link"><!--
+    
+        
+            
+                
+                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/reussir/transition" aria-expanded="false"><!-- 
+                    
+                    --><span class="item__label">
+                        Transition
+                    </span><!-- 
+                --></a><!--
 --></div><!--
 
                 --></li><!--
@@ -1750,7 +1855,7 @@
 
 --><div class="item item--has-link"><!--
 
-                --><a class="item__control type_rubrique_0001" href="https://formationcontinue.ulb.be/" aria-expanded="false"><!-- 
+                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/deposer-votre-candidature/formation-continue" aria-expanded="false"><!-- 
 
                     --><span class="item__label">
                         Formation continue
@@ -1786,7 +1891,32 @@
                         Bruface (Polytechnique) 
                     </span><!-- 
                 --></a><!--
+--></div><!--
 
+                --></li><!--
+            
+                
+                
+                
+                --><li class="menu__level__item" data-toggle-id="1570800255032"><!--
+                    
+                    
+
+
+
+
+
+--><div class="item item--has-link"><!--
+    
+        
+            
+                
+                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/deposer-votre-candidature/reinscription" aria-expanded="false"><!-- 
+                    
+                    --><span class="item__label">
+                        Réinscription
+                    </span><!-- 
+                --></a><!--
 --></div><!--
 
                 --></li><!--
@@ -2136,10 +2266,10 @@
 
 --><div class="item item--has-link"><!--
 
-                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/projets-de-recherche/fondation-ulb-et-mecenat" aria-expanded="false"><!-- 
+                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/projets-de-recherche/mecenat" aria-expanded="false"><!-- 
 
                     --><span class="item__label">
-                        Fondation ULB et mécénat
+                        Mécénat
                     </span><!-- 
                 --></a><!--
 
@@ -2533,7 +2663,32 @@
                         L'ULB en bref
                     </span><!-- 
                 --></a><!--
+--></div><!--
 
+                --></li><!--
+            
+                
+                
+                
+                --><li class="menu__level__item" data-toggle-id="1578497783105"><!--
+                    
+                    
+
+
+
+
+
+--><div class="item item--has-link"><!--
+    
+        
+            
+                
+                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/gouvernance/cap-2030-le-plan-strategique-de-l-ulb" aria-expanded="false"><!-- 
+                    
+                    --><span class="item__label">
+                        CAP 2030 - Le Plan Stratégique de l’ULB 
+                    </span><!-- 
+                --></a><!--
 --></div><!--
 
                 --></li><!--
@@ -2578,7 +2733,32 @@
                         Documents officiels
                     </span><!-- 
                 --></a><!--
+--></div><!--
 
+                --></li><!--
+            
+                
+                
+                
+                --><li class="menu__level__item" data-toggle-id="1559116497079"><!--
+                    
+                    
+
+
+
+
+
+--><div class="item item--has-link"><!--
+    
+        
+            
+                
+                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/gouvernance/elections" aria-expanded="false"><!-- 
+                    
+                    --><span class="item__label">
+                        Elections
+                    </span><!-- 
+                --></a><!--
 --></div><!--
 
                 --></li><!--
@@ -3092,10 +3272,10 @@
 
 --><div class="item item--has-link"><!--
 
-                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/pole-ulb-charleroi/charleroi-ville-haute" aria-expanded="false"><!-- 
+                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/pole-ulb-charleroi/ucharleroi" aria-expanded="false"><!-- 
 
                     --><span class="item__label">
-                        Charleroi Ville-Haute
+                        CampusUCharleroi
                     </span><!-- 
                 --></a><!--
 
@@ -3290,7 +3470,7 @@
 
 --><div class="item item--has-link"><!--
 
-                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/vie-sur-les-campus/secours-securite" aria-expanded="false"><!-- 
+                --><a class="item__control type_rubrique_FICO" href="https://www.ulb.be/fr/vie-sur-les-campus/secours-securite" aria-expanded="false"><!-- 
 
                     --><span class="item__label">
                         Secours, sécurité
@@ -3483,7 +3663,7 @@
                 --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/travailler-et-collaborer/offres-d-emploi-1" aria-expanded="false"><!-- 
 
                     --><span class="item__label">
-                        Offres d'emploi administratives
+                        Offres d'emploi administratives, techniques, de gestion et spécialisées
                     </span><!-- 
                 --></a><!--
 
@@ -3585,7 +3765,35 @@
     --><div class="menu__level menu__level--2" data-toggle-target><!--
 
         --><ul class="menu__level__items"><!--
+                --><li class="menu__level__item" data-toggle-id="1570107866792"><!--
 
+--><div class="item item--has-link"><!--
+    
+        
+            
+                
+                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/l-ulb-et-l-ecole/infor-etudes" aria-expanded="false"><!-- 
+                    
+                    --><span class="item__label">
+                        InfOR-Études
+                    </span><!-- 
+                --></a><!--
+            
+            
+        
+        
+    
+--></div><!--
+
+                    
+                    
+
+
+
+
+
+
+                --></li><!--
                 --><li class="menu__level__item" data-toggle-id="1554904932982"><!--
 
 --><div class="item item--has-link"><!--
@@ -3601,14 +3809,14 @@
 
                 --></li><!--
 
-                --><li class="menu__level__item" data-toggle-id="1554905029897"><!--
+                --><li class="menu__level__item" data-toggle-id="1576595062136"><!--
 
 --><div class="item item--has-link"><!--
 
-                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/l-ulb-et-l-ecole/acteurs-de-l-enseignement" aria-expanded="false"><!-- 
+                --><a class="item__control type_rubrique_FICO" href="https://www.ulb.be/fr/l-ulb-et-l-ecole/l-universite-des-enseignants-1" aria-expanded="false"><!-- 
 
                     --><span class="item__label">
-                        Acteurs de l'enseignement
+                        L'université des enseignants
                     </span><!-- 
                 --></a><!--
 
@@ -3626,7 +3834,32 @@
                         Les écoles plurielles
                     </span><!-- 
                 --></a><!--
+--></div><!--
 
+                --></li><!--
+            
+                
+                
+                
+                --><li class="menu__level__item" data-toggle-id="1584627452128"><!--
+                    
+                    
+
+
+
+
+
+--><div class="item item--has-link"><!--
+    
+        
+            
+                
+                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/l-ulb-et-l-ecole/l-ecole-en-ligne" aria-expanded="false"><!-- 
+                    
+                    --><span class="item__label">
+                        L'école en ligne
+                    </span><!-- 
+                --></a><!--
 --></div><!--
 
                 --></li><!--
@@ -3775,10 +4008,10 @@
 
 --><div class="item item--has-link"><!--
 
-                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/plans-et-acces/charleroi-ville-haute" aria-expanded="false"><!-- 
+                --><a class="item__control type_rubrique_0001" href="https://www.ulb.be/fr/plans-et-acces/ucharleroi" aria-expanded="false"><!-- 
 
                     --><span class="item__label">
-                        Charleroi Ville-Haute
+                        UCharleroi
                     </span><!-- 
                 --></a><!--
 
@@ -3954,7 +4187,7 @@
 
 		                                    <a href="https://www.ulb.be/fr/futur-etudiant" class="type_rubrique_0001">
 
-		                            Futur·e étudiant·e
+		                            Futur étudiant
 
 		                                    </a>
 
@@ -3982,9 +4215,11 @@
 
 		                        <li>
 
-		                                    <a href="https://www.ulb.be/fr/etudiant-e-1" class="type_rubrique_0001">
-
-		                            Étudiant·e
+		                                    <a href="https://www.ulb.be/fr/etudiant-de-l-ulb" class="type_rubrique_0001">
+		                                
+		                                
+		                            
+		                            Étudiant de l'ULB
 
 		                                    </a>
 
@@ -4002,7 +4237,7 @@
 
 		                        <li>
 
-		                                    <a href="https://www.ulb.be/fr/alumni" class="type_rubrique_0001">
+		                                    <a href="https://alumni.site.ulb.be/" class="type_rubrique_0001">
 
 		                            Alumni
 
@@ -4040,6 +4275,39 @@
 
 		                        </li>
 
+		                        <li>
+		                            
+		                                
+		                                    <a href="https://www.ulb.be/fr/membre-du-personnel-de-l-ulb" class="type_rubrique_0001">
+		                                
+		                                
+		                            
+		                            Membre du personnel de l'ULB
+		                            
+		                                
+		                                    </a>
+		                                
+		                                
+		                            
+		                        </li>
+		                    
+		                    
+		                    
+		                        <li>
+		                            
+		                                
+		                                    <a href="https://www.ulb.be/fr/pensionne-de-l-ulb" class="type_rubrique_0001">
+		                                
+		                                
+		                            
+		                            Pensionné de l'ULB
+		                            
+		                                
+		                                    </a>
+		                                
+		                                
+		                            
+		                        </li>
 		                </ul>
 
 		        </div><!--
@@ -4058,6 +4326,22 @@
 
 	                                <li>
 
+	                                    <a href="https://www.ulb.be/fr/info-coronavirus-1" class="type_rubrique_FICO">
+	                                        
+	                                        
+	                            
+	                            Infos Covid-19
+	                            
+	                                
+	                                    </a>
+	                                    
+	                                    
+	                                    
+	                                </li>
+	                            
+	                        
+	                            
+	                                <li>
 	                                    <a href="https://www.ulb.be/fr/catalogue-des-formations" class="type_rubrique_0001">
 
 	                            Offre de formation
@@ -4098,6 +4382,22 @@
 
 	                                <li>
 
+	                                    <a href="https://www.ulb.be/fr/annee-des-langues" class="type_rubrique_FICO">
+	                                        
+	                                        
+	                            
+	                            Année des langues
+	                            
+	                                
+	                                    </a>
+	                                    
+	                                    
+	                                    
+	                                </li>
+	                            
+	                        
+	                            
+	                                <li>
 	                                    <a href="https://www.ulb.be/fr/l-ulb-a-charleroi" class="type_rubrique_0001">
 
 	                            L'ULB à Charleroi
@@ -4118,16 +4418,6 @@
 
 	                                <li>
 
-	                                    <a href="https://www.ulb.be/fr/civis" class="type_rubrique_FICO">
-
-	                            CIVIS
-
-	                                    </a>
-
-	                                </li>
-
-	                                <li>
-
 	                                    <a href="https://www.ulb.be/fr/culture" class="type_rubrique_0001">
 
 	                            Culture
@@ -4136,15 +4426,7 @@
 
 	                                </li>
 
-	                                <li>
 
-	                                    <a href="https://www.ulb.be/fr/presses-universitaires-de-bruxelles-pub" class="type_rubrique_0001">
-
-	                            Presses Universitaires de Bruxelles (PUB)
-
-	                                    </a>
-
-	                                </li>
 
 	                                <li>
 
@@ -4154,6 +4436,58 @@
 
 	                                    </a>
 
+	                                </li>
+
+	                                <li>
+	                                    
+	                                    
+	                                    <a href="https://www.ulb.be/fr/annuaire-de-l-ulb" class="type_rubrique_0001">
+	                                        
+	                                        
+	                            
+	                            Annuaire de l'ULB
+	                            
+	                                
+	                                    </a>
+	                                    
+	                                    
+	                                    
+	                                </li>
+	                            
+	                        
+	                            
+	                                <li>
+	                                    
+	                                    
+	                                    <a href="https://www.ulb.be/fr/presses-universitaires-de-bruxelles-pub" class="type_rubrique_0001">
+	                                        
+	                                        
+	                            
+	                            PUB
+	                            
+	                                
+	                                    </a>
+	                                    
+	                                    
+	                                    
+	                                </li>
+	                            
+	                        
+	                            
+	                                <li>
+	                                    
+	                                    
+	                                    <a href="https://www.ulb.be/fr/cap-2030-le-plan-strategique-de-l-ulb" class="type_rubrique_FICO">
+	                                        
+	                                        
+	                            
+	                            ULB CAP 2030
+	                            
+	                                
+	                                    </a>
+	                                    
+	                                    
+	                                    
 	                                </li>
 
 	                                <li>
@@ -4354,7 +4688,7 @@
 	                                    <a href="https://bioing.ulb.be/" class="type_rubrique_0001">
 
 	                            <span class="footer_puce" style="border-bottom-color:#00a59a"></span>
-	                            <span>École interfacultaire de bioingénieurs</span>
+	                            <span>École interfacultaire de Bioingénieurs</span>
 
 	                                    </a>
 
@@ -4376,12 +4710,28 @@
 	                                    <a href="https://www.ulb.be/fr/institut-d-etudes-europeennes" class="type_rubrique_0001">
 
 	                            <span class="footer_puce" style="border-bottom-color:#00509a"></span>
-	                            <span>Institut d'études européennes</span>
+	                            <span>Institut d'Études européennes</span>
 
 	                                    </a>
 
 	                                </li>
 
+	                                <li>
+	                                    
+	                                    
+	                                    <a href="https://langues.ulb.be/" class="type_rubrique_0001">
+	                                        
+	                                        
+	                            
+	                            <span class="footer_puce" style="border-bottom-color:#ad0f0a"></span>
+	                            <span>ULB Langues</span>
+	                            
+	                                
+	                                    </a>
+	                                    
+	                                    
+	                                    
+	                                </li>
 	                    </ul>
 
 	            </div><!--
@@ -4431,7 +4781,7 @@
 
 	                                    </a><!--
 
-	                                --><a class="grille_pictos__item" href="https://www.ulb.be/fr/civis-1" class="type_rubrique_0001">
+	                                --><a class="grille_pictos__item" href="https://www.ulb.be/fr/civis" class="type_rubrique_0001">
 
 	                            <div class="grille_pictos__img_wrapper"><img src="https://www.ulb.be/medias/photo/civis_1553847691371-png"/></div>
 	                            <span>CIVIS</span>
@@ -4476,10 +4826,10 @@
     --><div id="menu_deroulant_footer1" class="header_toggle">
         <button class="header_toggle__libelle header_toggle__lvl1" data-toggle="[data-toggle-id='menuderoulantfooter1']" data-toggle-group="menus" type="button">
 
-                <span class="header_toggle__picto"><img src="https://www.ulb.be/medias/photo/acces-restreints-header_1534254852458-png" alt="Accès restreints"></span>
+                <span class="header_toggle__picto"><img src="https://www.ulb.be/medias/photo/acces-restreints-header_1534254852458-png" alt="Intranet"></span>
 
             <span class="header_toggle__libelle-texte">
-            	Accès restreints
+            	Intranet
         	</span>
         </button>
         <div data-toggle-id="menuderoulantfooter1" class="header_toggle__menu menuderoulant" data-toggle-target>
@@ -4504,10 +4854,12 @@
                     </li>
 
                     <li class="menuderoulant__item">
-                        <a href="https://www.ulb.be/fr/connexion-k-sup" class="type_rubrique_0001">
+                        <a href="https://www.ulb.be/fr/mode-edition" class="type_rubrique_CONN">
+                            
+                                <span class="header_toggle__picto"><img src="https://www.ulb.be/medias/photo/noun-pencil-3102612_1581950006718-png" title="Mode édition"></span>
 
                             <span class="header_toggle__libelle">
-                            Connexion adminsite
+                            Mode édition
                         </span>
                         </a>
                     </li>
@@ -4523,7 +4875,7 @@
     </footer>
 
 <a class="url-fiche" href="https://www.ulb.be/fr/ulb-accueil">https://www.ulb.be/fr/ulb-accueil</a>
-<script type="text/javascript" src="https://www.ulb.be/wro/scriptsFo_fr_FR/b906e4797d18ee20a3ae1f640abbbd042096431.js"></script>
+<script type="text/javascript" src="https://www.ulb.be/wro/scriptsFo_fr_FR/e4e193d5d0d0a3956eae6674779f1f354873f136.js"></script>
 
 </body>
 </html>
