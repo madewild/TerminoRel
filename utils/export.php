@@ -155,6 +155,7 @@ foreach($domains as $domain) {
   echo "Glossaire " . $domain ." exporté en TBX avec succès.<br>";
 
   $zip = new ZipArchive;
+  echo "Current directory is " . getcwd();
   if ($zip->open('../tbx/'.$domain.'.zip') === TRUE) {
       $zip->addFile('../tbx/'.$domain.'.tbx', $domain.'.tbx');
       $zip->close();
