@@ -1,4 +1,15 @@
 <?php
+
+if (basename(__FILE__) == basename($_SERVER['SCRIPT_FILENAME'])) {
+    # direct usage of export, not included by insert_term
+    error_reporting(-1);
+    ini_set('display_errors', 'On');
+    include("../static/secret.php");
+    $server = SERVER;
+    $username = USERNAME;
+    $password = PASSWORD;
+ }
+
 function print_trad($results, $type) {
   $tig = '';
   while ($row = sqlsrv_fetch_array($results)) {
