@@ -27,7 +27,7 @@ include("../static/header.php");
                 if ($conn) {
                     $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE 'P01%01-fr' ORDER BY termtext", array(), array("Scrollable" => 'static'));
                     while ($row = sqlsrv_fetch_array($query)) {
-                        echo '<option value="'.$row["termtext"].'">'.$row["termtext"].'</option>';
+                        echo '<option value="'.$row["termlexid"].'">'.$row["termtext"].'</option>';
                     }
                 }
                 ?>
