@@ -550,10 +550,10 @@
 
 </style>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/validate.js"></script>
-    <script src="js/details-shim.js"></script>
-    <script src="js/language-selection.js?version=2"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/validate.js"></script>
+    <script src="../js/details-shim.js"></script>
+    <script src="../js/language-selection.js?version=2"></script>
 
     <script type="text/javascript">var html = document.getElementsByTagName('html')[0]; html.className = html.className.replace('no-js', 'js');</script>
     <script type="text/javascript" src="https://www.ulb.be/wro/scripts/ab0a3f1398fc9ba91f3aa9319fda64515b6e39eb.js"></script>
