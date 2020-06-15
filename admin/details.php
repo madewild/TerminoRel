@@ -17,7 +17,7 @@ $conninfo = array(
 
 include("../static/header.php");
 
-echo "<h3>Fiche détaillée 
+echo "<h3>Fiche détaillée &nbsp;&nbsp;&nbsp;
 <img title='Modifier la fiche' src='icons/edit.png' style='width:24px;height:24px'> 
 <img title='Supprimer la fiche' src='icons/delete.png' style='width:24px;height:24px'></h3>";
 echo "<fieldset>";
