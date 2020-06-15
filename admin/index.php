@@ -1,1 +1,3 @@
-<h1>Bienvenue dans l'espace d'administration.</h1>
+<?php
+include("../index.php");
+?>
