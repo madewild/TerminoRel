@@ -18,8 +18,8 @@ $conninfo = array(
 include("../static/header.php");
 
 echo "<h3>Fiche détaillée 
-<img title='Modifier la fiche' src='icons/edit.png' width='50%' height='50%'> 
-<img title='Supprimer la fiche' src='icons/delete.png' width='50%' height='50%'></h3>";
+<img title='Modifier la fiche' src='icons/edit.png' style='width:50%;height:50%'> 
+<img title='Supprimer la fiche' src='icons/delete.png' style='width:50%;height:50%'></h3>";
 echo "<fieldset>";
 echo "<p>Terme principal en français : <b>" . $termtext . "</b></p>";
 echo "</fieldset>";
