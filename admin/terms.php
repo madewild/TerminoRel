@@ -32,7 +32,9 @@ include("../static/header.php");
                     }
                 }
                 ?>
-            </select></li>
+            </select>
+            <input type="submit" value="Afficher">
+            </li>
         </ul></nav>
     </fieldset>
 </form><br>
