@@ -17,7 +17,7 @@ $conninfo = array(
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid=$termlexid ORDER BY termtext", array(), array("Scrollable" => 'static'));
+    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$termlexid'", array(), array("Scrollable" => 'static'));
     $row = sqlsrv_fetch_array($query);
 }
 
