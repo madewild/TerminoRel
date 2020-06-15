@@ -13,15 +13,14 @@ $conninfo = array(
     "CharacterSet" => "UTF-8"
 );
 
-#include("functions.php");
 include("../static/header.php");
 ?>
 <h3>Espace d'administration</h3>
-<form class="form" action="" method="get" onsubmit="return validate()">
+<form class="form" action="" method="get">
     <fieldset>
         <legend>Vos critères de recherche</legend>
         <nav id="form"><ul>
-            <li><label for="domain">Fiche</label>
+            <li><label for="fiche">Fiche</label>
             <select name="fiche">
                 <?php
                 $conn = sqlsrv_connect($server, $conninfo);
