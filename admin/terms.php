@@ -16,7 +16,7 @@ $conninfo = array(
 #include("functions.php");
 include("../static/header.php");
 ?>
-<h3>Espace d'administration<h3>
+<h3>Espace d'administration</h3>
 <form class="form" action="" method="get" onsubmit="return validate()">
     <fieldset>
         <legend>Vos critères de recherche</legend>
