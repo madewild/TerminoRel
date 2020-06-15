@@ -713,7 +713,7 @@
 
 <div class="banniere" role="banner">
     <a href="https://www.ulb.be/" class="banniere__logo logo_mobile" title="Retour à la page d'accueil">
-        <img src="/uas/ulbout/NOM_PROPRIETE_LOGO_MOBILE/ulb-mobile.svg" alt="logo-ULB" title="Retour à la page d'accueil"/>
+        <img src="https://www.ulb.be/uas/ulbout/NOM_PROPRIETE_LOGO_MOBILE/ulb-mobile.svg" alt="logo-ULB" title="Retour à la page d'accueil"/>
     </a>
     <a href="https://www.ulb.be/" class="banniere__logo" title="Retour à la page d'accueil">
         <img src="https://www.ulb.be/uas/ulbout/LOGO/Logo-ULB.svg" alt="logo-ULB" title="Retour à la page d'accueil"/>
