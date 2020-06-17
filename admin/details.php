@@ -85,10 +85,11 @@ if(!empty($definition)) {
     $source_text_def = $row['text'];
     $result = sqlsrv_query($conn, "SELECT title FROM biblio WHERE id=$bib_id", array(), array("Scrollable" => 'static'));
     $bib_title_def = sqlsrv_fetch_array($result)['title'];
-    echo "<tr><td>Définition</td><td>" . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")</td></tr>";
+    echo "<tr><td>Définition</td><td>" . $definition . "</td></tr>";
+    echo "<tr><td>Source de la définition</td><td>" . $bib_title_def . ", " . $source_text_def . "</td></tr>";
 }
 
-$result = sqlsrv_query($conn, "SELECT explanation FROM langroup WHERE termid=$termid AND lang LIKE '$source%'", array(), array("Scrollable" => 'static'));
+$result = sqlsrv_query($conn, "SELECT explanation FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'", array(), array("Scrollable" => 'static'));
 $explanation = sqlsrv_fetch_array($result)['explanation'];
 if(!empty($explanation)) {
     $result = sqlsrv_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='exp'", array(), array("Scrollable" => 'static'));
@@ -97,7 +98,8 @@ if(!empty($explanation)) {
     $source_text_exp = $row['text'];
     $result = sqlsrv_query($conn, "SELECT title FROM biblio WHERE id=$bib_id", array(), array("Scrollable" => 'static'));
     $bib_title_exp = sqlsrv_fetch_array($result)['title'];
-    echo "<tr><td>Explication</td><td>" . $explanation . " (<i>" . $bib_title_exp . "</i>, " . $source_text_exp . ")</td></tr>";
+    echo "<tr><td>Explication</td><td>" . $explanation . "</td></tr>";
+    echo "<tr><td>Source de l'explication</td><td>" . $bib_title_exp . ", " . $source_text_exp . "</td></tr>";
 }
 
 echo "</table>";
