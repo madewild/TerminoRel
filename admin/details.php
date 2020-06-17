@@ -73,6 +73,9 @@ if($number_id == 12) {
 }
 echo "<tr><td>Nombre</td><td><b>" . $number . "</b></td></tr>";
 
+$result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source", array(), array("Scrollable" => 'static'));
+$termid = sqlsrv_fetch_array($result)['termid'];
+
 $result = sqlsrv_query($conn, "SELECT definition FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'", array(), array("Scrollable" => 'static'));
 $definition = sqlsrv_fetch_array($result)['definition'];
 if(!empty($definition)) {
