@@ -29,8 +29,10 @@ echo "<h3>Fiche détaillée &nbsp;&nbsp;&nbsp;
 echo "<table>";
 echo "<tr><td>Terme principal en français</td><td><b>" . $row['termtext'] . "</b></td></tr>";
 $variant = $row['variant'];
+$mf = False;
 if($variant != NULL) {
     echo "<tr><td>Variante</td><td><b>" . $variant . "</b></td></tr>";
+    $mf = True;
 }
 
 $langroup_source = $row['langroup'];
