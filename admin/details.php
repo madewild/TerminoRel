@@ -120,8 +120,8 @@ $results_depr = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$lan
 
 $num_pref = sqlsrv_num_rows($results_pref);
 show_trad_admin($conn, $langroup_target, $results_pref, "privilégiée");
-show_trad_admin($conn, $langroup_target, $results_admi, $cible, "admise");
-show_trad_admin($conn, $langroup_target, $results_depr, $cible, "à éviter");
+show_trad_admin($conn, $langroup_target, $results_admi, "admise");
+show_trad_admin($conn, $langroup_target, $results_depr, "à éviter");
 
 echo "</table>";
 ?>
