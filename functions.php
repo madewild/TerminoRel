@@ -44,8 +44,7 @@ function show_trad_admin($conn, $langroup_target, $results, $type) {
     while ($row = sqlsrv_fetch_array($results)) {
         $translation = $row['termtext'];
         echo "<table><tr><td><b>Traduction " . $type . "</b></td><td>" . $translation . "</td></tr>";
-        $result = sqlsrv_query($conn, "SELECT id FROM termgroup WHERE langroup=$langroup_target", array(), array("Scrollable" => 'static'));
-        $termgroup = sqlsrv_fetch_array($result)['id'];
+        $termgroup = $row['id'];
         $result = sqlsrv_query($conn, "SELECT id, context FROM contextgroup WHERE termgroup=$termgroup", array(), array("Scrollable" => 'static'));
         $row = sqlsrv_fetch_array($result);
         $contextgroup = $row['id'];
