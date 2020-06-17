@@ -27,11 +27,11 @@ echo "<h3>Fiche détaillée &nbsp;&nbsp;&nbsp;
 <img title='Modifier la fiche' src='icons/edit.png' style='width:24px;height:24px'> 
 <img title='Supprimer la fiche' src='icons/delete.png' style='width:24px;height:24px'></h3>";
 echo "<table>";
-echo "<tr><td>Terme principal en français</td><td><b>" . $row['termtext'] . "</b></td></tr>";
+echo "<tr><td><b>Terme principal en français</b></td><td>" . $row['termtext'] . "</td></tr>";
 $variant = $row['variant'];
 $mf = False;
 if($variant != NULL) {
-    echo "<tr><td>Variante</td><td><b>" . $variant . "</b></td></tr>";
+    echo "<tr><td><b>Variante</b></td><td>" . $variant . "</td></tr>";
     $mf = True;
 }
 
@@ -40,7 +40,7 @@ $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_
 $row2 = sqlsrv_fetch_array($result);
 if($row2) {
     $acro = $row2['termtext'];
-    echo "<tr><td>Abréviation</td><td><b>" . $acro . "</b></td></tr>";
+    echo "<tr><td><b>Abréviation</b></td><td>" . $acro . "</td></tr>";
 }
 
 $pos_id = $row['pos'];
@@ -51,7 +51,7 @@ if($pos_id == 1) {
 } else {
     $pos = "locution";
 }
-echo "<tr><td>Catégorie grammaticale</td><td><b>" . $pos . "</b></td></tr>";
+echo "<tr><td><b>Catégorie grammaticale</b></td><td>" . $pos . "</td></tr>";
 
 $gender_id = $row['gender'];
 if($gender_id == 4 or $mf) {
@@ -63,7 +63,7 @@ if($gender_id == 4 or $mf) {
 } else {
     $gender = "";
 }
-echo "<tr><td>Genre</td><td><b>" . $gender . "</b></td></tr>";
+echo "<tr><td><b>Genre</b></td><td>" . $gender . "</td></tr>";
 
 $number_id = $row['number'];
 if($number_id == 12) {
@@ -71,7 +71,7 @@ if($number_id == 12) {
 } else {
     $number = "singulier";
 }
-echo "<tr><td>Nombre</td><td><b>" . $number . "</b></td></tr>";
+echo "<tr><td><b>Nombre</b></td><td>" . $number . "</td></tr>";
 
 $result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source", array(), array("Scrollable" => 'static'));
 $termid = sqlsrv_fetch_array($result)['termid'];
@@ -85,8 +85,8 @@ if(!empty($definition)) {
     $source_text_def = $row['text'];
     $result = sqlsrv_query($conn, "SELECT title FROM biblio WHERE id=$bib_id", array(), array("Scrollable" => 'static'));
     $bib_title_def = sqlsrv_fetch_array($result)['title'];
-    echo "<tr><td>Définition</td><td>" . $definition . "</td></tr>";
-    echo "<tr><td>Source de la définition</td><td>" . $bib_title_def . ", " . $source_text_def . "</td></tr>";
+    echo "<tr><td><b>Définition</b></td><td>" . $definition . "</td></tr>";
+    echo "<tr><td><b>Source de la définition</b></td><td>" . $bib_title_def . ", " . $source_text_def . "</td></tr>";
 }
 
 $result = sqlsrv_query($conn, "SELECT explanation FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'", array(), array("Scrollable" => 'static'));
@@ -98,8 +98,8 @@ if(!empty($explanation)) {
     $source_text_exp = $row['text'];
     $result = sqlsrv_query($conn, "SELECT title FROM biblio WHERE id=$bib_id", array(), array("Scrollable" => 'static'));
     $bib_title_exp = sqlsrv_fetch_array($result)['title'];
-    echo "<tr><td>Explication</td><td>" . $explanation . "</td></tr>";
-    echo "<tr><td>Source de l'explication</td><td>" . $bib_title_exp . ", " . $source_text_exp . "</td></tr>";
+    echo "<tr><td><b>Explication</b></td><td>" . $explanation . "</td></tr>";
+    echo "<tr><td><b>Source de l'explication</b></td><td>" . $bib_title_exp . ", " . $source_text_exp . "</td></tr>";
 }
 
 echo "</table>";
