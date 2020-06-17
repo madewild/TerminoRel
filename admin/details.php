@@ -106,6 +106,7 @@ if(!empty($explanation)) {
     echo "<tr><td><b>Explication</b></td><td>" . $explanation . "</td></tr>";
     echo "<tr><td><b>Source de l'explication</b></td><td>" . $bib_title_exp . ", " . $source_text_exp . "</td></tr>";
 }
+echo "</table>";
 
 $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE 'en%'", array(), array("Scrollable" => 'static'));
 $langroup_target = sqlsrv_fetch_array($result)['id'];
@@ -119,10 +120,8 @@ $results_depr = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$lan
 
 $num_pref = sqlsrv_num_rows($results_pref);
 show_trad_admin($conn, $langroup_target, $results_pref, "privilégiée");
-if($num_pref == 0) {
-    //show_trad_admin($conn, $langroup_target, $results_admi, $cible, "admise");
-    //show_trad_admin($conn, $langroup_target, $results_depr, $cible, "à éviter");
-}
+show_trad_admin($conn, $langroup_target, $results_admi, $cible, "admise");
+show_trad_admin($conn, $langroup_target, $results_depr, $cible, "à éviter");
 
 echo "</table>";
 ?>

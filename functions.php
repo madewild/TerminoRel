@@ -43,7 +43,7 @@ function show_trad($conn, $langroup_target, $results, $lang_trad, $type) {
 function show_trad_admin($conn, $langroup_target, $results, $type) {
     while ($row = sqlsrv_fetch_array($results)) {
         $translation = $row['termtext'];
-        echo "<tr><td><b>Traduction " . $type . "</b></td><td>" . $translation . "</td></tr>";
+        echo "<table><tr><td><b>Traduction " . $type . "</b></td><td>" . $translation . "</td></tr>";
         $result = sqlsrv_query($conn, "SELECT id FROM termgroup WHERE langroup=$langroup_target", array(), array("Scrollable" => 'static'));
         $termgroup = sqlsrv_fetch_array($result)['id'];
         $result = sqlsrv_query($conn, "SELECT id, context FROM contextgroup WHERE termgroup=$termgroup", array(), array("Scrollable" => 'static'));
@@ -59,6 +59,7 @@ function show_trad_admin($conn, $langroup_target, $results, $type) {
             $bib_title_con = sqlsrv_fetch_array($result)['title'];
             echo "<tr><td><b>Exemple d'usage</b></td><td>" . $context . "</td></tr>";
             echo "<tr><td><b>Source de l'example</b></td><td>" . $bib_title_con . ", " . $source_text_con . "</td></tr>";
+        echo "</table>";
         } 
     }
 }
