@@ -185,10 +185,10 @@ if ($conn) {
 
             $num_pref = sqlsrv_num_rows($results_pref);
             echo "<tr><td>" . strtoupper($cible) . "</td><td>";
-            show_trad($conn, $langroup_target, $results_pref, $cible, "privilégié");
+            show_trad($conn, $results_pref, $cible, "privilégié");
             if($num_pref == 0) {
-                show_trad($conn, $langroup_target, $results_admi, $cible, "admis");
-                show_trad($conn, $langroup_target, $results_depr, $cible, "à éviter");
+                show_trad($conn, $results_admi, $cible, "admis");
+                show_trad($conn, $results_depr, $cible, "à éviter");
             }
             echo "</td></tr>";
 

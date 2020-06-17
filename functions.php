@@ -1,6 +1,6 @@
 <?php
 
-function show_trad($conn, $langroup_target, $results, $lang_trad, $type) {
+function show_trad($conn, $results, $lang_trad, $type) {
     $counter = sqlsrv_num_rows($results);
     while ($row = sqlsrv_fetch_array($results)) {
         $color = "";
@@ -16,8 +16,7 @@ function show_trad($conn, $langroup_target, $results, $lang_trad, $type) {
         }
         echo "</b> (terme " . $type . ")";
         echo "</span></summary>";
-        $result = sqlsrv_query($conn, "SELECT id FROM termgroup WHERE langroup=$langroup_target", array(), array("Scrollable" => 'static'));
-        $termgroup = sqlsrv_fetch_array($result)['id'];
+        $termgroup = $row['id'];
         $result = sqlsrv_query($conn, "SELECT id, context FROM contextgroup WHERE termgroup=$termgroup", array(), array("Scrollable" => 'static'));
         $row = sqlsrv_fetch_array($result);
         $contextgroup = $row['id'];
@@ -40,7 +39,7 @@ function show_trad($conn, $langroup_target, $results, $lang_trad, $type) {
     }
 }
 
-function show_trad_admin($conn, $langroup_target, $results, $type) {
+function show_trad_admin($conn, $results, $type) {
     while ($row = sqlsrv_fetch_array($results)) {
         $translation = $row['termtext'];
         echo "<table><tr><td><b>Traduction " . $type . "</b></td><td>" . $translation . "</td></tr>";
