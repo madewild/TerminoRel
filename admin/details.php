@@ -23,7 +23,10 @@ if ($conn) {
 
 include("../functions.php");
 include("../static/header.php");
-echo "<p><a href='#'>Retour à la sélection des fiches</a></p>"; // remove the dev before moving to prod!
+$path = $_SERVER['REQUEST_URI'];
+$barebath = strtok($path, '?');
+
+echo "<p><a href='" . $barebath . "'>Retour à la sélection des fiches</a></p>";
 
 echo "<h3>Fiche détaillée &nbsp;&nbsp;&nbsp;
 <img title='Modifier la fiche' src='icons/edit.png' style='width:24px;height:24px'> 
