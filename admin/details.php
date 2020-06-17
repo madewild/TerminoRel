@@ -26,11 +26,11 @@ include("../static/header.php");
 echo "<h3>Fiche détaillée &nbsp;&nbsp;&nbsp;
 <img title='Modifier la fiche' src='icons/edit.png' style='width:24px;height:24px'> 
 <img title='Supprimer la fiche' src='icons/delete.png' style='width:24px;height:24px'></h3>";
-echo "<fieldset><table>";
-echo "<tr><td>Terme principal en français</td><td>" . $row['termtext'] . "</td></tr>";
+echo "<table>";
+echo "<tr><td>Terme principal en français</td><td><b>" . $row['termtext'] . "</b></td></tr>";
 $variant = $row['variant'];
 if($variant != NULL) {
-    echo "<tr><td>Variante</td><td>" . $variant . "</td></tr>";
+    echo "<tr><td>Variante</td><td><b>" . $variant . "</b></td></tr>";
 }
-echo "</table></fieldset>";
+echo "</table>";
 ?>
