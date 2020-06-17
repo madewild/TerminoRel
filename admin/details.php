@@ -21,7 +21,7 @@ if ($conn) {
     $row = sqlsrv_fetch_array($query);
 }
 
-include("functions.php");
+include("../functions.php");
 include("../static/header.php");
 echo "<p><a href='#'>Retour à la sélection des fiches</a></p>"; // remove the dev before moving to prod!
 
@@ -104,7 +104,7 @@ if(!empty($explanation)) {
     echo "<tr><td><b>Source de l'explication</b></td><td>" . $bib_title_exp . ", " . $source_text_exp . "</td></tr>";
 }
 
-$result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE '$cible%'", array(), array("Scrollable" => 'static'));
+$result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE 'en%'", array(), array("Scrollable" => 'static'));
 $langroup_target = sqlsrv_fetch_array($result)['id'];
 $results_pref = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=7", array(), array("Scrollable" => 'static'));
 if($results_pref === FALSE) {
