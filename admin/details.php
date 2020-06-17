@@ -118,9 +118,9 @@ $results_admi = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$lan
 $results_depr = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=10", array(), array("Scrollable" => 'static'));
 
 $num_pref = sqlsrv_num_rows($results_pref);
-//show_trad_admin($conn, $langroup_target, $results_pref, $cible, "privilégié");
+show_trad_admin($conn, $langroup_target, $results_pref, "privilégiée");
 if($num_pref == 0) {
-  //  show_trad_admin($conn, $langroup_target, $results_admi, $cible, "admis");
+    //show_trad_admin($conn, $langroup_target, $results_admi, $cible, "admise");
     //show_trad_admin($conn, $langroup_target, $results_depr, $cible, "à éviter");
 }
 
