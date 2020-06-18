@@ -24,9 +24,9 @@ if ($conn) {
 include("../functions.php");
 include("../static/header.php");
 $path = $_SERVER['REQUEST_URI'];
-$barebath = strtok($path, '?');
+$barepath = strtok($path, '?');
 
-echo "<p><a href='" . $barebath . "'>Retour à la sélection des fiches</a></p>";
+echo "<p><a href='" . $barepath . "'>Retour à la sélection des fiches</a></p>";
 
 echo "<h3>Fiche détaillée &nbsp;&nbsp;&nbsp;
 <img title='Modifier la fiche' src='icons/edit.png' style='width:24px;height:24px'> 
