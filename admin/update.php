@@ -6,7 +6,7 @@ $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
 
-$termlexid = htmlspecialchars($_GET['fiche']);
+$termlexid = htmlspecialchars($_GET['termlexid']);
 
 $conninfo = array(
     "Database" => "terminorel",
@@ -25,7 +25,7 @@ include("../functions.php");
 include("../static/header.php");
 $path = $_SERVER['REQUEST_URI'];
 $barepath = strtok($path, '?');
-$fullpath = $barepath . "/details.php?fiche=" . $termlexid;
+$fullpath = $barepath . "?fiche=" . $termlexid;
 
 echo "<p><a href='" . $fullpath . "/'>Retour à la fiche</a></p>";
 
