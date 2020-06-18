@@ -29,7 +29,7 @@ $barepath = strtok($path, '?');
 echo "<p><a href='" . $barepath . "'>Retour à la sélection des fiches</a></p>";
 
 echo "<h3>Fiche détaillée &nbsp;&nbsp;&nbsp;
-<a href='update.php?fiche=" . $termlexid . "'><img title='Modifier la fiche' src='icons/edit.png' style='width:24px;height:24px'> 
+<a href='" . $barepath . "?termlexid=" . $termlexid . "'><img title='Modifier la fiche' src='icons/edit.png' style='width:24px;height:24px'></a> 
 <img title='Supprimer la fiche' src='icons/delete.png' style='width:24px;height:24px'></h3>";
 echo "<table>";
 echo "<tr><td><b>Terme principal en français</b></td><td>" . $row['termtext'] . "</td></tr>";
