@@ -30,9 +30,10 @@ $fullpath = $barepath . "?fiche=" . $termlexid;
 echo "<p><a href='" . $fullpath . "/'>Retour à la fiche</a></p>";
 
 echo "<h3>Modifier la fiche</h3>";
-echo '<form class="form" action="" method="get"<fieldset><nav id="form"><ul>';
+echo '<form class="form" action="" method="get"><fieldset><nav id="form"><ul>';
 echo "<li><label for='term'>Terme principal en français</label>";
 echo '<input type="text" class="input" id="term" name="term" size="70" value="' . $row['termtext'] . '"></li>';
+echo "</ul></nav></fieldset></form><table>";
 
 $variant = $row['variant'];
 $mf = False;
