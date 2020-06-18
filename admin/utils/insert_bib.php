@@ -1,7 +1,7 @@
 <?php
 error_reporting(-1);
 ini_set('display_errors', 'On');
-include("../static/secret.php");
+include("../../static/secret.php");
 $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
@@ -22,7 +22,7 @@ $conninfo = array(
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    $xml = simplexml_load_file("../xml/biblio_v2.xml");
+    $xml = simplexml_load_file("../../xml/biblio_v2.xml");
     foreach($xml->entrée as $doc)
     {
         $ref = $doc['id'];

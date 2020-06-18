@@ -1,2 +1,2 @@
 static/secret.php
-utils/sync.sh
+admin/utils/sync.sh

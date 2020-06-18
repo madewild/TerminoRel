@@ -4,7 +4,7 @@ if (basename(__FILE__) == basename($_SERVER['SCRIPT_FILENAME'])) {
     # direct usage of export, not included by insert_term
     error_reporting(-1);
     ini_set('display_errors', 'On');
-    include("../static/secret.php");
+    include("../../static/secret.php");
     $server = SERVER;
     $username = USERNAME;
     $password = PASSWORD;
@@ -151,13 +151,13 @@ foreach($domains as $domain) {
     </text>
   </martif>';
 
-  file_put_contents('../tbx/'.$domain.'.tbx', $tbx);
+  file_put_contents('../../tbx/'.$domain.'.tbx', $tbx);
   echo "Glossaire " . $domain ." exporté en TBX avec succès.<br>";
 
   $zip = new ZipArchive;
   //echo "Current directory is " . getcwd();
-  if ($zip->open('../tbx/'.$domain.'.zip') === TRUE) {
-      $zip->addFile('../tbx/'.$domain.'.tbx', $domain.'.tbx');
+  if ($zip->open('../../tbx/'.$domain.'.zip') === TRUE) {
+      $zip->addFile('../../tbx/'.$domain.'.tbx', $domain.'.tbx');
       $zip->close();
       echo 'La compression ZIP a réussi.<br>';
   } else {

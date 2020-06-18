@@ -7,7 +7,7 @@
 <?php
 error_reporting(-1);
 ini_set('display_errors', 'On');
-include("../static/secret.php");
+include("../../static/secret.php");
 $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
