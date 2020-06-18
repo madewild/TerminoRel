@@ -25,14 +25,15 @@ include("../functions.php");
 include("../static/header.php");
 $path = $_SERVER['REQUEST_URI'];
 $barepath = strtok($path, '?');
+$fullpath = $barepath . "/details.php?fiche=" . $termlexid;
 
-echo "<p><a href='" . $barepath . "'>Retour à la sélection des fiches</a></p>";
+echo "<p><a href='" . $fullpath . "/'>Retour à la fiche</a></p>";
 
-echo "<h3>Fiche détaillée &nbsp;&nbsp;&nbsp;
-<a href='update.php?fiche=" . $termlexid . "'><img title='Modifier la fiche' src='icons/edit.png' style='width:24px;height:24px'> 
-<img title='Supprimer la fiche' src='icons/delete.png' style='width:24px;height:24px'></h3>";
-echo "<table>";
-echo "<tr><td><b>Terme principal en français</b></td><td>" . $row['termtext'] . "</td></tr>";
+echo "<h3>Modifier la fiche</h3>";
+echo '<form class="form" action="" method="get"<fieldset><nav id="form"><ul>';
+echo "<li><label for='term'>Terme principal en français</label>";
+echo '<input type="text" class="input" id="term" name="term" size="70" value="' . $row['termtext'] . '"></li>';
+
 $variant = $row['variant'];
 $mf = False;
 if($variant != NULL) {
