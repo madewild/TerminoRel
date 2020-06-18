@@ -32,16 +32,17 @@ echo "<p><a href='" . $fullpath . "'>Retour à la fiche</a></p>";
 echo "<h3>Modifier la fiche</h3>";
 echo '<form class="form" action="" method="get"><fieldset><nav id="form"><ul>';
 echo "<li><label for='term'>Terme principal en français</label> ";
-echo '<input type="text" class="input" id="term" name="term" size="70" value="' . $row['termtext'] . '"></li>';
+echo '<input type="text" class="input" id="term" name="term" value="' . $row['termtext'] . '"></li>';
 
 $variant = $row['variant'];
 $mf = False;
 if($variant != NULL) {
     echo "<li><label for='variant'>Variante</label> ";
-    echo '<input type="text" class="input" id="variant" name="variant" size="70" value="' . $variant . '"></li>';
+    echo '<input type="text" class="input" id="variant" name="variant" value="' . $variant . '"></li>';
     $mf = True;
 }
 
+echo '<li><input type="submit" value="Sauvegarder"></li>';
 echo "</ul></nav></fieldset></form><table>";
 
 $langroup_source = $row['langroup'];
