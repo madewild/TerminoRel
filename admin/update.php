@@ -27,20 +27,22 @@ $path = $_SERVER['REQUEST_URI'];
 $barepath = strtok($path, '?');
 $fullpath = $barepath . "?fiche=" . $termlexid;
 
-echo "<p><a href='" . $fullpath . "/'>Retour à la fiche</a></p>";
+echo "<p><a href='" . $fullpath . "'>Retour à la fiche</a></p>";
 
 echo "<h3>Modifier la fiche</h3>";
 echo '<form class="form" action="" method="get"><fieldset><nav id="form"><ul>';
-echo "<li><label for='term'>Terme principal en français</label>";
+echo "<li><label for='term'>Terme principal en français</label> ";
 echo '<input type="text" class="input" id="term" name="term" size="70" value="' . $row['termtext'] . '"></li>';
-echo "</ul></nav></fieldset></form><table>";
 
 $variant = $row['variant'];
 $mf = False;
 if($variant != NULL) {
-    echo "<tr><td><b>Variante</b></td><td>" . $variant . "</td></tr>";
+    echo "<li><label for='variant'>Variante</label> ";
+    echo '<input type="text" class="input" id="variant" name="variant" size="70" value="' . $variant . '"></li>';
     $mf = True;
 }
+
+echo "</ul></nav></fieldset></form><table>";
 
 $langroup_source = $row['langroup'];
 $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1", array(), array("Scrollable" => 'static'));
