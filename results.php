@@ -51,7 +51,7 @@ $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
     //echo "<b>Domaine : " . $domaine . "</b><br><br>";
 
-    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext", array(), array("Scrollable" => 'static'));
+    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext", array(), array("Scrollable" => 'static'));
     
     // Total number of results to display
     $num_rows = sqlsrv_num_rows($query);
