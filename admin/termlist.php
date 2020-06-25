@@ -3,6 +3,7 @@
 <form class="form" action="" method="get">
     <fieldset>
         <legend>Sélectionnez une fiche à modifier</legend>
+        <nav id="form">
             <ul>
                 <li>
                     <label for="domain">Domaine</label>
@@ -27,6 +28,7 @@
                 </li>
                 <li><input type="submit" value="Afficher"></li>
             </ul>
+        </nav>
         <p><a href="?import=xml">Importez un nouveau fichier XML</a></p>
     </fieldset>
 </form><br>
