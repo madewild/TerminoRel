@@ -51,7 +51,7 @@
 <h3>Télécharger un glossaire</h3>
 <ul>
     <li>
-        Télécharger un glossaire au format TBX (format destiné aux outils d'aide à la traduction) :
+        Télécharger un glossaire au format TBX compressé (format destiné aux outils d'aide à la traduction) :
         <ul class="static">
             <li><a href='tbx/P.zip' download="all">Tous les glossaires</a></li>
             <li><a href='tbx/P01.zip' download="titres_fonctions">Titres et fonctions</a></li>
