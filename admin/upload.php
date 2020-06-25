@@ -6,7 +6,7 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-$path = $_SERVER['REQUEST_URI'];
+$path = $_SERVER['REQUEST_URI'] . "?import=xml";
 
 echo "<p><a href='" . $path . "'>Retour à l'import de fichier XML</a></p>";
 echo "<p>";
