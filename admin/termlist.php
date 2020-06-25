@@ -29,6 +29,6 @@
                 <li><input type="submit" value="Afficher"></li>
             </ul>
         </nav>
-        <p><a href="?import=xml">Importez un nouveau fichier XML</a></p>
+        <legend><a href="?import=xml">Importez un nouveau fichier XML</a></legend>
     </fieldset>
 </form><br>
