@@ -13,13 +13,13 @@ echo "<p>";
 
 // Check if file already exists
 if (file_exists($target_file)) {
-  echo "Ce fichier existe déjà. ";
+  echo "Ce nom de fichier existe déjà. ";
   $uploadOk = 0;
 }
 
 // Check file size
-if ($_FILES["fileToUpload"]["size"] > 1000000) {
-  echo "Désolé, ce fichier est trop volumineux. ";
+if ($_FILES["fileToUpload"]["size"] > 500000) {
+  echo "Ce fichier est trop volumineux. ";
   $uploadOk = 0;
 }
 
@@ -31,7 +31,7 @@ if($fileType != "xml" ) {
 
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-  echo "Ce fichier n'a pas pu être uploadé.";
+  echo "Le fichier n'a pas pu être uploadé.";
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
