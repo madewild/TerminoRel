@@ -4,7 +4,9 @@
             <?php
             $path = $_SERVER['REQUEST_URI'];
             $barepath = strtok($path, '?');
-            $barepath = strtok($barepath, 'admin');
+            if (strpos($path, 'admin') !== false) {
+                $barepath = strtok($barepath, 'admin');
+            }
             echo '<td><a href="' . $barepath . '" title="Aller à la page d&apos;accueil">Page d&apos;accueil</a></td>';
             echo '<td><a href="' . $barepath . '?page=about" title="Aller à la page &apos;À propos des glossaires Terminorel&apos;">À propos des glossaires</a></td>';
             echo '<td><a href="' . $barepath . '?page=help" title="Aller au mode d&apos;emploi des glossaires">Aide</a></td>';
