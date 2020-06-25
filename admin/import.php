@@ -11,7 +11,7 @@ echo "<p><a href='" . $barepath . "'>Retour à l'accueil de l'administration</a>
 
 <h3>Import d'un fichier XML</h3>
 <form action="upload.php" method="post" enctype="multipart/form-data">
-  Choisissez un fichier :
+  <p>Choisissez un fichier :
   <input type="file" name="fileToUpload" id="fileToUpload">
-  <input type="submit" value="OK" name="submit">
+  <input type="submit" value="OK" name="submit"></p>
 </form>
