@@ -7,7 +7,7 @@ if(isset($_GET['fiche'])) {
     include("delete.php");
 } else if(isset($_GET['import'])){
     include("import.php");
-} else if(isset($_POST["OK"])) {
+} else if(isset($_POST["submit"])) {
     include("upload.php");
 } else {
     include("home.php");
