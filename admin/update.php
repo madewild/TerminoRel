@@ -1,28 +1,13 @@
 <?php 
-error_reporting(-1);
-ini_set('display_errors', 'On');
-include("../static/secret.php");
-$server = SERVER;
-$username = USERNAME;
-$password = PASSWORD;
+include("../static/header.php");
 
 $termlexid = htmlspecialchars($_GET['termlexid']);
-
-$conninfo = array(
-    "Database" => "terminorel",
-    "UID" => $username,
-    "PWD" => $password,
-    "CharacterSet" => "UTF-8"
-);
-
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
     $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$termlexid'", array(), array("Scrollable" => 'static'));
     $row = sqlsrv_fetch_array($query);
 }
 
-include("../functions.php");
-include("../static/header.php");
 $path = $_SERVER['REQUEST_URI'];
 $barepath = strtok($path, '?');
 $fullpath = $barepath . "?fiche=" . $termlexid;

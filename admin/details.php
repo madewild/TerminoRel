@@ -1,26 +1,13 @@
 <?php 
-include("../static/secret.php");
-$server = SERVER;
-$username = USERNAME;
-$password = PASSWORD;
+include("../static/header.php");
 
 $termlexid = htmlspecialchars($_GET['fiche']);
-
-$conninfo = array(
-    "Database" => "terminorel",
-    "UID" => $username,
-    "PWD" => $password,
-    "CharacterSet" => "UTF-8"
-);
-
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
     $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$termlexid'", array(), array("Scrollable" => 'static'));
     $row = sqlsrv_fetch_array($query);
 }
 
-include("../functions.php");
-include("../static/header.php");
 $path = $_SERVER['REQUEST_URI'];
 $barepath = strtok($path, '?');
 
