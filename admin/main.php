@@ -8,7 +8,7 @@ if(isset($_GET['fiche'])) {
 } else if(isset($_GET['import'])){
     include("import.php");
 } else {
-    include("termlist.php");
+    include("home.php");
 }
 include("../static/footer.php");
 ?>

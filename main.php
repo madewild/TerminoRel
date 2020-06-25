@@ -16,7 +16,7 @@ if(isset($_GET['term'])) {
       include("static/error.php");
    }
 } else {
-    include("form.php");
+    include("home.php");
 }
 include("static/footer.php");
 ?>
