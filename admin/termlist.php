@@ -1,20 +1,4 @@
-<?php 
-error_reporting(-1);
-ini_set('display_errors', 'On');
-include("../static/secret.php");
-$server = SERVER;
-$username = USERNAME;
-$password = PASSWORD;
-
-$conninfo = array(
-    "Database" => "terminorel",
-    "UID" => $username,
-    "PWD" => $password,
-    "CharacterSet" => "UTF-8"
-);
-
-include("../static/header.php");
-?>
+<?php include("../static/header.php"); ?>
 <h3>Espace d'administration</h3>
 <form class="form" action="" method="get">
     <fieldset>
