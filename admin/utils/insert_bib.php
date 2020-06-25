@@ -1,24 +1,5 @@
 <?php
-error_reporting(-1);
-ini_set('display_errors', 'On');
-include("../../static/secret.php");
-$server = SERVER;
-$username = USERNAME;
-$password = PASSWORD;
-
-function clean($string) {
-    $string = str_replace("'", "''", $string);
-    $string = str_replace("\n", " ", $string);
-    $string = preg_replace('/\s\s+/', ' ', $string);
-    return $string;
-}
-
-$conninfo = array(
-    "Database" => "terminorel",
-    "UID" => $username,
-    "PWD" => $password,
-    "CharacterSet" => "UTF-8"
-);
+include("static/header.php");
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {

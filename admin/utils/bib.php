@@ -5,19 +5,7 @@
 </head>
 <body>
 <?php
-error_reporting(-1);
-ini_set('display_errors', 'On');
-include("../../static/secret.php");
-$server = SERVER;
-$username = USERNAME;
-$password = PASSWORD;
-
-$conninfo = array(
-    "Database" => "terminorel",
-    "UID" => $username,
-    "PWD" => $password,
-    "CharacterSet" => "UTF-8"
-);
+include("static/header.php");
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {

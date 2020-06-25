@@ -1,5 +1,34 @@
 <?php
 
+function clean($string) {
+    $string = str_replace("'", "''", $string);
+    $string = str_replace("\n", " ", $string);
+    $string = preg_replace('/\s\s+/', ' ', $string);
+    return $string;
+}
+
+function sqlsrv_insert_id($conn) {
+    $id = 0; 
+    $res = sqlsrv_query($conn, "SELECT @@identity AS id", array(), array("Scrollable" => 'static')); 
+    if ($row = sqlsrv_fetch_array($res)) { 
+        $id = $row["id"]; 
+    }
+    return $id; 
+}
+
+function print_trad($results, $type) {
+    $tig = '';
+    while ($row = sqlsrv_fetch_array($results)) {
+      $translation = $row['termtext'];
+      $tig .= '
+            <tig>
+              <term>' . $translation . '</term>
+              <note>Terme ' . $type . '</note>
+            </tig>';
+    }
+    return $tig;
+  }
+
 function show_trad($conn, $results, $lang_trad, $type) {
     $counter = sqlsrv_num_rows($results);
     while ($row = sqlsrv_fetch_array($results)) {

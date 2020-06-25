@@ -1,10 +1,5 @@
 <?php 
-error_reporting(-1);
-ini_set('display_errors', 'On');
-include("static/secret.php");
-$server = SERVER;
-$username = USERNAME;
-$password = PASSWORD;
+include("static/header.php");
 
 $glossary = htmlspecialchars($_GET['glossary']);
 $sort = htmlspecialchars($_GET['sort']);
@@ -22,8 +17,6 @@ if ($glossary == 'all') {
     die("Glossaire inconnu.");
 }
 
-include("functions.php");
-include("static/header.php");
 include('static/retour.php');
 
 if($sort == "fr") {
@@ -33,13 +26,6 @@ if($sort == "fr") {
         $cible = "fr";
         $other_lang = "le français";
     }
-
-$conninfo = array(
-    "Database" => "terminorel",
-    "UID" => $username,
-    "PWD" => $password,
-    "CharacterSet" => "UTF-8"
-);
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {

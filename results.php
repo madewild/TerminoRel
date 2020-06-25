@@ -1,10 +1,5 @@
 <?php 
-error_reporting(-1);
-ini_set('display_errors', 'On');
-include("static/secret.php");
-$server = SERVER;
-$username = USERNAME;
-$password = PASSWORD;
+include("static/header.php");
 
 $term = htmlspecialchars($_GET['term']);
 $clean_term = str_replace("'", "''", $term);
@@ -21,8 +16,6 @@ if(isset($_GET['status'])) {
     $restriction = "none";
 }
 
-include("functions.php");
-include("static/header.php");
 include('static/retour.php'); 
 ?>
 
@@ -40,13 +33,6 @@ include('static/retour.php');
 </div><br>
 
 <?php
-$conninfo = array(
-    "Database" => "terminorel",
-    "UID" => $username,
-    "PWD" => $password,
-    "CharacterSet" => "UTF-8"
-);
-
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
     //echo "<b>Domaine : " . $domaine . "</b><br><br>";
