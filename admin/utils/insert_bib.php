@@ -3,6 +3,7 @@ include("../../static/header.php");
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
+    $query = sqlsrv_query($conn, "TRUNCATE TABLE biblio", array(), array("Scrollable" => 'static'));
     $xml = simplexml_load_file("../../xml/biblio_v2.xml");
     foreach($xml->entrée as $doc)
     {
