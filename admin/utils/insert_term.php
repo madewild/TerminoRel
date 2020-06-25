@@ -1,5 +1,6 @@
 <?php
 include("../../static/header.php");
+ob_implicit_flush(); // force flushing after each call to display inserts in real time
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
