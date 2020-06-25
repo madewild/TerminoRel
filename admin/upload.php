@@ -7,9 +7,8 @@ $uploadOk = 1;
 $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
 $path = $_SERVER['REQUEST_URI'];
-$barepath = strtok($path, '?');
 
-echo "<p><a href='" . $barepath . "'>Retour à l'accueil de l'administration</a></p>";
+echo "<p><a href='" . $path . "'>Retour à l'import de fichier XML</a></p>";
 echo "<p>";
 
 // Check if file already exists
