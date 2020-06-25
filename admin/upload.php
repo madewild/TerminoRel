@@ -6,6 +6,9 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));  
 
+echo "<p><a href='" . $barepath . "'>Retour à l'accueil de l'administration</a></p>";
+echo "<p>";
+
 // Check if file already exists
 if (file_exists($target_file)) {
   echo "Ce fichier existe déjà. ";
@@ -35,4 +38,5 @@ if ($uploadOk == 0) {
     echo "Une erreur est survenue lors de l'upload...";
   }
 }
+echo "</p>";
 ?>
