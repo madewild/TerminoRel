@@ -127,16 +127,16 @@ foreach($domains as $domain) {
   </martif>';
 
   file_put_contents('../../tbx/'.$domain.'.tbx', $tbx);
-  echo "Glossaire " . $domain ." exporté en TBX avec succès." . str_pad('',4096,' ') . "<br/>";
+  echo "Glossaire " . $domain ." exporté en TBX avec succès." . str_pad('',4096,' ') . "<br>";
 
   $zip = new ZipArchive;
   //echo "Current directory is " . getcwd();
   if ($zip->open('../../tbx/'.$domain.'.zip') === TRUE) {
       $zip->addFile('../../tbx/'.$domain.'.tbx', $domain.'.tbx');
       $zip->close();
-      echo 'La compression ZIP a réussi.' . str_pad("",4096," ") . '<br/>';
+      echo 'La compression ZIP a réussi.' . str_pad("",4096," ") . '<br>';
   } else {
-      echo 'La compression ZIP a échoué.' . str_pad("",4096," ") . '<br/>';
+      echo 'La compression ZIP a échoué.' . str_pad("",4096," ") . '<br>';
   }
 }
 ?>
