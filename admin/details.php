@@ -15,7 +15,7 @@ echo "<p><a href='" . $barepath . "'>Retour à l'accueil de l'administration</a>
 
 echo "<h3>Fiche détaillée &nbsp;&nbsp;&nbsp;
 <a href='" . $barepath . "?update=" . $termlexid . "'><img title='Modifier la fiche' src='icons/edit.png' style='width:24px;height:24px'></a> 
-<a href='" . $barepath . "?delete=" . $termlexid . "' onclick='return confirm('Voulez-vous vraiment supprimer cette fiche ?');'><img title='Supprimer la fiche' src='icons/delete.png' style='width:24px;height:24px'>
+<a href='" . $barepath . "?delete=" . $termlexid . "' onclick=\"return confirm('Voulez-vous vraiment supprimer cette fiche ?');\"><img title='Supprimer la fiche' src='icons/delete.png' style='width:24px;height:24px'>
 </h3>";
 echo "<table>";
 echo "<tr><td><b>Terme principal en français</b></td><td>" . $row['termtext'] . "</td></tr>";
