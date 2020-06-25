@@ -1,5 +1,5 @@
 <?php 
-include("static/header.php");
+include("../static/header.php");
  
 if(!empty($_POST["domain_id"])){ 
     $domainid = $_POST["domain_id"];
