@@ -14,7 +14,7 @@ if ($conn) {
         foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
         {
             $ref = $doc['DC-206-entryIdentifier'];
-            echo $ref . ' inserted' . str_pad("",4096," ") . '<br/>';
+            echo $ref . ' ajouté' . str_pad("",4096," ") . '<br>';
 
             foreach($doc->{'DC-489-subjectField'} as $subject)
             {
@@ -60,7 +60,7 @@ if ($conn) {
             $date = $doc->{'DC-274-inputDate'};
             $query = sqlsrv_query($conn, "SELECT id from term where reference=N'$ref'", array(), array("Scrollable" => 'static'));
             if (sqlsrv_num_rows($query) > 0) {
-                echo "Reference already in DB<br>";
+                echo "Référence déjà présente (doublon)<br>";
                 $term_id = sqlsrv_fetch_array($query)['id'];
             }
             else {
@@ -91,7 +91,7 @@ if ($conn) {
 
                 $query = sqlsrv_query($conn, "SELECT id from langroup where termid=N'$term_id' and lang=N'$lang'", array(), array("Scrollable" => 'static'));
                 if (sqlsrv_num_rows($query) > 0) {
-                    echo "This term has already an entry for " . $lang . "<br>";
+                    echo "Ce terme a déjà une entrée pour la langue " . $lang . "<br>";
                     $langroup_id = sqlsrv_fetch_array($query)['id'];
                 }
                 else {
