@@ -1,7 +1,7 @@
 <?php 
 include("../static/header.php");
 
-$termlexid = htmlspecialchars($_GET['termlexid']);
+$termlexid = htmlspecialchars($_GET['update']);
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
     $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$termlexid'", array(), array("Scrollable" => 'static'));
