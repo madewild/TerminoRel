@@ -1,7 +1,5 @@
 <?php 
 include("static/header.php");
-error_reporting(-1);
-ini_set('display_errors', 'On');
 
 $term = htmlspecialchars($_GET['term']);
 $clean_term = str_replace("'", "''", $term);
