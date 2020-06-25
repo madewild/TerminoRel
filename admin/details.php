@@ -11,7 +11,7 @@ if ($conn) {
 $path = $_SERVER['REQUEST_URI'];
 $barepath = strtok($path, '?');
 
-echo "<p><a href='" . $barepath . "'>Retour à la sélection des fiches</a></p>";
+echo "<p><a href='" . $barepath . "'>Retour à l'accueil de l'administration</a></p>";
 
 echo "<h3>Fiche détaillée &nbsp;&nbsp;&nbsp;
 <a href='" . $barepath . "?termlexid=" . $termlexid . "'><img title='Modifier la fiche' src='icons/edit.png' style='width:24px;height:24px'></a> 

@@ -2,7 +2,7 @@
 <h3>Espace d'administration</h3>
 <form class="form" action="" method="get">
     <fieldset>
-        <legend>Vos critères de recherche</legend>
+        <legend>Sélectionnez une fiche à modifier</legend>
         <nav id="form">
             <ul>
                 <li>
@@ -31,3 +31,4 @@
         </nav>
     </fieldset>
 </form><br>
+<p><a href="?import=xml">Importez un nouveau fichier XML</a></p>
