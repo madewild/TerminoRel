@@ -29,9 +29,8 @@ if($fileType != "xml" ) {
   $uploadOk = 0;
 }
 
-
 // Validate XML
-$xml = XMLReader::open($_FILES["fileToUpload"]["name"]);
+$xml = XMLReader::open($_FILES["fileToUpload"]);
 $xml->setParserProperty(XMLReader::VALIDATE, true);
 if (not($xml->isValid())) {
   echo "Ce fichier XML n'est pas valide. ";
