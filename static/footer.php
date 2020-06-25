@@ -12,6 +12,7 @@
             echo '<td><a href="' . $barepath . '?page=help" title="Aller au mode d&apos;emploi des glossaires">Aide</a></td>';
             echo '<td><a href="' . $barepath . '?page=copyright" title="En savoir plus sur les droits d&apos;auteur associés aux glossaires">Droits d&apos;auteur</a></td>';
             echo '<td><a href="' . $barepath . '?page=contact" title="Nous écrire">Nous contacter</a></td>';
+            echo '<td><a href="' . $barepath . 'admin/" title="Admin">Administration</a></td>';
             ?>
         </tr>
     </table>
