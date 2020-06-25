@@ -4,7 +4,10 @@ include("../static/header.php");
 $target_dir = "../xml/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
-$fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));  
+$fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+$path = $_SERVER['REQUEST_URI'];
+$barepath = strtok($path, '?');
 
 echo "<p><a href='" . $barepath . "'>Retour à l'accueil de l'administration</a></p>";
 echo "<p>";
