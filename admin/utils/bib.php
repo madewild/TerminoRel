@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php
-include("static/header.php");
+include("../../static/header.php");
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
