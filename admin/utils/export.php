@@ -3,8 +3,6 @@
 if (basename(__FILE__) == basename($_SERVER['SCRIPT_FILENAME'])) {
     # direct usage of export, not included by insert_term
     include("../../static/header.php");
- } else {
-     include("../../static/functions.php");
  }
 
 $domains = array("P", "P01", "P02");
