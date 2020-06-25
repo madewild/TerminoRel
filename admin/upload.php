@@ -1,24 +1,26 @@
 <?php
+include("../static/header.php");
+
 $target_dir = "../xml/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
-$fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+$fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));  
 
 // Check if file already exists
 if (file_exists($target_file)) {
-  echo "Ce fichier existe déjà.";
+  echo "Ce fichier existe déjà. ";
   $uploadOk = 0;
 }
 
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 1000000) {
-  echo "Désolé, ce fichier est trop volumineux.";
+  echo "Désolé, ce fichier est trop volumineux. ";
   $uploadOk = 0;
 }
 
 // Allow certain file formats
 if($fileType != "xml" ) {
-  echo "Seul le format XML est autorisé.";
+  echo "Seul le format XML est autorisé. ";
   $uploadOk = 0;
 }
 
