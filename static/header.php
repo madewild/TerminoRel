@@ -3,6 +3,7 @@ echo "<h2>TerminoRel – Glossaires académiques de l'ULB pour la rédaction de 
 
 error_reporting(-1);
 ini_set('display_errors', 'On');
+ini_set('pcre.jit', '0');
 
 include("functions.php");
 include("secret.php");
