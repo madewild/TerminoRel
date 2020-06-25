@@ -14,7 +14,7 @@ if ($conn) {
         foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
         {
             $ref = $doc['DC-206-entryIdentifier'];
-            echo $ref . ' inserted' . str_pad("",1024," ") . '<br/>';
+            echo $ref . ' inserted' . str_pad("",4096," ") . '<br/>';
 
             foreach($doc->{'DC-489-subjectField'} as $subject)
             {
