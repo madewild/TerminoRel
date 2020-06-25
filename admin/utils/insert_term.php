@@ -9,7 +9,7 @@ if ($conn) {
     $query = sqlsrv_query($conn, "TRUNCATE TABLE term", array(), array("Scrollable" => 'static'));
     $domains = array("P01", "P02");
     foreach($domains as $domain) {
-        $xml = simplexml_load_file("../xml/".$domain.".xml");
+        $xml = simplexml_load_file("../../xml/".$domain.".xml");
         foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
         {
             $ref = $doc['DC-206-entryIdentifier'];
