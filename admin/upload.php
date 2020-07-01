@@ -61,7 +61,17 @@ if ($uploadOk && file_exists($target_file)) {
         echo $ref . ' détecté' . str_pad("",4096," ") . '<br>';
         $query = sqlsrv_query($conn, "SELECT id from term where reference=N'$ref'", array(), array("Scrollable" => 'static'));
         if (sqlsrv_num_rows($query) > 0) {
-            echo "Référence déjà présente (doublon)<br>";
+            echo "Cet identifiant existe déjà, il s'agit vraisemblablement d'un doublon<br>";
+        }
+        foreach($doc->langGrp as $lgrp) {
+            foreach($lgrp->termGrp as $tgrp) {
+                $term = $tgrp->{'DC-508-term'};
+                $termtext = clean($term);
+                $query = sqlsrv_query($conn, "SELECT id from termgroup where termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
+                if (sqlsrv_num_rows($query) > 0) {
+                    echo("Attention, le terme " . $termtext . " existe déjà<br>");
+                }
+            }
         }
     }
 }
