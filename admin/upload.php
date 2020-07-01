@@ -84,7 +84,7 @@ if ($uploadOk && file_exists($target_file)) {
                 }
             }
             if (!$same_entry) {
-                echo "Doublon détecté !";
+                echo "<br>Doublon détecté !";
                 echo "<br><span style='color: tomato'>Importation annulée.</span>";
                 $importOk = 0;
             }
@@ -94,7 +94,7 @@ if ($uploadOk && file_exists($target_file)) {
                 $importOk = 0;
             }
         } else {
-            echo "Nouvel identifiant";
+            echo "<br>Nouvel identifiant";
             foreach($doc->langGrp as $lgrp) {
                 foreach($lgrp->termGrp as $tgrp) {
                     $term = $tgrp->{'DC-508-term'};
