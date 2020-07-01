@@ -61,9 +61,9 @@ if ($uploadOk && file_exists($target_file)) {
         $importOk = 1;
         echo '<p><b>' . $ref . '</b> en cours de traitement...' . str_pad("",4096," ");
         $query = sqlsrv_query($conn, "SELECT id from term where reference=N'$ref'", array(), array("Scrollable" => 'static'));
+        $new_syns = 0;
         if (sqlsrv_num_rows($query) > 0) {
             echo "<br>Identifiant existant";
-            $new_syns = 0;
             $same_entry = 1;
             foreach($doc->langGrp as $lgrp) {
                 foreach($lgrp->termGrp as $tgrp) {
