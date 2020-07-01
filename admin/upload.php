@@ -85,12 +85,10 @@ if ($uploadOk && file_exists($target_file)) {
             }
             if (!$same_entry) {
                 echo "<br>Doublon détecté !";
-                echo "<br><span style='color: tomato'>Importation annulée.</span>";
                 $importOk = 0;
             }
             else if (!$new_syns) {
                 echo "<br>Aucun nouveau synonyme";
-                echo "<br><span style='color: tomato'>Importation annulée.</span>";
                 $importOk = 0;
             }
         } else {
@@ -101,17 +99,25 @@ if ($uploadOk && file_exists($target_file)) {
                     $termtext = clean($term);
                     $termlexid = $term['DC-301-lexTermIdentifier'];
                     $dom = strtoupper(explode("-", $termlexid)[0]);
-                    $query = sqlsrv_query($conn, "SELECT id from termgroup where termlexid like '$dom%01-fr' and termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
+                    $query = sqlsrv_query($conn, "SELECT termlexid from termgroup where termlexid like '$dom%01-fr' and termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
                     if (sqlsrv_num_rows($query) > 0) {
-                        echo("<br>Le terme <b>" . $termtext . "</b> existe déjà dans le domaine " . $dom . " !");
-                        echo("<br><span style='color: tomato'>Importation annulée.</span>");
+                        $dbtermlexid = sqlsrv_fetch_array($query)['termlexid'];
+                        $duplicate = explode("-", $dbtermlexid)[0] . "-" . explode("-", $termlexid)[1];
+                        echo("<br>Le terme <b>" . $termtext . "</b> existe déjà dans le domaine " . $dom . " (entrée " . $duplicate . ") !");
                         $importOk = 0;
                     }
                 }
             }
         }
         if ($importOk) {
-            echo("<br><span style='color: lightgreen'>Importation réussie.</span>");
+            if ($new_syns) {
+                $word = "Mise à jour";
+            } else {
+                $word = "Importation";
+            }
+            echo("<br><span style='color: lightgreen'>" . $word . " réussie.</span>");
+        } else {
+            echo("<br><span style='color: tomato'>Importation annulée.</span>");
         }
         echo "</p>";
     }
