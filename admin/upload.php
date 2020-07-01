@@ -50,7 +50,7 @@ if ($uploadOk == 0) {
     echo "Une erreur est survenue lors de l'upload...";
   }
 }
-echo "</p><p>";
+echo "</p>";
 
 if ($uploadOk && file_exists($target_file)) {
     $conn = sqlsrv_connect($server, $conninfo);
@@ -58,22 +58,22 @@ if ($uploadOk && file_exists($target_file)) {
     foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
     {
         $ref = $doc['DC-206-entryIdentifier'];
-        echo $ref . ' détecté' . str_pad("",4096," ") . '<br>';
+        echo '<br><b>' . $ref . '</b> a été détecté...' . str_pad("",4096," ") . '<br>';
         $query = sqlsrv_query($conn, "SELECT id from term where reference=N'$ref'", array(), array("Scrollable" => 'static'));
         if (sqlsrv_num_rows($query) > 0) {
-            echo "Cet identifiant existe déjà, il s'agit vraisemblablement d'un doublon<br>";
-        }
-        foreach($doc->langGrp as $lgrp) {
-            foreach($lgrp->termGrp as $tgrp) {
-                $term = $tgrp->{'DC-508-term'};
-                $termtext = clean($term);
-                $query = sqlsrv_query($conn, "SELECT id from termgroup where termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
-                if (sqlsrv_num_rows($query) > 0) {
-                    echo("Attention, le terme " . $termtext . " existe déjà<br>");
+            echo "<span style='color: tomato'>Cet identifiant existe déjà, il s'agit sans doute d'un doublon !</span><br>";
+        } else {
+            foreach($doc->langGrp as $lgrp) {
+                foreach($lgrp->termGrp as $tgrp) {
+                    $term = $tgrp->{'DC-508-term'};
+                    $termtext = clean($term);
+                    $query = sqlsrv_query($conn, "SELECT id from termgroup where termlexid like '%01-fr' and termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
+                    if (sqlsrv_num_rows($query) > 0) {
+                        echo("<span style='color: tomato'>Attention, le terme " . $termtext . " existe déjà !</span><br>");
+                    }
                 }
             }
         }
     }
 }
-echo "</p>";
 ?>
