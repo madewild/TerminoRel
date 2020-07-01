@@ -62,8 +62,24 @@ if ($uploadOk && file_exists($target_file)) {
         echo '<p><b>' . $ref . '</b> a été détecté...' . str_pad("",4096," ");
         $query = sqlsrv_query($conn, "SELECT id from term where reference=N'$ref'", array(), array("Scrollable" => 'static'));
         if (sqlsrv_num_rows($query) > 0) {
-            echo "<br><span style='color: tomato'>Cet identifiant existe déjà, il s'agit sans doute d'un doublon.</span>";
-            $importOk = 0;
+            $new_syns = 0;
+            foreach($doc->langGrp as $lgrp) {
+                foreach($lgrp->termGrp as $tgrp) {
+                    $term = $tgrp->{'DC-508-term'};
+                    $termtext = clean($term);
+                    $termlexid = $term['DC-301-lexTermIdentifier'];
+                    $query = sqlsrv_query($conn, "SELECT id from termgroup where termlexid=N'$termlexid' and termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
+                    if (sqlsrv_num_rows($query) == 0) {
+                        $lang = strtoupper(explode("-", $termlexid)[3]);
+                        echo "<br>Nouveau synonyme " . $lang . " : " . $termtext;
+                        $new_syns++;
+                    }
+                }
+            }
+            if (!$new_syns) {
+                echo "<br><span style='color: tomato'>Cet identifiant existe déjà, il s'agit sans doute d'un doublon.</span>";
+                $importOk = 0;
+            }
         } else {
             foreach($doc->langGrp as $lgrp) {
                 foreach($lgrp->termGrp as $tgrp) {
