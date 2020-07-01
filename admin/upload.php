@@ -1,5 +1,6 @@
 <?php
 include("../static/header.php");
+ob_implicit_flush(); // force flushing after each call to display inserts in real time
 
 $target_dir = "../xml/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -52,10 +53,16 @@ if ($uploadOk == 0) {
 echo "</p><p>";
 
 if ($uploadOk && file_exists($target_file)) {
+    $conn = sqlsrv_connect($server, $conninfo);
+
     foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
     {
         $ref = $doc['DC-206-entryIdentifier'];
         echo $ref . ' détecté' . str_pad("",4096," ") . '<br>';
+        $query = sqlsrv_query($conn, "SELECT id from term where reference=N'$ref'", array(), array("Scrollable" => 'static'));
+        if (sqlsrv_num_rows($query) > 0) {
+            echo "Référence déjà présente (doublon)<br>";
+        }
     }
 }
 echo "</p>";
