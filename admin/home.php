@@ -3,7 +3,7 @@
 <form class="form" action="" method="get">
     <fieldset>
         <legend>
-        Sélectionnez une fiche à modifier
+        Sélectionnez une fiche à modifier &nbsp;&nbsp;&nbsp;
         <a href="#" onclick="return confirm('Prochainement disponible...');"><img title='Créer une nouvelle fiche' src='icons/create.png' style='width:24px;height:24px'></a>
         </legend>
         <nav id="form">
