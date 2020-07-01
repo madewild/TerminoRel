@@ -102,7 +102,7 @@ if ($uploadOk && file_exists($target_file)) {
                     $query = sqlsrv_query($conn, "SELECT termlexid from termgroup where termlexid like '$dom%01-fr' and termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
                     if (sqlsrv_num_rows($query) > 0) {
                         $dbtermlexid = sqlsrv_fetch_array($query)['termlexid'];
-                        $duplicate = explode("-", $dbtermlexid)[0] . "-" . explode("-", $termlexid)[1];
+                        $duplicate = explode("-", $dbtermlexid)[0] . "-" . explode("-", $dbtermlexid)[1];
                         echo("<br>Le terme <b>" . $termtext . "</b> existe déjà dans le domaine " . $dom . " (entrée " . $duplicate . ") !");
                         $importOk = 0;
                     }
