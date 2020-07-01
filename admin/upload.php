@@ -70,6 +70,8 @@ if ($uploadOk && file_exists($target_file)) {
                     $query = sqlsrv_query($conn, "SELECT id from termgroup where termlexid like '%01-fr' and termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
                     if (sqlsrv_num_rows($query) > 0) {
                         echo("<br><span style='color: tomato'>Attention, le terme <b>" . $termtext . "</b> existe déjà !</span>");
+                    } else {
+                        echo("<br><span style='color: lightgreen'>Importation réussie.</span>")
                     }
                 }
             }
