@@ -71,7 +71,7 @@ if ($uploadOk && file_exists($target_file)) {
                     if (sqlsrv_num_rows($query) > 0) {
                         echo("<br><span style='color: tomato'>Attention, le terme <b>" . $termtext . "</b> existe déjà !</span>");
                     } else {
-                        echo("<br><span style='color: lightgreen'>Importation réussie.</span>")
+                        echo("<br><span style='color: lightgreen'>Importation réussie.</span>");
                     }
                 }
             }
