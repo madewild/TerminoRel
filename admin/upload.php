@@ -58,10 +58,12 @@ if ($uploadOk && file_exists($target_file)) {
     foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
     {
         $ref = $doc['DC-206-entryIdentifier'];
+        $importOk = 1;
         echo '<p><b>' . $ref . '</b> a été détecté...' . str_pad("",4096," ");
         $query = sqlsrv_query($conn, "SELECT id from term where reference=N'$ref'", array(), array("Scrollable" => 'static'));
         if (sqlsrv_num_rows($query) > 0) {
             echo "<br><span style='color: tomato'>Cet identifiant existe déjà, il s'agit sans doute d'un doublon.</span>";
+            $importOk = 0;
         } else {
             foreach($doc->langGrp as $lgrp) {
                 foreach($lgrp->termGrp as $tgrp) {
@@ -70,11 +72,13 @@ if ($uploadOk && file_exists($target_file)) {
                     $query = sqlsrv_query($conn, "SELECT id from termgroup where termlexid like '%01-fr' and termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
                     if (sqlsrv_num_rows($query) > 0) {
                         echo("<br><span style='color: tomato'>Attention, le terme <b>" . $termtext . "</b> existe déjà !</span>");
-                    } else {
-                        echo("<br><span style='color: lightgreen'>Importation réussie.</span>");
+                        $importOk = 0;
                     }
                 }
             }
+        }
+        if ($importOk) {
+            echo("<br><span style='color: lightgreen'>Importation réussie.</span>");
         }
         echo "</p>";
     }
