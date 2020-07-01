@@ -27,15 +27,13 @@ if($variant != NULL) {
     $mf = True;
 }
 
-echo '<li><input type="submit" value="Sauvegarder"></li>';
-echo "</ul></nav></fieldset></form><table>";
-
 $langroup_source = $row['langroup'];
 $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1", array(), array("Scrollable" => 'static'));
 $row2 = sqlsrv_fetch_array($result);
 if($row2) {
     $acro = $row2['termtext'];
-    echo "<tr><td><b>Abréviation</b></td><td>" . $acro . "</td></tr>";
+    echo "<li><label for='abrev'>Abréviation</label> ";
+    echo '<input type="text" class="input" id="abrev" name="abrev" value="' . $acro . '" size="70"></li>';
 }
 
 $pos_id = $row['pos'];
@@ -46,7 +44,11 @@ if($pos_id == 1) {
 } else {
     $pos = "locution";
 }
-echo "<tr><td><b>Catégorie grammaticale</b></td><td>" . $pos . "</td></tr>";
+echo "<li><label for='catgram'>Catégorie grammaticale</label> ";
+echo '<input type="text" class="input" id="catgram" name="catgram" value="' . $pos . '" size="70"></li>';
+
+echo '<li><input type="submit" value="Sauvegarder"></li>';
+echo "</ul></nav></fieldset></form><table>";
 
 $gender_id = $row['gender'];
 if($gender_id == 4 or $mf) {
