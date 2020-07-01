@@ -59,35 +59,52 @@ if ($uploadOk && file_exists($target_file)) {
     {
         $ref = $doc['DC-206-entryIdentifier'];
         $importOk = 1;
-        echo '<p><b>' . $ref . '</b> a été détecté...' . str_pad("",4096," ");
+        echo '<p><b>' . $ref . '</b> en cours de traitement...' . str_pad("",4096," ");
         $query = sqlsrv_query($conn, "SELECT id from term where reference=N'$ref'", array(), array("Scrollable" => 'static'));
         if (sqlsrv_num_rows($query) > 0) {
+            echo "<br>Identifiant existant";
             $new_syns = 0;
+            $same_entry = 1;
             foreach($doc->langGrp as $lgrp) {
                 foreach($lgrp->termGrp as $tgrp) {
                     $term = $tgrp->{'DC-508-term'};
                     $termtext = clean($term);
                     $termlexid = $term['DC-301-lexTermIdentifier'];
-                    $query = sqlsrv_query($conn, "SELECT id from termgroup where termlexid=N'$termlexid' and termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
+                    $query = sqlsrv_query($conn, "SELECT termtext from termgroup where termlexid=N'$termlexid'", array(), array("Scrollable" => 'static'));
                     if (sqlsrv_num_rows($query) == 0) {
                         $lang = strtoupper(explode("-", $termlexid)[3]);
-                        echo "<br>Nouveau synonyme " . $lang . " : " . $termtext;
+                        echo "<br>Nouveau synonyme " . $lang . " : <b>" . $termtext . "</b>";
                         $new_syns++;
+                    } else {
+                        $dbtermtext = sqlsrv_fetch_array($query)['termtext'];
+                        if ($dbtermtext != $termtext) {
+                            $same_entry = 0;
+                        }
                     }
                 }
             }
-            if (!$new_syns) {
-                echo "<br><span style='color: tomato'>Cet identifiant existe déjà, il s'agit sans doute d'un doublon.</span>";
+            if (!$same_entry) {
+                echo "Doublon détecté !";
+                echo "<br><span style='color: tomato'>Importation annulée.</span>";
+                $importOk = 0;
+            }
+            else if (!$new_syns) {
+                echo "<br>Aucun nouveau synonyme";
+                echo "<br><span style='color: tomato'>Importation annulée.</span>";
                 $importOk = 0;
             }
         } else {
+            echo "Nouvel identifiant";
             foreach($doc->langGrp as $lgrp) {
                 foreach($lgrp->termGrp as $tgrp) {
                     $term = $tgrp->{'DC-508-term'};
                     $termtext = clean($term);
-                    $query = sqlsrv_query($conn, "SELECT id from termgroup where termlexid like '%01-fr' and termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
+                    $termlexid = $term['DC-301-lexTermIdentifier'];
+                    $dom = strtoupper(explode("-", $termlexid)[0]);
+                    $query = sqlsrv_query($conn, "SELECT id from termgroup where termlexid like '$dom%01-fr' and termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
                     if (sqlsrv_num_rows($query) > 0) {
-                        echo("<br><span style='color: tomato'>Attention, le terme <b>" . $termtext . "</b> existe déjà !</span>");
+                        echo("<br>Le terme <b>" . $termtext . "</b> existe déjà dans le domaine " . $dom . " !");
+                        echo("<br><span style='color: tomato'>Importation annulée.</span>");
                         $importOk = 0;
                     }
                 }
