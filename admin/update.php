@@ -22,7 +22,7 @@ echo '<td><input type="text" class="input" id="term" name="term" value="' . $row
 $variant = $row['variant'];
 $mf = False;
 if($variant != NULL) {
-    echo "<tr><td><li><label for='variant'>Variante</label></td>";
+    echo "<tr><td><label for='variant'>Variante</label></td>";
     echo '<td><input type="text" class="input" id="variant" name="variant" value="' . $variant . '" size="70"></td></tr>';
     $mf = True;
 }
@@ -32,8 +32,8 @@ $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_
 $row2 = sqlsrv_fetch_array($result);
 if($row2) {
     $acro = $row2['termtext'];
-    echo "<li><label for='abrev'>Abréviation</label> ";
-    echo '<input type="text" class="input" id="abrev" name="abrev" value="' . $acro . '" size="70"></li>';
+    echo "<tr><td><label for='abrev'>Abréviation</label></td>";
+    echo '<td><input type="text" class="input" id="abrev" name="abrev" value="' . $acro . '" size="70"></td></tr>';
 }
 
 $pos_id = $row['pos'];
@@ -44,8 +44,8 @@ if($pos_id == 1) {
 } else {
     $pos = "locution";
 }
-echo "<li><label for='catgram'>Catégorie grammaticale</label> ";
-echo '<input type="text" class="input" id="catgram" name="catgram" value="' . $pos . '" size="70"></li>';
+echo "<tr><td><label for='catgram'>Catégorie grammaticale</label></td>";
+echo '<td><input type="text" class="input" id="catgram" name="catgram" value="' . $pos . '" size="70"></td></tr>';
 
 $gender_id = $row['gender'];
 if($gender_id == 4 or $mf) {
@@ -57,8 +57,8 @@ if($gender_id == 4 or $mf) {
 } else {
     $gender = "";
 }
-echo "<li><label for='gender'>Genre</label> ";
-echo '<input type="text" class="input" id="gender" name="gender" value="' . $gender . '" size="70"></li>';
+echo "<tr><td><label for='gender'>Genre</label></td>";
+echo '<td><input type="text" class="input" id="gender" name="gender" value="' . $gender . '" size="70"></td></tr>';
 
 $number_id = $row['number'];
 if($number_id == 12) {
@@ -66,8 +66,8 @@ if($number_id == 12) {
 } else {
     $number = "singulier";
 }
-echo "<li><label for='number'>Nombre</label> ";
-echo '<input type="text" class="input" id="number" name="number" value="' . $number . '" size="70"></li>';
+echo "<tr><td><label for='number'>Nombre</label></td>";
+echo '<td><input type="text" class="input" id="number" name="number" value="' . $number . '" size="70"></td></tr>';
 
 $result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source", array(), array("Scrollable" => 'static'));
 $termid = sqlsrv_fetch_array($result)['termid'];
@@ -81,10 +81,10 @@ if(!empty($definition)) {
     $source_text_def = $row['text'];
     $result = sqlsrv_query($conn, "SELECT title FROM biblio WHERE id=$bib_id", array(), array("Scrollable" => 'static'));
     $bib_title_def = sqlsrv_fetch_array($result)['title'];
-    echo "<li><label for='def'>Définition</label> ";
-    echo '<input type="text" class="input" id="def" name="def" value="' . $definition . '" size="70"></li>';
-    echo "<li><label for='sourcedef'>Source de la définition</label> ";
-    echo '<input type="text" class="input" id="sourcedef" name="sourcedef" value="' . $bib_title_def . ", " . $source_text_def . '" size="70"></li>';
+    echo "<tr><td><label for='def'>Définition</label></td>";
+    echo '<td><input type="text" class="input" id="def" name="def" value="' . $definition . '" size="70"></td></tr>';
+    echo "<tr><td><label for='sourcedef'>Source de la définition</label></td>";
+    echo '<td><input type="text" class="input" id="sourcedef" name="sourcedef" value="' . $bib_title_def . ", " . $source_text_def . '" size="70"></td></tr>';
 }
 
 $result = sqlsrv_query($conn, "SELECT explanation FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'", array(), array("Scrollable" => 'static'));
@@ -96,15 +96,15 @@ if(!empty($explanation)) {
     $source_text_exp = $row['text'];
     $result = sqlsrv_query($conn, "SELECT title FROM biblio WHERE id=$bib_id", array(), array("Scrollable" => 'static'));
     $bib_title_exp = sqlsrv_fetch_array($result)['title'];
-    echo "<li><label for='exp'>Explication</label> ";
-    echo '<input type="text" class="input" id="exp" name="exp" value="' . $explanation . '" size="70"></li>';
-    echo "<li><label for='sourceexp'>Source de l'explication</label> ";
-    echo '<input type="text" class="input" id="sourceexp" name="sourceexp" value="' . $bib_title_exp . ", " . $source_text_exp . '" size="70"></li>';
+    echo "<tr><td><label for='exp'>Explication</label></td>";
+    echo '<td><input type="text" class="input" id="exp" name="exp" value="' . $explanation . '" size="70"></td></tr>';
+    echo "<tr><td><label for='sourceexp'>Source de l'explication</label></td>";
+    echo '<td><input type="text" class="input" id="sourceexp" name="sourceexp" value="' . $bib_title_exp . ", " . $source_text_exp . '" size="70"></td></tr>';
 }
 echo "</table>";
 
-echo '<li><input type="submit" value="Sauvegarder"></li>';
-echo "</ul></nav></fieldset></form>";
+echo '<input type="submit" value="Sauvegarder">';
+echo "</nav></fieldset></form>";
 
 $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE 'en%'", array(), array("Scrollable" => 'static'));
 $langroup_target = sqlsrv_fetch_array($result)['id'];
