@@ -32,8 +32,8 @@ if($fileType != "xml" ) {
 // Validate XML
 $xml_string = file_get_contents($_FILES["fileToUpload"]["tmp_name"]);
 libxml_use_internal_errors(true);
-$doc = simplexml_load_string($xml_string);
-if(!$doc) {
+$xml = simplexml_load_string($xml_string);
+if(!$xml) {
   echo "Ce fichier XML n'est pas valide. ";
   $uploadOk = 0;
 }
@@ -48,6 +48,15 @@ if ($uploadOk == 0) {
   } else {
     echo "Une erreur est survenue lors de l'upload...";
   }
+}
+echo "</p><p>";
+
+if ($uploadOk && file_exists($target_file)) {
+    foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
+    {
+        $ref = $doc['DC-206-entryIdentifier'];
+        echo $ref . ' détecté' . str_pad("",4096," ") . '<br>';
+    }
 }
 echo "</p>";
 ?>
