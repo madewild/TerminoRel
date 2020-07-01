@@ -31,6 +31,7 @@ if($fileType != "xml" ) {
 
 // Validate XML
 $xml_string = file_get_contents($_FILES["fileToUpload"]["tmp_name"]);
+echo($xml_string);
 $xml = new XMLReader;
 if (!$xml->xml($xml_string, NULL, LIBXML_DTDVALID)) {
   echo "Ce fichier XML n'est pas valide. ";
