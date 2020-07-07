@@ -7,6 +7,10 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
+$xml_string = file_get_contents($_FILES["fileToUpload"]["tmp_name"]);
+libxml_use_internal_errors(true);
+$xml = simplexml_load_string($xml_string);
+
 $path = $_SERVER['REQUEST_URI'] . "?import=xml";
 
 echo "<p><a href='" . $path . "'>Retour à l'import de fichier XML</a></p>";
@@ -19,22 +23,19 @@ if (file_exists($target_file)) {
 }
 
 // Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
+ else if ($_FILES["fileToUpload"]["size"] > 500000) {
   echo "Ce fichier est trop volumineux. ";
   $uploadOk = 0;
 }
 
 // Allow certain file formats
-if($fileType != "xml" ) {
+else if($fileType != "xml" ) {
   echo "Seul le format XML est autorisé. ";
   $uploadOk = 0;
 }
 
 // Validate XML
-$xml_string = file_get_contents($_FILES["fileToUpload"]["tmp_name"]);
-libxml_use_internal_errors(true);
-$xml = simplexml_load_string($xml_string);
-if(!$xml) {
+else if(!$xml) {
   echo "Ce fichier XML n'est pas valide. ";
   $uploadOk = 0;
 }
