@@ -105,6 +105,7 @@ if ($uploadOk && file_exists($target_file)) {
                         $duplicate = explode("-", $dbtermlexid)[0] . "-" . explode("-", $dbtermlexid)[1];
                         echo("<br>Le terme <b>" . $termtext . "</b> existe déjà dans le domaine " . $dom . " (entrée " . $duplicate . ") !");
                         $importOk = 0;
+                        $duplicate_term = $termtext;
                     }
                 }
             }
@@ -121,5 +122,10 @@ if ($uploadOk && file_exists($target_file)) {
         }
         echo "</p>";
     }
+}
+if(isset($duplicate_term)) {
+    echo "<script>
+    confirm('Forcer la réimportation de " . $duplicate_term . " ?')
+    </script>";
 }
 ?>
