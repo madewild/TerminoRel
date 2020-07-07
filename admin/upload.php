@@ -118,7 +118,11 @@ if ($uploadOk && file_exists($target_file)) {
             }
             echo("<br><span style='color: lightgreen'>" . $word . " réussie.</span>");
         } else {
-            echo("<br><span id='fail' style='color: tomato'>Importation annulée.</span>");
+            if(isset($duplicate_term)) {
+                echo("<br><span id='fail' style='color: tomato'>Importation annulée.</span>");
+            } else {
+                echo("<br><span style='color: tomato'>Importation annulée.</span>");
+            }
         }
         echo "</p>";
     }
