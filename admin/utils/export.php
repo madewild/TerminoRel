@@ -1,16 +1,9 @@
 <?php
-function print_trad($results, $type) {
-  $tig = '';
-  while ($row = sqlsrv_fetch_array($results)) {
-    $translation = $row['termtext'];
-    $tig .= '
-          <tig>
-            <term>' . $translation . '</term>
-            <note>Terme ' . $type . '</note>
-          </tig>';
-  }
-  return $tig;
-}
+
+if (basename(__FILE__) == basename($_SERVER['SCRIPT_FILENAME'])) {
+    # direct usage of export, not included by insert_term
+    include("../../static/header.php");
+ }
 
 $domains = array("P", "P01", "P02");
 
@@ -34,13 +27,6 @@ foreach($domains as $domain) {
     </martifHeader>
     <text>
       <body>';
-
-      $conninfo = array(
-        "Database" => "terminorel",
-        "UID" => $username,
-        "PWD" => $password,
-        "CharacterSet" => "UTF-8"
-    );
     
     $conn = sqlsrv_connect($server, $conninfo);
     if ($conn) {
@@ -130,6 +116,9 @@ foreach($domains as $domain) {
         </termEntry>';
           }
       }
+  } else {
+    echo "Connection could not be established.<br />";
+    die( print_r( sqlsrv_errors(), true));
   }
 
   $tbx .= '
@@ -137,16 +126,17 @@ foreach($domains as $domain) {
     </text>
   </martif>';
 
-  file_put_contents('../tbx/'.$domain.'.tbx', $tbx);
-  echo "Glossaire " . $domain ." exporté en TBX avec succès.<br>";
+  file_put_contents('../../tbx/'.$domain.'.tbx', $tbx);
+  echo "Glossaire " . $domain ." exporté en TBX avec succès." . str_pad('',4096,' ') . "<br>";
 
   $zip = new ZipArchive;
-  if ($zip->open('../tbx/'.$domain.'.zip') === TRUE) {
-      $zip->addFile('../tbx/'.$domain.'.tbx', $domain.'.tbx');
+  //echo "Current directory is " . getcwd();
+  if ($zip->open('../../tbx/'.$domain.'.zip') === TRUE) {
+      $zip->addFile('../../tbx/'.$domain.'.tbx', $domain.'.tbx');
       $zip->close();
-      echo 'La compression ZIP a réussi.<br>';
+      echo 'La compression ZIP a réussi.' . str_pad("",4096," ") . '<br>';
   } else {
-      echo 'La compression ZIP a échoué.<br>';
+      echo 'La compression ZIP a échoué.' . str_pad("",4096," ") . '<br>';
   }
 }
 ?>

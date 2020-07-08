@@ -1,33 +1,6 @@
 <?php
-error_reporting(-1);
-ini_set('display_errors', 'On');
-include("../static/secret.php");
-$server = SERVER;
-$username = USERNAME;
-$password = PASSWORD;
-
-function sqlsrv_insert_id($conn) {
-    $id = 0; 
-    $res = sqlsrv_query($conn, "SELECT @@identity AS id", array(), array("Scrollable" => 'static')); 
-    if ($row = sqlsrv_fetch_array($res)) { 
-        $id = $row["id"]; 
-    }
-    return $id; 
-}
-
-function clean($string) {
-    $string = str_replace("'", "''", $string);
-    $string = str_replace("\n", " ", $string);
-    $string = preg_replace('/\s\s+/', ' ', $string);
-    return $string;
-}
-
-$conninfo = array(
-    "Database" => "terminorel",
-    "UID" => $username,
-    "PWD" => $password,
-    "CharacterSet" => "UTF-8"
-);
+include("../../static/header.php");
+ob_implicit_flush(); // force flushing after each call to display inserts in real time
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
@@ -37,11 +10,11 @@ if ($conn) {
     $query = sqlsrv_query($conn, "TRUNCATE TABLE term", array(), array("Scrollable" => 'static'));
     $domains = array("P01", "P02");
     foreach($domains as $domain) {
-        $xml = simplexml_load_file("../xml/".$domain.".xml");
+        $xml = simplexml_load_file("../../xml/".$domain.".xml");
         foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
         {
             $ref = $doc['DC-206-entryIdentifier'];
-            echo $ref . ' inserted<br>';
+            echo $ref . ' ajouté' . str_pad("",4096," ") . '<br>';
 
             foreach($doc->{'DC-489-subjectField'} as $subject)
             {
@@ -87,7 +60,7 @@ if ($conn) {
             $date = $doc->{'DC-274-inputDate'};
             $query = sqlsrv_query($conn, "SELECT id from term where reference=N'$ref'", array(), array("Scrollable" => 'static'));
             if (sqlsrv_num_rows($query) > 0) {
-                echo "Reference already in DB<br>";
+                echo "Référence déjà présente (doublon)<br>";
                 $term_id = sqlsrv_fetch_array($query)['id'];
             }
             else {
@@ -118,7 +91,7 @@ if ($conn) {
 
                 $query = sqlsrv_query($conn, "SELECT id from langroup where termid=N'$term_id' and lang=N'$lang'", array(), array("Scrollable" => 'static'));
                 if (sqlsrv_num_rows($query) > 0) {
-                    echo "This term has already an entry for " . $lang . "<br>";
+                    echo "Ce terme a déjà une entrée pour la langue " . $lang . "<br>";
                     $langroup_id = sqlsrv_fetch_array($query)['id'];
                 }
                 else {
@@ -306,6 +279,9 @@ if ($conn) {
             }
         }
     }
+} else {
+    echo "Connection could not be established.<br />";
+    die( print_r( sqlsrv_errors(), true));
 }
 include("export.php");
 ?>

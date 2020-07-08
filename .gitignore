@@ -1,2 +1,3 @@
 static/secret.php
-utils/sync.sh
+sync.sh
+xml/*test*

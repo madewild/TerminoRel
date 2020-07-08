@@ -1,10 +1,5 @@
 <?php 
-error_reporting(-1);
-ini_set('display_errors', 'On');
-include("static/secret.php");
-$server = SERVER;
-$username = USERNAME;
-$password = PASSWORD;
+include("static/header.php");
 
 $term = htmlspecialchars($_GET['term']);
 $clean_term = str_replace("'", "''", $term);
@@ -21,8 +16,6 @@ if(isset($_GET['status'])) {
     $restriction = "none";
 }
 
-include("functions.php");
-include("static/header.php");
 include('static/retour.php'); 
 ?>
 
@@ -40,18 +33,11 @@ include('static/retour.php');
 </div><br>
 
 <?php
-$conninfo = array(
-    "Database" => "terminorel",
-    "UID" => $username,
-    "PWD" => $password,
-    "CharacterSet" => "UTF-8"
-);
-
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
     //echo "<b>Domaine : " . $domaine . "</b><br><br>";
 
-    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext", array(), array("Scrollable" => 'static'));
+    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext", array(), array("Scrollable" => 'static'));
     
     // Total number of results to display
     $num_rows = sqlsrv_num_rows($query);
@@ -98,7 +84,7 @@ if ($conn) {
         echo $nav;
 
         echo "<table class='results_table'>";
-        $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ) ORDER BY termtext OFFSET $offset ROWS FETCH NEXT $limit ROWS ONLY", array(), array("Scrollable" => 'static'));
+        $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext OFFSET $offset ROWS FETCH NEXT $limit ROWS ONLY", array(), array("Scrollable" => 'static'));
         if($query === FALSE) {
             if( ($errors = sqlsrv_errors() ) != null) {  
                 foreach( $errors as $error) {  
@@ -220,10 +206,10 @@ if ($conn) {
             if($num_pref == 0 and $restriction == "approved_only") {
                 echo "Aucune traduction approuvée.";
             } else {
-                show_trad($conn, $langroup_target, $results_pref, $cible, "privilégié");
+                show_trad($conn, $results_pref, $cible, "privilégié");
                 if($num_pref == 0) {
-                    show_trad($conn, $langroup_target, $results_admi, $cible, "admis");
-                    show_trad($conn, $langroup_target, $results_depr, $cible, "à éviter");
+                    show_trad($conn, $results_admi, $cible, "admis");
+                    show_trad($conn, $results_depr, $cible, "à éviter");
                 }
             }
             echo "</td></tr>";

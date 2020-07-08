@@ -1,28 +1,10 @@
 <?php
-error_reporting(-1);
-ini_set('display_errors', 'On');
-include("../static/secret.php");
-$server = SERVER;
-$username = USERNAME;
-$password = PASSWORD;
-
-function clean($string) {
-    $string = str_replace("'", "''", $string);
-    $string = str_replace("\n", " ", $string);
-    $string = preg_replace('/\s\s+/', ' ', $string);
-    return $string;
-}
-
-$conninfo = array(
-    "Database" => "terminorel",
-    "UID" => $username,
-    "PWD" => $password,
-    "CharacterSet" => "UTF-8"
-);
+include("../../static/header.php");
 
 $conn = sqlsrv_connect($server, $conninfo);
 if ($conn) {
-    $xml = simplexml_load_file("../xml/biblio_v2.xml");
+    $query = sqlsrv_query($conn, "TRUNCATE TABLE biblio", array(), array("Scrollable" => 'static'));
+    $xml = simplexml_load_file("../../xml/biblio_v2.xml");
     foreach($xml->entrée as $doc)
     {
         $ref = $doc['id'];

@@ -1,11 +1,19 @@
 <div class="glossary_footer">
     <table class="footer_table">
         <tr>
-            <td><a href="/" title="Aller à la page d'accueil">Page d'accueil</a></td>
-            <td><a href="/?page=about" title="Aller à la page 'À propos des glossaires Terminorel'">À propos des glossaires</a></td>
-            <td><a href="/?page=help" title="Aller au mode d'emploi des glossaires">Aide</a></td>
-            <td><a href="/?page=copyright" title="En savoir plus sur les droits d'auteur associés aux glossaires">Droits d'auteur</a></td>
-            <td><a href="/?page=contact" title="Nous écrire">Nous contacter</a></td>
+            <?php
+            $path = $_SERVER['REQUEST_URI'];
+            $barepath = strtok($path, '?');
+            if (strpos($path, 'admin') !== false) {
+                $barepath = substr($barepath, 0, -6);
+            }
+            echo '<td><a href="' . $barepath . '" title="Aller à la page d&apos;accueil">Page d&apos;accueil</a></td>';
+            echo '<td><a href="' . $barepath . '?page=about" title="Aller à la page &apos;À propos des glossaires Terminorel&apos;">À propos des glossaires</a></td>';
+            echo '<td><a href="' . $barepath . '?page=help" title="Aller au mode d&apos;emploi des glossaires">Aide</a></td>';
+            echo '<td><a href="' . $barepath . '?page=copyright" title="En savoir plus sur les droits d&apos;auteur associés aux glossaires">Droits d&apos;auteur</a></td>';
+            echo '<td><a href="' . $barepath . '?page=contact" title="Nous écrire">Nous contacter</a></td>';
+            echo '<td><a href="' . $barepath . 'admin/" title="Admin">Administration</a></td>';
+            ?>
         </tr>
     </table>
 </div>
