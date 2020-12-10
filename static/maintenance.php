@@ -9,5 +9,5 @@
 </style>
 <div class="alert alert-danger alert-server" role="alert">
   <button type="button" class="close" data-dismiss="alert">×</button>
-  <strong>Migration de serveur</strong> En raison d'une opération de maintenance, le site sera temporairement indisponible du jeudi 17/12 à 17h au vendredi 18/12 à 17h, veuillez nous en excuser.
+  <strong>Migration de serveur</strong> En raison d'une opération de maintenance, le site sera temporairement indisponible du jeudi 17/12 à 17h au vendredi 18/12 à 17h. Veuillez nous excuser pour les désagréments occasionnés.
 </div>
