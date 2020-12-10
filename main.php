@@ -1,4 +1,5 @@
 <?php
+include("static/maintenance.php");
 if(isset($_GET['term'])) {
     include("results.php");
 } else if(isset($_GET['glossary'])) {
