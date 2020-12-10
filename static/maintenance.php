@@ -11,5 +11,6 @@
 <div class="alert alert-danger alert-server" role="alert">
   <button type="button" class="close" data-dismiss="alert"><span style="color:black">X</span></button>
   En raison d'une opération de maintenance, le site sera temporairement indisponible <strong>du jeudi 17/12/2020 à 17h au vendredi 18/12/2020 à 17h</strong>.
+  Veuillez nous en excuser.
 </div>
 <p>&nbsp;</p>
