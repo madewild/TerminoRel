@@ -580,7 +580,7 @@
 	
 	    --><a href="https://www.ulb.be/fr/info-coronavirus" class="acces_direct__item type_rubrique_FICO">
 	        <span class="acces_direct__libelle">
-	            INFOS COVID-19
+	            COVID-19
 	        </span>
 	    </a><!--
 	
@@ -769,7 +769,7 @@
                 --><a class="item__control type_rubrique_FICO" href="https://www.ulb.be/fr/info-coronavirus" aria-expanded="false"><!-- 
                     
                     --><span class="item__label">
-                        Infos Covid-19
+                        Covid-19
                     </span><!-- 
                 --></a><!--
             
@@ -4187,7 +4187,7 @@
 
 		                                    <a href="https://www.ulb.be/fr/futur-etudiant" class="type_rubrique_0001">
 
-		                            Futur étudiant
+                                    Futur·e étudiant·e
 
 		                                    </a>
 
@@ -4197,7 +4197,7 @@
 
 		                                    <a href="https://www.ulb.be/fr/parent" class="type_rubrique_0001">
 
-		                            Parent
+		                            Parents
 
 		                                    </a>
 
@@ -4207,7 +4207,7 @@
 
 		                                    <a href="https://www.ulb.be/fr/doctorant" class="type_rubrique_FICO">
 
-		                            Doctorant
+                                    Doctorant·e
 
 		                                    </a>
 
@@ -4219,7 +4219,7 @@
 		                                
 		                                
 		                            
-		                            Étudiant de l'ULB
+		                            Étudiant·e de l'ULB
 
 		                                    </a>
 
@@ -4229,7 +4229,7 @@
 
 		                                    <a href="https://www.ulb.be/fr/chercheur" class="type_rubrique_0001">
 
-		                            Chercheur
+		                            Chercheuse, Chercheur
 
 		                                    </a>
 
@@ -4269,7 +4269,7 @@
 
 		                                    <a href="https://www.ulb.be/fr/acteurs-de-l-enseignement" class="type_rubrique_FICO">
 
-		                            Acteurs de l'enseignement
+		                            Actrice, acteur de l'enseignement
 
 		                                    </a>
 
@@ -4300,7 +4300,7 @@
 		                                
 		                                
 		                            
-		                            Pensionné de l'ULB
+		                            Pensionné·e de l'ULB
 		                            
 		                                
 		                                    </a>
@@ -4330,7 +4330,7 @@
 	                                        
 	                                        
 	                            
-	                            Infos Covid-19
+	                            Covid-19
 	                            
 	                                
 	                                    </a>
