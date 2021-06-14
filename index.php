@@ -4875,7 +4875,7 @@
     </footer>
 
 <a class="url-fiche" href="https://www.ulb.be/fr/ulb-accueil">https://www.ulb.be/fr/ulb-accueil</a>
-<script type="text/javascript" src="https://www.ulb.be/wro/scriptsFo_fr_FR/e4e193d5d0d0a3956eae6674779f1f354873f136.js"></script>
+<script type="text/javascript" src="https://www.ulb.be/wro/scriptsFo_fr_FR/9203e082176023657778e20a04686f60d2391ac9.js"></script>
 
 </body>
 </html>
