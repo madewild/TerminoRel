@@ -14,7 +14,7 @@ $password = PASSWORD;
 $path = $_SERVER['REQUEST_URI'];
 
 if (strpos($path, 'dev') !== false) {
-    $database = "terminorel";
+    $database = "terminorel-dev";
 } else {
     $database = "terminorel";
 }
