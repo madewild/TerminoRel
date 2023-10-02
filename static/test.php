@@ -2,8 +2,6 @@
 
 <?php include('static/retour.php'); ?>
 
-<p>Ceci est un test</p>
-
 <?php
 error_reporting(-1);
 ini_set('display_errors', 'On');
@@ -14,19 +12,20 @@ $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
 $path = $_SERVER['REQUEST_URI'];
+$table = 'terminfo';
 
 if (strpos($path, 'dev') !== false) {
     $database = "terminoreldev";
 } else {
     $database = "terminorel";
 }
-echo 'Using database ' . $database;
+echo '<p>Using database ' . $database . '</p>';
+echo '<p>Sample data from table ' . $table . ':</p>';
 
 $conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
 mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
-$result = mysqli_query($conn, "SELECT * FROM terminfo");
+$result = mysqli_query($conn, "SELECT * FROM '$table'");
 while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
     printf("ID: %s  Name: %s <br>", $row[0], $row[1]);
 }
-phpinfo();
 ?>
