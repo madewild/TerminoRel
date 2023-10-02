@@ -22,8 +22,8 @@ if (strpos($path, 'dev') !== false) {
 }
 echo 'Using database ' . $database;
 
-$connect = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
-mysqli_select_db($database) or die("Could not open the database '$database'");
+$conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
+mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
 $result = mysqli_query("SELECT * FROM terminfo");
 while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
     printf("ID: %s  Name: %s <br>", $row[0], $row[1]);
