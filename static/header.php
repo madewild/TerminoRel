@@ -1,5 +1,5 @@
 <?php
-echo "<h2>TerminoRel – Glossaires académiques de l'ULB pour la rédaction de textes en anglais</h2>";
+echo "<h2>TerminoRel – Glossaires académiques de l'ULB pour la rédaction de textes en anglais (dev)</h2>";
 
 error_reporting(-1);
 ini_set('display_errors', 'On');
@@ -18,6 +18,7 @@ if (strpos($path, 'dev') !== false) {
 } else {
     $database = "terminorel";
 }
+echo $database;
 
 $conninfo = array(
     "Database" => $database,
