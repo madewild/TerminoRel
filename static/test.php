@@ -29,4 +29,5 @@ $result = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
     printf("ID: %s  Name: %s <br>", $row[0], $row[1]);
 }
+echo "";
 ?>
