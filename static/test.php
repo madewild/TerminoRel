@@ -5,6 +5,9 @@
 <p>Ceci est un test</p>
 
 <?php
+error_reporting(-1);
+ini_set('display_errors', 'On');
+ini_set('pcre.jit', '0');
 include("secret2.php");
 
 $server = SERVER;
