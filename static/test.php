@@ -20,7 +20,7 @@ if (strpos($path, 'dev') !== false) {
 } else {
     $database = "terminorel";
 }
-echo '<p>Using database <b>' . $database . '</b></p>';
+echo '<p>Using database <b>' . $database . '</b> with user <b>' . $username . '</b></p>';
 echo '<p>Sample data from table <b>' . $table . '</b>:</p>';
 
 $conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
