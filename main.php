@@ -13,6 +13,8 @@ if(isset($_GET['term'])) {
       include("static/copyright.php");
    } else if($_GET['page'] == 'contact') {
       include("static/contact.php");
+   } else if($_GET['page'] == 'test') {
+    include("static/test.php");
    } else {
       include("static/error.php");
    }
