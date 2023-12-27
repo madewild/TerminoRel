@@ -7,7 +7,7 @@
         <nav id="form"><ul>
             <li><label for="term">
             <span title="Expression, mot ou partie de mot : 'rec' renverra recteur, directeur, recherche, etc.">
-            Terme recherché &#9432;</span></label>
+            Terme recherché 📄</span></label>
             <input type="text" class="input" id="term" name="term" size="70">
             <input type="submit" value="Rechercher"></li>
             <li><label for="source">Langue source</label>
