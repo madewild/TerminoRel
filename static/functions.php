@@ -43,13 +43,17 @@ function show_trad($conn, $results, $lang_trad, $type) {
         if(!is_null($row)) {
             $contextgroup = $row['id'];
             $context = $row['context'];
-            $result = mysqli_query($conn, "SELECT * FROM source WHERE contextgroup=$contextgroup");
-            $row = mysqli_fetch_assoc($result);
-            $bib_id = $row['biblio'];
-            $source_text_con = $row['text'];
-            $result = mysqli_query($conn, "SELECT title FROM biblio WHERE id=$bib_id");
-            $bib_title_con = mysqli_fetch_assoc($result)['title'];
-            echo "<br><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title_con . "</i>, " . $source_text_con . ")";
+            if(!is_null($context)) {
+                $result = mysqli_query($conn, "SELECT * FROM source WHERE contextgroup=$contextgroup");
+                $row = mysqli_fetch_assoc($result);
+                $bib_id = $row['biblio'];
+                $source_text_con = $row['text'];
+                $result = mysqli_query($conn, "SELECT title FROM biblio WHERE id=$bib_id");
+                $bib_title_con = mysqli_fetch_assoc($result)['title'];
+                echo "<br><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title_con . "</i>, " . $source_text_con . ")";
+            } else {
+                echo "<br>Pas d'exemple d'usage pour ce terme.";
+            }
         } else {
             echo "<br>Pas d'exemple d'usage pour ce terme.";
         }
