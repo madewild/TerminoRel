@@ -33,7 +33,7 @@ mysqli_select_db($conn, $database) or die("Could not open the database '$databas
 if ($conn) {
     $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$sort' ORDER BY termtext";
     $result = mysqli_query($conn, $query);
-    $num_rows = MYSQLI_ASSOC_rows($result);
+    $num_rows = mysqli_num_rows($result);
 
     // How many items to list per page
     if(isset($_GET['limit'])) {
@@ -174,7 +174,7 @@ if ($conn) {
             $results_admi = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth IN (0,9)");
             $results_depr = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=10");
 
-            $num_pref = MYSQLI_ASSOC_rows($results_pref);
+            $num_pref = mysqli_num_rows($results_pref);
             echo "<tr><td>" . strtoupper($cible) . "</td><td>";
             show_trad($conn, $results_pref, $cible, "privilégié");
             if($num_pref == 0) {
