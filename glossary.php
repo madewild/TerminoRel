@@ -33,7 +33,7 @@ mysqli_select_db($conn, $database) or die("Could not open the database '$databas
 if ($conn) {
     $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$sort' ORDER BY termtext";
     $result = mysqli_query($conn, $query);
-    $num_rows = mysqli_num_rows($result);
+    $num_rows = MYSQLI_ASSOC_rows($result);
 
     // How many items to list per page
     if(isset($_GET['limit'])) {
@@ -78,7 +78,7 @@ if ($conn) {
         echo "<table class='results_table'>";
         $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$sort' ORDER BY termtext LIMIT $limit OFFSET $offset";
     	$result = mysqli_query($conn, $query);
-        while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             echo "<tr>";
             print_r($row);
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
@@ -97,7 +97,7 @@ if ($conn) {
             $abbrev = $row['abbrev'];
             if($abbrev == 1) {
                 $result = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source");
-                $row2 = mysqli_fetch_array($result, MYSQLI_NUM);
+                $row2 = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 $termtextfull = $row2['termtext'];
                 $termtextfull_variant = $row2['variant'];
                 echo " (" . $termtextfull;
@@ -108,7 +108,7 @@ if ($conn) {
                 $mf = True;
             } else {
                 $result = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1");
-                $row2 = mysqli_fetch_array($result, MYSQLI_NUM);
+                $row2 = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 if($row2) {
                     $acro = $row2['termtext'];
                     echo " (" . $acro . ")";
@@ -136,36 +136,36 @@ if ($conn) {
             echo "<br>" . $pos . " " . $gender . "<br>";
 
             $result = mysqli_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source");
-            $termid = mysqli_fetch_array($result, MYSQLI_NUM)['termid'];
+            $termid = mysqli_fetch_array($result, MYSQLI_ASSOC)['termid'];
 
             $result = mysqli_query($conn, "SELECT definition FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'");
-            $definition = mysqli_fetch_array($result, MYSQLI_NUM)['definition'];
+            $definition = mysqli_fetch_array($result, MYSQLI_ASSOC)['definition'];
             if(!empty($definition)) {
                 $result = mysqli_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='def'");
-                $row = mysqli_fetch_array($result, MYSQLI_NUM);
+                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 $bib_id = $row['biblio'];
                 $source_text_def = $row['text'];
                 $result = mysqli_query($conn, "SELECT title FROM biblio WHERE id=$bib_id");
-                $bib_title_def = mysqli_fetch_array($result, MYSQLI_NUM)['title'];
+                $bib_title_def = mysqli_fetch_array($result, MYSQLI_ASSOC)['title'];
                 echo "<br><u>Définition</u> : " . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")";
             }
 
             $result = mysqli_query($conn, "SELECT explanation FROM langroup WHERE termid=$termid AND lang LIKE '$sort%'");
-            $explanation = mysqli_fetch_array($result, MYSQLI_NUM)['explanation'];
+            $explanation = mysqli_fetch_array($result, MYSQLI_ASSOC)['explanation'];
             if(!empty($explanation)) {
                 $result = mysqli_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='exp'");
-                $row = mysqli_fetch_array($result, MYSQLI_NUM);
+                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 $bib_id = $row['biblio'];
                 $source_text_exp = $row['text'];
                 $result = mysqli_query($conn, "SELECT title FROM biblio WHERE id=$bib_id");
-                $bib_title_exp = mysqli_fetch_array($result, MYSQLI_NUM)['title'];
+                $bib_title_exp = mysqli_fetch_array($result, MYSQLI_ASSOC)['title'];
                 echo "<br><br><u>Explication</u> : " . $explanation . " (<i>" . $bib_title_exp . "</i>, " . $source_text_exp . ")";
             }
 
             echo "</details></td></tr>";
 
             $result = mysqli_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE '$cible%'");
-            $langroup_target = mysqli_fetch_array($result, MYSQLI_NUM)['id'];
+            $langroup_target = mysqli_fetch_array($result, MYSQLI_ASSOC)['id'];
             $results_pref = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=7");
             if($results_pref === FALSE) {
                 print_r(mysqli_errors(), true);
@@ -174,7 +174,7 @@ if ($conn) {
             $results_admi = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth IN (0,9)");
             $results_depr = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=10");
 
-            $num_pref = mysqli_num_rows($results_pref);
+            $num_pref = MYSQLI_ASSOC_rows($results_pref);
             echo "<tr><td>" . strtoupper($cible) . "</td><td>";
             show_trad($conn, $results_pref, $cible, "privilégié");
             if($num_pref == 0) {
