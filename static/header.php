@@ -6,7 +6,7 @@ ini_set('display_errors', 'On');
 ini_set('pcre.jit', '0');
 
 include("functions.php");
-include("secret.php");
+include("secret2.php");
 
 $server = SERVER;
 $username = USERNAME;
