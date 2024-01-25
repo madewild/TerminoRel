@@ -39,9 +39,9 @@ function show_trad($conn, $results, $lang_trad, $type) {
         $termgroup = $row['id'];
         $result = mysqli_query($conn, "SELECT id, context FROM contextgroup WHERE termgroup=$termgroup");
         $row = mysqli_fetch_assoc($result);
-        $contextgroup = $row['id'];
-        $context = $row['context'];
-        if(!empty($context)) {
+        if(!is_null($row)) {
+            $contextgroup = $row['id'];
+            $context = $row['context'];
             $result = mysqli_query($conn, "SELECT * FROM source WHERE contextgroup=$contextgroup");
             $row = mysqli_fetch_assoc($result);
             $bib_id = $row['biblio'];
