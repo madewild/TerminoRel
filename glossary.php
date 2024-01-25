@@ -183,6 +183,10 @@ if ($conn) {
             }
             echo "</td></tr>";
 
+            if(--$num_rows > 0) {
+                echo "<tr><th></th></tr><tr><th></th></tr>";
+            }
+
         }
         echo "</table>";
         // Display the paging information
