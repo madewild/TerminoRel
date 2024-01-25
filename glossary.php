@@ -80,7 +80,7 @@ if ($conn) {
     	$result = mysqli_query($conn, $query);
         while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
             echo "<tr>";
-            echo($row);
+            print_r($row);
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
             $mf = False;
             echo "<td width='45'>" . $lang . "</td>";
