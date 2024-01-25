@@ -39,6 +39,7 @@ function show_trad($conn, $results, $lang_trad, $type) {
         $termgroup = $row['id'];
         $result = mysqli_query($conn, "SELECT id, context FROM contextgroup WHERE termgroup=$termgroup");
         $row = mysqli_fetch_assoc($result);
+        print_r($row);
         if(!is_null($row)) {
             $contextgroup = $row['id'];
             $context = $row['context'];
