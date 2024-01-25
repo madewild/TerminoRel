@@ -42,7 +42,7 @@ function show_trad($conn, $results, $lang_trad, $type) {
         if(!is_null($row)) {
             $contextgroup = $row['id'];
             $context = $row['context'];
-            if(!is_null($context)) {
+            if(!empty($context)) {
                 $result = mysqli_query($conn, "SELECT * FROM source WHERE contextgroup=$contextgroup");
                 $row = mysqli_fetch_assoc($result);
                 $bib_id = $row['biblio'];
