@@ -81,7 +81,7 @@ if ($conn) {
     	$result = mysqli_query($conn, $query);
         while ($row = mysqli_fetch_all($result, MYSQLI_ASSOC)) {
             echo "<tr>";
-            print_r(row);
+            print_r($row);
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
             $mf = False;
             echo "<td width='45'>" . $lang . "</td>";
