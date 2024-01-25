@@ -7,15 +7,6 @@ function clean($string) {
     return $string;
 }
 
-function mysqli_insert_id($conn) {
-    $id = 0; 
-    $res = mysqli_query($conn, "SELECT @@identity AS id", array(), array("Scrollable" => 'static')); 
-    if ($row = mysqli_fetch_array($res)) { 
-        $id = $row["id"]; 
-    }
-    return $id; 
-}
-
 function print_trad($results, $type) {
     $tig = '';
     while ($row = mysqli_fetch_array($results)) {
