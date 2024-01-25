@@ -183,6 +183,7 @@ if ($conn) {
             }
             echo "</td></tr>";
 
+            // Blank separation between two rows
             if(--$num_rows > 0) {
                 echo "<tr><th></th></tr><tr><th></th></tr>";
             }
