@@ -79,9 +79,9 @@ if ($conn) {
         echo "<table class='results_table'>";
         $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$sort' ORDER BY termtext LIMIT $limit OFFSET $offset";
     	$result = mysqli_query($conn, $query);
-        while ($row = mysqli_fetch_all($result, MYSQLI_ASSOC)) {
+        while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
-            $lang = strtoupper(explode("-", $row[0]['termlexid'])[3]);
+            $lang = strtoupper(explode("-", $row['termlexid'])[3]);
             $mf = False;
             echo "<td width='45'>" . $lang . "</td>";
             echo "<td><details><summary>";
