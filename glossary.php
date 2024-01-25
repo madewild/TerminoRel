@@ -76,7 +76,7 @@ if ($conn) {
         echo '<div id="paging"><p>', $prevlink, ' Page ', $page, ' sur ', $pages, ' (entrées ', $start, '-', $end, ') ', $nextlink, ' </p></div>';
 
         echo "<table class='results_table'>";
-        $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$sort' ORDER BY termtext OFFSET $offset ROWS FETCH NEXT $limit ROWS ONLY";
+        $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$sort' ORDER BY termtext LIMIT $limit OFFSET $offset";
     	$result = mysqli_query($conn, $query);
         while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
             echo "<tr>";
