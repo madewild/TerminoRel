@@ -78,8 +78,8 @@ if ($conn) {
 
         echo "<table class='results_table'>";
         $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$sort' ORDER BY termtext LIMIT $limit OFFSET $offset";
-    	$result = mysqli_query($conn, $query);
-        while ($row = mysqli_fetch_assoc($result)) {
+    	$main_result = mysqli_query($conn, $query);
+        while ($row = mysqli_fetch_assoc($main_result)) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
             $mf = False;
@@ -182,10 +182,6 @@ if ($conn) {
                 show_trad($conn, $results_depr, $cible, "à éviter");
             }
             echo "</td></tr>";
-
-            //if(--$num_rows > 0) {
-            //    echo "<tr><th></th></tr><tr><th></th></tr>";
-            //}
 
         }
         echo "</table>";
