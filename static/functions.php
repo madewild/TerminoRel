@@ -37,16 +37,16 @@ function show_trad($conn, $results, $lang_trad, $type) {
         echo "</b> (terme " . $type . ")";
         echo "</span></summary>";
         $termgroup = $row['id'];
-        $result = mysqli_query($conn, "SELECT id, context FROM contextgroup WHERE termgroup=$termgroup", array(), array("Scrollable" => 'static'));
+        $result = mysqli_query($conn, "SELECT id, context FROM contextgroup WHERE termgroup=$termgroup");
         $row = mysqli_fetch_assoc($result);
         $contextgroup = $row['id'];
         $context = $row['context'];
         if(!empty($context)) {
-            $result = mysqli_query($conn, "SELECT * FROM source WHERE contextgroup=$contextgroup", array(), array("Scrollable" => 'static'));
+            $result = mysqli_query($conn, "SELECT * FROM source WHERE contextgroup=$contextgroup");
             $row = mysqli_fetch_assoc($result);
             $bib_id = $row['biblio'];
             $source_text_con = $row['text'];
-            $result = mysqli_query($conn, "SELECT title FROM biblio WHERE id=$bib_id", array(), array("Scrollable" => 'static'));
+            $result = mysqli_query($conn, "SELECT title FROM biblio WHERE id=$bib_id");
             $bib_title_con = mysqli_fetch_assoc($result)['title'];
             echo "<br><u>Exemple d'usage</u> : « " . $context . " » (<i>" . $bib_title_con . "</i>, " . $source_text_con . ")";
         } else {
@@ -64,16 +64,16 @@ function show_trad_admin($conn, $results, $type) {
         $translation = $row['termtext'];
         echo "<table><tr><td><b>Traduction " . $type . "</b></td><td>" . $translation . "</td></tr>";
         $termgroup = $row['id'];
-        $result = mysqli_query($conn, "SELECT id, context FROM contextgroup WHERE termgroup=$termgroup", array(), array("Scrollable" => 'static'));
+        $result = mysqli_query($conn, "SELECT id, context FROM contextgroup WHERE termgroup=$termgroup");
         $row = mysqli_fetch_assoc($result);
         $contextgroup = $row['id'];
         $context = $row['context'];
         if(!empty($context)) {
-            $result = mysqli_query($conn, "SELECT * FROM source WHERE contextgroup=$contextgroup", array(), array("Scrollable" => 'static'));
+            $result = mysqli_query($conn, "SELECT * FROM source WHERE contextgroup=$contextgroup");
             $row = mysqli_fetch_assoc($result);
             $bib_id = $row['biblio'];
             $source_text_con = $row['text'];
-            $result = mysqli_query($conn, "SELECT title FROM biblio WHERE id=$bib_id", array(), array("Scrollable" => 'static'));
+            $result = mysqli_query($conn, "SELECT title FROM biblio WHERE id=$bib_id");
             $bib_title_con = mysqli_fetch_assoc($result)['title'];
             echo "<tr><td><b>Exemple d'usage</b></td><td>" . $context . "</td></tr>";
             echo "<tr><td><b>Source de l'example</b></td><td>" . $bib_title_con . ", " . $source_text_con . "</td></tr>";
