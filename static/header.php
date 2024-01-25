@@ -18,6 +18,7 @@ if (strpos($path, 'dev') !== false) {
 } else {
     $database = "terminorel";
 }
+echo '<p>Using database <b>' . $database . '</b> with user <b>' . $username . '</b></p>';
 
 $conninfo = array(
     "Database" => $database,
