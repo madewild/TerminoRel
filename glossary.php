@@ -31,7 +31,7 @@ $conn = mysqli_connect($server, $username, $password) or die("Unable to connect 
 mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
 
 if ($conn) {
-    $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$sort' ORDER BY termtext"
+    $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$sort' ORDER BY termtext";
     $result = mysqli_query($conn, $query);
     $num_rows = mysqli_num_rows($result);
 
