@@ -2,7 +2,7 @@
 include("static/header.php");
 
 $term = htmlspecialchars($_GET['term']);
-$clean_term = REPLACE("'", "''", $term);
+$clean_term = str_replace("'", "''", $term);
 $source = htmlspecialchars($_GET['source']);
 $cible = htmlspecialchars($_GET['target']);
 $fulldomain = htmlspecialchars($_GET['domain']);
@@ -40,6 +40,7 @@ mysqli_select_db($conn, $database) or die("Could not open the database '$databas
 if ($conn) {
     //$query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext";
     $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ORDER BY termtext";
+    echo($query);
     $result = mysqli_query($conn, $query);
     $num_rows = mysqli_num_rows($result);
 
