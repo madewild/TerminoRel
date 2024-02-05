@@ -38,12 +38,9 @@ $conn -> set_charset("utf8");
 mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
 
 if ($conn) {
-    //echo "<b>Domaine : " . $domaine . "</b><br><br>";
-
-    $query = mysqli_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext");
-    
-    // Total number of results to display
-    $num_rows = mysqli_num_rows($query);
+    $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext";
+    $result = mysqli_query($conn, $query);
+    $num_rows = mysqli_num_rows($result);
 
     // How many items to list per page
     $limit = 10;
