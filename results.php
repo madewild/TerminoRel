@@ -33,7 +33,10 @@ include('static/retour.php');
 </div><br>
 
 <?php
-$conn = mysqli_connect($server, $conninfo);
+$conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
+$conn -> set_charset("utf8");
+mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
+
 if ($conn) {
     //echo "<b>Domaine : " . $domaine . "</b><br><br>";
 
