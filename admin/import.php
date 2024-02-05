@@ -1,7 +1,7 @@
 <?php 
 include("../static/header.php");
 
-$conn = sqlsrv_connect($server, $conninfo);
+$conn = mysqli_connect($server, $conninfo);
 
 $path = $_SERVER['REQUEST_URI'];
 $barepath = strtok($path, '?');

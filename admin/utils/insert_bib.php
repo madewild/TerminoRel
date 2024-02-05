@@ -1,9 +1,9 @@
 <?php
 include("../../static/header.php");
 
-$conn = sqlsrv_connect($server, $conninfo);
+$conn = mysqli_connect($server, $conninfo);
 if ($conn) {
-    $query = sqlsrv_query($conn, "TRUNCATE TABLE biblio", array(), array("Scrollable" => 'static'));
+    $query = mysqli_query($conn, "TRUNCATE TABLE biblio", array(), array("Scrollable" => 'static'));
     $xml = simplexml_load_file("../../xml/biblio_v2.xml");
     foreach($xml->entrée as $doc)
     {
@@ -23,9 +23,9 @@ if ($conn) {
         $filename = $doc->nomFichier;
         $filename = str_replace("'", "''", $filename);
         echo 'Importing ' . $ref . '...<br>';
-        $stmt = sqlsrv_query($conn, "INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, author, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$auteur', N'$url', N'$filename')", array(), array("Scrollable" => 'static'));
+        $stmt = mysqli_query($conn, "INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, author, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$auteur', N'$url', N'$filename')", array(), array("Scrollable" => 'static'));
         if( $stmt === false ) {
-            die( print_r( sqlsrv_errors(), true));
+            die( print_r( mysqli_errors(), true));
        }
     }
 }

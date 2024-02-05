@@ -7,12 +7,12 @@
 <?php
 include("../../static/header.php");
 
-$conn = sqlsrv_connect($server, $conninfo);
+$conn = mysqli_connect($server, $conninfo);
 if ($conn) {
-    $query = sqlsrv_query($conn, "SELECT * FROM biblio", array(), array("Scrollable" => 'static'));
+    $query = mysqli_query($conn, "SELECT * FROM biblio", array(), array("Scrollable" => 'static'));
     if ($query) {
         echo '<table><tr><th>ID</th><th>Titre</th><th>Type</th><th>Date</th><th>Source</th><th>Service</th></tr>';
-        while ($row = sqlsrv_fetch_array($query))
+        while ($row = mysqli_fetch_array($query))
         {
             $ref = $row['reference'];
             $title = $row['title'];

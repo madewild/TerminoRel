@@ -54,16 +54,16 @@ if ($uploadOk == 0) {
 echo "</p>";
 
 if ($uploadOk && file_exists($target_file)) {
-    $conn = sqlsrv_connect($server, $conninfo);
+    $conn = mysqli_connect($server, $conninfo);
 
     foreach($xml->{'DC-209-terminologicalEntry'} as $doc)
     {
         $ref = $doc['DC-206-entryIdentifier'];
         $importOk = 1;
         echo '<p><b>' . $ref . '</b> en cours de traitement...' . str_pad("",4096," ");
-        $query = sqlsrv_query($conn, "SELECT id from term where reference=N'$ref'", array(), array("Scrollable" => 'static'));
+        $query = mysqli_query($conn, "SELECT id from term where reference=N'$ref'", array(), array("Scrollable" => 'static'));
         $new_syns = 0;
-        if (sqlsrv_num_rows($query) > 0) {
+        if (mysqli_num_rows($query) > 0) {
             echo "<br>Identifiant existant";
             $same_entry = 1;
             foreach($doc->langGrp as $lgrp) {
@@ -71,13 +71,13 @@ if ($uploadOk && file_exists($target_file)) {
                     $term = $tgrp->{'DC-508-term'};
                     $termtext = clean($term);
                     $termlexid = $term['DC-301-lexTermIdentifier'];
-                    $query = sqlsrv_query($conn, "SELECT termtext from termgroup where termlexid=N'$termlexid'", array(), array("Scrollable" => 'static'));
-                    if (sqlsrv_num_rows($query) == 0) {
+                    $query = mysqli_query($conn, "SELECT termtext from termgroup where termlexid=N'$termlexid'", array(), array("Scrollable" => 'static'));
+                    if (mysqli_num_rows($query) == 0) {
                         $lang = strtoupper(explode("-", $termlexid)[3]);
                         echo "<br>Nouveau synonyme " . $lang . " : <b>" . $termtext . "</b>";
                         $new_syns++;
                     } else {
-                        $dbtermtext = sqlsrv_fetch_array($query)['termtext'];
+                        $dbtermtext = mysqli_fetch_array($query)['termtext'];
                         if ($dbtermtext != $termtext) {
                             $same_entry = 0;
                         }
@@ -100,9 +100,9 @@ if ($uploadOk && file_exists($target_file)) {
                     $termtext = clean($term);
                     $termlexid = $term['DC-301-lexTermIdentifier'];
                     $dom = strtoupper(explode("-", $termlexid)[0]);
-                    $query = sqlsrv_query($conn, "SELECT termlexid from termgroup where termlexid like '$dom%01-fr' and termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
-                    if (sqlsrv_num_rows($query) > 0) {
-                        $dbtermlexid = sqlsrv_fetch_array($query)['termlexid'];
+                    $query = mysqli_query($conn, "SELECT termlexid from termgroup where termlexid like '$dom%01-fr' and termtext=N'$termtext'", array(), array("Scrollable" => 'static'));
+                    if (mysqli_num_rows($query) > 0) {
+                        $dbtermlexid = mysqli_fetch_array($query)['termlexid'];
                         $duplicate = explode("-", $dbtermlexid)[0] . "-" . explode("-", $dbtermlexid)[1];
                         echo("<br>Le terme <b>" . $termtext . "</b> existe déjà dans le domaine " . $dom . " (entrée " . $duplicate . ") !");
                         $importOk = 0;
