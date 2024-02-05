@@ -2,7 +2,7 @@
 include("static/header.php");
 
 $term = htmlspecialchars($_GET['term']);
-$clean_term = str_replace("'", "''", $term);
+$clean_term = REPLACE("'", "''", $term);
 $source = htmlspecialchars($_GET['source']);
 $cible = htmlspecialchars($_GET['target']);
 $fulldomain = htmlspecialchars($_GET['domain']);
