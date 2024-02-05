@@ -38,9 +38,7 @@ $conn -> set_charset("utf8");
 mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
 
 if ($conn) {
-    //$query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext";
     $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%') ORDER BY termtext";
-    echo($query);
     $result = mysqli_query($conn, $query);
     $num_rows = mysqli_num_rows($result);
 
@@ -88,12 +86,10 @@ if ($conn) {
         echo "<table class='results_table'>";
         $query = mysqli_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext OFFSET $offset ROWS FETCH NEXT $limit ROWS ONLY");
         if($query === FALSE) {
-            if( ($errors = mysqli_errors() ) != null) {  
-                foreach( $errors as $error) {  
-                    echo "SQLSTATE: ".$error[ 'SQLSTATE']."\n";  
-                    echo "code: ".$error[ 'code']."\n";  
-                    echo "message: ".$error[ 'message']."\n";  
-                }  
+            if( ($error = mysqli_error() ) != null) {  
+                echo "SQLSTATE: ".$error[ 'SQLSTATE']."\n";  
+                echo "code: ".$error[ 'code']."\n";  
+                echo "message: ".$error[ 'message']."\n";
             } else {
                 echo "no error!";
             }
