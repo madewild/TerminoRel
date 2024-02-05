@@ -38,7 +38,8 @@ $conn -> set_charset("utf8");
 mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
 
 if ($conn) {
-    $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext";
+    //$query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext";
+    $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%' ORDER BY termtext";
     $result = mysqli_query($conn, $query);
     $num_rows = mysqli_num_rows($result);
 
