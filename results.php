@@ -86,7 +86,7 @@ if ($conn) {
         echo "<table class='results_table'>";
         $query = mysqli_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext OFFSET $offset ROWS FETCH NEXT $limit ROWS ONLY");
         if($query === FALSE) {
-            if( ($error = mysqli_error() ) != null) {  
+            if( ($error = mysqli_error($conn) ) != null) {  
                 echo "SQLSTATE: ".$error[ 'SQLSTATE']."\n";  
                 echo "code: ".$error[ 'code']."\n";  
                 echo "message: ".$error[ 'message']."\n";
