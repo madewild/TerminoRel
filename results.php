@@ -84,17 +84,10 @@ if ($conn) {
         echo $nav;
 
         echo "<table class='results_table'>";
-        $query = mysqli_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext OFFSET $offset ROWS FETCH NEXT $limit ROWS ONLY");
-        if($query === FALSE) {
-            if( ($error = mysqli_error($conn) ) != null) {  
-                echo "SQLSTATE: ".$error[ 'SQLSTATE']."\n";  
-                echo "code: ".$error[ 'code']."\n";  
-                echo "message: ".$error[ 'message']."\n";
-            } else {
-                echo "no error!";
-            }
-        }
-        while ($row = mysqli_fetch_array($query)) {
+        $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%') ORDER BY termtext LIMIT $limit OFFSET $offset";
+        $main_result = mysqli_query($conn, $query);
+
+        while ($row = mysqli_fetch_assoc($main_result)) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
             $mf = False;
