@@ -28,31 +28,40 @@ foreach($domains as $domain) {
     <text>
       <body>';
     
-    $conn = mysqli_connect($server, $conninfo);
+    $conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
+    $conn -> set_charset("utf8");
+    mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
+
     if ($conn) {
-      $query = mysqli_query($conn, "SELECT * FROM term WHERE reference LIKE '$domain%'", array(), array("Scrollable" => 'static'));
-      $num_rows = mysqli_num_rows($query);
+      $query = "SELECT * FROM term WHERE reference LIKE '$domain%'";
+      $result = mysqli_query($conn, $query);
+      $num_rows = mysqli_num_rows($result);
       if ($num_rows > 0) {
-          while ($row = mysqli_fetch_array($query)) {
+          while ($row = mysqli_fetch_assoc($result)) {
               $termid = $row['id'];
               $ref = $row['reference'];
               $tbx .= '
         <termEntry id ="' . $ref . '">';
-              $result = mysqli_query($conn, "SELECT * FROM subjectfield where term LIKE '$ref'", array(), array("Scrollable" => 'static'));
-              while ($row2 = mysqli_fetch_array($result)) {
+              
+              $query2 = "SELECT * FROM subjectfield where term LIKE '$ref'";
+              $result2 = mysqli_query($conn, $query2);
+              while ($row2 = mysqli_fetch_assoc($result2)) {
                 $subjectid = $row2['subject'];
-                $result2 = mysqli_query($conn, "SELECT text FROM subject where id=$subjectid", array(), array("Scrollable" => 'static'));
-                $subject = mysqli_fetch_array($result2)['text'];
+                $query3 = "SELECT text FROM subject where id=$subjectid";
+                $result3 = mysqli_query($conn, $query3);
+                $subject = mysqli_fetch_assoc($result3)['text'];
                 $tbx .= '
           <descrip type="subjectField">' . $subject . '</descrip>';
               }
               $tbx .= '
           <langSet xml:lang="fr-BE">';
 
-              $result = mysqli_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'", array(), array("Scrollable" => 'static'));
-              $langroup_source = mysqli_fetch_array($result)['id'];
-              $result2 = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source", array(), array("Scrollable" => 'static'));
-              while ($termgroup = mysqli_fetch_array($result2)) {
+              $query4 = "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'";
+              $result4 = mysqli_query($conn, $query4);
+              $langroup_source = mysqli_fetch_assoc($result4)['id'];
+              $query5 = "SELECT * FROM termgroup WHERE langroup=$langroup_source";
+              $result5 = mysqli_query($conn, $query5);
+              while ($termgroup = mysqli_fetch_assoc($result5)) {
                 $term = $termgroup['termtext'];
                 $tbx .= '
               <tig>
@@ -68,16 +77,18 @@ foreach($domains as $domain) {
                 }
 
                 $posid = $termgroup['pos'];
-                $result = mysqli_query($conn, "SELECT dcvalue FROM terminfo WHERE id=$posid", array(), array("Scrollable" => 'static'));
-                $dcvalue = mysqli_fetch_array($result)['dcvalue'];
+                $query6 = "SELECT dcvalue FROM terminfo WHERE id=$posid";
+                $result6 = mysqli_query($conn, $query6);
+                $dcvalue = mysqli_fetch_assoc($result6)['dcvalue'];
                 $pos = explode("-", $dcvalue)[2];
 
                 $tbx .= '
                 <termNote type="partOfSpeech">' . $pos . '</termNote>';
 
                 $gendid = $termgroup['gender'];
-                $result = mysqli_query($conn, "SELECT dcvalue FROM terminfo WHERE id=$gendid", array(), array("Scrollable" => 'static'));
-                $dcvalue = mysqli_fetch_array($result)['dcvalue'];
+                $query7 = "SELECT dcvalue FROM terminfo WHERE id=$gendid";
+                $result7 = mysqli_query($conn, $query7);
+                $dcvalue = mysqli_fetch_assoc($result7)['dcvalue'];
                 if($dcvalue) {
                   if($dcvalue == "DC-246-masculine_or_DC-247-feminine") {
                     $gender = "other";
@@ -97,11 +108,14 @@ foreach($domains as $domain) {
           </langSet>
           <langSet xml:lang="en-GB">';
 
-              $result = mysqli_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE 'en%'", array(), array("Scrollable" => 'static'));
-              $langroup_target = mysqli_fetch_array($result)['id'];
+              $query8 = "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE 'en%'";
+              $result8 = mysqli_query($conn, $query8);
+              $langroup_target = mysqli_fetch_assoc($result8)['id'];
 
-              $results_recom = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5", array(), array("Scrollable" => 'static'));
-              $results_prop = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5", array(), array("Scrollable" => 'static'));
+              $query_recom = "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier!=5";
+              $results_recom = mysqli_query($conn, $query_recom);
+              $query_prop = "SELECT * FROM termgroup WHERE langroup=$langroup_target AND qualifier=5";
+              $results_prop = mysqli_query($conn, $query_prop);
               $num_recom = mysqli_num_rows($results_recom);
               
               $tig = print_trad($results_recom, "approuvé");
