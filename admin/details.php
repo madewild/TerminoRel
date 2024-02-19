@@ -2,10 +2,13 @@
 include("../static/header.php");
 
 $termlexid = htmlspecialchars($_GET['fiche']);
-$conn = mysqli_connect($server, $conninfo);
+$conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
+$conn -> set_charset("utf8");
+mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
 if ($conn) {
-    $query = mysqli_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$termlexid'", array(), array("Scrollable" => 'static'));
-    $row = mysqli_fetch_array($query);
+    $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$termlexid'";
+    $main_result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($main_result);
 }
 
 $path = $_SERVER['REQUEST_URI'];
