@@ -64,7 +64,7 @@ function show_trad($conn, $results, $lang_trad, $type) {
 }
 
 function show_trad_admin($conn, $results, $type) {
-    while ($row = mysqli_fetch_assoc($result)) {
+    while ($row = mysqli_fetch_assoc($results)) {
         $translation = $row['termtext'];
         echo "<table><tr><td><b>Traduction " . $type . "</b></td><td>" . $translation . "</td></tr>";
         $termgroup = $row['id'];
