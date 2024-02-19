@@ -30,8 +30,9 @@ if($variant != NULL) {
 }
 
 $langroup_source = $row['langroup'];
-$result = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1", array(), array("Scrollable" => 'static'));
-$row2 = mysqli_fetch_array($result);
+$query2 = "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1";
+$result2 = mysqli_query($conn, $query2);
+$row2 = mysqli_fetch_assoc($result2);
 if($row2) {
     $acro = $row2['termtext'];
     echo "<tr><td><b>Abréviation</b></td><td>" . $acro . "</td></tr>";
