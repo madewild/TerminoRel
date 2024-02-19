@@ -7,12 +7,16 @@
 <?php
 include("../../static/header.php");
 
-$conn = mysqli_connect($server, $conninfo);
+$conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
+$conn -> set_charset("utf8");
+mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
+
 if ($conn) {
-    $query = mysqli_query($conn, "SELECT * FROM biblio", array(), array("Scrollable" => 'static'));
-    if ($query) {
+    $query = "SELECT * FROM biblio";
+    $result = mysqli_query($conn, $query);
+    if ($result) {
         echo '<table><tr><th>ID</th><th>Titre</th><th>Type</th><th>Date</th><th>Source</th><th>Service</th></tr>';
-        while ($row = mysqli_fetch_array($query))
+        while ($row = mysqli_fetch_assoc($result))
         {
             $ref = $row['reference'];
             $title = $row['title'];
