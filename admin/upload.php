@@ -80,7 +80,7 @@ if ($uploadOk && file_exists($target_file)) {
                         echo "<br>Nouveau synonyme " . $lang . " : <b>" . $termtext . "</b>";
                         $new_syns++;
                     } else {
-                        $dbtermtext = mysqli_fetch_array($query)['termtext'];
+                        $dbtermtext = mysqli_fetch_assoc($result2)['termtext'];
                         if ($dbtermtext != $termtext) {
                             $same_entry = 0;
                         }
