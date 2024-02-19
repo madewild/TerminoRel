@@ -72,7 +72,7 @@ function show_trad_admin($conn, $results, $type) {
         $row = mysqli_fetch_assoc($result);
         $contextgroup = $row['id'];
         $context = $row['context'];
-        if(!empty($context)) {
+        if($context) {
             $result = mysqli_query($conn, "SELECT * FROM source WHERE contextgroup=$contextgroup");
             $row = mysqli_fetch_assoc($result);
             $bib_id = $row['biblio'];
