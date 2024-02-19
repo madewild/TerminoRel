@@ -3,10 +3,12 @@ include("../static/header.php");
  
 if(!empty($_POST["domain_id"])){ 
     $domainid = $_POST["domain_id"];
-    $conn = mysqli_connect($server, $conninfo);
+    $conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
+    $conn -> set_charset("utf8");
     if ($conn) {
-        $query = mysqli_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$domainid%01-fr' ORDER BY termtext", array(), array("Scrollable" => 'static'));
-        while ($row = mysqli_fetch_array($query)) {
+        $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$domainid%01-fr' ORDER BY termtext";
+        $main_result = mysqli_query($conn, $query);
+        while ($row = mysqli_fetch_assoc($main_result)) {
             echo '<option value="'.$row["termlexid"].'">'.$row["termtext"].'</option>';
         }
     }
