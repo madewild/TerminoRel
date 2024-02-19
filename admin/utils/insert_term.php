@@ -23,7 +23,7 @@ if ($conn) {
                 $subject = str_replace("'", "''", $subject);
                 $query = mysqli_query($conn, "SELECT id from subject where level=$level and text=N'$subject'");
                 if (mysqli_num_rows($query) > 0) {
-                    $subject_id = mysqli_fetch_array($query)['id'];
+                    $subject_id = mysqli_fetch_assoc($query)['id'];
                 }
                 else {
                     $query = mysqli_query($conn, "INSERT INTO subject (cdu, level, text) VALUES (N'$cdu', $level, N'$subject')");
@@ -39,7 +39,7 @@ if ($conn) {
             $owner_name = $owner['nom'];
             $query = mysqli_query($conn, "SELECT id from subsetowner where name=N'$owner_name'");
             if (mysqli_num_rows($query) > 0) {
-                $owner_id = mysqli_fetch_array($query)['id'];
+                $owner_id = mysqli_fetch_assoc($query)['id'];
             }
             else {
                 $query = mysqli_query($conn, "INSERT INTO subsetowner (name) VALUES (N'$owner_name')");
@@ -50,7 +50,7 @@ if ($conn) {
             $creator_name = str_replace("'", "''", $creator);
             $query = mysqli_query($conn, "SELECT id from creator where name=N'$creator_name'");
             if (mysqli_num_rows($query) > 0) {
-                $creator_id = mysqli_fetch_array($query)['id'];
+                $creator_id = mysqli_fetch_assoc($query)['id'];
             }
             else {
                 $query = mysqli_query($conn, "INSERT INTO creator (name) VALUES (N'$creator_name')");
@@ -61,7 +61,7 @@ if ($conn) {
             $query = mysqli_query($conn, "SELECT id from term where reference=N'$ref'");
             if (mysqli_num_rows($query) > 0) {
                 echo "Référence déjà présente (doublon)<br>";
-                $term_id = mysqli_fetch_array($query)['id'];
+                $term_id = mysqli_fetch_assoc($query)['id'];
             }
             else {
                 $query = mysqli_query($conn, "INSERT INTO term (reference, subsetowner, createdby, inputdate) VALUES (N'$ref', $owner_id, $creator_id, N'$date')");
@@ -92,7 +92,7 @@ if ($conn) {
                 $query = mysqli_query($conn, "SELECT id from langroup where termid=N'$term_id' and lang=N'$lang'");
                 if (mysqli_num_rows($query) > 0) {
                     echo "Ce terme a déjà une entrée pour la langue " . $lang . "<br>";
-                    $langroup_id = mysqli_fetch_array($query)['id'];
+                    $langroup_id = mysqli_fetch_assoc($query)['id'];
                 }
                 else {
                     $query = mysqli_query($conn, "INSERT INTO langroup (termid, lang, definition, explanation) VALUES ($term_id, N'$lang', N'$def', N'$exp')");
@@ -105,11 +105,11 @@ if ($conn) {
                         $source_text = str_replace("'", "''", $source);
                         $query = mysqli_query($conn, "SELECT id from biblio where reference=N'$bibref'");
                         if (mysqli_num_rows($query) > 0) {
-                            $bib_id = mysqli_fetch_array($query)['id'];
+                            $bib_id = mysqli_fetch_assoc($query)['id'];
                         }
                         $query = mysqli_query($conn, "SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='def' and termid=$term_id");
                         if (mysqli_num_rows($query) > 0) {
-                            $source_id = mysqli_fetch_array($query)['id'];
+                            $source_id = mysqli_fetch_assoc($query)['id'];
                         }
                         else {
                             $query = mysqli_query($conn, "INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'def', $term_id, NULL)");
@@ -124,11 +124,11 @@ if ($conn) {
                         $source_text = str_replace("'", "''", $source);
                         $query = mysqli_query($conn, "SELECT id from biblio where reference=N'$bibref'");
                         if (mysqli_num_rows($query) > 0) {
-                            $bib_id = mysqli_fetch_array($query)['id'];
+                            $bib_id = mysqli_fetch_assoc($query)['id'];
                         }
                         $query = mysqli_query($conn, "SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='exp' and termid=$term_id");
                         if (mysqli_num_rows($query) > 0) {
-                            $source_id = mysqli_fetch_array($query)['id'];
+                            $source_id = mysqli_fetch_assoc($query)['id'];
                         }
                         else {
                             $query = mysqli_query($conn, "INSERT INTO source (biblio, text, type, termid, contextgroup) VALUES ($bib_id, N'$source_text', 'exp', $term_id, NULL)");
@@ -144,7 +144,7 @@ if ($conn) {
                     $status = $term['DC-280-languagePlanningQualifier'];
                     $query = mysqli_query($conn, "SELECT id from terminfo where dcvalue=N'$status'");
                     if (mysqli_num_rows($query) > 0) {
-                        while ($row = mysqli_fetch_array($query)) {
+                        while ($row = mysqli_fetch_assoc($query)) {
                             $status_id = $row['id'];
                         }
                     }
@@ -160,7 +160,7 @@ if ($conn) {
                     $auth = $term['DC-374-normativeAuthorization'];
                     $query = mysqli_query($conn, "SELECT id from terminfo where dcvalue=N'$auth'");
                     if (mysqli_num_rows($query) > 0) {
-                        while ($row = mysqli_fetch_array($query)) {
+                        while ($row = mysqli_fetch_assoc($query)) {
                             $auth_id = $row['id'];
                         }
                     }
@@ -182,7 +182,7 @@ if ($conn) {
                     $pos = $graminfo['DC-396-partOfSpeech'];
                     $query = mysqli_query($conn, "SELECT id from terminfo where dcvalue=N'$pos'");
                     if (mysqli_num_rows($query) > 0) {
-                        while ($row = mysqli_fetch_array($query)) {
+                        while ($row = mysqli_fetch_assoc($query)) {
                             $pos_id = $row['id'];
                         }
                     }
@@ -194,7 +194,7 @@ if ($conn) {
                     $gender = $graminfo['DC-245-grammaticalGender'];
                     $query = mysqli_query($conn, "SELECT id from terminfo where dcvalue=N'$gender'");
                     if (mysqli_num_rows($query) > 0) {
-                        while ($row = mysqli_fetch_array($query)) {
+                        while ($row = mysqli_fetch_assoc($query)) {
                             $gender_id = $row['id'];
                         }
                     }
@@ -210,7 +210,7 @@ if ($conn) {
                     $number = $graminfo['DC-251-grammaticalNumber'];
                     $query = mysqli_query($conn, "SELECT id from terminfo where dcvalue=N'$number'");
                     if (mysqli_num_rows($query) > 0) {
-                        while ($row = mysqli_fetch_array($query)) {
+                        while ($row = mysqli_fetch_assoc($query)) {
                             $number_id = $row['id'];
                         }
                     }
@@ -232,7 +232,7 @@ if ($conn) {
 
                     $query = mysqli_query($conn, "SELECT id from termgroup where langroup=$langroup_id and termlexid=N'$termlexid' and termtext=N'$termtext' and pos=$pos_id");
                     if (mysqli_num_rows($query) > 0) {
-                        while ($row = mysqli_fetch_array($query)) {
+                        while ($row = mysqli_fetch_assoc($query)) {
                             $termgroup_id = $row['id'];
                         }
                     }
@@ -247,7 +247,7 @@ if ($conn) {
                         $context = clean($context);
                         $query = mysqli_query($conn, "SELECT id from contextgroup where termgroup=$termgroup_id and context=N'$context'");
                         if (mysqli_num_rows($query) > 0) {
-                            while ($row = mysqli_fetch_array($query)) {
+                            while ($row = mysqli_fetch_assoc($query)) {
                                 $contextgroup_id = $row['id'];
                             }
                         }
@@ -260,13 +260,13 @@ if ($conn) {
                         $source_text = clean($source);
                         $query = mysqli_query($conn, "SELECT id from biblio where reference=N'$bibref'");
                         if (mysqli_num_rows($query) > 0) {
-                            while ($row = mysqli_fetch_array($query)) {
+                            while ($row = mysqli_fetch_assoc($query)) {
                                 $bib_id = $row['id'];
                             }
                         }
                         $query = mysqli_query($conn, "SELECT id from source where biblio=$bib_id and text=N'$source_text' and type='con' and termid=$term_id and contextgroup=$contextgroup_id");
                         if (mysqli_num_rows($query) > 0) {
-                            while ($row = mysqli_fetch_array($query)) {
+                            while ($row = mysqli_fetch_assoc($query)) {
                                 $source_id = $row['id'];
                             }
                         }
