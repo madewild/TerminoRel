@@ -70,9 +70,9 @@ function show_trad_admin($conn, $results, $type) {
         $termgroup = $row['id'];
         $result = mysqli_query($conn, "SELECT id, context FROM contextgroup WHERE termgroup=$termgroup");
         $row = mysqli_fetch_assoc($result);
-        $contextgroup = $row['id'];
-        $context = $row['context'];
-        if($context) {
+        if($row) {
+            $contextgroup = $row['id'];
+            $context = $row['context'];
             $result = mysqli_query($conn, "SELECT * FROM source WHERE contextgroup=$contextgroup");
             $row = mysqli_fetch_assoc($result);
             $bib_id = $row['biblio'];
@@ -81,8 +81,8 @@ function show_trad_admin($conn, $results, $type) {
             $bib_title_con = mysqli_fetch_assoc($result)['title'];
             echo "<tr><td><b>Exemple d'usage</b></td><td>" . $context . "</td></tr>";
             echo "<tr><td><b>Source de l'example</b></td><td>" . $bib_title_con . ", " . $source_text_con . "</td></tr>";
+        }
         echo "</table>";
-        } 
     }
 }
 
