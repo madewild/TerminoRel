@@ -27,7 +27,7 @@ $conn = mysqli_connect($server, $username, $password) or die("Unable to connect 
 mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
 $result = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_assoc($result)) {
-    printf("ID: %s  Name: %s <br>", $row[id], $row[termtext]);
+    printf("ID: %s  Name: %s <br>", $row['id'], $row['termtext']);
 }
 echo "<br>";
 ?>
