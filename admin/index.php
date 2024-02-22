@@ -1,43 +1,43 @@
 <!DOCTYPE html>
-<html class="no-js html loading" xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html class="js html csscalc no-touchevents backgroundblendmode objectfit object-fit flexbox" xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />     
-    <meta property="og:description" content="L&#39;ULB vous accueille lors de ses différentes activités d&#39;information sur les études et la vie étudiante, sur ses campus et près de chez vous!" />
-    <meta property="og:title" content="Glossaires de l'ULB" />
-    <meta property="og:site_name" content="ULB" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.ulb.be/fr/ulb-accueil" />
-    <meta property="og:image" content="https://www.ulb.be/medias/photo/dsc-1442-lara-herbinia-preview_1530802388369-jpeg" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <meta property="og:description" content="L&#39;ULB vous accueille lors de ses différentes activités d&#39;information sur les études et la vie étudiante, sur ses campus et près de chez vous!">
+    <meta property="og:title" content="Glossaires de l'ULB">
+    <meta property="og:site_name" content="ULB">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.ulb.be/fr/ulb-accueil">
+    <meta property="og:image" content="https://www.ulb.be/uas/ulbout/LOGO/Logo-ULB.svg">
 
     <title>Glossaires de l'ULB</title>
 
-    <link rel="alternate" href="https://www.ulb.be/en" hreflang="en" />
-    <link rel="canonical" href="https://www.ulb.be" />
+    <link rel="alternate" href="https://www.ulb.be/en" hreflang="en">
+    <link rel="canonical" href="https://www.ulb.be/">
 
-    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache">
 
-    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-    <meta name="DC.Title" content="Bienvenue à l'ULB" />
-    <meta name="DC.Creator" content="Administrateur K-Sup" />
-    <meta name="DC.Description" lang="fr-FR" content="L&#39;ULB vous accueille lors de ses différentes activités d&#39;information sur les études et la vie étudiante, sur ses campus et près de chez vous!" />
-    <meta name="DC.Publisher" content="Administrateur K-Sup" />
-    <meta name="DC.Date.created" scheme="W3CDTF" content="20180705 16:53:56.0" />
-    <meta name="DC.Date.modified" scheme="W3CDTF" content="20190605 11:57:39.0" />
-    <meta name="DC.Language" scheme="RFC3066" content="fr-FR" />
-    <meta name="DC.Rights" content="Copyright &copy; ULB" />
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <meta name="DC.Title" content="Bienvenue à l&#39;ULB">
+    <meta name="DC.Creator" content="Administrateur K-Sup">
+    <meta name="DC.Description" lang="fr-FR" content="L&#39;ULB vous accueille lors de ses différentes activités d&#39;information sur les études et la vie étudiante, sur ses campus et près de chez vous!">
+    <meta name="DC.Publisher" content="Administrateur K-Sup">
+    <meta name="DC.Date.created" scheme="W3CDTF" content="20180705 16:53:56.0">
+    <meta name="DC.Date.modified" scheme="W3CDTF" content="20240221 16:51:50.0">
+    <meta name="DC.Language" scheme="RFC3066" content="fr-FR">
+    <meta name="DC.Rights" content="Copyright &copy; ULB">
 
-    <meta name="description" content="L&#39;ULB vous accueille lors de ses différentes activités d&#39;information sur les études et la vie étudiante, sur ses campus et près de chez vous!" />
-    <meta name="author" lang="fr_FR" content="Administrateur K-Sup" />
-    <meta name="Date-Creation-yyyymmdd" content="20180705 16:53:56.0" />
-    <meta name="Date-Revision-yyyymmdd" content="20190605 11:57:39.0" />
-    <meta name="copyright" content="Copyright &copy; ULB" />
-    <meta name="reply-to" content="webmaster@ulb.ac.be" />
-    <meta name="category" content="Internet" />
-    <meta name="robots" content="index, follow" />
-    <meta name="distribution" content="global" />
-    <meta name="identifier-url" content="https://www.ulb.be/" />
-    <meta name="resource-type" content="document" />
+    <meta name="description" content="L&#39;ULB vous accueille lors de ses différentes activités d&#39;information sur les études et la vie étudiante, sur ses campus et près de chez vous!">
+    <meta name="author" lang="fr_FR" content="Administrateur K-Sup">
+    <meta name="Date-Creation-yyyymmdd" content="20180705 16:53:56.0">
+    <meta name="Date-Revision-yyyymmdd" content="20190605 11:57:39.0">
+    <meta name="copyright" content="Copyright &copy; ULB">
+    <meta name="reply-to" content="webmaster@ulb.ac.be">
+    <meta name="category" content="Internet">
+    <meta name="robots" content="index, follow">
+    <meta name="distribution" content="global">
+    <meta name="identifier-url" content="https://www.ulb.be/">
+    <meta name="resource-type" content="document">
     <meta name="expires" content="-1" />
 
     <meta name="google-site-verification" content="AIzaSyDFz1CYoEnKZsD8O3nXoyh98EAoZqntYLw" />
@@ -578,11 +578,9 @@
 
 
 	
-	    --><a href="https://www.ulb.be/fr/info-coronavirus" class="acces_direct__item type_rubrique_FICO">
-	        <span class="acces_direct__libelle">
-	            INFOS COVID-19
-	        </span>
-	    </a><!--
+
+
+
 	
 	    --><a href="https://www.ulb.be/fr/plan-et-acces" class="acces_direct__item type_rubrique_0001">
 	        <span class="acces_direct__libelle">
@@ -602,9 +600,24 @@
 	        </span>
 	    </a><!--
 	
+	    --><a href="https://www.ulb.be/fr/lulb-a-charleroi" class="acces_direct__item type_rubrique_0001">
+	        <span class="acces_direct__libelle">
+	            ÉTUDIER À CHARLEROI
+	        </span>
+	    </a><!--
+	
+
+       
+       
+       
+           
+           
+           
+           
+	
 
     --><div id="menu_deroulant1" class="header_toggle">
-        <button class="header_toggle__libelle header_toggle__lvl1" data-toggle="[data-toggle-id='menuderoulant1']" data-toggle-group="menus" type="button">
+        <button class="header_toggle__libelle header_toggle__lvl1" data-toggle="[data-toggle-id=&#39;menuderoulant1&#39;]" data-toggle-group="menus" type="button">
 
                 <span class="header_toggle__picto"><img src="https://www.ulb.be/medias/photo/acces-restreints-header_1534254852458-png" alt="Intranet"></span>
 
@@ -612,7 +625,7 @@
             	Intranet
         	</span>
         </button>
-        <div data-toggle-id="menuderoulant1" class="header_toggle__menu menuderoulant" data-toggle-target>
+        <div data-toggle-id="menuderoulant1" class="header_toggle__menu menuderoulant" data-toggle-target="">
             <ul class="menuderoulant">
 
                     <li class="menuderoulant__item">
@@ -661,19 +674,19 @@
 
             <input type="hidden" name="l" value="">
             <input type="hidden" name="RH" value="1571625036018525">
-            <input type="hidden" data-inputfor="MOTS_CLEFS" id="MOTS_CLEFS_AUTOCOMPLETE"/>
+            <input type="hidden" data-inputfor="MOTS_CLEFS" id="MOTS_CLEFS_AUTOCOMPLETE">
 
             <div class="header_toggle__radios js-radio-search">
                 <span class="header_toggle__radios__block">
-	                <input type="radio" id="tout_le_site" name="beanKey" value="150bfcee-1f87-11e7-a0e0-b753bedcad22" checked="checked"/>
+	                <input type="radio" id="tout_le_site" name="beanKey" value="150bfcee-1f87-11e7-a0e0-b753bedcad22" checked="checked">
 	                <label for="tout_le_site">Tout le site</label>
                 </span>
                 <span class="header_toggle__radios__block">
-	                <input type="radio" id="annuaire" name="beanKey" value="beanKeyRechercheAnnuaireksup" />
+	                <input type="radio" id="annuaire" name="beanKey" value="beanKeyRechercheAnnuaireksup">
 	                <label for="annuaire">Annuaire</label>
                 </span>
                 <span class="header_toggle__radios__block">
-	                <input type="radio" id="formations" name="beanKey" value="beanKeyRechercheFormation" />
+	                <input type="radio" id="formations" name="beanKey" value="beanKeyRechercheFormation">
 	                <label for="formations">Formation</label>
                 </span>
             </div>
@@ -769,7 +782,7 @@
                 --><a class="item__control type_rubrique_FICO" href="https://www.ulb.be/fr/info-coronavirus" aria-expanded="false"><!-- 
                     
                     --><span class="item__label">
-                        Infos Covid-19
+                        Covid-19
                     </span><!-- 
                 --></a><!--
             
@@ -4187,7 +4200,7 @@
 
 		                                    <a href="https://www.ulb.be/fr/futur-etudiant" class="type_rubrique_0001">
 
-		                            Futur étudiant
+                                    Futur·e étudiant·e
 
 		                                    </a>
 
@@ -4197,7 +4210,7 @@
 
 		                                    <a href="https://www.ulb.be/fr/parent" class="type_rubrique_0001">
 
-		                            Parent
+		                            Parents
 
 		                                    </a>
 
@@ -4207,7 +4220,7 @@
 
 		                                    <a href="https://www.ulb.be/fr/doctorant" class="type_rubrique_FICO">
 
-		                            Doctorant
+                                    Doctorant·e
 
 		                                    </a>
 
@@ -4219,7 +4232,7 @@
 		                                
 		                                
 		                            
-		                            Étudiant de l'ULB
+		                            Étudiant·e de l'ULB
 
 		                                    </a>
 
@@ -4229,7 +4242,7 @@
 
 		                                    <a href="https://www.ulb.be/fr/chercheur" class="type_rubrique_0001">
 
-		                            Chercheur
+		                            Chercheuse, Chercheur
 
 		                                    </a>
 
@@ -4269,7 +4282,7 @@
 
 		                                    <a href="https://www.ulb.be/fr/acteurs-de-l-enseignement" class="type_rubrique_FICO">
 
-		                            Acteurs de l'enseignement
+		                            Actrice, acteur de l'enseignement
 
 		                                    </a>
 
@@ -4300,7 +4313,7 @@
 		                                
 		                                
 		                            
-		                            Pensionné de l'ULB
+		                            Pensionné·e de l'ULB
 		                            
 		                                
 		                                    </a>
@@ -4330,7 +4343,7 @@
 	                                        
 	                                        
 	                            
-	                            Infos Covid-19
+	                            Covid-19
 	                            
 	                                
 	                                    </a>
