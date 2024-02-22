@@ -12,8 +12,8 @@ $server = SERVER;
 $username = USERNAME;
 $password = PASSWORD;
 $path = $_SERVER['REQUEST_URI'];
-$table = 'terminfo';
-$query = "SELECT * FROM " . $table;
+$table = 'termgroup';
+$query = "SELECT * FROM " . $table . " LIMIT 10";
 
 if (strpos($path, 'dev') !== false) {
     $database = "terminoreldev";
@@ -26,8 +26,8 @@ echo '<p>Sample data from table <b>' . $table . '</b>:</p>';
 $conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
 mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
 $result = mysqli_query($conn, $query);
-while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
-    printf("ID: %s  Name: %s <br>", $row[0], $row[1]);
+while ($row = mysqli_fetch_assoc($result, MYSQLI_NUM)) {
+    printf("ID: %s  Name: %s <br>", $row[id], $row[termtext]);
 }
 echo "<br>";
 ?>
