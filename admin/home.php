@@ -19,10 +19,13 @@
                     <label for="fiche">Fiche</label>
                     <select id="fiche" name="fiche">
                         <?php
-                        $conn = sqlsrv_connect($server, $conninfo);
+                        $conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
+                        $conn -> set_charset("utf8");
+                        mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
                         if ($conn) {
-                            $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE 'P01%01-fr' ORDER BY termtext", array(), array("Scrollable" => 'static'));
-                            while ($row = sqlsrv_fetch_array($query)) {
+                            $query = "SELECT * FROM termgroup WHERE termlexid LIKE 'P01%01-fr' ORDER BY termtext";
+    	                    $main_result = mysqli_query($conn, $query);
+                            while ($row = mysqli_fetch_assoc($main_result)) {
                                 echo '<option value="'.$row["termlexid"].'">'.$row["termtext"].'</option>';
                             }
                         }

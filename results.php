@@ -33,14 +33,14 @@ include('static/retour.php');
 </div><br>
 
 <?php
-$conn = sqlsrv_connect($server, $conninfo);
-if ($conn) {
-    //echo "<b>Domaine : " . $domaine . "</b><br><br>";
+$conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
+$conn -> set_charset("utf8");
+mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
 
-    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext", array(), array("Scrollable" => 'static'));
-    
-    // Total number of results to display
-    $num_rows = sqlsrv_num_rows($query);
+if ($conn) {
+    $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%') ORDER BY termtext";
+    $result = mysqli_query($conn, $query);
+    $num_rows = mysqli_num_rows($result);
 
     // How many items to list per page
     $limit = 10;
@@ -84,19 +84,10 @@ if ($conn) {
         echo $nav;
 
         echo "<table class='results_table'>";
-        $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI OR variant COLLATE FRENCH_CI_AI LIKE '%$clean_term%' COLLATE FRENCH_CI_AI) ORDER BY termtext OFFSET $offset ROWS FETCH NEXT $limit ROWS ONLY", array(), array("Scrollable" => 'static'));
-        if($query === FALSE) {
-            if( ($errors = sqlsrv_errors() ) != null) {  
-                foreach( $errors as $error) {  
-                    echo "SQLSTATE: ".$error[ 'SQLSTATE']."\n";  
-                    echo "code: ".$error[ 'code']."\n";  
-                    echo "message: ".$error[ 'message']."\n";  
-                }  
-            } else {
-                echo "no error!";
-            }
-        }
-        while ($row = sqlsrv_fetch_array($query)) {
+        $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$refcode%$source' AND (termtext LIKE '%$clean_term%' OR variant LIKE '%$clean_term%') ORDER BY termtext LIMIT $limit OFFSET $offset";
+        $main_result = mysqli_query($conn, $query);
+
+        while ($row = mysqli_fetch_assoc($main_result)) {
             echo "<tr>";
             $lang = strtoupper(explode("-", $row['termlexid'])[3]);
             $mf = False;
@@ -113,8 +104,8 @@ if ($conn) {
             $langroup_source = $row['langroup'];
             $abbrev = $row['abbrev'];
             if($abbrev == 1) {
-                $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source", array(), array("Scrollable" => 'static'));
-                $row2 = sqlsrv_fetch_array($result);
+                $result = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source");
+                $row2 = mysqli_fetch_assoc($result);
                 $termtextfull = $row2['termtext'];
                 $termtextfull_variant = $row2['variant'];
                 echo " (" . $termtextfull;
@@ -124,8 +115,8 @@ if ($conn) {
                 echo ")";
                 $mf = True;
             } else {
-                $result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1", array(), array("Scrollable" => 'static'));
-                $row2 = sqlsrv_fetch_array($result);
+                $result = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1");
+                $row2 = mysqli_fetch_assoc($result);
                 if($row2) {
                     $acro = $row2['termtext'];
                     echo " (" . $acro . ")";
@@ -162,46 +153,46 @@ if ($conn) {
 
             echo "<br>" . $pos . " " . $gender . " " . $number . "<br>";
 
-            $result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source", array(), array("Scrollable" => 'static'));
-            $termid = sqlsrv_fetch_array($result)['termid'];
+            $result = mysqli_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source");
+            $termid = mysqli_fetch_assoc($result)['termid'];
 
-            $result = sqlsrv_query($conn, "SELECT definition FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'", array(), array("Scrollable" => 'static'));
-            $definition = sqlsrv_fetch_array($result)['definition'];
+            $result = mysqli_query($conn, "SELECT definition FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'");
+            $definition = mysqli_fetch_assoc($result)['definition'];
             if(!empty($definition)) {
-                $result = sqlsrv_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='def'", array(), array("Scrollable" => 'static'));
-                $row = sqlsrv_fetch_array($result);
+                $result = mysqli_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='def'");
+                $row = mysqli_fetch_assoc($result);
                 $bib_id = $row['biblio'];
                 $source_text_def = $row['text'];
-                $result = sqlsrv_query($conn, "SELECT title FROM biblio WHERE id=$bib_id", array(), array("Scrollable" => 'static'));
-                $bib_title_def = sqlsrv_fetch_array($result)['title'];
+                $result = mysqli_query($conn, "SELECT title FROM biblio WHERE id=$bib_id");
+                $bib_title_def = mysqli_fetch_assoc($result)['title'];
                 echo "<br><u>Définition</u> : " . $definition . " (<i>" . $bib_title_def . "</i>, " . $source_text_def . ")";
             }
 
-            $result = sqlsrv_query($conn, "SELECT explanation FROM langroup WHERE termid=$termid AND lang LIKE '$source%'", array(), array("Scrollable" => 'static'));
-            $explanation = sqlsrv_fetch_array($result)['explanation'];
+            $result = mysqli_query($conn, "SELECT explanation FROM langroup WHERE termid=$termid AND lang LIKE '$source%'");
+            $explanation = mysqli_fetch_assoc($result)['explanation'];
             if(!empty($explanation)) {
-                $result = sqlsrv_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='exp'", array(), array("Scrollable" => 'static'));
-                $row = sqlsrv_fetch_array($result);
+                $result = mysqli_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='exp'");
+                $row = mysqli_fetch_assoc($result);
                 $bib_id = $row['biblio'];
                 $source_text_exp = $row['text'];
-                $result = sqlsrv_query($conn, "SELECT title FROM biblio WHERE id=$bib_id", array(), array("Scrollable" => 'static'));
-                $bib_title_exp = sqlsrv_fetch_array($result)['title'];
+                $result = mysqli_query($conn, "SELECT title FROM biblio WHERE id=$bib_id");
+                $bib_title_exp = mysqli_fetch_assoc($result)['title'];
                 echo "<br><br><u>Explication</u> : " . $explanation . " (<i>" . $bib_title_exp . "</i>, " . $source_text_exp . ")";
             }
 
             echo "</details></td></tr>";
 
-            $result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE '$cible%'", array(), array("Scrollable" => 'static'));
-            $langroup_target = sqlsrv_fetch_array($result)['id'];
-            $results_pref = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=7", array(), array("Scrollable" => 'static'));
+            $result = mysqli_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE '$cible%'");
+            $langroup_target = mysqli_fetch_assoc($result)['id'];
+            $results_pref = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=7");
             if($results_pref === FALSE) {
-                print_r(sqlsrv_errors(), true);
+                print_r(mysqli_errors(), true);
                 print_r($langroup_target);
             }
-            $results_admi = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth IN (0,9)", array(), array("Scrollable" => 'static'));
-            $results_depr = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=10", array(), array("Scrollable" => 'static'));
+            $results_admi = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth IN (0,9)");
+            $results_depr = mysqli_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=10");
 
-            $num_pref = sqlsrv_num_rows($results_pref);
+            $num_pref = mysqli_num_rows($results_pref);
             echo "<tr><td>" . strtoupper($cible) . "</td><td>";
             if($num_pref == 0 and $restriction == "approved_only") {
                 echo "Aucune traduction approuvée.";

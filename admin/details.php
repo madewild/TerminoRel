@@ -2,10 +2,13 @@
 include("../static/header.php");
 
 $termlexid = htmlspecialchars($_GET['fiche']);
-$conn = sqlsrv_connect($server, $conninfo);
+$conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
+$conn -> set_charset("utf8");
+mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
 if ($conn) {
-    $query = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE termlexid LIKE '$termlexid'", array(), array("Scrollable" => 'static'));
-    $row = sqlsrv_fetch_array($query);
+    $query = "SELECT * FROM termgroup WHERE termlexid LIKE '$termlexid'";
+    $main_result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($main_result);
 }
 
 $path = $_SERVER['REQUEST_URI'];
@@ -27,8 +30,9 @@ if($variant != NULL) {
 }
 
 $langroup_source = $row['langroup'];
-$result = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1", array(), array("Scrollable" => 'static'));
-$row2 = sqlsrv_fetch_array($result);
+$query2 = "SELECT * FROM termgroup WHERE langroup=$langroup_source AND abbrev=1";
+$result2 = mysqli_query($conn, $query2);
+$row2 = mysqli_fetch_assoc($result2);
 if($row2) {
     $acro = $row2['termtext'];
     echo "<tr><td><b>Abréviation</b></td><td>" . $acro . "</td></tr>";
@@ -64,47 +68,58 @@ if($number_id == 12) {
 }
 echo "<tr><td><b>Nombre</b></td><td>" . $number . "</td></tr>";
 
-$result = sqlsrv_query($conn, "SELECT termid FROM langroup WHERE id=$langroup_source", array(), array("Scrollable" => 'static'));
-$termid = sqlsrv_fetch_array($result)['termid'];
+$query3 = "SELECT termid FROM langroup WHERE id=$langroup_source";
+$result3 = mysqli_query($conn, $query3);
+$termid = mysqli_fetch_assoc($result3)['termid'];
 
-$result = sqlsrv_query($conn, "SELECT definition FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'", array(), array("Scrollable" => 'static'));
-$definition = sqlsrv_fetch_array($result)['definition'];
+$query4 = "SELECT definition FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'";
+$result4 = mysqli_query($conn, $query4);
+$definition = mysqli_fetch_assoc($result4)['definition'];
 if(!empty($definition)) {
-    $result = sqlsrv_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='def'", array(), array("Scrollable" => 'static'));
-    $row = sqlsrv_fetch_array($result);
+    $query5 = "SELECT * FROM source WHERE termid=$termid AND type='def'";
+    $result5 = mysqli_query($conn, $query5);
+    $row = mysqli_fetch_assoc($result5);
     $bib_id = $row['biblio'];
     $source_text_def = $row['text'];
-    $result = sqlsrv_query($conn, "SELECT title FROM biblio WHERE id=$bib_id", array(), array("Scrollable" => 'static'));
-    $bib_title_def = sqlsrv_fetch_array($result)['title'];
+    $query6 = "SELECT title FROM biblio WHERE id=$bib_id";
+    $result6 = mysqli_query($conn, $query6);
+    $bib_title_def = mysqli_fetch_assoc($result6)['title'];
     echo "<tr><td><b>Définition</b></td><td>" . $definition . "</td></tr>";
     echo "<tr><td><b>Source de la définition</b></td><td>" . $bib_title_def . ", " . $source_text_def . "</td></tr>";
 }
 
-$result = sqlsrv_query($conn, "SELECT explanation FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'", array(), array("Scrollable" => 'static'));
-$explanation = sqlsrv_fetch_array($result)['explanation'];
+$query7 = "SELECT explanation FROM langroup WHERE termid=$termid AND lang LIKE 'fr%'";
+$result7 = mysqli_query($conn, $query7);
+$explanation = mysqli_fetch_assoc($result7)['explanation'];
 if(!empty($explanation)) {
-    $result = sqlsrv_query($conn, "SELECT * FROM source WHERE termid=$termid AND type='exp'", array(), array("Scrollable" => 'static'));
-    $row = sqlsrv_fetch_array($result);
+    $query8 = "SELECT * FROM source WHERE termid=$termid AND type='exp'";
+    $result8 = mysqli_query($conn, $query8);
+    $row = mysqli_fetch_assoc($result8);
     $bib_id = $row['biblio'];
     $source_text_exp = $row['text'];
-    $result = sqlsrv_query($conn, "SELECT title FROM biblio WHERE id=$bib_id", array(), array("Scrollable" => 'static'));
-    $bib_title_exp = sqlsrv_fetch_array($result)['title'];
+    $query9 = "SELECT title FROM biblio WHERE id=$bib_id";
+    $result9 = mysqli_query($conn, $query9);
+    $bib_title_exp = mysqli_fetch_assoc($result9)['title'];
     echo "<tr><td><b>Explication</b></td><td>" . $explanation . "</td></tr>";
     echo "<tr><td><b>Source de l'explication</b></td><td>" . $bib_title_exp . ", " . $source_text_exp . "</td></tr>";
 }
 echo "</table>";
 
-$result = sqlsrv_query($conn, "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE 'en%'", array(), array("Scrollable" => 'static'));
-$langroup_target = sqlsrv_fetch_array($result)['id'];
-$results_pref = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=7", array(), array("Scrollable" => 'static'));
+$query10 = "SELECT id FROM langroup WHERE termid=$termid AND lang LIKE 'en%'";
+$result10 = mysqli_query($conn, $query10);
+$langroup_target = mysqli_fetch_assoc($result10)['id'];
+$query_pref = "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=7";
+$results_pref = mysqli_query($conn, $query_pref);
 if($results_pref === FALSE) {
-    print_r(sqlsrv_errors(), true);
+    print_r(mysqli_errors(), true);
     print_r($langroup_target);
 }
-$results_admi = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth IN (0,9)", array(), array("Scrollable" => 'static'));
-$results_depr = sqlsrv_query($conn, "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=10", array(), array("Scrollable" => 'static'));
+$query_admi = "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth IN (0,9)";
+$results_admi = mysqli_query($conn, $query_admi);
+$query_depr = "SELECT * FROM termgroup WHERE langroup=$langroup_target AND auth=10";
+$results_depr = mysqli_query($conn, $query_depr);
 
-$num_pref = sqlsrv_num_rows($results_pref);
+$num_pref = mysqli_num_rows($results_pref);
 show_trad_admin($conn, $results_pref, "privilégiée");
 show_trad_admin($conn, $results_admi, "admise");
 show_trad_admin($conn, $results_depr, "à éviter");

@@ -1,7 +1,8 @@
 <?php 
 include("../static/header.php");
 
-$conn = sqlsrv_connect($server, $conninfo);
+$conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
+$conn -> set_charset("utf8");
 
 $path = $_SERVER['REQUEST_URI'];
 $barepath = strtok($path, '?');

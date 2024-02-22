@@ -1,9 +1,13 @@
 <?php
 include("../../static/header.php");
 
-$conn = sqlsrv_connect($server, $conninfo);
+$conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
+$conn -> set_charset("utf8");
+mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
+
 if ($conn) {
-    $query = sqlsrv_query($conn, "TRUNCATE TABLE biblio", array(), array("Scrollable" => 'static'));
+    $query = "TRUNCATE TABLE biblio";
+    $result = mysqli_query($conn, $query);
     $xml = simplexml_load_file("../../xml/biblio_v2.xml");
     foreach($xml->entrée as $doc)
     {
@@ -23,9 +27,10 @@ if ($conn) {
         $filename = $doc->nomFichier;
         $filename = str_replace("'", "''", $filename);
         echo 'Importing ' . $ref . '...<br>';
-        $stmt = sqlsrv_query($conn, "INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, author, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$auteur', N'$url', N'$filename')", array(), array("Scrollable" => 'static'));
+        $query2 = "INSERT INTO biblio (reference, title, typedoc, datedoc, source, service, author, url, filename) VALUES (N'$ref', N'$title', N'$type', '$date', N'$source', N'$service', N'$auteur', N'$url', N'$filename')";
+        $stmt = mysqli_query($conn, $query2);
         if( $stmt === false ) {
-            die( print_r( sqlsrv_errors(), true));
+            die( print_r( mysqli_errors(), true));
        }
     }
 }
