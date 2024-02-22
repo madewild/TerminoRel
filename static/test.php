@@ -26,7 +26,7 @@ echo '<p>Sample data from table <b>' . $table . '</b>:</p>';
 $conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
 mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
 $result = mysqli_query($conn, $query);
-while ($row = mysqli_fetch_assoc($result, MYSQLI_NUM)) {
+while ($row = mysqli_fetch_assoc($result)) {
     printf("ID: %s  Name: %s <br>", $row[id], $row[termtext]);
 }
 echo "<br>";
