@@ -24,6 +24,7 @@ echo '<p>Using database <b>' . $database . '</b> with user <b>' . $username . '<
 echo '<p>Sample data from table <b>' . $table . '</b>:</p>';
 
 $conn = mysqli_connect($server, $username, $password) or die("Unable to connect to '$server'");
+$conn -> set_charset("utf8");
 mysqli_select_db($conn, $database) or die("Could not open the database '$database'");
 $result = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_assoc($result)) {
